@@ -1,0 +1,70 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+ENV/
+build/
+dist/
+*.egg-info/
+*.egg
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+.ipynb_checkpoints/
+
+# Local settings and secrets
+.env
+.env.*
+!.env.example
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.log
+
+# ROS 2 generated outputs
+ros2_ws/build/
+ros2_ws/install/
+ros2_ws/log/
+*.bag
+*.db3
+*.mcap
+
+# Models, datasets and training outputs
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.safetensors
+checkpoints/
+weights/
+datasets/
+runs/
+wandb/
+outputs/
+tensorboard/
+
+# Simulator and general caches
+.cache/
+cache/
+isaac_sim/cache/
+isaac_sim/logs/
+
+# Store large scenes/textures externally; small assets need explicit review
+*.usd
+*.usda
+*.usdc
+*.usdz
+assets/large/
+assets/textures/
