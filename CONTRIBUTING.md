@@ -5,12 +5,12 @@
 - 使用一个主仓库，获得 Collaborator 权限后直接参与，**不用 Fork**。
 - `main` 保持稳定、可运行。新任务使用 `feature/...`，修复使用 `fix/...`；按任务命名分支。
 - **不要直接 push main**。正式修改统一经过分支 → commit → push → Pull Request（PR）→ review → 合并 main。
-- PR 尽量小，写清改了什么、如何运行和验证；请至少另一位队友检查，再由有权限的成员合并。
+- PR 尽量小，写清改了什么、如何运行和验证。
 - 上述是团队约定，是否强制执行取决于后续仓库分支保护设置。
 
 ## 1. 第一次下载
 
-安装 Git，并完成 GitHub 登录。公开仓库可直接下载；上传分支与创建同仓库 PR 需要 Collaborator 写入权限，目前尚未添加队友。
+安装 Git，并完成 GitHub 登录。公开仓库可直接下载；上传分支与创建同仓库 PR 需要 Collaborator 写入权限。
 
 ```bash
 git clone https://github.com/qw-ren/isaacsim-jetbot-nav.git
@@ -43,7 +43,7 @@ git push -u origin feature/nav2-baseline
 
 ## 4. 创建 PR 并合并
 
-在 GitHub 打开仓库，点击 **Compare & pull request**（或 Pull requests → New pull request），选择 `base: main`、`compare: 自己的分支`。写清修改内容、运行/验证方式、已知问题，邀请队友检查。检查通过后 Merge，可删除已合并分支。
+在 GitHub 打开仓库，点击 **Compare & pull request**（或 Pull requests → New pull request），选择 `base: main`、`compare: 自己的分支`。写清修改内容、运行/验证方式、已知问题。检查通过后 Merge，可删除已合并分支。
 
 下一项任务重新执行第 2 步，从最新 main 建立新分支。遇到合并冲突时逐个确认应保留的内容；不确定就和相关队友一起处理，不要强制覆盖 main。
 
