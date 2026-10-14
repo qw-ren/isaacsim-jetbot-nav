@@ -96,3 +96,5 @@ Go2 无显示服务器的 headless 模式尚未验收；当前验证使用镜像
 ## 2026-10-14 补充复核
 
 云端baseline 12项SHA256重新通过，当前运行源码与13日备份一致。用户报告GUI键盘验收通过；这不是新增自动化运动测试。SSH现已恢复，用户确认为笔记本代理问题；关机操作者仍未知。云端仓储SLAM/Nav2尚未验收。精选历史证据见 `experiments/go2_warehouse_stage1_20261013/`。
+
+另已核对14日独立低速复测报告：`experiments/go2_warehouse_stage1_20261014/interfaces.json`，12项通过；本地与云端SHA256一致（3f1edfe1…7d99b0b）。该报告为已有独立复测，本次归档没有再次发送运动命令。
