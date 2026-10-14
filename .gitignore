@@ -68,3 +68,7 @@ isaac_sim/logs/
 *.usdz
 assets/large/
 assets/textures/
+
+# Go2 simulator env is source code, not a virtual environment
+!isaac_sim/go2_warehouse/env/
+!isaac_sim/go2_warehouse/env/*.py

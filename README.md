@@ -2,7 +2,7 @@
 
 阿童木机器人课题：**基于 Isaac Sim 的 JetBot 视觉-激光融合导航与学习型局部避障**（暂定）。
 
-先跑通 Isaac Sim + JetBot + ROS 2 + SLAM/Nav2 的目标点导航 baseline，再推进 PPO 局部避障及与传统局部规划器的对比，逐步接入视觉与激光感知融合。当前仓库为项目骨架，尚未实现各模块 Demo。
+先跑通 Isaac Sim + JetBot + ROS 2 + SLAM/Nav2 的目标点导航 baseline，再推进 PPO 局部避障及与传统局部规划器的对比，逐步接入视觉与激光感知融合。当前已归档 Go2 仓储云仿真阶段一，作为导航迁移前置验证；JetBot 与团队融合模块仍按各组计划推进。
 
 ## 四个模块
 
@@ -34,3 +34,9 @@ assets/         必要的小型资源与资源下载说明
 完善 baseline；评估 PPO 与传统局部规划器的成功率、碰撞率、到达时间等指标；接入视觉-激光融合。**语义目标导航与简单自然语言导航仅作为按进度开展的后续扩展，不是当前必做承诺。**
 
 协作方式见 [CONTRIBUTING.md](CONTRIBUTING.md)。大模型、数据集、训练产物和大型场景资源通过外部存储共享，在仓库中记录获取方式。
+
+## Go2 导航前置验证（任权伟）
+
+[运行源码与说明](isaac_sim/go2_warehouse/README.md) · [阶段一验收](docs/GO2_WAREHOUSE_STAGE1.md) · [外部资源清单](assets/go2_warehouse_resources.md)
+
+2026-10-13 M0–M3通过；10月14日哈希复核与用户键盘验收完成。尚未声称仓储SLAM/Nav2或JetBot导航已实现。

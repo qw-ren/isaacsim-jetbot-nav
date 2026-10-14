@@ -1,0 +1,234 @@
+--- a/isaac_go2_ros2.py
++++ b/isaac_go2_ros2.py
+@@ -10,6 +10,11 @@
+ 
+ # add argparse arguments
+ parser = argparse.ArgumentParser(description="Tutorial on running the cartpole RL environment.")
++parser.add_argument("--run-seconds", type=float, default=0.0)
++parser.add_argument("--artifact-dir", default="")
++parser.add_argument("--spawn-x", type=float, default=0.0)
++parser.add_argument("--spawn-y", type=float, default=0.0)
++parser.add_argument("--spawn-yaw", type=float, default=0.0)
+ 
+ # append AppLauncher cli args
+ AppLauncher.add_app_launcher_args(parser)
+@@ -43,6 +48,10 @@
+     # Go2 Environment setup
+     go2_env_cfg = Go2RSLEnvCfg()
+     go2_env_cfg.scene.num_envs = cfg.num_envs
++    go2_env_cfg.scene.unitree_go2.init_state.pos = (
++        args_cli.spawn_x, args_cli.spawn_y, go2_env_cfg.scene.unitree_go2.init_state.pos[2])
++    go2_env_cfg.scene.unitree_go2.init_state.rot = (
++        math.cos(args_cli.spawn_yaw / 2), 0.0, 0.0, math.sin(args_cli.spawn_yaw / 2))
+     go2_env_cfg.decimation = math.ceil(1./go2_env_cfg.sim.dt/cfg.freq)
+     go2_env_cfg.sim.render_interval = go2_env_cfg.decimation
+     go2_ctrl.init_base_vel_cmd(cfg.num_envs)
+@@ -72,8 +81,9 @@
+ 
+     # Keyboard control
+     system_input = carb.input.acquire_input_interface()
+-    system_input.subscribe_to_keyboard_events(
+-        omni.appwindow.get_default_app_window().get_keyboard(), go2_ctrl.sub_keyboard_event)
++    app_window = omni.appwindow.get_default_app_window()
++    if app_window is not None and not args_cli.headless:
++        system_input.subscribe_to_keyboard_events(app_window.get_keyboard(), go2_ctrl.sub_keyboard_event)
+     
+     # ROS2 Bridge
+     rclpy.init()
+@@ -82,7 +92,42 @@
+     # Run simulation
+     sim_step_dt = float(go2_env_cfg.sim.dt * go2_env_cfg.decimation)
+     obs, _ = env.reset()
+-    while simulation_app.is_running():
++    started = time.monotonic()
++    import signal
++    shutdown_requested = [False]
++    def request_shutdown(signum, frame):
++        shutdown_requested[0] = True
++    signal.signal(signal.SIGINT, request_shutdown)
++    signal.signal(signal.SIGTERM, request_shutdown)
++    next_status = started
++    step_count = 0
++    if args_cli.artifact_dir:
++        import json
++        from pathlib import Path
++        from pxr import UsdGeom, UsdPhysics
++        stage = omni.usd.get_context().get_stage()
++        warehouse = stage.GetPrimAtPath("/World/Warehouse")
++        cache = UsdGeom.BBoxCache(0, [UsdGeom.Tokens.default_, UsdGeom.Tokens.render])
++        bounds = cache.ComputeWorldBound(warehouse).ComputeAlignedRange()
++        metadata = {
++            "env_name": str(cfg.env_name),
++            "spawn_xy": [args_cli.spawn_x, args_cli.spawn_y],
++            "spawn_yaw_rad": args_cli.spawn_yaw,
++            "warehouse_prim_valid": warehouse.IsValid(),
++            "warehouse_prims": sum(1 for p in stage.Traverse() if str(p.GetPath()).startswith("/World/Warehouse/")),
++            "warehouse_collision_prims": sum(1 for p in stage.Traverse() if str(p.GetPath()).startswith("/World/Warehouse/") and p.HasAPI(UsdPhysics.CollisionAPI)),
++            "meters_per_unit": UsdGeom.GetStageMetersPerUnit(stage),
++            "up_axis": str(UsdGeom.GetStageUpAxis(stage)),
++            "bounds_min": list(bounds.GetMin()),
++            "bounds_max": list(bounds.GetMax()),
++        }
++        artifact_dir = Path(args_cli.artifact_dir)
++        artifact_dir.mkdir(parents=True, exist_ok=True)
++        (artifact_dir / "scene.json").write_text(json.dumps(metadata, indent=2) + "\n")
++        print("WAREHOUSE_SCENE " + json.dumps(metadata), flush=True)
++    while simulation_app.is_running() and not shutdown_requested[0]:
++        if args_cli.run_seconds > 0 and time.monotonic() - started >= args_cli.run_seconds:
++            break
+         start_time = time.time()
+         with torch.inference_mode():            
+             # control joints
+@@ -91,12 +136,15 @@
+             # step the environment
+             obs, _, _, _ = env.step(actions)
+ 
+-            # ROS2 data handled by bridge timer running in background thread
+-            # (no spin_once here to avoid blocking simulation loop)
++            dm.pub_ros2_data()
++            step_count += 1
+ 
+             # Camera follow
+             if (cfg.camera_follow):
+                 camera_follow(env)
++            if args_cli.artifact_dir and step_count == 80:
++                from omni.kit.viewport.utility import capture_viewport_to_file, get_active_viewport
++                capture_viewport_to_file(get_active_viewport(), str(artifact_dir / "warehouse_viewport.png"))
+ 
+             # limit loop time
+             elapsed_time = time.time() - start_time
+@@ -105,12 +153,18 @@
+                 time.sleep(sleep_duration)
+         actual_loop_time = time.time() - start_time
+         rtf = min(1.0, sim_step_dt/elapsed_time)
+-        print(f"\rStep time: {actual_loop_time*1000:.2f}ms, Real Time Factor: {rtf:.2f}", end='', flush=True)
++        if time.monotonic() >= next_status:
++            print(f"Step time: {actual_loop_time*1000:.2f}ms, Real Time Factor: {rtf:.2f}", flush=True)
++            next_status = time.monotonic() + 2.0
+     
++    go2_ctrl.base_vel_cmd_input.zero_()
++    dm._executor.shutdown()
++    dm._spin_thread.join(timeout=5)
+     dm.destroy_node()
+     rclpy.shutdown()
++    env.close()
+     simulation_app.close()
+ 
+ if __name__ == "__main__":
+     run_simulator()
+-    
+\ 文件末尾没有换行符
++    
+--- a/ros2/go2_ros2_bridge.py
++++ b/ros2/go2_ros2_bridge.py
+@@ -1,5 +1,6 @@
+ import rclpy
+ from rclpy.node import Node
++from rclpy.executors import SingleThreadedExecutor
+ from nav_msgs.msg import Odometry
+ from geometry_msgs.msg import PoseStamped, Twist, TransformStamped
+ from sensor_msgs.msg import PointCloud2, PointField, Image
+@@ -8,7 +9,6 @@
+ from tf2_ros.static_transform_broadcaster import StaticTransformBroadcaster
+ import numpy as np
+ import threading
+-from cv_bridge import CvBridge
+ import cv2
+ import omni
+ import omni.graph.core as og
+@@ -112,9 +112,11 @@
+         # create a ROS2 timer to publish odom/pose at a stable frequency
+         # using a timer avoids depending on the simulation loop timing
+         self.publish_timer_hz = 25.0
+-        self.create_timer(1.0 / self.publish_timer_hz, self.pub_ros2_data_timer)
++        # Physics tensors and RTX annotators are read from the simulation thread.
+         # start a background thread to spin this node so timers fire independently
+-        self._spin_thread = threading.Thread(target=rclpy.spin, args=(self,), daemon=True)
++        self._executor = SingleThreadedExecutor()
++        self._executor.add_node(self)
++        self._spin_thread = threading.Thread(target=self._executor.spin, daemon=True)
+         self._spin_thread.start()
+ 
+  
+@@ -148,7 +150,7 @@
+         command = ["ros2", "param", "set", "/robot_data_manager", "use_sim_time", "true"]
+ 
+         # Run the command in a non-blocking way
+-        subprocess.Popen(command)  
++        self.set_parameters([rclpy.parameter.Parameter("use_sim_time", value=True)])
+         return True
+ 
+     def create_static_transform(self):
+@@ -210,6 +212,9 @@
+             # Publish the transform
+             camera_broadcaster.sendTransform(base_cam_transform)
+ 
++            if not getattr(self.cfg, "publish_map_to_odom", True):
++                continue
++
+             # -------------------------------------------------------------
+             # Map to Odom (Fake Localization for using truth map)
+             # Create and publish the transform
+@@ -424,6 +429,8 @@
+         go2_ctrl.base_vel_cmd_input[env_idx][2] = msg.angular.z
+     
+     def semantic_segmentation_callback(self, img, env_idx):
++        from cv_bridge import CvBridge
++
+         bridge = CvBridge()
+         semantic_image = bridge.imgmsg_to_cv2(img, desired_encoding='passthrough')
+         semantic_image_normalized = (semantic_image / semantic_image.max() * 255).astype(np.uint8)
+@@ -667,7 +674,7 @@
+                 topic_name = f"unitree_go2_{i}/front_cam/info"
+             queue_size = 1
+             node_namespace = ""
+-            frame_id = self.cameras[i].prim_path.split("/")[-1] # This matches what the TF tree is publishing.
++            frame_id = "unitree_go2/front_cam" if self.num_envs == 1 else f"unitree_go2_{i}/front_cam"
+ 
+             writer = rep.writers.get("ROS2PublishCameraInfo")
+             camera_info = read_camera_info(render_product_path=render_product)
+@@ -692,4 +699,4 @@
+             )
+ 
+             # Set step input of the Isaac Simulation Gate nodes upstream of ROS publishers to control their execution rate
+-            og.Controller.attribute(gate_path + ".inputs:step").set(step_size)            
+\ 文件末尾没有换行符
++            og.Controller.attribute(gate_path + ".inputs:step").set(step_size)            
+--- a/go2/go2_env.py
++++ b/go2/go2_env.py
+@@ -52,7 +52,7 @@
+     height_scanner = RayCasterCfg(
+         prim_path="{ENV_REGEX_NS}/Go2/base",
+         offset=RayCasterCfg.OffsetCfg(pos=(0.0, 0.0, 20)), 
+-        attach_yaw_only=True,
++        ray_alignment="yaw",
+         pattern_cfg=patterns.GridPatternCfg(resolution=0.1, size=[1.6, 1.0]), 
+         debug_vis=False,
+         mesh_prim_paths=["/World/ground"],
+@@ -184,6 +184,6 @@
+         yaw = rotation.as_euler('zyx')[0]
+         yaw_rotation = R.from_euler('z', yaw).as_matrix()
+         set_camera_view(
+-            yaw_rotation.dot(np.asarray([-4.0, 0.0, 5.0])) + robot_position,
++            yaw_rotation.dot(np.asarray([-2.0, 0.0, 0.35])) + robot_position,
+             robot_position
+-        )
+\ 文件末尾没有换行符
++        )
+--- a/go2/go2_sensors.py
++++ b/go2/go2_sensors.py
+@@ -27,6 +27,7 @@
+             )
+ 
+             annotator = rep.AnnotatorRegistry.get_annotator("RtxSensorCpuIsaacCreateRTXLidarScanBuffer")
++            annotator.initialize(transformPoints=False)
+             hydra_texture = rep.create.render_product(sensor.GetPath(), [1, 1], name="Isaac")
+             annotator.attach(hydra_texture.path)
+             lidar_annotators.append(annotator)
+@@ -45,4 +46,4 @@
+             camera.initialize()
+             camera.set_focal_length(1.5)
+             cameras.append(camera)
+-        return cameras
+\ 文件末尾没有换行符
++        return cameras

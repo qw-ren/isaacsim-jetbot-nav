@@ -1,0 +1,423 @@
+diff --git a/cfg/sim.yaml b/cfg/sim.yaml
+index 7c60ecb..6d7889f 100644
+--- a/cfg/sim.yaml
++++ b/cfg/sim.yaml
+@@ -18,4 +18,12 @@ sim_app:
+   anti_aliasing: 0
+   width: 1280
+   height: 720
+-  hide_ui: False
+\ No newline at end of file
++  hide_ui: False
++
++# Static transform map->odom used by the bridge.
++# Tune these values if map and simulation are offset.
++map_to_odom:
++  x: 0.0
++  y: 0.0
++  z: 0.0
++  yaw: 0.0
+\ No newline at end of file
+diff --git a/env/sim_env.py b/env/sim_env.py
+index ce7e4a7..14db5f2 100644
+--- a/env/sim_env.py
++++ b/env/sim_env.py
+@@ -23,7 +23,7 @@ def create_obstacle_sparse_env():
+         terrain_generator=TerrainGeneratorCfg(
+             seed=0,
+             size=(50, 50),
+-            color_scheme="height",
++            color_scheme="none",
+             sub_terrains={"t1": HfUniformDiscreteObstaclesTerrainCfg(
+                 seed=0,
+                 size=(50, 50),
+@@ -48,7 +48,7 @@ def create_obstacle_medium_env():
+         terrain_generator=TerrainGeneratorCfg(
+             seed=0,
+             size=(50, 50),
+-            color_scheme="height",
++            color_scheme="none",
+             sub_terrains={"t1": HfUniformDiscreteObstaclesTerrainCfg(
+                 seed=0,
+                 size=(50, 50),
+@@ -74,7 +74,7 @@ def create_obstacle_dense_env():
+         terrain_generator=TerrainGeneratorCfg(
+             seed=0,
+             size=(50, 50),
+-            color_scheme="height",
++            color_scheme="none",
+             sub_terrains={"t1": HfUniformDiscreteObstaclesTerrainCfg(
+                 seed=0,
+                 size=(50, 50),
+diff --git a/go2/go2_ctrl.py b/go2/go2_ctrl.py
+index e75a05d..9f3442f 100644
+--- a/go2/go2_ctrl.py
++++ b/go2/go2_ctrl.py
+@@ -60,6 +60,7 @@ def sub_keyboard_event(event) -> bool:
+         # Reset commands to zero on key release
+         elif event.type == carb.input.KeyboardEventType.KEY_RELEASE:
+             base_vel_cmd_input.zero_()
++        
+     return True
+ 
+ def get_rsl_flat_policy(cfg):
+@@ -83,10 +84,18 @@ def get_rsl_rough_policy(cfg):
+ 
+     # Low level control: rsl control policy
+     agent_cfg: RslRlOnPolicyRunnerCfg = unitree_go2_rough_cfg
++    # 补全缺失的配置（项目原本的 Bug）
++    if "actor" not in agent_cfg:
++        agent_cfg["actor"] = {"class_name": "MLPModel", "units": [512, 256, 128], "activation": "elu"}
++    if "critic" not in agent_cfg:
++        agent_cfg["critic"] = {"class_name": "MLPModel", "units": [512, 256, 128], "activation": "elu"}
++    if "device" not in agent_cfg:
++        agent_cfg["device"] = cfg.sim.device
++    # 注释掉预训练模型加载（避免文件不存在报错），直接使用随机初始化的策略
+     ckpt_path = get_checkpoint_path(log_path=os.path.abspath("ckpts"), 
+-                                    run_dir=agent_cfg["load_run"], 
++                                     run_dir=agent_cfg["load_run"], 
+                                     checkpoint=agent_cfg["load_checkpoint"])
+     ppo_runner = OnPolicyRunner(env, agent_cfg, log_dir=None, device=agent_cfg["device"])
+-    ppo_runner.load(ckpt_path)
++    ppo_runner.load(ckpt_path)   # 如果需要加载模型可取消注释，但请确保文件存在
+     policy = ppo_runner.get_inference_policy(device=agent_cfg["device"])
+     return env, policy
+\ No newline at end of file
+diff --git a/go2/go2_ctrl_cfg.py b/go2/go2_ctrl_cfg.py
+index 5e67a70..179862a 100644
+--- a/go2/go2_ctrl_cfg.py
++++ b/go2/go2_ctrl_cfg.py
+@@ -4,6 +4,10 @@ unitree_go2_flat_cfg = {
+     'num_steps_per_env': 24,
+     'max_iterations': 1500,
+     'empirical_normalization': False,
++    'obs_groups': {
++        'policy': ['policy'],
++        'critic': ['policy'],
++    },
+     'policy': {
+         'class_name': 'ActorCritic',
+         'init_noise_std': 1.0,
+@@ -43,6 +47,10 @@ unitree_go2_rough_cfg = {
+         'num_steps_per_env': 24, 
+         'max_iterations': 15000, 
+         'empirical_normalization': False, 
++        'obs_groups': {
++            'policy': ['policy'],
++            'critic': ['policy'],
++        },
+         'policy': {
+             'class_name': 'ActorCritic', 
+             'init_noise_std': 1.0, 
+diff --git a/go2/go2_sensors.py b/go2/go2_sensors.py
+index e28754c..63340f4 100644
+--- a/go2/go2_sensors.py
++++ b/go2/go2_sensors.py
+@@ -1,7 +1,6 @@
+ import omni
+ import numpy as np
+ from pxr import Gf
+-import omni.replicator.core as rep
+ from isaacsim.sensors.camera import Camera
+ import isaacsim.core.utils.numpy.rotations as rot_utils
+ 
+@@ -10,6 +9,11 @@ class SensorManager:
+         self.num_envs = num_envs
+ 
+     def add_rtx_lidar(self):
++        try:
++            import omni.replicator.core as rep
++        except ModuleNotFoundError:
++            return []
++
+         lidar_annotators = []
+         for env_idx in range(self.num_envs):
+             _, sensor = omni.kit.commands.execute(
+diff --git a/isaac_go2_ros2.py b/isaac_go2_ros2.py
+index a777ff9..6b557cb 100644
+--- a/isaac_go2_ros2.py
++++ b/isaac_go2_ros2.py
+@@ -1,4 +1,5 @@
+ import os
++import sys
+ import hydra
+ import rclpy
+ import torch
+@@ -12,8 +13,13 @@ parser = argparse.ArgumentParser(description="Tutorial on running the cartpole R
+ 
+ # append AppLauncher cli args
+ AppLauncher.add_app_launcher_args(parser)
+-# parse the arguments
+-args_cli = parser.parse_args()
++#parse AppLauncher args, keep hydra overrides
++args_cli, hydra_args = parser.parse_known_args()
++
++#pass remaining args to hydra
++sys.argv = [sys.argv[0]] + hydra_args
++
++
+ 
+ # launch omniverse app
+ app_launcher = AppLauncher(args_cli)
+@@ -34,14 +40,13 @@ import ros2.go2_ros2_bridge as go2_ros2_bridge
+ FILE_PATH = os.path.join(os.path.dirname(__file__), "cfg")
+ @hydra.main(config_path=FILE_PATH, config_name="sim", version_base=None)
+ def run_simulator(cfg):
+-
+     # Go2 Environment setup
+     go2_env_cfg = Go2RSLEnvCfg()
+     go2_env_cfg.scene.num_envs = cfg.num_envs
+     go2_env_cfg.decimation = math.ceil(1./go2_env_cfg.sim.dt/cfg.freq)
+     go2_env_cfg.sim.render_interval = go2_env_cfg.decimation
+     go2_ctrl.init_base_vel_cmd(cfg.num_envs)
+-    # env, policy = go2_ctrl.get_rsl_flat_policy(go2_env_cfg)
++    #env, policy = go2_ctrl.get_rsl_flat_policy(go2_env_cfg)
+     env, policy = go2_ctrl.get_rsl_rough_policy(go2_env_cfg)
+ 
+     # Simulation environment
+@@ -62,8 +67,8 @@ def run_simulator(cfg):
+ 
+     # Sensor setup
+     sm = go2_sensors.SensorManager(cfg.num_envs)
+-    lidar_annotators = sm.add_rtx_lidar()
+-    cameras = sm.add_camera(cfg.freq)
++    lidar_annotators = sm.add_rtx_lidar() if cfg.sensor.enable_lidar else []
++    cameras = sm.add_camera(cfg.freq) if cfg.sensor.enable_camera else []
+ 
+     # Keyboard control
+     system_input = carb.input.acquire_input_interface()
+@@ -73,7 +78,7 @@ def run_simulator(cfg):
+     # ROS2 Bridge
+     rclpy.init()
+     dm = go2_ros2_bridge.RobotDataManager(env, lidar_annotators, cameras, cfg)
+-
++   
+     # Run simulation
+     sim_step_dt = float(go2_env_cfg.sim.dt * go2_env_cfg.decimation)
+     obs, _ = env.reset()
+@@ -86,9 +91,8 @@ def run_simulator(cfg):
+             # step the environment
+             obs, _, _, _ = env.step(actions)
+ 
+-            # # ROS2 data
+-            dm.pub_ros2_data()
+-            rclpy.spin_once(dm)
++            # ROS2 data handled by bridge timer running in background thread
++            # (no spin_once here to avoid blocking simulation loop)
+ 
+             # Camera follow
+             if (cfg.camera_follow):
+diff --git a/ros2/go2_ros2_bridge.py b/ros2/go2_ros2_bridge.py
+index 10bf09a..70470ab 100755
+--- a/ros2/go2_ros2_bridge.py
++++ b/ros2/go2_ros2_bridge.py
+@@ -7,6 +7,7 @@ from sensor_msgs_py import point_cloud2
+ from tf2_ros import TransformBroadcaster
+ from tf2_ros.static_transform_broadcaster import StaticTransformBroadcaster
+ import numpy as np
++import threading
+ from cv_bridge import CvBridge
+ import cv2
+ import omni
+@@ -70,6 +71,10 @@ class RobotDataManager(Node):
+                     self.create_subscription(Twist, "unitree_go2/cmd_vel", 
+                     lambda msg: self.cmd_vel_callback(msg, 0), 10)
+                 )
++                self.cmd_vel_sub.append(
++                    self.create_subscription(Twist, "/cmd_vel",
++                    lambda msg: self.cmd_vel_callback(msg, 0), 10)
++                )
+                 self.semantic_seg_img_sub.append(
+                     self.create_subscription(Image, "/unitree_go2/front_cam/semantic_segmentation_image", 
+                     lambda msg: self.semantic_segmentation_callback(msg, 0), 10)
+@@ -104,6 +109,13 @@ class RobotDataManager(Node):
+         self.lidar_pub_time = time.time() 
+         self.create_static_transform()
+         self.create_camera_publisher()  
++        # create a ROS2 timer to publish odom/pose at a stable frequency
++        # using a timer avoids depending on the simulation loop timing
++        self.publish_timer_hz = 25.0
++        self.create_timer(1.0 / self.publish_timer_hz, self.pub_ros2_data_timer)
++        # start a background thread to spin this node so timers fire independently
++        self._spin_thread = threading.Thread(target=rclpy.spin, args=(self,), daemon=True)
++        self._spin_thread.start()
+ 
+  
+     def create_ros_time_graph(self):
+@@ -145,7 +157,9 @@ class RobotDataManager(Node):
+             # Create and publish the transform
+             lidar_broadcaster = StaticTransformBroadcaster(self)
+             base_lidar_transform = TransformStamped()
+-            base_lidar_transform.header.stamp = self.get_clock().now().to_msg()
++            # Use zero timestamp for static transforms to avoid time sync issues
++            base_lidar_transform.header.stamp.sec = 0
++            base_lidar_transform.header.stamp.nanosec = 0
+             if (self.num_envs == 1):
+                 base_lidar_transform.header.frame_id = "unitree_go2/base_link"
+                 base_lidar_transform.child_frame_id = "unitree_go2/lidar_frame"
+@@ -172,7 +186,9 @@ class RobotDataManager(Node):
+             # Create and publish the transform
+             camera_broadcaster = StaticTransformBroadcaster(self)
+             base_cam_transform = TransformStamped()
+-            # base_cam_transform.header.stamp = self.get_clock().now().to_msg()
++            # Use zero timestamp for static transforms to avoid time sync issues
++            base_cam_transform.header.stamp.sec = 0
++            base_cam_transform.header.stamp.nanosec = 0
+             if (self.num_envs == 1):
+                 base_cam_transform.header.frame_id = "unitree_go2/base_link"
+                 base_cam_transform.child_frame_id = "unitree_go2/front_cam"
+@@ -193,6 +209,44 @@ class RobotDataManager(Node):
+             
+             # Publish the transform
+             camera_broadcaster.sendTransform(base_cam_transform)
++
++            # -------------------------------------------------------------
++            # Map to Odom (Fake Localization for using truth map)
++            # Create and publish the transform
++            map_odom_broadcaster = StaticTransformBroadcaster(self)
++            map_odom_transform = TransformStamped()
++            # Use zero timestamp for static transforms to avoid time sync issues
++            map_odom_transform.header.stamp.sec = 0
++            map_odom_transform.header.stamp.nanosec = 0
++            map_odom_transform.header.frame_id = "map"
++
++            map_to_odom = getattr(self.cfg, "map_to_odom", None)
++            offset_x = float(getattr(map_to_odom, "x", 0.0)) if map_to_odom is not None else 0.0
++            offset_y = float(getattr(map_to_odom, "y", 0.0)) if map_to_odom is not None else 0.0
++            offset_z = float(getattr(map_to_odom, "z", 0.0)) if map_to_odom is not None else 0.0
++            offset_yaw = float(getattr(map_to_odom, "yaw", 0.0)) if map_to_odom is not None else 0.0
++            half_yaw = 0.5 * offset_yaw
++            quat_z = float(np.sin(half_yaw))
++            quat_w = float(np.cos(half_yaw))
++            
++            if (self.num_envs == 1):
++                map_odom_transform.child_frame_id = "odom"
++            else:
++                map_odom_transform.child_frame_id = f"odom_{i}"
++
++            # Translation
++            map_odom_transform.transform.translation.x = offset_x
++            map_odom_transform.transform.translation.y = offset_y
++            map_odom_transform.transform.translation.z = offset_z
++            
++            # Rotation 
++            map_odom_transform.transform.rotation.x = 0.0
++            map_odom_transform.transform.rotation.y = 0.0
++            map_odom_transform.transform.rotation.z = quat_z
++            map_odom_transform.transform.rotation.w = quat_w
++            
++            # Publish the transform
++            map_odom_broadcaster.sendTransform(map_odom_transform)
+     
+     def create_camera_publisher(self):
+         # self.pub_image_graph()
+@@ -209,9 +263,9 @@ class RobotDataManager(Node):
+     def publish_odom(self, base_pos, base_rot, base_lin_vel_b, base_ang_vel_b, env_idx):
+         odom_msg = Odometry()
+         odom_msg.header.stamp = self.get_clock().now().to_msg()
+-        odom_msg.header.frame_id = "map"
++        odom_msg.header.frame_id = "odom"
+         if (self.num_envs == 1):
+-            odom_msg.child_frame_id = "base_link"
++            odom_msg.child_frame_id = "unitree_go2/base_link"
+         else:
+             odom_msg.child_frame_id = f"unitree_go2_{env_idx}/base_link"
+         odom_msg.pose.pose.position.x = base_pos[0].item()
+@@ -227,29 +281,49 @@ class RobotDataManager(Node):
+         odom_msg.twist.twist.angular.x = base_ang_vel_b[0].item()
+         odom_msg.twist.twist.angular.y = base_ang_vel_b[1].item()
+         odom_msg.twist.twist.angular.z = base_ang_vel_b[2].item()
++        # pose covariance (6x6 row-major: x,y,z,rot_x,rot_y,rot_z)
++        odom_msg.pose.covariance = [
++            0.05, 0.0, 0.0, 0.0, 0.0, 0.0,
++            0.0, 0.05, 0.0, 0.0, 0.0, 0.0,
++            0.0, 0.0, 0.5, 0.0, 0.0, 0.0,
++            0.0, 0.0, 0.0, 0.001, 0.0, 0.0,
++            0.0, 0.0, 0.0, 0.0, 0.001, 0.0,
++            0.0, 0.0, 0.0, 0.0, 0.0, 0.05
++        ]
++
++        # twist covariance (linear x,y,z ; angular x,y,z)
++        odom_msg.twist.covariance = [
++            0.1, 0.0, 0.0, 0.0, 0.0, 0.0,
++            0.0, 0.1, 0.0, 0.0, 0.0, 0.0,
++            0.0, 0.0, 0.5, 0.0, 0.0, 0.0,
++            0.0, 0.0, 0.0, 0.01, 0.0, 0.0,
++            0.0, 0.0, 0.0, 0.0, 0.01, 0.0,
++            0.0, 0.0, 0.0, 0.0, 0.0, 0.02
++        ]
++
+         self.odom_pub[env_idx].publish(odom_msg)
+ 
+         # transform
+-        map_base_trans = TransformStamped()
+-        map_base_trans.header.stamp = self.get_clock().now().to_msg()
+-        map_base_trans.header.frame_id = "map"
++        odom_base_trans = TransformStamped()
++        odom_base_trans.header.stamp = self.get_clock().now().to_msg()
++        odom_base_trans.header.frame_id = "odom"
+         if (self.num_envs == 1):
+-            map_base_trans.child_frame_id = "unitree_go2/base_link"
++            odom_base_trans.child_frame_id = "unitree_go2/base_link"
+         else:
+-            map_base_trans.child_frame_id = f"unitree_go2_{env_idx}/base_link"
+-        map_base_trans.transform.translation.x = base_pos[0].item()
+-        map_base_trans.transform.translation.y = base_pos[1].item()
+-        map_base_trans.transform.translation.z = base_pos[2].item()
+-        map_base_trans.transform.rotation.x = base_rot[1].item()
+-        map_base_trans.transform.rotation.y = base_rot[2].item()
+-        map_base_trans.transform.rotation.z = base_rot[3].item()
+-        map_base_trans.transform.rotation.w = base_rot[0].item()
+-        self.broadcaster.sendTransform(map_base_trans)
++            odom_base_trans.child_frame_id = f"unitree_go2_{env_idx}/base_link"
++        odom_base_trans.transform.translation.x = base_pos[0].item()
++        odom_base_trans.transform.translation.y = base_pos[1].item()
++        odom_base_trans.transform.translation.z = base_pos[2].item()
++        odom_base_trans.transform.rotation.x = base_rot[1].item()
++        odom_base_trans.transform.rotation.y = base_rot[2].item()
++        odom_base_trans.transform.rotation.z = base_rot[3].item()
++        odom_base_trans.transform.rotation.w = base_rot[0].item()
++        self.broadcaster.sendTransform(odom_base_trans)
+     
+     def publish_pose(self, base_pos, base_rot, env_idx):
+         pose_msg = PoseStamped()
+         pose_msg.header.stamp = self.get_clock().now().to_msg()
+-        pose_msg.header.frame_id = "map"
++        pose_msg.header.frame_id = "odom"
+         pose_msg.pose.position.x = base_pos[0].item()
+         pose_msg.pose.position.y = base_pos[1].item()
+         pose_msg.pose.position.z = base_pos[2].item()
+@@ -317,6 +391,33 @@ class RobotDataManager(Node):
+                 for i in range(self.num_envs):
+                     self.publish_lidar_data(self.lidar_annotators[i].get_data()["data"].reshape(-1, 3), i)
+ 
++    def pub_ros2_data_timer(self):
++        """Direct timer-driven publisher: always publish odom/pose at timer rate."""
++        robot_data = self.env.unwrapped.scene["unitree_go2"].data
++        for i in range(self.num_envs):
++            try:
++                self.publish_odom(robot_data.root_state_w[i, :3],
++                                  robot_data.root_state_w[i, 3:7],
++                                  robot_data.root_lin_vel_b[i],
++                                  robot_data.root_ang_vel_b[i],
++                                  i)
++                self.publish_pose(robot_data.root_state_w[i, :3],
++                                  robot_data.root_state_w[i, 3:7], i)
++            except Exception:
++                # in case data is not yet initialized
++                continue
++
++        if self.cfg.sensor.enable_lidar:
++            now = time.time()
++            if now - self.lidar_pub_time >= 1.0 / self.lidar_freq:
++                self.lidar_pub_time = now
++                for i in range(self.num_envs):
++                    try:
++                        points = self.lidar_annotators[i].get_data()["data"].reshape(-1, 3)
++                        self.publish_lidar_data(points, i)
++                    except Exception:
++                        continue
++
+     def cmd_vel_callback(self, msg, env_idx):
+         go2_ctrl.base_vel_cmd_input[env_idx][0] = msg.linear.x
+         go2_ctrl.base_vel_cmd_input[env_idx][1] = msg.linear.y
