@@ -1,0 +1,179 @@
+{
+  "motion_requested": true,
+  "command_topic": "/unitree_go2/cmd_vel",
+  "standing": {
+    "x": -0.0056130290031433105,
+    "y": -0.9983214735984802,
+    "z": 0.4172804057598114,
+    "yaw": -0.03932425160319236,
+    "tilt": 0.010984285959915402,
+    "speed": 0.0007657119623464678,
+    "yaw_rate": 0.00040587125113233924,
+    "stamp": 4.109999908
+  },
+  "forward_end": {
+    "x": 0.7630666494369507,
+    "y": -0.6663951277732849,
+    "z": 0.38157182931900024,
+    "yaw": 0.04460768603847333,
+    "tilt": 0.22896634559322762,
+    "speed": 0.2372244370873783,
+    "yaw_rate": 0.15862005949020386,
+    "stamp": 8.134999818
+  },
+  "forward_distance_m": 0.8372834329542377,
+  "turn_end": {
+    "x": 0.9023406505584717,
+    "y": -0.5708028078079224,
+    "z": 0.40737858414649963,
+    "yaw": 1.078561928836527,
+    "tilt": 0.11501236977895632,
+    "speed": 0.03347743211478114,
+    "yaw_rate": 0.1553039699792862,
+    "stamp": 11.15999975
+  },
+  "turn_angle_rad": 1.0339542427980535,
+  "stopped": {
+    "x": 0.874042809009552,
+    "y": -0.5753395557403564,
+    "z": 0.4136628806591034,
+    "yaw": 0.8793161732218804,
+    "tilt": 0.014456760446335372,
+    "speed": 0.0026519261798877846,
+    "yaw_rate": -0.0449230819940567,
+    "stamp": 15.18499966
+  },
+  "topics": {
+    "/tf_static": {
+      "count": 3,
+      "first_arrival": 1264.316596304,
+      "last_arrival": 1264.317429743,
+      "wall_rate_hz": 2399.6957186928726
+    },
+    "/unitree_go2/odom": {
+      "count": 610,
+      "first_arrival": 1276.364609082,
+      "last_arrival": 1336.174415023,
+      "frame": "odom",
+      "last_stamp": 15.259999658,
+      "child_frame": "unitree_go2/base_link",
+      "wall_rate_hz": 10.182276809270292
+    },
+    "/unitree_go2/pose": {
+      "count": 609,
+      "first_arrival": 1276.365094086,
+      "last_arrival": 1336.082499462,
+      "frame": "odom",
+      "last_stamp": 15.234999659,
+      "wall_rate_hz": 10.181286279466372
+    },
+    "/tf": {
+      "count": 609,
+      "first_arrival": 1276.365247,
+      "last_arrival": 1336.082658565,
+      "wall_rate_hz": 10.181285224297042
+    },
+    "/unitree_go2/lidar/point_cloud": {
+      "count": 604,
+      "first_arrival": 1276.366038171,
+      "last_arrival": 1336.085777485,
+      "frame": "unitree_go2/lidar_frame",
+      "last_stamp": 15.234999659,
+      "points": 62507,
+      "finite_points": 62507,
+      "xyz_min": [
+        -16.31180763244629,
+        -13.976999282836914,
+        -0.7951619625091553
+      ],
+      "xyz_max": [
+        19.543163299560547,
+        20.49036979675293,
+        5.416810035705566
+      ],
+      "wall_rate_hz": 10.097163968340324
+    },
+    "/clock": {
+      "count": 609,
+      "first_arrival": 1276.397061357,
+      "last_arrival": 1336.113106241,
+      "last_sim_time": 15.259999658,
+      "wall_rate_hz": 10.181518236531845
+    },
+    "/unitree_go2/front_cam/info": {
+      "count": 609,
+      "first_arrival": 1278.627747979,
+      "last_arrival": 1336.136731623,
+      "frame": "unitree_go2/front_cam",
+      "last_stamp": 15.259999658,
+      "width": 640,
+      "height": 480,
+      "focal_x": 458.1245542807029,
+      "focal_y": 458.1245542807029,
+      "wall_rate_hz": 10.572261262061689
+    },
+    "/unitree_go2/front_cam/color_image": {
+      "count": 601,
+      "first_arrival": 1279.005827234,
+      "last_arrival": 1336.138835589,
+      "frame": "unitree_go2/front_cam",
+      "last_stamp": 15.259999658,
+      "width": 640,
+      "height": 480,
+      "encoding": "rgb8",
+      "bytes": 921600,
+      "pixel_std": 52.382809977463786,
+      "wall_rate_hz": 10.50181002673369
+    },
+    "/unitree_go2/front_cam/depth_image": {
+      "count": 604,
+      "first_arrival": 1279.0935319,
+      "last_arrival": 1336.13836917,
+      "frame": "unitree_go2/front_cam",
+      "last_stamp": 15.259999658,
+      "width": 640,
+      "height": 480,
+      "encoding": "32FC1",
+      "bytes": 1228800,
+      "valid_depth_pixels": 307200,
+      "depth_range_m": [
+        1.0405797958374023,
+        9.07539176940918
+      ],
+      "wall_rate_hz": 10.570632310614352
+    }
+  },
+  "tf_edges": [
+    [
+      "map",
+      "odom"
+    ],
+    [
+      "odom",
+      "unitree_go2/base_link"
+    ],
+    [
+      "unitree_go2/base_link",
+      "unitree_go2/front_cam"
+    ],
+    [
+      "unitree_go2/base_link",
+      "unitree_go2/lidar_frame"
+    ]
+  ],
+  "checks": {
+    "no_runtime_error": true,
+    "rgb_nonblank": true,
+    "depth_valid": true,
+    "pointcloud_valid": true,
+    "camera_info_matches_image_frame": true,
+    "camera_intrinsics_valid": true,
+    "tf_tree_present": true,
+    "sim_time_advances": true,
+    "timestamps_monotonic": true,
+    "forward_motion": true,
+    "turning_motion": true,
+    "final_speed_low": true
+  },
+  "passed": true
+}
