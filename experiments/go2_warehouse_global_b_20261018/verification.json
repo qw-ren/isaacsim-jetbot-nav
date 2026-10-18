@@ -1,0 +1,36 @@
+{
+  "time": "2026-10-18T21:18:08.422121+08:00",
+  "baseline": {
+    "returncode": 0,
+    "stdout": "isaac_go2_ros2.py: OK\ngo2/go2_env.py: OK\ngo2/go2_ctrl.py: OK\ngo2/go2_ctrl_cfg.py: OK\ngo2/go2_sensors.py: OK\nenv/sim_env.py: OK\nenv/terrain.py: OK\nenv/terrain_cfg.py: OK\nros2/go2_ros2_bridge.py: OK\ncfg/sim.yaml: OK\nckpts/unitree_go2/flat_model_6800.pt: OK\nckpts/unitree_go2/rough_model_7850.pt: OK\n",
+    "stderr": ""
+  },
+  "stable_work": {
+    "returncode": 0,
+    "stdout": "isaac_go2_ros2.py: OK\nros2/go2_ros2_bridge.py: OK\ncloud/warehouse_stage1/start_warehouse.sh: OK\n",
+    "stderr": ""
+  },
+  "source": {
+    "returncode": 0,
+    "stdout": "BRANCH_OBSTACLE_README.md: OK\nFIXED_OBSTACLE_README.md: OK\nMOTION_README.md: OK\nOBSTACLE_README.md: OK\nOPEN_OBSTACLE_README.md: OK\nPLAN_README.md: OK\nREADME.md: OK\nactivate_lifecycle_manager.py: OK\naudit_motion_runtime.py: OK\nbranch_obstacle_fixture.py: OK\nbuild_dev_map.py: OK\ncapture_cloud.py: OK\ncapture_guard_fault.py: OK\ncapture_guard_fault_stamped.py: OK\ncapture_slam_pose.py: OK\ncheck_branch_navigation.py: OK\ncheck_branch_plan.py: OK\ncheck_localization.py: OK\ncheck_localized_navigation.py: OK\ncheck_motion.py: OK\ncheck_navigation.py: OK\ncheck_navigation_turn.py: OK\ncheck_obstacle_costmap.py: OK\ncheck_obstacle_navigation.py: OK\ncheck_open_mission.py: OK\ncheck_open_obstacle_navigation.py: OK\ncheck_plan.py: OK\ncheck_scan.py: OK\ncheck_scan_motion.py: OK\ncheck_slam_inputs.py: OK\ncheck_stance.py: OK\ncollect_branch_lower.py: OK\ncollect_branch_prior.py: OK\ncollect_slam_corridor.py: OK\ninspect_lidar_geometry.py: OK\nlidar_temporal_diagnostics.py: OK\nm3_obstacle_fixture.py: OK\nmake_localization_params.py: OK\nmanage_localization.sh: OK\nmanage_localized_plan.sh: OK\nmanage_navigation.sh: OK\nmanage_obstacle_plan.sh: OK\nmanage_plan.sh: OK\nmanage_scan.sh: OK\nmanage_slam.sh: OK\nmanage_velocity_guard.sh: OK\nmotion_base.sha256: OK\nmotion_runtime.patch: OK\nnav_env.sh: OK\nnav_motion.yaml: OK\nnav_obstacle_motion.yaml: OK\nnav_obstacle_motion_arrival.yaml: OK\nnav_obstacle_motion_safe.yaml: OK\nnav_obstacle_motion_track.yaml: OK\nnav_obstacle_plan_safe.yaml: OK\nnav_obstacles.yaml: OK\nnav_plan.yaml: OK\nnav_turn.yaml: OK\nnav_turn_short.yaml: OK\nnavigate_through_poses.xml: OK\nnavigate_to_pose.xml: OK\nnavigate_valid_path.xml: OK\nopen_obstacle_fixture.py: OK\nplan_view.rviz: OK\nplot_plan_check.py: OK\nplot_turn_checks.py: OK\nprepare_amcl_map.py: OK\nprepare_branch_copy.py: OK\nprepare_bt_runtime.sh: OK\nprepare_flat_copy.py: OK\nprepare_lidar_diagnostic_copy.py: OK\nprepare_lidar_full_copy.py: OK\nprepare_lidar_unfiltered_copy.py: OK\nprepare_m3_unfiltered.py: OK\nprepare_motion_copy.py: OK\nprepare_nav_runtime.sh: OK\nprepare_obstacle_copy.py: OK\nprepare_open_copy.py: OK\nprepare_rviz_runtime.sh: OK\nprepare_slam_runtime.sh: OK\nprepare_stance_copy.py: OK\nprepare_world_lidar_copy.py: OK\nprepare_world_stance_copy.py: OK\nrefine_guard_height.py: OK\nscan_converter.yaml: OK\nscan_converter_50.yaml: OK\nscan_ground_frame.py: OK\nscan_view.rviz: OK\nseed_amcl_pose.py: OK\nslam_env.sh: OK\nslam_mapping.yaml: OK\nstance_adapter.py: OK\nstart_localization.sh: OK\nstart_localized_plan.sh: OK\nstart_navigation.sh: OK\nstart_obstacle_plan.sh: OK\nstart_plan.sh: OK\nstart_plan_rviz.sh: OK\nstart_scan.sh: OK\nstart_scan_rviz.sh: OK\nstart_slam.sh: OK\nstart_velocity_guard.sh: OK\nvelocity_guard.py: OK\nwait_live_sim.py: OK\nwait_localization_services.py: OK\nwait_navigation_ready.py: OK\nworld_lidar_adapter.py: OK\n",
+    "stderr": ""
+  },
+  "tmux": {
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "no server running on /tmp/tmux-1000/default\n"
+  },
+  "boot_time": {
+    "returncode": 0,
+    "stdout": "2026-10-18 19:32:10\n",
+    "stderr": ""
+  },
+  "disk": {
+    "returncode": 0,
+    "stdout": "Filesystem      Size  Used Avail Use% Mounted on\n/dev/nvme1n1p1  197G  140G   48G  75% /home\n",
+    "stderr": ""
+  },
+  "power_operation": false,
+  "remaining_sim_navigation_processes": [],
+  "passed": true
+}

@@ -1,0 +1,62 @@
+{
+  "map": "/home/admin/go2-warehouse/nav_stage2/maps/slam_m2_20261015_v1/map_nav.yaml",
+  "mode": "NavigateToPose_with_saved_SLAM_map_and_AMCL",
+  "start": {
+    "wall": 6788.041978527,
+    "stamp": 13.669999694,
+    "x": 1.992664499346288,
+    "y": -1.044792862709322,
+    "yaw": -0.004385012487814568
+  },
+  "target": {
+    "x": 3.9926644993462883,
+    "y": -1.044792862709322,
+    "yaw": 0.0
+  },
+  "start_wall": 6788.042052508,
+  "start_sim": 13.669999694,
+  "action_status": 4,
+  "action_end_pose": {
+    "wall": 6802.614471791,
+    "stamp": 16.889999622,
+    "x": 3.8010455641638035,
+    "y": -1.0485249455803052,
+    "yaw": 0.01769802261954099
+  },
+  "final_map_pose": {
+    "wall": 6825.642817471,
+    "stamp": 21.88999951,
+    "x": 3.8654228379013404,
+    "y": -1.0467006917092156,
+    "yaw": -0.10675194844367866
+  },
+  "goal_error_m": 0.12725596339175452,
+  "goal_yaw_error_rad": 0.10675194844367866,
+  "cruise_mps": 0.6944650655443018,
+  "cruise_samples": 88,
+  "min_center_aabb_clearance_m": 1.7217392550479325,
+  "map_publishers": [
+    "map_server"
+  ],
+  "tf_publishers": [
+    "robot_data_manager",
+    "go2_scan_ground_frame",
+    "amcl"
+  ],
+  "amcl_pose_updates_during_action": 17,
+  "checks": {
+    "amcl_updates_during_navigation": true,
+    "no_error": true,
+    "action_succeeded": true,
+    "localized_goal_error_le_025": true,
+    "localized_yaw_error_le_030": true,
+    "cruise_ge_06": true,
+    "commands_bounded": true,
+    "sustained_stop": true,
+    "posture": true,
+    "geometry_clearance": true,
+    "saved_map_unchanged": true,
+    "saved_map_amcl_sources": true
+  },
+  "passed": true
+}

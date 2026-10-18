@@ -1,0 +1,86 @@
+{
+  "map": "/home/admin/go2-warehouse/nav_stage2/maps/slam_m2_20261015_v1/map_nav.yaml",
+  "mode": "A_fixed_new_obstacle_NavigateToPose_with_AMCL",
+  "fixture": {
+    "id": "open_A_01",
+    "enabled": true,
+    "center": [
+      4.3,
+      -1.3,
+      0.5
+    ],
+    "size": [
+      0.6,
+      0.6,
+      1.0
+    ]
+  },
+  "initial_box_lethal_cells": 13,
+  "start": {
+    "wall": 4356.105366093,
+    "stamp": 40.449999095,
+    "x": 1.0274490222195312,
+    "y": -1.3468016170894228,
+    "yaw": -8.516974044264474e-05
+  },
+  "target": {
+    "x": 6.527449022219531,
+    "y": -1.3468016170894228,
+    "yaw": 0.0
+  },
+  "start_wall": 4356.105442754,
+  "start_sim": 40.469999095,
+  "action_status": 4,
+  "action_end_pose": {
+    "wall": 4420.816990567,
+    "stamp": 55.90999875,
+    "x": 6.3733443337713656,
+    "y": -1.5378063537415778,
+    "yaw": 0.49984652523914186
+  },
+  "final_map_pose": {
+    "wall": 4441.692771825,
+    "stamp": 60.909998638,
+    "x": 6.379380886155866,
+    "y": -1.5619003029948249,
+    "yaw": 0.6398468636565523
+  },
+  "goal_error_m": 0.26113524770815355,
+  "goal_yaw_error_rad": 0.6398468636565523,
+  "cruise_mps": 0.7024128820563926,
+  "cruise_samples": 366,
+  "min_center_aabb_clearance_m": 0.8308344494912854,
+  "map_publishers": [
+    "map_server"
+  ],
+  "tf_publishers": [
+    "robot_data_manager",
+    "go2_scan_ground_frame",
+    "amcl"
+  ],
+  "amcl_pose_updates_during_action": 56,
+  "checks": {
+    "amcl_updates_during_navigation": true,
+    "no_error": true,
+    "action_succeeded": true,
+    "localized_goal_error_le_025": false,
+    "localized_yaw_error_le_030": false,
+    "cruise_ge_06": true,
+    "commands_bounded": true,
+    "posture": true,
+    "geometry_clearance": true,
+    "saved_map_unchanged": true,
+    "saved_map_amcl_sources": true,
+    "global_plan_observed": true,
+    "new_obstacle_clearance": true,
+    "passed_obstacle": true,
+    "guard_no_latched_fault": true
+  },
+  "obstacle_clearance_m": 0.8308344494912853,
+  "global_plans_seen": 1,
+  "lateral_excursion_m": 1.2000213861465454,
+  "informational_checks": {
+    "sustained_stop": true
+  },
+  "passed": false
+}

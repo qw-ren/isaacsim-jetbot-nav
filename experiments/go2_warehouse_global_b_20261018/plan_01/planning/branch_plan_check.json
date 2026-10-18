@@ -1,0 +1,123 @@
+{
+  "mode": "stationary_B_two_branches_prior_divider_and_new_barrier",
+  "velocity_commands_sent": false,
+  "fixture": {
+    "divider": {
+      "center": [
+        4.3,
+        -1.3,
+        0.5
+      ],
+      "size": [
+        2.0,
+        0.4,
+        1.0
+      ]
+    },
+    "barrier": {
+      "center": [
+        4.3,
+        1.4,
+        0.5
+      ],
+      "size": [
+        0.6,
+        5.0,
+        1.0
+      ]
+    }
+  },
+  "map_file_hashes_before": {
+    "/home/admin/go2-warehouse/nav_stage2/maps/slam_b_prior_20261018_v2/map_nav.yaml": "0a05b15eb127b80ba99fae142d3ca9376a7dfeb904bc34cf298f076667e51e62",
+    "/home/admin/go2-warehouse/nav_stage2/maps/slam_b_prior_20261018_v2/map.pgm": "d1b0583fac30d5d5e15b6674435560593762c1b176dea05580ced82819709f38"
+  },
+  "before_fixture": {
+    "id": "planning_before",
+    "enabled": false,
+    "center": [
+      4.3,
+      1.4,
+      0.5
+    ],
+    "size": [
+      0.6,
+      5.0,
+      1.0
+    ],
+    "prior_divider": {
+      "center": [
+        4.3,
+        -1.3,
+        0.5
+      ],
+      "size": [
+        2.0,
+        0.4,
+        1.0
+      ]
+    }
+  },
+  "before": {
+    "status": 4,
+    "path_points": 221,
+    "sim": 16.389999633,
+    "divider_clearance_m": 1.0599029263925253,
+    "barrier_clearance_m": 0.0,
+    "middle_y_min": -0.023025030745232447,
+    "middle_y_max": -0.004028709573157846,
+    "barrier_region_lethal_cells": 32,
+    "length_m": 5.567073120643719
+  },
+  "enabled_fixture": {
+    "id": "planning_enabled",
+    "enabled": true,
+    "center": [
+      4.3,
+      1.4,
+      0.5
+    ],
+    "size": [
+      0.6,
+      5.0,
+      1.0
+    ],
+    "prior_divider": {
+      "center": [
+        4.3,
+        -1.3,
+        0.5
+      ],
+      "size": [
+        2.0,
+        0.4,
+        1.0
+      ]
+    }
+  },
+  "blocked": {
+    "status": 4,
+    "path_points": 365,
+    "sim": 20.409999543,
+    "divider_clearance_m": 1.0366605749784599,
+    "barrier_clearance_m": 1.5366031088354275,
+    "middle_y_min": -2.6970705673650412,
+    "middle_y_max": -2.6378489361784307,
+    "barrier_region_lethal_cells": 114,
+    "length_m": 9.130529129220736
+  },
+  "max_displacement_m": 0.019569439867945546,
+  "checks": {
+    "both_native_plans_succeed": true,
+    "prior_route_uses_upper_branch": true,
+    "prior_route_intersects_future_barrier": true,
+    "new_physical_barrier_marked": true,
+    "blocked_route_uses_lower_branch": true,
+    "new_path_clears_divider": true,
+    "new_path_clears_barrier": true,
+    "map_files_unchanged": true,
+    "published_map_unchanged": true,
+    "no_commanded_motion": true,
+    "one_map_source": true
+  },
+  "passed": true
+}

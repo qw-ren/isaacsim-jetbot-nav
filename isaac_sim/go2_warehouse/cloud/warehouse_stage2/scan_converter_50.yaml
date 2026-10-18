@@ -1,0 +1,21 @@
+go2_cloud_to_scan:
+  ros__parameters:
+    use_sim_time: true
+    target_frame: unitree_go2/scan_ground
+    transform_tolerance: 0.2
+    queue_size: 20
+    # In the ground-projected frame z is height above this warehouse's z=0 floor.
+    min_height: 0.10
+    max_height: 1.20
+    angle_min: -3.141592653589793
+    angle_max: 3.141592653589793
+    angle_increment: 0.017453292519943295
+    scan_time: 0.020
+    range_min: 0.30
+    range_max: 12.0
+    use_inf: true
+
+go2_scan_ground_frame:
+  ros__parameters:
+    use_sim_time: true
+    ground_z: 0.0

@@ -1,0 +1,14 @@
+{
+  "source_sha256": "0a65d9f996f9302239edee8afa0b0ddb9c43b85c196840231e5d73b9febf9a88",
+  "asset_sha256": "010062d67621d04aab6272232bc569bef75d071dc406ca216227ee32455c1c94",
+  "height_band": [
+    0.05,
+    0.85
+  ],
+  "original_boxes": 1077,
+  "refined_boxes": 1077,
+  "changed_xy_or_removed": 80,
+  "independent_edge_samples_retained": 47233646,
+  "non_mesh_or_convex_collision_fallback": "unchanged original AABB",
+  "safety_threshold_changed": false
+}

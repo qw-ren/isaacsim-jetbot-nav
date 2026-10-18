@@ -1,0 +1,120 @@
+{
+  "states": {
+    "map_server": {
+      "id": 3,
+      "label": "active"
+    },
+    "planner_server": {
+      "id": 3,
+      "label": "active"
+    },
+    "controller_server": {
+      "id": 3,
+      "label": "active"
+    },
+    "bt_navigator": {
+      "id": 3,
+      "label": "active"
+    },
+    "local_costmap/local_costmap": {
+      "id": 3,
+      "label": "active"
+    },
+    "global_costmap/global_costmap": {
+      "id": 3,
+      "label": "active"
+    }
+  },
+  "parameters": {
+    "map_server": {
+      "use_sim_time": true
+    },
+    "planner_server": {
+      "use_sim_time": true
+    },
+    "controller_server": {
+      "use_sim_time": true,
+      "odom_topic": "/unitree_go2/odom",
+      "FollowPath.min_vel_x": 0.0,
+      "FollowPath.max_vel_x": 0.8,
+      "FollowPath.min_speed_xy": 0.0,
+      "controller_frequency": 20.0,
+      "goal_checker.plugin": "nav2_controller::StoppedGoalChecker",
+      "goal_checker.xy_goal_tolerance": 0.15,
+      "goal_checker.yaw_goal_tolerance": 0.1,
+      "goal_checker.trans_stopped_velocity": 0.05,
+      "goal_checker.rot_stopped_velocity": 0.05,
+      "FollowPath.RotateToGoal.lookahead_time": 0.3,
+      "FollowPath.sim_time": 0.8,
+      "FollowPath.xy_goal_tolerance": 0.15
+    },
+    "bt_navigator": {
+      "use_sim_time": true
+    },
+    "local_costmap/local_costmap": {
+      "use_sim_time": true
+    },
+    "global_costmap/global_costmap": {
+      "use_sim_time": true
+    }
+  },
+  "publishers": {
+    "/tf": [
+      "/go2_scan_ground_frame",
+      "/robot_data_manager"
+    ],
+    "/scan": [
+      "/go2_cloud_to_scan"
+    ],
+    "/nav_m1/cmd_vel": [
+      "/controller_server"
+    ],
+    "/unitree_go2/cmd_vel": [
+      "/go2_sim_velocity_guard"
+    ],
+    "/cmd_vel": [],
+    "/nav_m1/runtime_cmd": [
+      "/robot_data_manager"
+    ]
+  },
+  "tf_edges_observed": {
+    "odom -> unitree_go2/base_link": 74,
+    "odom -> unitree_go2/scan_ground": 74
+  },
+  "guard_last": {
+    "wall": 5657.488842919,
+    "armed": false,
+    "reason": "DISARMED",
+    "output": [
+      0.0,
+      0.0
+    ],
+    "predicted_center_clearance_m": null,
+    "pose": [
+      3.7784767150878906,
+      1.143458366394043,
+      0.4152073860168457,
+      0.5491879557868093,
+      0.10283799864270872
+    ],
+    "scan_stamp": 23.169999482,
+    "odom_stamp": 23.169999482,
+    "sim": 23.189999481,
+    "front_min_range_m": null,
+    "front_angle_rad": null,
+    "input_command": [
+      0.0,
+      0.0
+    ]
+  },
+  "checks": {
+    "all_active": true,
+    "all_sim_time": true,
+    "single_velocity_output": true,
+    "single_controller_input": true,
+    "no_alias_publisher": true,
+    "disarmed_zero": true,
+    "two_expected_tf_publishers": true
+  },
+  "passed": true
+}

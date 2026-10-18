@@ -1,0 +1,79 @@
+{
+  "turn_back_rough50_tight": {
+    "window_sim_s": 7.479999832000004,
+    "runtime_vx_mean": 0.0,
+    "runtime_wz_mean": 0.05999999865889549,
+    "actual_vx_mean": 0.0002887572795152664,
+    "actual_abs_wz_mean": 0.0006474741444302102,
+    "travel_distance_m": 6.114079904005995e-05,
+    "yaw_change_rad": -0.0005195848344541343
+  },
+  "final015_diagonal": {
+    "window_sim_s": 7.479999832000001,
+    "runtime_vx_mean": 0.072727270424366,
+    "runtime_wz_mean": 0.13058823434745565,
+    "actual_vx_mean": 4.6356261508966176e-05,
+    "actual_abs_wz_mean": 0.011956499037953714,
+    "travel_distance_m": 2.916178184852217e-05,
+    "yaw_change_rad": -0.0021001454204418457
+  },
+  "short_stop": {
+    "observed_sim_s": 5.019999887999999,
+    "post_action_displacement_m": 0.20762835580099728,
+    "action_goal_error_m": 0.09955610224581561,
+    "final_goal_error_m": 0.2645015762197245,
+    "runtime_after_action_0p2s_all_zero": true
+  },
+  "height_recheck": {
+    "short_diagonal_01": {
+      "min_height_m": 0.3541167080402374,
+      "max_height_m": 0.4526941776275635,
+      "height_and_tilt_bounded": true
+    },
+    "turn_back_rough50_tight": {
+      "min_height_m": 0.3664083778858185,
+      "max_height_m": 0.420391321182251,
+      "height_and_tilt_bounded": true
+    },
+    "turn_back_stopped_v2": {
+      "min_height_m": 0.3768519163131714,
+      "max_height_m": 0.41650110483169556,
+      "height_and_tilt_bounded": true
+    },
+    "turn_back_02": {
+      "min_height_m": 0.37477195262908936,
+      "max_height_m": 0.41776198148727417,
+      "height_and_tilt_bounded": true
+    },
+    "diagonal_stopped_v2": {
+      "min_height_m": 0.3290860652923584,
+      "max_height_m": 0.45243287086486816,
+      "height_and_tilt_bounded": true
+    },
+    "final015_diagonal": {
+      "min_height_m": 0.34804174304008484,
+      "max_height_m": 0.4526941776275635,
+      "height_and_tilt_bounded": true
+    },
+    "diagonal_01": {
+      "min_height_m": 0.3290860652923584,
+      "max_height_m": 0.45243287086486816,
+      "height_and_tilt_bounded": true
+    },
+    "diagonal_rough50": {
+      "min_height_m": 0.34804174304008484,
+      "max_height_m": 0.4526941776275635,
+      "height_and_tilt_bounded": true
+    },
+    "flat_speed_0p8": {
+      "min_height_m": 0.19463470578193665,
+      "max_height_m": 0.44605782628059387,
+      "height_and_tilt_bounded": false
+    },
+    "final_diagonal_01": {
+      "min_height_m": 0.34804174304008484,
+      "max_height_m": 0.4526941776275635,
+      "height_and_tilt_bounded": true
+    }
+  }
+}

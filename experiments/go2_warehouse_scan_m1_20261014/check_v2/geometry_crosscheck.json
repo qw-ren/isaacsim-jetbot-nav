@@ -1,0 +1,100 @@
+{
+  "low_points": 5942,
+  "low_points_near_rack_frame_aabbs": 1011,
+  "aabb_margin_m": 0.03,
+  "matching_rack_frame_aabbs": [
+    {
+      "path": "/Root/Shelf_1/SM_RackFrame_161/SM_RackFrame_03/Section1",
+      "low_points_near_aabb": 373
+    },
+    {
+      "path": "/Root/Shelf_1/SM_RackFrame_159/SM_RackFrame_03/Section1",
+      "low_points_near_aabb": 366
+    },
+    {
+      "path": "/Root/Shelf_1/SM_RackFrame_159/SM_RackFrame_03/Section0",
+      "low_points_near_aabb": 186
+    },
+    {
+      "path": "/Root/Shelf_1/SM_RackFrame_161/SM_RackFrame_03/Section0",
+      "low_points_near_aabb": 185
+    },
+    {
+      "path": "/Root/Shelf_1/SM_RackFrame_167/SM_RackFrame_03/Section1",
+      "low_points_near_aabb": 74
+    },
+    {
+      "path": "/Root/Shelf_1/SM_RackFrame_163/SM_RackFrame_03/Section1",
+      "low_points_near_aabb": 39
+    },
+    {
+      "path": "/Root/Shelf_2/SM_RackFrame_161/SM_RackFrame_03/Section1",
+      "low_points_near_aabb": 35
+    },
+    {
+      "path": "/Root/Shelf_2/SM_RackFrame_159/SM_RackFrame_03/Section1",
+      "low_points_near_aabb": 34
+    },
+    {
+      "path": "/Root/Shelf_2/SM_RackFrame_163/SM_RackFrame_03/Section1",
+      "low_points_near_aabb": 26
+    },
+    {
+      "path": "/Root/Shelf_1/SM_RackFrame_163/SM_RackFrame_03/Section0",
+      "low_points_near_aabb": 23
+    },
+    {
+      "path": "/Root/Shelf_2/SM_RackFrame_167/SM_RackFrame_03/Section1",
+      "low_points_near_aabb": 22
+    },
+    {
+      "path": "/Root/Shelf_2/SM_RackFrame_159/SM_RackFrame_03/Section0",
+      "low_points_near_aabb": 21
+    },
+    {
+      "path": "/Root/Shelf_0/SM_RackFrame_159/SM_RackFrame_03/Section1",
+      "low_points_near_aabb": 20
+    },
+    {
+      "path": "/Root/Shelf_2/SM_RackFrame_163/SM_RackFrame_03/Section0",
+      "low_points_near_aabb": 18
+    },
+    {
+      "path": "/Root/Shelf_2/SM_RackFrame_161/SM_RackFrame_03/Section0",
+      "low_points_near_aabb": 15
+    },
+    {
+      "path": "/Root/Shelf_0/SM_RackFrame_159/SM_RackFrame_03/Section0",
+      "low_points_near_aabb": 15
+    },
+    {
+      "path": "/Root/Shelf_0/SM_RackFrame_161/SM_RackFrame_03/Section1",
+      "low_points_near_aabb": 13
+    },
+    {
+      "path": "/Root/Shelf_1/SM_RackFrame_167/SM_RackFrame_03/Section0",
+      "low_points_near_aabb": 11
+    },
+    {
+      "path": "/Root/Shelf_0/SM_RackFrame_161/SM_RackFrame_03/Section0",
+      "low_points_near_aabb": 7
+    },
+    {
+      "path": "/Root/Shelf_0/SM_RackFrame_163/SM_RackFrame_03/Section1",
+      "low_points_near_aabb": 7
+    },
+    {
+      "path": "/Root/Shelf_2/SM_RackFrame_167/SM_RackFrame_03/Section0",
+      "low_points_near_aabb": 5
+    },
+    {
+      "path": "/Root/Shelf_0/SM_RackFrame_163/SM_RackFrame_03/Section0",
+      "low_points_near_aabb": 5
+    },
+    {
+      "path": "/Root/Shelf_1/SM_RackFrame_165/SM_RackFrame_03/Section1",
+      "low_points_near_aabb": 2
+    }
+  ],
+  "limitations": "Proximity to offline collision AABBs is supporting evidence, not mesh-surface or collision certification"
+}

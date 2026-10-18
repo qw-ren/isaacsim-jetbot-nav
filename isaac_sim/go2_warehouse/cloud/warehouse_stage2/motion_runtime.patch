@@ -1,0 +1,102 @@
+--- a/isaac_go2_ros2.py
++++ b/isaac_go2_ros2.py
+@@ -80,10 +80,7 @@
+     cameras = sm.add_camera(cfg.freq) if cfg.sensor.enable_camera else []
+ 
+     # Keyboard control
+-    system_input = carb.input.acquire_input_interface()
+-    app_window = omni.appwindow.get_default_app_window()
+-    if app_window is not None and not args_cli.headless:
+-        system_input.subscribe_to_keyboard_events(app_window.get_keyboard(), go2_ctrl.sub_keyboard_event)
++    # Motion-validation copy: keyboard bypass disabled; guarded ROS input only.
+     
+     # ROS2 Bridge
+     rclpy.init()
+@@ -130,6 +127,7 @@
+             break
+         start_time = time.time()
+         with torch.inference_mode():            
++            dm.enforce_command_timeout()
+             # control joints
+             actions = policy(obs)
+ 
+--- a/ros2/go2_ros2_bridge.py
++++ b/ros2/go2_ros2_bridge.py
+@@ -2,7 +2,7 @@
+ from rclpy.node import Node
+ from rclpy.executors import SingleThreadedExecutor
+ from nav_msgs.msg import Odometry
+-from geometry_msgs.msg import PoseStamped, Twist, TransformStamped
++from geometry_msgs.msg import PoseStamped, Twist, TwistStamped, TransformStamped
+ from sensor_msgs.msg import PointCloud2, PointField, Image
+ from sensor_msgs_py import point_cloud2
+ from tf2_ros import TransformBroadcaster
+@@ -34,6 +34,9 @@
+ 
+         self.env = env
+         self.num_envs = env.unwrapped.scene.num_envs
++        self._command_lock = threading.Lock()
++        self._last_cmd_wall = [0.0] * self.num_envs
++        self._runtime_cmd_pub = self.create_publisher(TwistStamped, "/nav_m1/runtime_cmd", 10)
+         self.lidar_annotators = lidar_annotators
+         self.cameras = cameras
+         self.points = []
+@@ -71,10 +74,7 @@
+                     self.create_subscription(Twist, "unitree_go2/cmd_vel", 
+                     lambda msg: self.cmd_vel_callback(msg, 0), 10)
+                 )
+-                self.cmd_vel_sub.append(
+-                    self.create_subscription(Twist, "/cmd_vel",
+-                    lambda msg: self.cmd_vel_callback(msg, 0), 10)
+-                )
++                # /cmd_vel alias disabled in the guarded motion copy.
+                 self.semantic_seg_img_sub.append(
+                     self.create_subscription(Image, "/unitree_go2/front_cam/semantic_segmentation_image", 
+                     lambda msg: self.semantic_segmentation_callback(msg, 0), 10)
+@@ -424,9 +424,32 @@
+                         continue
+ 
+     def cmd_vel_callback(self, msg, env_idx):
+-        go2_ctrl.base_vel_cmd_input[env_idx][0] = msg.linear.x
+-        go2_ctrl.base_vel_cmd_input[env_idx][1] = msg.linear.y
+-        go2_ctrl.base_vel_cmd_input[env_idx][2] = msg.angular.z
++        values = np.array([msg.linear.x, msg.linear.y, msg.angular.z], dtype=float)
++        with self._command_lock:
++            if not np.isfinite(values).all():
++                go2_ctrl.base_vel_cmd_input[env_idx].zero_()
++                self._last_cmd_wall[env_idx] = 0.0
++                return
++            go2_ctrl.base_vel_cmd_input[env_idx][0] = float(np.clip(values[0], 0.0, 0.8))
++            go2_ctrl.base_vel_cmd_input[env_idx][1] = 0.0
++            go2_ctrl.base_vel_cmd_input[env_idx][2] = float(np.clip(values[2], -0.6, 0.6))
++            self._last_cmd_wall[env_idx] = time.monotonic()
++
++    def enforce_command_timeout(self):
++        # Executed by the simulator main loop, independent of the ROS executor/gateway.
++        now = time.monotonic()
++        with self._command_lock:
++            for i in range(self.num_envs):
++                if now - self._last_cmd_wall[i] > 0.5:
++                    go2_ctrl.base_vel_cmd_input[i].zero_()
++            values = go2_ctrl.base_vel_cmd_input[0].clone()
++        message = TwistStamped()
++        message.header.stamp = self.get_clock().now().to_msg()
++        message.header.frame_id = "unitree_go2/base_link"
++        message.twist.linear.x = float(values[0])
++        message.twist.linear.y = float(values[1])
++        message.twist.angular.z = float(values[2])
++        self._runtime_cmd_pub.publish(message)
+     
+     def semantic_segmentation_callback(self, img, env_idx):
+         from cv_bridge import CvBridge
+--- a/cloud/warehouse_stage1/start_warehouse.sh
++++ b/cloud/warehouse_stage1/start_warehouse.sh
+@@ -1,7 +1,7 @@
+ #!/usr/bin/env bash
+ set -eo pipefail
+ source "$(dirname "${BASH_SOURCE[0]}")/cloud_env.sh"
+-cd "${GO2_CLOUD_ROOT}/work"
++cd "$(dirname "${BASH_SOURCE[0]}")/../.."
+ go2_kit_args="--/persistent/isaac/asset_root/default=${GO2_ASSET_ROOT} --/persistent/isaac/asset_root/cloud=${GO2_ASSET_ROOT}"
+ exec "${GO2_ISAAC_ROOT}/python.sh" isaac_go2_ros2.py \
+     --enable_cameras --spawn-y -1.0 --spawn-yaw 0.0 --kit_args "$go2_kit_args" \

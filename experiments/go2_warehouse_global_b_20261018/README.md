@@ -1,0 +1,4 @@
+精选证据；完整333项清单对应本地data/cloud_warehouse/m4_global_b_20261018，并非本精选目录的文件清单。
+实际下侧行走17项通过，未验证运动中注入/独立冷启动。本目录包括两次规划NPZ、实际遥测、地图和analyze_branch.py，可从本目录重绘包含实际轨迹的branch_paths.png。完整SLAM序列化图、日志和其余源码在本地完整归档。
+
+实际遥测在精选目录使用telemetry.json.gz无损压缩；解压字节SHA与完整云清单中的原始telemetry.json一致。分析脚本兼容原JSON和gzip，不重新改写原验收结果。

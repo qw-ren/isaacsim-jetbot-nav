@@ -39,4 +39,4 @@ assets/         必要的小型资源与资源下载说明
 
 [运行源码与说明](isaac_sim/go2_warehouse/README.md) · [阶段一验收](docs/GO2_WAREHOUSE_STAGE1.md) · [外部资源清单](assets/go2_warehouse_resources.md)
 
-2026-10-13 M0–M3通过；10月14日哈希复核与用户键盘验收完成。尚未声称仓储SLAM/Nav2或JetBot导航已实现。
+2026-10-13阶段一M0–M3通过。10月18日阶段二已完成真实SLAM先验、AMCL、受保护Nav2及A/B障碍任务验证；B实际巡航.714m/s。详见[阶段二进度与限制](docs/GO2_WAREHOUSE_STAGE2.md)。精准驻足、障碍移除残留、FAST-LIO2和JetBot仍未完成。

@@ -1,0 +1,93 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+    Property Tree Widget:
+      Expanded:
+        - /Scan1
+        - /Scan1/Status1
+      Splitter Ratio: 0.55
+  - Class: rviz_common/Views
+    Name: Views
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz_default_plugins/Grid
+      Name: Ground grid
+      Enabled: true
+      Cell Size: 1
+      Plane Cell Count: 40
+      Color: 90; 90; 90
+      Alpha: 0.4
+      Reference Frame: odom
+      Value: true
+    - Class: rviz_default_plugins/Axes
+      Name: Go2 base
+      Enabled: true
+      Reference Frame: unitree_go2/base_link
+      Length: 0.6
+      Radius: 0.04
+      Value: true
+    - Class: rviz_default_plugins/LaserScan
+      Name: Scan
+      Enabled: true
+      Topic:
+        Value: /scan
+        Reliability Policy: Best Effort
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Depth: 5
+        Filter size: 20
+      Color Transformer: FlatColor
+      Color: 70; 255; 120
+      Position Transformer: XYZ
+      Style: Flat Squares
+      Size (m): 0.08
+      Size (Pixels): 4
+      Alpha: 1
+      Decay Time: 0
+      Use Fixed Frame: true
+      Value: true
+    - Class: rviz_default_plugins/PointCloud2
+      Name: Raw 3D cloud (optional)
+      Enabled: false
+      Topic:
+        Value: /unitree_go2/lidar/point_cloud
+        Reliability Policy: Best Effort
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Depth: 2
+        Filter size: 10
+      Color Transformer: AxisColor
+      Axis: Z
+      Position Transformer: XYZ
+      Style: Points
+      Size (Pixels): 2
+      Alpha: 0.25
+      Use Fixed Frame: true
+      Value: false
+  Enabled: true
+  Global Options:
+    Fixed Frame: odom
+    Background Color: 28; 32; 38
+    Frame Rate: 20
+  Name: root
+  Tools:
+    - Class: rviz_default_plugins/Interact
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select
+  Views:
+    Current:
+      Class: rviz_default_plugins/TopDownOrtho
+      Name: Current View
+      Target Frame: odom
+      Angle: 0
+      Scale: 35
+      X: 1.5
+      Y: 2.1
+      Near Clip Distance: 0.01
+    Saved: ~
+Window Geometry:
+  Width: 1280
+  Height: 850
+  X: 30
+  Y: 30

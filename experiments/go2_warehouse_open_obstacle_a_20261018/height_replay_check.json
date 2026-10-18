@@ -1,0 +1,40 @@
+{
+  "replay": {
+    "navigation_01": {
+      "old_min_m": 0.502933504761061,
+      "height_clipped_min_m": 0.502933504761061,
+      "limiting_path": "new_test_box",
+      "would_latch": true
+    },
+    "navigation_02": {
+      "old_min_m": 0.5498681596966323,
+      "height_clipped_min_m": 0.5498681596966323,
+      "limiting_path": "new_test_box",
+      "would_latch": true
+    },
+    "navigation_03": {
+      "old_min_m": 0.540134131217922,
+      "height_clipped_min_m": 0.699015131336764,
+      "limiting_path": "new_test_box",
+      "would_latch": false
+    },
+    "navigation_05_start1": {
+      "old_min_m": 0.5384397166928148,
+      "height_clipped_min_m": 1.804039560145001,
+      "limiting_path": "new_test_box",
+      "would_latch": false
+    },
+    "navigation_06_start1": {
+      "old_min_m": 0.5456738775779648,
+      "height_clipped_min_m": 1.0171593019774086,
+      "limiting_path": "new_test_box",
+      "would_latch": false
+    }
+  },
+  "checks": {
+    "new_box_close_commands_still_blocked": true,
+    "old_high_mesh_false_blocks_removed": true
+  },
+  "passed": true,
+  "threshold_m": 0.55
+}

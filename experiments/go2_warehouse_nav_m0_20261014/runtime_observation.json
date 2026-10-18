@@ -1,0 +1,222 @@
+{
+  "audit_date": "2026-10-14",
+  "wall_observation_seconds": 12.087446537999767,
+  "mode": "read_only_no_velocity_publishers_created",
+  "counts": {
+    "tf_static": 3,
+    "odom": 132,
+    "tf": 131,
+    "clock": 131,
+    "cloud": 130
+  },
+  "timestamp_backwards": {},
+  "samples": {
+    "odom": {
+      "frame": "odom",
+      "child": "unitree_go2/base_link",
+      "position": [
+        1.4891972541809082,
+        2.130051612854004,
+        0.41600820422172546
+      ],
+      "orientation": [
+        -0.011048026382923126,
+        -0.010402909480035305,
+        0.9246096611022949,
+        0.38061362504959106
+      ],
+      "linear": [
+        -4.2501415009610355e-06,
+        -3.90359346056357e-05,
+        0.0005286296945996583
+      ],
+      "yaw_rate": 0.00045044583384878933,
+      "stamp": 245.909994503
+    },
+    "clock": {
+      "sim_time": 245.909994503
+    },
+    "cloud": {
+      "frame": "unitree_go2/lidar_frame",
+      "fields": [
+        "x",
+        "y",
+        "z"
+      ],
+      "points": 62771,
+      "finite_points": 62771,
+      "xyz_min": [
+        -15.978312492370605,
+        -16.98504066467285,
+        -0.9396243095397949
+      ],
+      "xyz_max": [
+        19.37801742553711,
+        18.470232009887695,
+        4.766252517700195
+      ],
+      "stamp": 242.659994576
+    }
+  },
+  "tf_edges": {
+    "unitree_go2/base_link -> unitree_go2/lidar_frame": {
+      "topic": "tf_static",
+      "translation": [
+        0.2,
+        0.0,
+        0.2
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    "unitree_go2/base_link -> unitree_go2/front_cam": {
+      "topic": "tf_static",
+      "translation": [
+        0.4,
+        0.0,
+        0.2
+      ],
+      "rotation": [
+        -0.5,
+        0.5,
+        -0.5,
+        0.5
+      ]
+    },
+    "map -> odom": {
+      "topic": "tf_static",
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    "odom -> unitree_go2/base_link": {
+      "topic": "tf",
+      "translation": [
+        1.4891972541809082,
+        2.130051612854004,
+        0.41600826382637024
+      ],
+      "rotation": [
+        -0.011047828942537308,
+        -0.010402807965874672,
+        0.9246096611022949,
+        0.38061362504959106
+      ]
+    }
+  },
+  "graph": {
+    "/tf": {
+      "publishers": [
+        "robot_data_manager"
+      ],
+      "subscribers": [
+        "go2_nav_m0_observer"
+      ]
+    },
+    "/tf_static": {
+      "publishers": [
+        "robot_data_manager",
+        "robot_data_manager",
+        "robot_data_manager"
+      ],
+      "subscribers": [
+        "go2_nav_m0_observer"
+      ]
+    },
+    "/map": {
+      "publishers": [],
+      "subscribers": []
+    },
+    "/scan": {
+      "publishers": [],
+      "subscribers": []
+    },
+    "/cmd_vel": {
+      "publishers": [],
+      "subscribers": [
+        "robot_data_manager"
+      ]
+    },
+    "/unitree_go2/cmd_vel": {
+      "publishers": [],
+      "subscribers": [
+        "robot_data_manager"
+      ]
+    },
+    "/unitree_go2/odom": {
+      "publishers": [
+        "robot_data_manager"
+      ],
+      "subscribers": [
+        "go2_nav_m0_observer"
+      ]
+    }
+  },
+  "nodes": [
+    "_ros2cli_daemon_41_30349e6af3cf49028fbccdcad390a728",
+    "robot_data_manager",
+    "_ActionGraph_PublishClock",
+    "_Render_PostProcess_SDGPipeline_Replicator_NodeWriterWriter_02",
+    "_Render_PostProcess_SDGPipeline_Replicator_NodeWriterWriter",
+    "_Render_PostProcess_SDGPipeline_Replicator_NodeWriterWriter_01",
+    "go2_nav_m0_observer"
+  ],
+  "shared_libraries_in_actual_isaac_ros_environment": {
+    "nav2_controller/controller_server": {
+      "exists": true,
+      "ldd_returncode": 0,
+      "missing": [
+        "liborocos-kdl.so.1.5 => not found"
+      ]
+    },
+    "nav2_planner/planner_server": {
+      "exists": true,
+      "ldd_returncode": 0,
+      "missing": [
+        "liborocos-kdl.so.1.5 => not found"
+      ]
+    },
+    "nav2_map_server/map_server": {
+      "exists": true,
+      "ldd_returncode": 0,
+      "missing": [
+        "libGraphicsMagick++-Q16.so.12 => not found",
+        "liborocos-kdl.so.1.5 => not found",
+        "libyaml-cpp.so.0.7 => not found"
+      ]
+    },
+    "nav2_amcl/amcl": {
+      "exists": true,
+      "ldd_returncode": 0,
+      "missing": [
+        "liborocos-kdl.so.1.5 => not found"
+      ]
+    },
+    "slam_toolbox/async_slam_toolbox_node": {
+      "exists": true,
+      "ldd_returncode": 0,
+      "missing": [
+        "libboost_serialization.so.1.74.0 => not found",
+        "liborocos-kdl.so.1.5 => not found",
+        "libtbb.so.12 => not found"
+      ]
+    },
+    "pointcloud_to_laserscan/pointcloud_to_laserscan_node": {
+      "exists": true,
+      "ldd_returncode": 0,
+      "missing": []
+    }
+  }
+}

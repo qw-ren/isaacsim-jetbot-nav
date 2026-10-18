@@ -1,0 +1,2402 @@
+[
+  {
+    "path": "/World/Warehouse/SM_FuseBox_24/SM_FuseBox_01",
+    "old": {
+      "path": "/World/Warehouse/SM_FuseBox_24/SM_FuseBox_01",
+      "min": [
+        -4.342944101771466,
+        17.585701967643075,
+        1.204465129102761e-05
+      ],
+      "max": [
+        -3.804309758411864,
+        17.99999971036607,
+        1.7114091011251527
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/SM_FuseBox_24/SM_FuseBox_01",
+      "min": [
+        -4.1299077844503564,
+        17.791064414966492,
+        0.049989999999999986
+      ],
+      "max": [
+        -4.071888467160257,
+        17.963576751515678,
+        0.8500099999999999
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/SM_PillarPartA_9M10_1473/SM_PillarPartA_9M/Section0",
+    "old": {
+      "path": "/World/Warehouse/SM_PillarPartA_9M10_1473/SM_PillarPartA_9M/Section0",
+      "min": [
+        0.4119405478810554,
+        8.799999719452611,
+        -1.2246540779316264e-17
+      ],
+      "max": [
+        9.51193984065511,
+        9.200003392838344,
+        9.000000409185873
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/SM_PillarPartA_9M10_1473/SM_PillarPartA_9M/Section0",
+      "min": [
+        9.111929745732358,
+        8.799990392977337,
+        0.04998999999999982
+      ],
+      "max": [
+        9.511949837991947,
+        9.200010970753565,
+        0.8500099999999999
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/SM_PillarPartA_9M11_1481/SM_PillarPartA_9M/Section0",
+    "old": {
+      "path": "/World/Warehouse/SM_PillarPartA_9M11_1481/SM_PillarPartA_9M/Section0",
+      "min": [
+        -10.429999766871333,
+        14.79999846756461,
+        -1.2246540779316264e-17
+      ],
+      "max": [
+        -1.3300005806237323,
+        15.199999717473982,
+        9.000000409185873
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/SM_PillarPartA_9M11_1481/SM_PillarPartA_9M/Section0",
+      "min": [
+        -10.430009766871333,
+        14.799988468836176,
+        0.04998999999999982
+      ],
+      "max": [
+        -10.02998977581203,
+        15.200009147812537,
+        0.8500099999999999
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/SM_PillarPartA_9M12_1482/SM_PillarPartA_9M/Section0",
+    "old": {
+      "path": "/World/Warehouse/SM_PillarPartA_9M12_1482/SM_PillarPartA_9M/Section0",
+      "min": [
+        0.4119405478810554,
+        14.79999958534216,
+        -1.2246540779316264e-17
+      ],
+      "max": [
+        9.51193984065511,
+        15.200003258727893,
+        9.000000409185873
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/SM_PillarPartA_9M12_1482/SM_PillarPartA_9M/Section0",
+      "min": [
+        9.111929745732358,
+        14.799990258866886,
+        0.04998999999999982
+      ],
+      "max": [
+        9.511949837991947,
+        15.200010836643115,
+        0.8500099999999999
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/SM_PillarPartA_9M3_1445/SM_PillarPartA_9M/Section0",
+    "old": {
+      "path": "/World/Warehouse/SM_PillarPartA_9M3_1445/SM_PillarPartA_9M/Section0",
+      "min": [
+        -10.429999766871333,
+        -9.200000995993587,
+        -1.2246540779316264e-17
+      ],
+      "max": [
+        -1.3300005806237323,
+        -8.799999746084215,
+        9.000000409185873
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/SM_PillarPartA_9M3_1445/SM_PillarPartA_9M/Section0",
+      "min": [
+        -10.430009766871333,
+        -9.200010994722021,
+        0.04998999999999982
+      ],
+      "max": [
+        -10.02998977581203,
+        -8.79999031574566,
+        0.8500099999999999
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/SM_PillarPartA_9M4_1446/SM_PillarPartA_9M/Section0",
+    "old": {
+      "path": "/World/Warehouse/SM_PillarPartA_9M4_1446/SM_PillarPartA_9M/Section0",
+      "min": [
+        0.4119405478810554,
+        -9.199999878216037,
+        -1.2246540779316264e-17
+      ],
+      "max": [
+        9.51193984065511,
+        -8.799996204830304,
+        9.000000409185873
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/SM_PillarPartA_9M4_1446/SM_PillarPartA_9M/Section0",
+      "min": [
+        9.111929745732358,
+        -9.20000920469131,
+        0.04998999999999982
+      ],
+      "max": [
+        9.511949837991947,
+        -8.799988626915082,
+        0.8500099999999999
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/SM_PillarPartA_9M5_1454/SM_PillarPartA_9M/Section0",
+    "old": {
+      "path": "/World/Warehouse/SM_PillarPartA_9M5_1454/SM_PillarPartA_9M/Section0",
+      "min": [
+        -10.429999766871333,
+        -3.200001130104038,
+        -1.2246540779316264e-17
+      ],
+      "max": [
+        -1.3300005806237323,
+        -2.7999998801946653,
+        9.000000409185873
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/SM_PillarPartA_9M5_1454/SM_PillarPartA_9M/Section0",
+      "min": [
+        -10.430009766871333,
+        -3.200011128832472,
+        0.04998999999999982
+      ],
+      "max": [
+        -10.02998977581203,
+        -2.7999904498561103,
+        0.8500099999999999
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/SM_PillarPartA_9M6_1455/SM_PillarPartA_9M/Section0",
+    "old": {
+      "path": "/World/Warehouse/SM_PillarPartA_9M6_1455/SM_PillarPartA_9M/Section0",
+      "min": [
+        0.4119405478810554,
+        -3.200000012326487,
+        -1.2246540779316264e-17
+      ],
+      "max": [
+        9.51193984065511,
+        -2.7999963389407547,
+        9.000000409185873
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/SM_PillarPartA_9M6_1455/SM_PillarPartA_9M/Section0",
+      "min": [
+        9.111929745732358,
+        -3.200009338801762,
+        0.04998999999999982
+      ],
+      "max": [
+        9.511949837991947,
+        -2.7999887610255336,
+        0.8500099999999999
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/SM_PillarPartA_9M7_1463/SM_PillarPartA_9M/Section0",
+    "old": {
+      "path": "/World/Warehouse/SM_PillarPartA_9M7_1463/SM_PillarPartA_9M/Section0",
+      "min": [
+        -10.429999766871333,
+        2.799998735785511,
+        -1.2246540779316264e-17
+      ],
+      "max": [
+        -1.3300005806237323,
+        3.199999985694884,
+        9.000000409185873
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/SM_PillarPartA_9M7_1463/SM_PillarPartA_9M/Section0",
+      "min": [
+        -10.430009766871333,
+        2.799988737057077,
+        0.04998999999999982
+      ],
+      "max": [
+        -10.02998977581203,
+        3.200009416033439,
+        0.8500099999999999
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/SM_PillarPartA_9M8_1464/SM_PillarPartA_9M/Section0",
+    "old": {
+      "path": "/World/Warehouse/SM_PillarPartA_9M8_1464/SM_PillarPartA_9M/Section0",
+      "min": [
+        0.4119405478810554,
+        2.799999853563062,
+        -1.2246540779316264e-17
+      ],
+      "max": [
+        9.51193984065511,
+        3.2000035269487945,
+        9.000000409185873
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/SM_PillarPartA_9M8_1464/SM_PillarPartA_9M/Section0",
+      "min": [
+        9.111929745732358,
+        2.7999905270877874,
+        0.04998999999999982
+      ],
+      "max": [
+        9.511949837991947,
+        3.2000111048640156,
+        0.8500099999999999
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/SM_PillarPartA_9M9_1472/SM_PillarPartA_9M/Section0",
+    "old": {
+      "path": "/World/Warehouse/SM_PillarPartA_9M9_1472/SM_PillarPartA_9M/Section0",
+      "min": [
+        -10.429999766871333,
+        8.79999860167506,
+        -1.2246540779316264e-17
+      ],
+      "max": [
+        -1.3300005806237323,
+        9.199999851584433,
+        9.000000409185873
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/SM_PillarPartA_9M9_1472/SM_PillarPartA_9M/Section0",
+      "min": [
+        -10.430009766871333,
+        8.799988602946627,
+        0.04998999999999982
+      ],
+      "max": [
+        -10.02998977581203,
+        9.200009281922988,
+        0.8500099999999999
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/SM_WallA_3M43/SM_WallA_6M/Section1",
+    "old": {
+      "path": "/World/Warehouse/SM_WallA_3M43/SM_WallA_6M/Section1",
+      "min": [
+        -2.999998865235356,
+        17.799997726853984,
+        7.629394360719743e-08
+      ],
+      "max": [
+        2.9999997541309256,
+        18.000000807765467,
+        3.1000048135219913
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/SM_WallA_3M43/SM_WallA_6M/Section1",
+      "min": [
+        -3.00000884246756,
+        17.97096898172373,
+        0.04999
+      ],
+      "max": [
+        3.000009754130661,
+        18.000010807765467,
+        0.1534726354248232
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/SM_WallA_3M44/SM_WallA_6M/Section1",
+    "old": {
+      "path": "/World/Warehouse/SM_WallA_3M44/SM_WallA_6M/Section1",
+      "min": [
+        -8.999998731124904,
+        17.799997726853984,
+        7.629394360719743e-08
+      ],
+      "max": [
+        -3.0000001117586232,
+        18.000000807765467,
+        3.1000048135219913
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/SM_WallA_3M44/SM_WallA_6M/Section1",
+      "min": [
+        -9.00000870835711,
+        17.97096898172373,
+        0.04999
+      ],
+      "max": [
+        -2.9999901117588883,
+        18.000010807765467,
+        0.1534726354248232
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/SM_WallA_6M10/SM_WallA_6M/Section1",
+    "old": {
+      "path": "/World/Warehouse/SM_WallA_6M10/SM_WallA_6M/Section1",
+      "min": [
+        -10.33000377595005,
+        -2.9999990174166125,
+        7.629394360719743e-08
+      ],
+      "max": [
+        -10.12999508962536,
+        3.0000001460260357,
+        3.1000048135219913
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/SM_WallA_6M10/SM_WallA_6M/Section1",
+      "min": [
+        -10.330011787523647,
+        -3.0000090174166125,
+        0.04999
+      ],
+      "max": [
+        -10.300968343097193,
+        3.0000099638614133,
+        0.1534726354248232
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/SM_WallA_6M11/SM_WallA_6M/Section1",
+    "old": {
+      "path": "/World/Warehouse/SM_WallA_6M11/SM_WallA_6M/Section1",
+      "min": [
+        -10.33000377595005,
+        3.0000008484729372,
+        7.629394360719743e-08
+      ],
+      "max": [
+        -10.12999508962536,
+        9.000000011915585,
+        3.1000048135219913
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/SM_WallA_6M11/SM_WallA_6M/Section1",
+      "min": [
+        -10.330011787523647,
+        2.9999908484729367,
+        0.04999
+      ],
+      "max": [
+        -10.300968343097193,
+        9.000009829750962,
+        0.1534726354248232
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/SM_WallA_6M15/SM_WallA_6M/Section1",
+    "old": {
+      "path": "/World/Warehouse/SM_WallA_6M15/SM_WallA_6M/Section1",
+      "min": [
+        9.211937507417137,
+        -8.999999852097833,
+        7.629394360719743e-08
+      ],
+      "max": [
+        9.411941399197914,
+        -3.0000008484719887,
+        3.1000048135219913
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/SM_WallA_6M15/SM_WallA_6M/Section1",
+      "min": [
+        9.382910370374526,
+        -9.000009806562769,
+        0.04999
+      ],
+      "max": [
+        9.41194980130154,
+        -2.9999908484719886,
+        0.1534726354248232
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/SM_WallA_6M16/SM_WallA_6M/Section1",
+    "old": {
+      "path": "/World/Warehouse/SM_WallA_6M16/SM_WallA_6M/Section1",
+      "min": [
+        9.211937507417137,
+        -2.9999999862082847,
+        7.629394360719743e-08
+      ],
+      "max": [
+        9.411941399197914,
+        2.9999990174175606,
+        3.1000048135219913
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/SM_WallA_6M16/SM_WallA_6M/Section1",
+      "min": [
+        9.382910370374526,
+        -3.0000099406732197,
+        0.04999
+      ],
+      "max": [
+        9.41194980130154,
+        3.0000090174175607,
+        0.1534726354248232
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/SM_WallA_6M17/SM_WallA_6M/Section1",
+    "old": {
+      "path": "/World/Warehouse/SM_WallA_6M17/SM_WallA_6M/Section1",
+      "min": [
+        9.211937507417137,
+        2.9999998796812646,
+        7.629394360719743e-08
+      ],
+      "max": [
+        9.411941399197914,
+        8.99999888330711,
+        3.1000048135219913
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/SM_WallA_6M17/SM_WallA_6M/Section1",
+      "min": [
+        9.382910370374526,
+        2.9999899252163296,
+        0.04999
+      ],
+      "max": [
+        9.41194980130154,
+        9.00000888330711,
+        0.1534726354248232
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/SM_WallA_6M18/SM_WallA_6M/Section1",
+    "old": {
+      "path": "/World/Warehouse/SM_WallA_6M18/SM_WallA_6M/Section1",
+      "min": [
+        9.211937507417137,
+        8.999999745570813,
+        7.629394360719743e-08
+      ],
+      "max": [
+        9.411941399197914,
+        14.99999874919666,
+        3.1000048135219913
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/SM_WallA_6M18/SM_WallA_6M/Section1",
+      "min": [
+        9.382910370374526,
+        8.999989791105879,
+        0.04999
+      ],
+      "max": [
+        9.41194980130154,
+        15.00000874919666,
+        0.1534726354248232
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/SM_WallA_6M4/SM_WallA_6M/Section1",
+    "old": {
+      "path": "/World/Warehouse/SM_WallA_6M4/SM_WallA_6M/Section1",
+      "min": [
+        2.9999999329447746,
+        -12.20000053793161,
+        7.629394360719743e-08
+      ],
+      "max": [
+        8.999998883307,
+        -11.999998244047198,
+        3.1000048135219913
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/SM_WallA_6M4/SM_WallA_6M/Section1",
+      "min": [
+        2.9999899329447746,
+        -12.200010537931611,
+        0.04999
+      ],
+      "max": [
+        9.000008883307,
+        -12.17096950910822,
+        0.1534726354248232
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/SM_WallA_6M5/SM_WallA_6M/Section1",
+    "old": {
+      "path": "/World/Warehouse/SM_WallA_6M5/SM_WallA_6M/Section1",
+      "min": [
+        -10.33000377595005,
+        -8.999998883306162,
+        7.629394360719743e-08
+      ],
+      "max": [
+        -10.12999508962536,
+        -2.9999997198635135,
+        3.1000048135219913
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/SM_WallA_6M5/SM_WallA_6M/Section1",
+      "min": [
+        -10.330011787523647,
+        -9.000008883306162,
+        0.04999
+      ],
+      "max": [
+        -10.300968343097193,
+        -2.999989902028136,
+        0.1534726354248232
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/SM_WallA_6M6/SM_WallA_6M/Section1",
+    "old": {
+      "path": "/World/Warehouse/SM_WallA_6M6/SM_WallA_6M/Section1",
+      "min": [
+        -2.9999999329447746,
+        -12.20000053793161,
+        7.629394360719743e-08
+      ],
+      "max": [
+        2.9999990174174513,
+        -11.999998244047198,
+        3.1000048135219913
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/SM_WallA_6M6/SM_WallA_6M/Section1",
+      "min": [
+        -3.0000099329447747,
+        -12.200010537931611,
+        0.04999
+      ],
+      "max": [
+        3.0000090174174514,
+        -12.17096950910822,
+        0.1534726354248232
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/SM_WallA_6M7/SM_WallA_6M/Section1",
+    "old": {
+      "path": "/World/Warehouse/SM_WallA_6M7/SM_WallA_6M/Section1",
+      "min": [
+        -8.999999798834324,
+        -12.20000053793161,
+        7.629394360719743e-08
+      ],
+      "max": [
+        -3.000000848472098,
+        -11.999998244047198,
+        3.1000048135219913
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/SM_WallA_6M7/SM_WallA_6M/Section1",
+      "min": [
+        -9.000009798834324,
+        -12.200010537931611,
+        0.04999
+      ],
+      "max": [
+        -2.999990848472098,
+        -12.17096950910822,
+        0.1534726354248232
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/SM_WallA_6M12/SM_WallA_6M/Section1",
+    "old": {
+      "path": "/World/Warehouse/SM_WallA_6M12/SM_WallA_6M/Section1",
+      "min": [
+        -10.33000377595005,
+        9.000000714362486,
+        7.629394360719743e-08
+      ],
+      "max": [
+        -10.12999508962536,
+        14.999999877805134,
+        3.1000048135219913
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/SM_WallA_6M12/SM_WallA_6M/Section1",
+      "min": [
+        -10.330011787523647,
+        8.999990714362486,
+        0.04999
+      ],
+      "max": [
+        -10.300968343097193,
+        15.000009695640511,
+        0.1534726354248232
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/SM_WallA_3M43_01/SM_WallA_6M/Section1",
+    "old": {
+      "path": "/World/Warehouse/SM_WallA_3M43_01/SM_WallA_6M/Section1",
+      "min": [
+        0.41270087967097746,
+        17.799997714932942,
+        7.629394360719743e-08
+      ],
+      "max": [
+        6.412699856665066,
+        18.00000080776554,
+        3.1000048135219913
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/SM_WallA_3M43_01/SM_WallA_6M/Section1",
+      "min": [
+        0.4126909024387749,
+        17.970968979993966,
+        0.04999
+      ],
+      "max": [
+        6.412709856664801,
+        18.00001080776554,
+        0.1534726354248232
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/Shelf_2/SM_RackFrame_167/SM_RackFrame_03/Section0",
+    "old": {
+      "path": "/World/Warehouse/Shelf_2/SM_RackFrame_167/SM_RackFrame_03/Section0",
+      "min": [
+        8.208782190079841,
+        -3.726505699854842,
+        0.1922249185867625
+      ],
+      "max": [
+        9.157817953884923,
+        -3.6735020677151717,
+        2.8077752064991683
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/Shelf_2/SM_RackFrame_167/SM_RackFrame_03/Section0",
+      "min": [
+        8.208774631821846,
+        -3.7265128402775165,
+        0.19221491858676248
+      ],
+      "max": [
+        9.15122498015228,
+        -3.6734920702377236,
+        0.8500099999999999
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/Shelf_2/SM_RackFrame_165/SM_RackFrame_03/Section0",
+    "old": {
+      "path": "/World/Warehouse/Shelf_2/SM_RackFrame_165/SM_RackFrame_03/Section0",
+      "min": [
+        8.208782190079841,
+        12.27349394251729,
+        0.1922249185867625
+      ],
+      "max": [
+        9.157817953884923,
+        12.32649757465696,
+        2.8077752064991683
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/Shelf_2/SM_RackFrame_165/SM_RackFrame_03/Section0",
+      "min": [
+        8.208774631821846,
+        12.273486802094615,
+        0.19221491858676248
+      ],
+      "max": [
+        9.15122498015228,
+        12.326507572134407,
+        0.8500099999999999
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/Shelf_2/SM_RackFrame_161/SM_RackFrame_03/Section0",
+    "old": {
+      "path": "/World/Warehouse/Shelf_2/SM_RackFrame_161/SM_RackFrame_03/Section0",
+      "min": [
+        8.208782190079841,
+        4.273494121331224,
+        0.1922249185867625
+      ],
+      "max": [
+        9.157817953884923,
+        4.3264977534708935,
+        2.8077752064991683
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/Shelf_2/SM_RackFrame_161/SM_RackFrame_03/Section0",
+      "min": [
+        8.208774631821846,
+        4.273486980908549,
+        0.19221491858676248
+      ],
+      "max": [
+        9.15122498015228,
+        4.326507750948342,
+        0.8500099999999999
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/Shelf_2/SM_RackFrame_163/SM_RackFrame_03/Section0",
+    "old": {
+      "path": "/World/Warehouse/Shelf_2/SM_RackFrame_163/SM_RackFrame_03/Section0",
+      "min": [
+        8.208782190079841,
+        8.273494031924256,
+        0.1922249185867625
+      ],
+      "max": [
+        9.157817953884923,
+        8.326497664063927,
+        2.8077752064991683
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/Shelf_2/SM_RackFrame_163/SM_RackFrame_03/Section0",
+      "min": [
+        8.208774631821846,
+        8.273486891501582,
+        0.19221491858676248
+      ],
+      "max": [
+        9.15122498015228,
+        8.326507661541374,
+        0.8500099999999999
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/Shelf_2/SM_RackFrame_159/SM_RackFrame_03/Section0",
+    "old": {
+      "path": "/World/Warehouse/Shelf_2/SM_RackFrame_159/SM_RackFrame_03/Section0",
+      "min": [
+        8.208782190079841,
+        0.27349421073819064,
+        0.1922249185867625
+      ],
+      "max": [
+        9.157817953884923,
+        0.32649784287786077,
+        2.8077752064991683
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/Shelf_2/SM_RackFrame_159/SM_RackFrame_03/Section0",
+      "min": [
+        8.208774631821846,
+        0.27348707031551617,
+        0.19221491858676248
+      ],
+      "max": [
+        9.15122498015228,
+        0.3265078403553093,
+        0.8500099999999999
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/Shelf_1/SM_RackFrame_167/SM_RackFrame_03/Section0",
+    "old": {
+      "path": "/World/Warehouse/Shelf_1/SM_RackFrame_167/SM_RackFrame_03/Section0",
+      "min": [
+        -0.7912176087544817,
+        -3.726505699854842,
+        0.1922249185867625
+      ],
+      "max": [
+        0.1578181550505975,
+        -3.6735020677151717,
+        2.8077752064991683
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/Shelf_1/SM_RackFrame_167/SM_RackFrame_03/Section0",
+      "min": [
+        -0.791225167012478,
+        -3.7265128402775165,
+        0.19221491858676248
+      ],
+      "max": [
+        0.15122518131795665,
+        -3.6734920702377236,
+        0.8500099999999999
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/Shelf_1/SM_RackFrame_165/SM_RackFrame_03/Section0",
+    "old": {
+      "path": "/World/Warehouse/Shelf_1/SM_RackFrame_165/SM_RackFrame_03/Section0",
+      "min": [
+        -0.7912176087544817,
+        12.27349394251729,
+        0.1922249185867625
+      ],
+      "max": [
+        0.1578181550505975,
+        12.32649757465696,
+        2.8077752064991683
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/Shelf_1/SM_RackFrame_165/SM_RackFrame_03/Section0",
+      "min": [
+        -0.791225167012478,
+        12.273486802094615,
+        0.19221491858676248
+      ],
+      "max": [
+        0.15122518131795665,
+        12.326507572134407,
+        0.8500099999999999
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/Shelf_1/SM_RackFrame_161/SM_RackFrame_03/Section0",
+    "old": {
+      "path": "/World/Warehouse/Shelf_1/SM_RackFrame_161/SM_RackFrame_03/Section0",
+      "min": [
+        -0.7912176087544817,
+        4.273494121331224,
+        0.1922249185867625
+      ],
+      "max": [
+        0.1578181550505975,
+        4.3264977534708935,
+        2.8077752064991683
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/Shelf_1/SM_RackFrame_161/SM_RackFrame_03/Section0",
+      "min": [
+        -0.791225167012478,
+        4.273486980908549,
+        0.19221491858676248
+      ],
+      "max": [
+        0.15122518131795665,
+        4.326507750948342,
+        0.8500099999999999
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/Shelf_1/SM_RackFrame_163/SM_RackFrame_03/Section0",
+    "old": {
+      "path": "/World/Warehouse/Shelf_1/SM_RackFrame_163/SM_RackFrame_03/Section0",
+      "min": [
+        -0.7912176087544817,
+        8.273494031924256,
+        0.1922249185867625
+      ],
+      "max": [
+        0.1578181550505975,
+        8.326497664063927,
+        2.8077752064991683
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/Shelf_1/SM_RackFrame_163/SM_RackFrame_03/Section0",
+      "min": [
+        -0.791225167012478,
+        8.273486891501582,
+        0.19221491858676248
+      ],
+      "max": [
+        0.15122518131795665,
+        8.326507661541374,
+        0.8500099999999999
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/Shelf_1/SM_RackFrame_159/SM_RackFrame_03/Section0",
+    "old": {
+      "path": "/World/Warehouse/Shelf_1/SM_RackFrame_159/SM_RackFrame_03/Section0",
+      "min": [
+        -0.7912176087544817,
+        0.27349421073819064,
+        0.1922249185867625
+      ],
+      "max": [
+        0.1578181550505975,
+        0.32649784287786077,
+        2.8077752064991683
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/Shelf_1/SM_RackFrame_159/SM_RackFrame_03/Section0",
+      "min": [
+        -0.791225167012478,
+        0.27348707031551617,
+        0.19221491858676248
+      ],
+      "max": [
+        0.15122518131795665,
+        0.3265078403553093,
+        0.8500099999999999
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/Shelf_0/SM_RackFrame_167/SM_RackFrame_03/Section0",
+    "old": {
+      "path": "/World/Warehouse/Shelf_0/SM_RackFrame_167/SM_RackFrame_03/Section0",
+      "min": [
+        -9.791217407588807,
+        -3.726505699854842,
+        0.1922249185867625
+      ],
+      "max": [
+        -8.842181643783725,
+        -3.6735020677151717,
+        2.8077752064991683
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/Shelf_0/SM_RackFrame_167/SM_RackFrame_03/Section0",
+      "min": [
+        -9.791224965846801,
+        -3.7265128402775165,
+        0.19221491858676248
+      ],
+      "max": [
+        -8.848774617516368,
+        -3.6734920702377236,
+        0.8500099999999999
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/Shelf_0/SM_RackFrame_165/SM_RackFrame_03/Section0",
+    "old": {
+      "path": "/World/Warehouse/Shelf_0/SM_RackFrame_165/SM_RackFrame_03/Section0",
+      "min": [
+        -9.791217407588807,
+        12.27349394251729,
+        0.1922249185867625
+      ],
+      "max": [
+        -8.842181643783725,
+        12.32649757465696,
+        2.8077752064991683
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/Shelf_0/SM_RackFrame_165/SM_RackFrame_03/Section0",
+      "min": [
+        -9.791224965846801,
+        12.273486802094615,
+        0.19221491858676248
+      ],
+      "max": [
+        -8.848774617516368,
+        12.326507572134407,
+        0.8500099999999999
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/Shelf_0/SM_RackFrame_161/SM_RackFrame_03/Section0",
+    "old": {
+      "path": "/World/Warehouse/Shelf_0/SM_RackFrame_161/SM_RackFrame_03/Section0",
+      "min": [
+        -9.791217407588807,
+        4.273494121331224,
+        0.1922249185867625
+      ],
+      "max": [
+        -8.842181643783725,
+        4.3264977534708935,
+        2.8077752064991683
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/Shelf_0/SM_RackFrame_161/SM_RackFrame_03/Section0",
+      "min": [
+        -9.791224965846801,
+        4.273486980908549,
+        0.19221491858676248
+      ],
+      "max": [
+        -8.848774617516368,
+        4.326507750948342,
+        0.8500099999999999
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/Shelf_0/SM_RackFrame_163/SM_RackFrame_03/Section0",
+    "old": {
+      "path": "/World/Warehouse/Shelf_0/SM_RackFrame_163/SM_RackFrame_03/Section0",
+      "min": [
+        -9.791217407588807,
+        8.273494031924256,
+        0.1922249185867625
+      ],
+      "max": [
+        -8.842181643783725,
+        8.326497664063927,
+        2.8077752064991683
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/Shelf_0/SM_RackFrame_163/SM_RackFrame_03/Section0",
+      "min": [
+        -9.791224965846801,
+        8.273486891501582,
+        0.19221491858676248
+      ],
+      "max": [
+        -8.848774617516368,
+        8.326507661541374,
+        0.8500099999999999
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/Shelf_0/SM_RackFrame_159/SM_RackFrame_03/Section0",
+    "old": {
+      "path": "/World/Warehouse/Shelf_0/SM_RackFrame_159/SM_RackFrame_03/Section0",
+      "min": [
+        -9.791217407588807,
+        0.27349421073819064,
+        0.1922249185867625
+      ],
+      "max": [
+        -8.842181643783725,
+        0.32649784287786077,
+        2.8077752064991683
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/Shelf_0/SM_RackFrame_159/SM_RackFrame_03/Section0",
+      "min": [
+        -9.791224965846801,
+        0.27348707031551617,
+        0.19221491858676248
+      ],
+      "max": [
+        -8.848774617516368,
+        0.3265078403553093,
+        0.8500099999999999
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/PalletBin_02/Roller/SM_PaletteA_360/SM_PaletteA_01",
+    "old": {
+      "path": "/World/Warehouse/PalletBin_02/Roller/SM_PaletteA_360/SM_PaletteA_01",
+      "min": [
+        3.7355056867061247,
+        13.005150938701068,
+        0.40918421973585567
+      ],
+      "max": [
+        5.218576819084225,
+        14.362494484586225,
+        0.620303752370482
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/PalletBin_02/Roller/SM_PaletteA_360/SM_PaletteA_01",
+      "min": [
+        3.7438139856497847,
+        13.01624954355761,
+        0.40917421973585566
+      ],
+      "max": [
+        5.205498218731741,
+        14.352449962159398,
+        0.6203137523704819
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/PalletBin_02/Roller/SM_PushcartA_02_22/SM_PushcartA_02",
+    "old": {
+      "path": "/World/Warehouse/PalletBin_02/Roller/SM_PushcartA_02_22/SM_PushcartA_02",
+      "min": [
+        3.5151241822306183,
+        12.901321217273969,
+        0.050000037029384714
+      ],
+      "max": [
+        5.383871718861304,
+        14.344278173739417,
+        0.4274050426318112
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/PalletBin_02/Roller/SM_PushcartA_02_22/SM_PushcartA_02",
+      "min": [
+        3.532313871300874,
+        12.925130061381207,
+        0.04999003702938471
+      ],
+      "max": [
+        5.366682029791048,
+        14.320469329632179,
+        0.42741504263181124
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_118/Visuals/FOF_Mesh_Magenta_Box",
+    "old": {
+      "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_118/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        4.5755227667042915,
+        13.866040598751457,
+        0.6406740201262922
+      ],
+      "max": [
+        4.920273102294604,
+        14.1493587686293,
+        0.7870339410093845
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_118/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        4.578661798717685,
+        13.868934757172443,
+        0.6406640207480894
+      ],
+      "max": [
+        4.917134085577922,
+        14.146464598046819,
+        0.7870439395195679
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_127/Visuals/FOF_Mesh_Magenta_Box",
+    "old": {
+      "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_127/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        4.575522785457804,
+        13.866040605177728,
+        0.7686810172651127
+      ],
+      "max": [
+        4.920273121048116,
+        14.149358775055571,
+        0.9150409381482051
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_127/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        4.578661802174485,
+        13.86893477576021,
+        0.76867101788691
+      ],
+      "max": [
+        4.917134089034723,
+        14.146464616634585,
+        0.8500099999999999
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_132/Visuals/FOF_Mesh_Magenta_Box",
+    "old": {
+      "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_132/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        4.2858227919331044,
+        13.766740607397251,
+        0.7686810172651127
+      ],
+      "max": [
+        4.630573127523417,
+        14.050058777275094,
+        0.9150409381482051
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_132/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        4.288961808649786,
+        13.769634777979732,
+        0.76867101788691
+      ],
+      "max": [
+        4.627434095510023,
+        14.047164618854108,
+        0.8500099999999999
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_133/Visuals/FOF_Mesh_Magenta_Box",
+    "old": {
+      "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_133/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        4.287515697869008,
+        13.770604420688876,
+        0.6406740201262922
+      ],
+      "max": [
+        4.628880221800364,
+        14.046194963325071,
+        0.7870339410093845
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_133/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        4.290427084210153,
+        13.773223159968973,
+        0.6406640207480894
+      ],
+      "max": [
+        4.625968841918439,
+        14.043576236997467,
+        0.7870439395195679
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_136/Visuals/FOF_Mesh_Magenta_Box",
+    "old": {
+      "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_136/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        3.9976227983748744,
+        13.668040609603365,
+        0.7686810172651127
+      ],
+      "max": [
+        4.342373133965187,
+        13.951358779481208,
+        0.9150409381482051
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_136/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        4.000761815091556,
+        13.670934780185846,
+        0.76867101788691
+      ],
+      "max": [
+        4.339234101951793,
+        13.948464621060221,
+        0.8500099999999999
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_137/Visuals/FOF_Mesh_Magenta_Box",
+    "old": {
+      "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_137/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        3.997622779621362,
+        13.668040603177094,
+        0.6406740201262922
+      ],
+      "max": [
+        4.342373115211674,
+        13.951358773054936,
+        0.7870339410093845
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_137/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        4.000761811634756,
+        13.67093476159808,
+        0.6406640207480894
+      ],
+      "max": [
+        4.339234098494993,
+        13.948464602472455,
+        0.7870439395195679
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_138/Visuals/FOF_Mesh_Magenta_Box",
+    "old": {
+      "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_138/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        4.078222777819813,
+        13.433040608429753,
+        0.6406740201262922
+      ],
+      "max": [
+        4.422973113410126,
+        13.716358778307596,
+        0.7870339410093845
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_138/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        4.081361809833207,
+        13.435934766850739,
+        0.6406640207480894
+      ],
+      "max": [
+        4.419834096693444,
+        13.713464607725115,
+        0.7870439395195679
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_143/Visuals/FOF_Mesh_Magenta_Box",
+    "old": {
+      "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_143/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        4.078222796573326,
+        13.433040614856024,
+        0.7686810172651127
+      ],
+      "max": [
+        4.422973132163638,
+        13.716358784733867,
+        0.9150409381482051
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_143/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        4.081361813290007,
+        13.435934785438505,
+        0.76867101788691
+      ],
+      "max": [
+        4.419834100150244,
+        13.71346462631288,
+        0.8500099999999999
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_139/Visuals/FOF_Mesh_Magenta_Box",
+    "old": {
+      "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_139/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        4.656122764902739,
+        13.631040604004117,
+        0.6406740201262922
+      ],
+      "max": [
+        5.000873100493052,
+        13.91435877388196,
+        0.7870339410093845
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_139/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        4.659261796916133,
+        13.633934762425103,
+        0.6406640207480894
+      ],
+      "max": [
+        4.99773408377637,
+        13.911464603299478,
+        0.7870439395195679
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_140/Visuals/FOF_Mesh_Magenta_Box",
+    "old": {
+      "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_140/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        4.368115696067459,
+        13.5357044259393,
+        0.6406740201262922
+      ],
+      "max": [
+        4.709480219998816,
+        13.811294968575496,
+        0.7870339410093845
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_140/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        4.371027082408604,
+        13.538323165219397,
+        0.6406640207480894
+      ],
+      "max": [
+        4.706568840116891,
+        13.808676242247891,
+        0.7870439395195679
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_141/Visuals/FOF_Mesh_Magenta_Box",
+    "old": {
+      "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_141/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        4.656122783656252,
+        13.631040610430388,
+        0.7686810172651127
+      ],
+      "max": [
+        5.000873119246564,
+        13.91435878030823,
+        0.9150409381482051
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_141/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        4.659261800372933,
+        13.633934781012869,
+        0.76867101788691
+      ],
+      "max": [
+        4.99773408723317,
+        13.911464621887244,
+        0.8500099999999999
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_142/Visuals/FOF_Mesh_Magenta_Box",
+    "old": {
+      "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_142/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        4.366422790131556,
+        13.531840612647676,
+        0.7686810172651127
+      ],
+      "max": [
+        4.711173125721868,
+        13.815158782525518,
+        0.9150409381482051
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_142/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        4.369561806848237,
+        13.534734783230157,
+        0.76867101788691
+      ],
+      "max": [
+        4.708034093708474,
+        13.812264624104532,
+        0.8500099999999999
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_150/Visuals/FOF_Mesh_Magenta_Box",
+    "old": {
+      "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_150/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        4.1559227760830835,
+        13.206340613496895,
+        0.6406740201262922
+      ],
+      "max": [
+        4.500673111673396,
+        13.489658783374738,
+        0.7870339410093845
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_150/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        4.159061808096477,
+        13.209234771917881,
+        0.6406640207480894
+      ],
+      "max": [
+        4.497534094956714,
+        13.486764612792257,
+        0.7870439395195679
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_151/Visuals/FOF_Mesh_Magenta_Box",
+    "old": {
+      "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_151/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        4.7338227631660095,
+        13.404340609071252,
+        0.6406740201262922
+      ],
+      "max": [
+        5.078573098756322,
+        13.687658778949094,
+        0.7870339410093845
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_151/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        4.736961795179403,
+        13.407234767492238,
+        0.6406640207480894
+      ],
+      "max": [
+        5.07543408203964,
+        13.684764608366613,
+        0.7870439395195679
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_152/Visuals/FOF_Mesh_Magenta_Box",
+    "old": {
+      "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_152/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        4.445815694330726,
+        13.30890443100867,
+        0.6406740201262922
+      ],
+      "max": [
+        4.787180218262082,
+        13.584494973644865,
+        0.7870339410093845
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_152/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        4.448727080671871,
+        13.311523170288767,
+        0.6406640207480894
+      ],
+      "max": [
+        4.784268838380157,
+        13.581876247317261,
+        0.7870439395195679
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_153/Visuals/FOF_Mesh_Magenta_Box",
+    "old": {
+      "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_153/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        4.733822781919522,
+        13.404340615497523,
+        0.7686810172651127
+      ],
+      "max": [
+        5.078573117509834,
+        13.687658785375366,
+        0.9150409381482051
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_153/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        4.736961798636203,
+        13.407234786080004,
+        0.76867101788691
+      ],
+      "max": [
+        5.075434085496441,
+        13.68476462695438,
+        0.8500099999999999
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_154/Visuals/FOF_Mesh_Magenta_Box",
+    "old": {
+      "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_154/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        4.444122788394822,
+        13.305040617717045,
+        0.7686810172651127
+      ],
+      "max": [
+        4.788873123985135,
+        13.588358787594888,
+        0.9150409381482051
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_154/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        4.447261805111504,
+        13.307934788299526,
+        0.76867101788691
+      ],
+      "max": [
+        4.785734091971741,
+        13.585464629173902,
+        0.8500099999999999
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_155/Visuals/FOF_Mesh_Magenta_Box",
+    "old": {
+      "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_155/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        4.155922794836596,
+        13.206340619923166,
+        0.7686810172651127
+      ],
+      "max": [
+        4.500673130426908,
+        13.489658789801009,
+        0.9150409381482051
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/PalletBin_02/Roller/SmallKLT_Visual_155/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        4.159061811553277,
+        13.209234790505647,
+        0.76867101788691
+      ],
+      "max": [
+        4.497534098413515,
+        13.486764631380023,
+        0.8500099999999999
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/PalletBin_01/Roller/SM_PaletteA_360/SM_PaletteA_01",
+    "old": {
+      "path": "/World/Warehouse/PalletBin_01/Roller/SM_PaletteA_360/SM_PaletteA_01",
+      "min": [
+        -6.8423920268594305,
+        13.005150938701068,
+        0.40918421973585567
+      ],
+      "max": [
+        -5.35932089448133,
+        14.362494484586225,
+        0.620303752370482
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/PalletBin_01/Roller/SM_PaletteA_360/SM_PaletteA_01",
+      "min": [
+        -6.83408372791577,
+        13.01624954355761,
+        0.40917421973585566
+      ],
+      "max": [
+        -5.3723994948338145,
+        14.352449962159398,
+        0.6203137523704819
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/PalletBin_01/Roller/SM_PushcartA_02_22/SM_PushcartA_02",
+    "old": {
+      "path": "/World/Warehouse/PalletBin_01/Roller/SM_PushcartA_02_22/SM_PushcartA_02",
+      "min": [
+        -7.062773531334937,
+        12.901321217273969,
+        0.050000037029384714
+      ],
+      "max": [
+        -5.194025994704251,
+        14.344278173739417,
+        0.4274050426318112
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/PalletBin_01/Roller/SM_PushcartA_02_22/SM_PushcartA_02",
+      "min": [
+        -7.045583842264681,
+        12.925130061381207,
+        0.04999003702938471
+      ],
+      "max": [
+        -5.211215683774507,
+        14.320469329632179,
+        0.42741504263181124
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_118/Visuals/FOF_Mesh_Magenta_Box",
+    "old": {
+      "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_118/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        -6.002374946861264,
+        13.866040598751457,
+        0.6406740201262922
+      ],
+      "max": [
+        -5.657624611270951,
+        14.1493587686293,
+        0.7870339410093845
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_118/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        -5.99923591484787,
+        13.868934757172443,
+        0.6406640207480894
+      ],
+      "max": [
+        -5.660763627987633,
+        14.146464598046819,
+        0.7870439395195679
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_127/Visuals/FOF_Mesh_Magenta_Box",
+    "old": {
+      "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_127/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        -6.002374928107751,
+        13.866040605177728,
+        0.7686810172651127
+      ],
+      "max": [
+        -5.657624592517439,
+        14.149358775055571,
+        0.9150409381482051
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_127/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        -5.99923591139107,
+        13.86893477576021,
+        0.76867101788691
+      ],
+      "max": [
+        -5.660763624530833,
+        14.146464616634585,
+        0.8500099999999999
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_132/Visuals/FOF_Mesh_Magenta_Box",
+    "old": {
+      "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_132/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        -6.292074921632451,
+        13.766740607397251,
+        0.7686810172651127
+      ],
+      "max": [
+        -5.947324586042138,
+        14.050058777275094,
+        0.9150409381482051
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_132/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        -6.288935904915769,
+        13.769634777979732,
+        0.76867101788691
+      ],
+      "max": [
+        -5.950463618055532,
+        14.047164618854108,
+        0.8500099999999999
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_133/Visuals/FOF_Mesh_Magenta_Box",
+    "old": {
+      "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_133/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        -6.290382015696547,
+        13.770604420688876,
+        0.6406740201262922
+      ],
+      "max": [
+        -5.949017491765191,
+        14.046194963325071,
+        0.7870339410093845
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_133/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        -6.287470629355402,
+        13.773223159968973,
+        0.6406640207480894
+      ],
+      "max": [
+        -5.951928871647116,
+        14.043576236997467,
+        0.7870439395195679
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_136/Visuals/FOF_Mesh_Magenta_Box",
+    "old": {
+      "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_136/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        -6.580274915190681,
+        13.668040609603365,
+        0.7686810172651127
+      ],
+      "max": [
+        -6.235524579600368,
+        13.951358779481208,
+        0.9150409381482051
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_136/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        -6.577135898473999,
+        13.670934780185846,
+        0.76867101788691
+      ],
+      "max": [
+        -6.238663611613762,
+        13.948464621060221,
+        0.8500099999999999
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_137/Visuals/FOF_Mesh_Magenta_Box",
+    "old": {
+      "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_137/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        -6.580274933944193,
+        13.668040603177094,
+        0.6406740201262922
+      ],
+      "max": [
+        -6.235524598353881,
+        13.951358773054936,
+        0.7870339410093845
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_137/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        -6.5771359019307996,
+        13.67093476159808,
+        0.6406640207480894
+      ],
+      "max": [
+        -6.238663615070562,
+        13.948464602472455,
+        0.7870439395195679
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_138/Visuals/FOF_Mesh_Magenta_Box",
+    "old": {
+      "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_138/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        -6.499674935745742,
+        13.433040608429753,
+        0.6406740201262922
+      ],
+      "max": [
+        -6.15492460015543,
+        13.716358778307596,
+        0.7870339410093845
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_138/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        -6.496535903732348,
+        13.435934766850739,
+        0.6406640207480894
+      ],
+      "max": [
+        -6.158063616872111,
+        13.713464607725115,
+        0.7870439395195679
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_143/Visuals/FOF_Mesh_Magenta_Box",
+    "old": {
+      "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_143/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        -6.499674916992229,
+        13.433040614856024,
+        0.7686810172651127
+      ],
+      "max": [
+        -6.154924581401917,
+        13.716358784733867,
+        0.9150409381482051
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_143/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        -6.496535900275548,
+        13.435934785438505,
+        0.76867101788691
+      ],
+      "max": [
+        -6.158063613415311,
+        13.71346462631288,
+        0.8500099999999999
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_139/Visuals/FOF_Mesh_Magenta_Box",
+    "old": {
+      "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_139/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        -5.921774948662816,
+        13.631040604004117,
+        0.6406740201262922
+      ],
+      "max": [
+        -5.577024613072504,
+        13.91435877388196,
+        0.7870339410093845
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_139/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        -5.918635916649422,
+        13.633934762425103,
+        0.6406640207480894
+      ],
+      "max": [
+        -5.580163629789185,
+        13.911464603299478,
+        0.7870439395195679
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_140/Visuals/FOF_Mesh_Magenta_Box",
+    "old": {
+      "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_140/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        -6.209782017498096,
+        13.5357044259393,
+        0.6406740201262922
+      ],
+      "max": [
+        -5.8684174935667395,
+        13.811294968575496,
+        0.7870339410093845
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_140/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        -6.206870631156951,
+        13.538323165219397,
+        0.6406640207480894
+      ],
+      "max": [
+        -5.871328873448665,
+        13.808676242247891,
+        0.7870439395195679
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_141/Visuals/FOF_Mesh_Magenta_Box",
+    "old": {
+      "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_141/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        -5.921774929909303,
+        13.631040610430388,
+        0.7686810172651127
+      ],
+      "max": [
+        -5.577024594318991,
+        13.91435878030823,
+        0.9150409381482051
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_141/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        -5.918635913192622,
+        13.633934781012869,
+        0.76867101788691
+      ],
+      "max": [
+        -5.580163626332385,
+        13.911464621887244,
+        0.8500099999999999
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_142/Visuals/FOF_Mesh_Magenta_Box",
+    "old": {
+      "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_142/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        -6.211474923433999,
+        13.531840612647676,
+        0.7686810172651127
+      ],
+      "max": [
+        -5.866724587843687,
+        13.815158782525518,
+        0.9150409381482051
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_142/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        -6.208335906717318,
+        13.534734783230157,
+        0.76867101788691
+      ],
+      "max": [
+        -5.869863619857081,
+        13.812264624104532,
+        0.8500099999999999
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_150/Visuals/FOF_Mesh_Magenta_Box",
+    "old": {
+      "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_150/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        -6.421974937482472,
+        13.206340613496895,
+        0.6406740201262922
+      ],
+      "max": [
+        -6.077224601892159,
+        13.489658783374738,
+        0.7870339410093845
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_150/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        -6.418835905469078,
+        13.209234771917881,
+        0.6406640207480894
+      ],
+      "max": [
+        -6.080363618608841,
+        13.486764612792257,
+        0.7870439395195679
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_151/Visuals/FOF_Mesh_Magenta_Box",
+    "old": {
+      "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_151/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        -5.844074950399546,
+        13.404340609071252,
+        0.6406740201262922
+      ],
+      "max": [
+        -5.499324614809233,
+        13.687658778949094,
+        0.7870339410093845
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_151/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        -5.840935918386152,
+        13.407234767492238,
+        0.6406640207480894
+      ],
+      "max": [
+        -5.502463631525915,
+        13.684764608366613,
+        0.7870439395195679
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_152/Visuals/FOF_Mesh_Magenta_Box",
+    "old": {
+      "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_152/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        -6.132082019234829,
+        13.30890443100867,
+        0.6406740201262922
+      ],
+      "max": [
+        -5.790717495303473,
+        13.584494973644865,
+        0.7870339410093845
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_152/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        -6.129170632893684,
+        13.311523170288767,
+        0.6406640207480894
+      ],
+      "max": [
+        -5.793628875185398,
+        13.581876247317261,
+        0.7870439395195679
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_153/Visuals/FOF_Mesh_Magenta_Box",
+    "old": {
+      "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_153/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        -5.844074931646033,
+        13.404340615497523,
+        0.7686810172651127
+      ],
+      "max": [
+        -5.499324596055721,
+        13.687658785375366,
+        0.9150409381482051
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_153/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        -5.840935914929352,
+        13.407234786080004,
+        0.76867101788691
+      ],
+      "max": [
+        -5.502463628069115,
+        13.68476462695438,
+        0.8500099999999999
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_154/Visuals/FOF_Mesh_Magenta_Box",
+    "old": {
+      "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_154/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        -6.133774925170733,
+        13.305040617717045,
+        0.7686810172651127
+      ],
+      "max": [
+        -5.78902458958042,
+        13.588358787594888,
+        0.9150409381482051
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_154/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        -6.130635908454051,
+        13.307934788299526,
+        0.76867101788691
+      ],
+      "max": [
+        -5.792163621593814,
+        13.585464629173902,
+        0.8500099999999999
+      ],
+      "height_clipped": true
+    }
+  },
+  {
+    "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_155/Visuals/FOF_Mesh_Magenta_Box",
+    "old": {
+      "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_155/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        -6.421974918728959,
+        13.206340619923166,
+        0.7686810172651127
+      ],
+      "max": [
+        -6.077224583138647,
+        13.489658789801009,
+        0.9150409381482051
+      ]
+    },
+    "new": {
+      "path": "/World/Warehouse/PalletBin_01/Roller/SmallKLT_Visual_155/Visuals/FOF_Mesh_Magenta_Box",
+      "min": [
+        -6.418835902012278,
+        13.209234790505647,
+        0.76867101788691
+      ],
+      "max": [
+        -6.080363615152041,
+        13.486764631380023,
+        0.8500099999999999
+      ],
+      "height_clipped": true
+    }
+  }
+]

@@ -1,0 +1,195 @@
+{
+  "mesh_count": 1879,
+  "results": [
+    {
+      "label": "previous_original_front_fault",
+      "point": [
+        3.7161155764,
+        -1.3668408352,
+        0.1128324143
+      ],
+      "nearest_mesh_aabbs": [
+        {
+          "distance_m": 0.1127324143,
+          "path": "/World/ground/Environment/Geometry"
+        },
+        {
+          "distance_m": 0.11283227124885574,
+          "path": "/World/Warehouse/SM_floor32/SM_floor02"
+        },
+        {
+          "distance_m": 0.1128324143,
+          "path": "/World/Warehouse/GroundPlane/CollisionMesh"
+        },
+        {
+          "distance_m": 1.3714897578735619,
+          "path": "/World/Warehouse/SM_floor47/SM_floor02"
+        }
+      ],
+      "within_any_mesh_bbox_005m": false
+    },
+    {
+      "label": "world_4.03000",
+      "point": [
+        0.19166958332061768,
+        -1.7954790592193604,
+        1.1588102579116821
+      ],
+      "nearest_mesh_aabbs": [
+        {
+          "distance_m": 0.0,
+          "path": "/World/Warehouse/Shelf_1/SM_RackShelf_156/SM_RackShelf_01/Section2"
+        },
+        {
+          "distance_m": 0.09761911671802205,
+          "path": "/World/Warehouse/Shelf_1/SM_RackShelf_156/SM_RackShelf_01/Section0"
+        },
+        {
+          "distance_m": 0.10294796907980708,
+          "path": "/World/Warehouse/Shelf_1/SM_RackShelf_156/SM_RackShelf_01/Section1"
+        },
+        {
+          "distance_m": 0.4684861780817713,
+          "path": "/World/Warehouse/Shelf_1/SM_CardBoxD_05/SM_CardBoxD_05"
+        }
+      ],
+      "within_any_mesh_bbox_005m": true
+    },
+    {
+      "label": "world_4.03000",
+      "point": [
+        0.1904376745223999,
+        -1.7306747436523438,
+        1.1445188522338867
+      ],
+      "nearest_mesh_aabbs": [
+        {
+          "distance_m": 0.0,
+          "path": "/World/Warehouse/Shelf_1/SM_RackShelf_156/SM_RackShelf_01/Section2"
+        },
+        {
+          "distance_m": 0.09995490246814842,
+          "path": "/World/Warehouse/Shelf_1/SM_RackShelf_156/SM_RackShelf_01/Section0"
+        },
+        {
+          "distance_m": 0.11494128942391542,
+          "path": "/World/Warehouse/Shelf_1/SM_RackShelf_156/SM_RackShelf_01/Section1"
+        },
+        {
+          "distance_m": 0.4719536657695563,
+          "path": "/World/Warehouse/Shelf_1/SM_CardBoxD_05/SM_CardBoxD_05"
+        }
+      ],
+      "within_any_mesh_bbox_005m": true
+    },
+    {
+      "label": "world_4.03000",
+      "point": [
+        0.15577197074890137,
+        -1.6739046573638916,
+        1.1416139602661133
+      ],
+      "nearest_mesh_aabbs": [
+        {
+          "distance_m": 0.0,
+          "path": "/World/Warehouse/Shelf_1/SM_RackShelf_156/SM_RackShelf_01/Section2"
+        },
+        {
+          "distance_m": 0.06933867909852284,
+          "path": "/World/Warehouse/Shelf_1/SM_RackShelf_156/SM_RackShelf_01/Section0"
+        },
+        {
+          "distance_m": 0.10717235080544488,
+          "path": "/World/Warehouse/Shelf_1/SM_RackShelf_156/SM_RackShelf_01/Section1"
+        },
+        {
+          "distance_m": 0.44054894503765823,
+          "path": "/World/Warehouse/Shelf_1/SM_CardBoxD_05/SM_CardBoxD_05"
+        }
+      ],
+      "within_any_mesh_bbox_005m": true
+    },
+    {
+      "label": "world_5.03000",
+      "point": [
+        0.1877155303955078,
+        -1.7957512140274048,
+        1.2679133415222168
+      ],
+      "nearest_mesh_aabbs": [
+        {
+          "distance_m": 0.0,
+          "path": "/World/Warehouse/Shelf_1/SM_RackShelf_156/SM_RackShelf_01/Section2"
+        },
+        {
+          "distance_m": 0.04825410357433185,
+          "path": "/World/Warehouse/Shelf_1/SM_RackShelf_156/SM_RackShelf_01/Section1"
+        },
+        {
+          "distance_m": 0.09435841252857326,
+          "path": "/World/Warehouse/Shelf_1/SM_RackShelf_156/SM_RackShelf_01/Section0"
+        },
+        {
+          "distance_m": 0.4429162895792977,
+          "path": "/World/Warehouse/Shelf_1/SM_CardBoxD_05/SM_CardBoxD_05"
+        }
+      ],
+      "within_any_mesh_bbox_005m": true
+    },
+    {
+      "label": "world_5.03000",
+      "point": [
+        0.1824784278869629,
+        -1.329659342765808,
+        1.2517406940460205
+      ],
+      "nearest_mesh_aabbs": [
+        {
+          "distance_m": 0.0,
+          "path": "/World/Warehouse/Shelf_1/SM_RackShelf_156/SM_RackShelf_01/Section2"
+        },
+        {
+          "distance_m": 0.04301700106578693,
+          "path": "/World/Warehouse/Shelf_1/SM_RackShelf_156/SM_RackShelf_01/Section1"
+        },
+        {
+          "distance_m": 0.08699695802873958,
+          "path": "/World/Warehouse/Shelf_1/SM_RackShelf_156/SM_RackShelf_01/Section0"
+        },
+        {
+          "distance_m": 0.5231618429877634,
+          "path": "/World/Warehouse/Shelf_1/SM_CardBoxD_05/SM_CardBoxD_05"
+        }
+      ],
+      "within_any_mesh_bbox_005m": true
+    },
+    {
+      "label": "world_5.03000",
+      "point": [
+        0.17560291290283203,
+        -0.8887357711791992,
+        1.2574188709259033
+      ],
+      "nearest_mesh_aabbs": [
+        {
+          "distance_m": 0.0,
+          "path": "/World/Warehouse/Shelf_1/SM_RackShelf_156/SM_RackShelf_01/Section2"
+        },
+        {
+          "distance_m": 0.03614148608165607,
+          "path": "/World/Warehouse/Shelf_1/SM_RackShelf_156/SM_RackShelf_01/Section1"
+        },
+        {
+          "distance_m": 0.0806275155105305,
+          "path": "/World/Warehouse/Shelf_1/SM_RackShelf_156/SM_RackShelf_01/Section0"
+        },
+        {
+          "distance_m": 0.35879345210472885,
+          "path": "/World/Warehouse/Shelf_1/SM_CardBoxD_02/SM_CardBoxD_02"
+        }
+      ],
+      "within_any_mesh_bbox_005m": true
+    }
+  ],
+  "limitations": "AABB inclusion is not a mesh-surface hit proof; exclusion applies to this static warehouse and ground, not moving robot or other dynamic assets."
+}

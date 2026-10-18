@@ -1,0 +1,12 @@
+{
+  "source": "recorded stationary JSON/NPZ; offline recheck, no rerun or rewriting original result",
+  "prior_region_lethal_cells": 32,
+  "blocked_region_lethal_cells": 114,
+  "lethal_cell_growth": 82,
+  "note": "ROI overlaps the prior divider, so positive count alone is insufficient. Require growth as well.",
+  "checks": {
+    "barrier_increases_lethal_cells": true,
+    "before_and_after_native_success": true
+  },
+  "passed": true
+}

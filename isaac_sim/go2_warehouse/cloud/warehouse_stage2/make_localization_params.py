@@ -1,0 +1,7 @@
+import argparse,json,yaml
+from pathlib import Path
+p=argparse.ArgumentParser();p.add_argument('--map',type=Path,required=True);p.add_argument('--pose',type=Path,required=True);p.add_argument('--output',type=Path,required=True);a=p.parse_args();pose=json.loads(a.pose.read_text());assert pose['source'].startswith('SLAM_');assert a.map.is_file()
+params={'map_server':{'ros__parameters':{'use_sim_time':True,'yaml_filename':str(a.map),'topic_name':'map','frame_id':'map'}},'amcl':{'ros__parameters':{'use_sim_time':True,'global_frame_id':'map','odom_frame_id':'odom','base_frame_id':'unitree_go2/scan_ground','scan_topic':'/scan','tf_broadcast':True,'transform_tolerance':.3,'set_initial_pose':False,'initial_pose':{'x':pose['x'],'y':pose['y'],'z':0.,'yaw':pose['yaw']},'robot_model_type':'nav2_amcl::OmniMotionModel','alpha1':.2,'alpha2':.2,'alpha3':.2,'alpha4':.2,'alpha5':.2,'min_particles':500,'max_particles':2000,'pf_err':.05,'pf_z':.99,'resample_interval':1,'update_min_d':.10,'update_min_a':.10,'laser_model_type':'likelihood_field','max_beams':60,'laser_min_range':.30,'laser_max_range':12.,'laser_likelihood_max_dist':2.,'sigma_hit':.20,'z_hit':.8,'z_rand':.2,'do_beamskip':False,'always_reset_initial_pose':False}},'lifecycle_manager_localization':{'ros__parameters':{'use_sim_time':True,'autostart':True,'node_names':['map_server','amcl'],'bond_timeout':4.0}}}
+a.output.parent.mkdir(parents=True,exist_ok=True)
+with a.output.open('x') as f:yaml.safe_dump(params,f,sort_keys=False)
+print(a.output)
