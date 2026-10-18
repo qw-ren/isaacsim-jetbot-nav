@@ -1,0 +1,19 @@
+{
+  "original_yaml": "/home/admin/go2-warehouse/nav_stage2/maps/slam_b_prior_20261018_v2/map.yaml",
+  "nav_yaml": "/home/admin/go2-warehouse/nav_stage2/maps/slam_b_prior_20261018_v2/map_nav.yaml",
+  "pgm_sha256": "d1b0583fac30d5d5e15b6674435560593762c1b176dea05580ced82819709f38",
+  "original_origin": [
+    -6.24,
+    -12.3,
+    0
+  ],
+  "nav_origin": [
+    -6.236298186049493,
+    -12.273524943114538,
+    0.0
+  ],
+  "original_mismatched_cells": 87389,
+  "corrected_mismatched_cells": 0,
+  "unknown_cells": 87389,
+  "map_pixels_unchanged": true
+}

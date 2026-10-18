@@ -1,0 +1,80 @@
+{
+  "map": "/home/admin/go2-warehouse/nav_stage2/maps/slam_m2_20261015_v1/map_nav.yaml",
+  "mode": "A_fixed_new_obstacle_NavigateToPose_with_AMCL",
+  "fixture": {
+    "id": "A_fixed_02",
+    "enabled": true,
+    "center": [
+      4.0,
+      -1.0,
+      0.5
+    ],
+    "size": [
+      0.6,
+      0.6,
+      1.0
+    ]
+  },
+  "initial_box_lethal_cells": 14,
+  "start": {
+    "wall": 2659.201527757,
+    "stamp": 5.509999876,
+    "x": 1.9589330171045733,
+    "y": -1.0563988612332202,
+    "yaw": -0.009163601306345817
+  },
+  "target": {
+    "x": 5.958933017104574,
+    "y": -1.0563988612332202,
+    "yaw": 0.0
+  },
+  "start_wall": 2659.201610357,
+  "start_sim": 5.529999876,
+  "error": "Guard latched: PREDICTED_STATIC_CLEARANCE",
+  "abort_wall": 2664.516018139,
+  "final_map_pose": {
+    "wall": 2685.773196956,
+    "stamp": 11.749999737,
+    "x": 2.7771749107839727,
+    "y": -1.2738265404279154,
+    "yaw": -0.5551029177567915
+  },
+  "goal_error_m": 3.18917849027251,
+  "goal_yaw_error_rad": 0.5551029177567915,
+  "cruise_mps": 0.7689625008238686,
+  "cruise_samples": 36,
+  "min_center_aabb_clearance_m": 0.8538803084254802,
+  "map_publishers": [
+    "map_server"
+  ],
+  "tf_publishers": [
+    "robot_data_manager",
+    "go2_scan_ground_frame",
+    "amcl"
+  ],
+  "amcl_pose_updates_during_action": 6,
+  "checks": {
+    "amcl_updates_during_navigation": true,
+    "no_error": false,
+    "action_succeeded": false,
+    "localized_goal_error_le_025": false,
+    "localized_yaw_error_le_030": false,
+    "cruise_ge_06": true,
+    "commands_bounded": true,
+    "posture": true,
+    "geometry_clearance": true,
+    "saved_map_unchanged": true,
+    "saved_map_amcl_sources": true,
+    "global_plan_observed": true,
+    "new_obstacle_clearance": true,
+    "passed_obstacle": false,
+    "guard_no_latched_fault": false
+  },
+  "obstacle_clearance_m": 0.85388030842548,
+  "global_plans_seen": 1,
+  "lateral_excursion_m": 0.320975661277771,
+  "informational_checks": {
+    "sustained_stop": true
+  },
+  "passed": false
+}

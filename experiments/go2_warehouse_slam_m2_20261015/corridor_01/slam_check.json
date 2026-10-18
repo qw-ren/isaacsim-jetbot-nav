@@ -1,0 +1,98 @@
+{
+  "mode": "SLAM_sensor_built_initial_corridor_NOT_full_warehouse",
+  "truth_odometry_input": true,
+  "nav2_goal_executed": false,
+  "parameters": {
+    "use_sim_time": true,
+    "base_frame": "unitree_go2/scan_ground",
+    "mode": "mapping"
+  },
+  "start": {
+    "wall": 5119.740675709,
+    "sim": 3.449999922,
+    "stage": "mapping_ready",
+    "x": -0.007008724845945835,
+    "y": -1.0030922889709473,
+    "z": 0.4175017178058624,
+    "yaw": -0.03112071899401566,
+    "tilt": 0.010084364607873306,
+    "vx": 0.0008181669400073588,
+    "vy": 0.00020953614148311317,
+    "speed": 0.0008445723985003513,
+    "wz": 0.0010712415678426623
+  },
+  "forward_end": {
+    "wall": 5147.87896507,
+    "sim": 9.469999788,
+    "stage": "mapping_forward",
+    "x": 4.456582546234131,
+    "y": -0.3877647817134857,
+    "z": 0.40613141655921936,
+    "yaw": 0.20092645991025998,
+    "tilt": 0.0768096857500535,
+    "vx": 0.7949573397636414,
+    "vy": 0.05337679386138916,
+    "speed": 0.7967472963035437,
+    "wz": -0.016271153464913368
+  },
+  "end": {
+    "wall": 5161.453786678,
+    "sim": 12.48999972,
+    "stage": "mapping_zero",
+    "x": 4.580365180969238,
+    "y": -0.5162855386734009,
+    "z": 0.4080736041069031,
+    "yaw": 0.17860575223887243,
+    "tilt": 0.15208847353986274,
+    "vx": -0.004337953869253397,
+    "vy": 0.00591628160327673,
+    "speed": 0.007336227353418185,
+    "wz": -0.044613033533096313
+  },
+  "save_map_result": 0,
+  "serialize_result": 0,
+  "cruise_mean_mps": 0.7784349626185847,
+  "travel_m": 4.505804587024379,
+  "last_map": {
+    "wall": 5162.303182002,
+    "sim": 12.669999716,
+    "width": 395,
+    "height": 460,
+    "occupied": 1325,
+    "free": 50264,
+    "unknown": 130111
+  },
+  "map_publishers": [
+    "slam_toolbox"
+  ],
+  "tf_publishers": [
+    "go2_scan_ground_frame",
+    "slam_toolbox",
+    "slam_toolbox",
+    "robot_data_manager"
+  ],
+  "map_to_odom": {
+    "wall": 5162.999971909,
+    "x": -0.0014768764430525224,
+    "y": -0.06930474491536284,
+    "z": 0.0,
+    "yaw": 0.003489999999999982
+  },
+  "guard_faults": [],
+  "checks": {
+    "no_error": true,
+    "map_messages": true,
+    "nonempty_occupancy": true,
+    "unknown_preserved": true,
+    "guarded_cruise": true,
+    "corridor_travel": true,
+    "no_guard_fault": true,
+    "one_slam_map_source": true,
+    "no_truth_map_static_tf": true,
+    "slam_dynamic_map_tf": true,
+    "sim_mapping_parameters": true,
+    "saved_grid": true,
+    "saved_graph": true
+  },
+  "passed": true
+}

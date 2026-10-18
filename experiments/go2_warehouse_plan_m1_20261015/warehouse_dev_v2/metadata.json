@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-15",
+  "kind": "development_collision_aabb_projection_NOT_SLAM",
+  "asset_relative": "Isaac/Environments/Simple_Warehouse/warehouse_multiple_shelves.usd",
+  "root_asset_sha256": "010062d67621d04aab6272232bc569bef75d071dc406ca216227ee32455c1c94",
+  "source_scene": {
+    "env_name": "warehouse-shelves",
+    "spawn_xy": [
+      0.0,
+      -1.0
+    ],
+    "spawn_yaw_rad": 0.0,
+    "warehouse_prim_valid": true,
+    "warehouse_prims": 8126,
+    "warehouse_collision_prims": 1878,
+    "meters_per_unit": 1.0,
+    "up_axis": "Z",
+    "bounds_min": [
+      -11.99999912142755,
+      -17.999999902844422,
+      -6.869831537606658e-05
+    ],
+    "bounds_max": [
+      12.000000342130647,
+      20.818081582505194,
+      9.300010941024185
+    ]
+  },
+  "collision_prims_total": 1878,
+  "selected_boxes": 1077,
+  "height_band_m": [
+    0.05,
+    0.85
+  ],
+  "resolution_m": 0.05,
+  "origin": [
+    -12.5,
+    -18.5
+  ],
+  "width": 501,
+  "height": 797,
+  "occupied_cells": 53946,
+  "free_cells": 318534,
+  "unknown_cells": 26817,
+  "pgm_values": {
+    "occupied": 0,
+    "free": 254,
+    "unknown": 128
+  },
+  "limitations": [
+    "AABBs overestimate rotated/disconnected mesh obstacles",
+    "Rectangular interior assumed free where no selected collider exists",
+    "Not ray-traced, observed, or SLAM-generated",
+    "Not a body swept-volume collision certification"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "replay": {
+    "old_body_position": [
+      2.671816349029541,
+      -1.1795682907104492,
+      0.33847400546073914
+    ],
+    "new_body_position": [
+      2.671816349029541,
+      -1.1795682907104492,
+      0.33847400546073914
+    ],
+    "position_difference_m": 0.0,
+    "orientation_difference_rad": 0.0,
+    "new_front_min_range_m": 4.964919809650927,
+    "old_front_min_range_m": 0.831944108,
+    "points_near_old_fault_xy": 562,
+    "near_xy_z_min_median_max": [
+      -0.0011434853076934814,
+      0.020620033144950867,
+      0.027838081121444702
+    ],
+    "new_points_near_old_fault_xy_in_scan_height_band": 0
+  },
+  "restart": {
+    "old_body_position": [
+      2.671816349029541,
+      -1.1795682907104492,
+      0.33847400546073914
+    ],
+    "new_body_position": [
+      2.671816349029541,
+      -1.1795682907104492,
+      0.33847400546073914
+    ],
+    "position_difference_m": 0.0,
+    "orientation_difference_rad": 0.0,
+    "new_front_min_range_m": 4.965085826562712,
+    "old_front_min_range_m": 0.831944108,
+    "points_near_old_fault_xy": 563,
+    "near_xy_z_min_median_max": [
+      -0.0011435151100158691,
+      0.020587682723999023,
+      0.02783423662185669
+    ],
+    "new_points_near_old_fault_xy_in_scan_height_band": 0
+  }
+}

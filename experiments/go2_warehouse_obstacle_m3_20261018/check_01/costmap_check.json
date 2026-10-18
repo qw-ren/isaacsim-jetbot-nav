@@ -1,0 +1,69 @@
+{
+  "mode": "stationary_physical_obstacle_global_costmap_Navfn",
+  "velocity_commands_sent": false,
+  "before": {
+    "sim": 8.069999819,
+    "status": 4,
+    "path_points": 161,
+    "box_center_map": [
+      3.984714736760625,
+      -0.9977444412143105
+    ],
+    "interior_min_cost": 0,
+    "interior_max_cost": 0,
+    "conservative_box_clearance_m": -0.3991923622817956
+  },
+  "fixture_enabled": {
+    "id": "check_01_enabled",
+    "enabled": true,
+    "center": [
+      4.0,
+      -1.0,
+      0.5
+    ],
+    "size": [
+      0.6,
+      0.6,
+      1.0
+    ]
+  },
+  "enabled": {
+    "sim": 12.089999729,
+    "status": 4,
+    "path_points": 184,
+    "box_center_map": [
+      3.984714736760625,
+      -0.9977444412143105
+    ],
+    "interior_min_cost": 99,
+    "interior_max_cost": 99,
+    "conservative_box_clearance_m": 0.47676661424119476
+  },
+  "removed": {
+    "sim": 16.109999639,
+    "status": 4,
+    "path_points": 173,
+    "box_center_map": [
+      3.984714736760625,
+      -0.9977444412143105
+    ],
+    "interior_min_cost": 99,
+    "interior_max_cost": 99,
+    "conservative_box_clearance_m": 0.26037934759272324
+  },
+  "max_displacement_m": 0.01956950365409558,
+  "checks": {
+    "baseline_box_region_free": true,
+    "physical_box_marked_lethal": false,
+    "baseline_plan_succeeds": true,
+    "baseline_path_crosses_new_box": true,
+    "obstacle_plan_succeeds": true,
+    "new_path_clears_box": true,
+    "removed_box_cleared": false,
+    "removed_plan_succeeds": true,
+    "saved_map_file_unchanged": true,
+    "published_map_unchanged": true,
+    "no_commanded_motion": true
+  },
+  "passed": false
+}

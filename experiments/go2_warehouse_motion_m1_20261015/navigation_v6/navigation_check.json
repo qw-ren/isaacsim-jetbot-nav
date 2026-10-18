@@ -1,0 +1,38 @@
+{
+  "start": {
+    "wall": 3059.108077234,
+    "sim": 38.88499913,
+    "x": -0.004542438313364983,
+    "y": -0.9980818629264832,
+    "z": 0.4171573519706726,
+    "vx": 2.8161808884874517e-08,
+    "speed": 7.989061100806973e-06,
+    "tilt": 0.010983618649559438
+  },
+  "error": "Guard latched: FRONT_SCAN_CLEARANCE",
+  "final": {
+    "wall": 3082.302230322,
+    "sim": 44.584999003,
+    "x": 0.41855350136756897,
+    "y": -1.3276997804641724,
+    "z": 0.4092946946620941,
+    "vx": -0.009350383654236794,
+    "speed": 0.01172536230965705,
+    "tilt": 0.12510882246033053
+  },
+  "final_goal_error_m": 5.591058232858292,
+  "minimum_center_aabb_clearance_m": 0.9099357638133501,
+  "actual_cruise_mean_mps": 0,
+  "checks": {
+    "no_error": false,
+    "action_succeeded": false,
+    "goal_error_le_025": false,
+    "actual_cruise_ge_06": false,
+    "planner_cruise_ge_06": true,
+    "commands_bounded": true,
+    "sustained_stop_2sim_seconds": false,
+    "posture_bounded": true,
+    "geometry_clearance": true
+  },
+  "passed": false
+}

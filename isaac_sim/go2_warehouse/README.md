@@ -1,4 +1,4 @@
-# Go2 仓储阶段一（导航迁移前置验证）
+# Go2 仓储云仿真（导航迁移前置验证）
 
 负责人：任权伟（导航与系统集成）。本目录是实际云端可运行源码副本，
 不是 JetBot 实现，也不是仅从公开上游克隆的工程。
@@ -8,7 +8,7 @@
 用户报告已完成 GUI 键盘验收。SSH 恢复原因由用户确认为笔记本代理问题。
 没有将本次手动键盘验收记作自动化测试。另有14日独立低速复测报告12项通过，
 本地/云端哈希已核对一致，见 experiments/go2_warehouse_stage1_20261014。
-仓储 SLAM/Nav2 尚未运行验收。
+以上是阶段一历史状态。2026-10-18已完成阶段二SLAM/AMCL、受保护Nav2与A/B障碍实验；见[最新进度](../../docs/GO2_WAREHOUSE_STAGE2.md)。
 
 ## 运行
 
@@ -42,7 +42,7 @@ bash /home/admin/go2-warehouse/work/cloud/warehouse_stage1/manage_warehouse.sh s
 
 nav2/nav2_params.yaml 与 scripts/start_nav2_servers.sh 是迁移前旧场景配置，
 保留用于阶段二审查。脚本含旧笔记本路径且引用未迁移旧地图，**不要直接运行**。
-尚无仓储地图、/scan 或 AMCL/SLAM 验收；旧配置中的高速参数也尚未在仓储验证。
+这些旧配置未用于当前仓储验收；当前/scan、地图和AMCL/SLAM使用cloud/warehouse_stage2中的独立入口。旧高速参数仍不应使用。
 
 后续定位节点发布 map→odom 时须关闭 Bridge 的临时静态变换
 （`+publish_map_to_odom=false`），避免重复 TF。

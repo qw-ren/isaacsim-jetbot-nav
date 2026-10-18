@@ -1,0 +1,38 @@
+{
+  "raw_18.01000": {
+    "stamp_sim_s": 18.009999597,
+    "points": 62675,
+    "timestamp_min_ns": 0,
+    "timestamp_max_ns": 17262581110135586817,
+    "timestamp_in_sim_range_fraction": 0.011471878739529318,
+    "nonzero_normal_fraction": 0.0,
+    "mapped_unique_ids": 9,
+    "unique_ids": 2734,
+    "usable_for_provenance": false,
+    "reason": "Timestamp/frame semantics and object IDs not validated; do not use these arrays as ground truth."
+  },
+  "raw_18.03000": {
+    "stamp_sim_s": 18.029999596,
+    "points": 62675,
+    "timestamp_min_ns": 0,
+    "timestamp_max_ns": 17262581110135586817,
+    "timestamp_in_sim_range_fraction": 0.012604706820901476,
+    "nonzero_normal_fraction": 0.0,
+    "mapped_unique_ids": 9,
+    "unique_ids": 2740,
+    "usable_for_provenance": false,
+    "reason": "Timestamp/frame semantics and object IDs not validated; do not use these arrays as ground truth."
+  },
+  "raw_18.05000": {
+    "stamp_sim_s": 18.049999596,
+    "points": 62675,
+    "timestamp_min_ns": 0,
+    "timestamp_max_ns": 17262581110135586817,
+    "timestamp_in_sim_range_fraction": 0.012461108895093737,
+    "nonzero_normal_fraction": 0.0,
+    "mapped_unique_ids": 9,
+    "unique_ids": 2737,
+    "usable_for_provenance": false,
+    "reason": "Timestamp/frame semantics and object IDs not validated; do not use these arrays as ground truth."
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "mode": "AMCL_warm_start_with_saved_SLAM_map_NOT_global_relocalization",
+  "nav2_goal_executed": false,
+  "lifecycle": {
+    "map_server": 3,
+    "amcl": 3
+  },
+  "pose_start": {
+    "wall": 5877.815610614,
+    "stamp": 170.089996198,
+    "frame": "map",
+    "x": 4.767375102061934,
+    "y": -0.5689051282261257,
+    "yaw": -0.12864496236627282,
+    "covariance_diag": [
+      -1.1546319456101628e-12,
+      5.229150445984487e-14,
+      7.5051076464662e-14
+    ]
+  },
+  "odom_start": {
+    "wall": 5882.398722667,
+    "sim": 171.089996175,
+    "stage": "localized_ready",
+    "x": 4.569018363952637,
+    "y": -0.501893937587738,
+    "z": 0.41205042600631714,
+    "yaw": -0.13319028216891649,
+    "tilt": 0.06108081418090732,
+    "vx": -2.845837843779009e-05,
+    "vy": 1.9906492525478825e-05,
+    "speed": 3.4729637890070496e-05,
+    "wz": 0.00011236662248848006
+  },
+  "odom_end": {
+    "wall": 5890.849648962,
+    "sim": 172.909996135,
+    "stage": "localization_forward",
+    "x": 5.827091693878174,
+    "y": -0.5037721991539001,
+    "z": 0.4092041552066803,
+    "yaw": -0.03260641322245357,
+    "tilt": 0.080071033992167,
+    "vx": 0.8043518662452698,
+    "vy": 0.036615945398807526,
+    "speed": 0.8051848559117942,
+    "wz": -0.009191964752972126
+  },
+  "pose_motion_updates": 11,
+  "pose_end": {
+    "wall": 5903.357433816,
+    "stamp": 175.609996074,
+    "frame": "map",
+    "x": 6.15550318732634,
+    "y": -0.6849011502420038,
+    "yaw": -0.032683060753598656,
+    "covariance_diag": [
+      0.011515603171218913,
+      0.01646854046844254,
+      0.006354091079081086
+    ]
+  },
+  "odom_displacement_m": 1.2580747320157257,
+  "amcl_displacement_m": 1.3929661367827044,
+  "cruise_mps": 0.7961543848117193,
+  "map_publishers": [
+    "map_server"
+  ],
+  "tf_publishers": [
+    "go2_scan_ground_frame",
+    "amcl",
+    "robot_data_manager"
+  ],
+  "guard_faults": [],
+  "particle_counts": [
+    501,
+    501,
+    501,
+    501,
+    501,
+    501,
+    501,
+    501,
+    501,
+    501
+  ],
+  "checks": {
+    "no_error": true,
+    "lifecycle_active": true,
+    "loaded_grid_matches_file": true,
+    "map_origin_matches_file": true,
+    "unknown_preserved": true,
+    "files_unchanged": true,
+    "one_saved_map_source": true,
+    "amcl_dynamic_map_tf": true,
+    "no_static_truth_map_tf": true,
+    "amcl_poses_finite": true,
+    "particles_present": true,
+    "guarded_motion": true,
+    "pose_updates_during_motion": true,
+    "amcl_tracks_motion": true,
+    "no_guard_fault": true
+  },
+  "passed": true
+}

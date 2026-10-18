@@ -1,0 +1,111 @@
+{
+  "map": "/home/admin/go2-warehouse/nav_stage2/maps/slam_b_prior_20261018_v2/map_nav.yaml",
+  "mode": "B_preblocked_upper_branch_actual_lower_branch_NavigateToPose_with_AMCL",
+  "fixture": {
+    "id": "planning_enabled",
+    "enabled": true,
+    "center": [
+      4.3,
+      1.4,
+      0.5
+    ],
+    "size": [
+      0.6,
+      5.0,
+      1.0
+    ],
+    "prior_divider": {
+      "center": [
+        4.3,
+        -1.3,
+        0.5
+      ],
+      "size": [
+        2.0,
+        0.4,
+        1.0
+      ]
+    }
+  },
+  "initial_box_lethal_cells": 20,
+  "start": {
+    "wall": 6080.362025837,
+    "stamp": 29.609999338,
+    "x": 0.9873970584490268,
+    "y": -0.047677803690745035,
+    "yaw": 0.003129071921460663
+  },
+  "target": {
+    "x": 6.487397058449027,
+    "y": -0.047677803690745035,
+    "yaw": 0.0
+  },
+  "start_wall": 6080.362097638,
+  "start_sim": 29.629999337,
+  "action_status": 4,
+  "action_end_pose": {
+    "wall": 6163.023482626,
+    "stamp": 49.329998897,
+    "x": 6.436705034294112,
+    "y": -0.3096328515206344,
+    "yaw": 0.4952072130184202
+  },
+  "final_map_pose": {
+    "wall": 6183.738037231,
+    "stamp": 54.329998785,
+    "x": 6.438681984315017,
+    "y": -0.3066318197291465,
+    "yaw": 0.7013567922668774
+  },
+  "goal_error_m": 0.2634963773380931,
+  "goal_yaw_error_rad": 0.7013567922668774,
+  "cruise_mps": 0.7136830529129063,
+  "cruise_samples": 540,
+  "min_center_aabb_clearance_m": 0.6340362827265892,
+  "map_publishers": [
+    "map_server"
+  ],
+  "tf_publishers": [
+    "robot_data_manager",
+    "go2_scan_ground_frame",
+    "amcl"
+  ],
+  "amcl_pose_updates_during_action": 83,
+  "checks": {
+    "amcl_updates_during_navigation": true,
+    "no_error": true,
+    "action_succeeded": true,
+    "cruise_ge_06": true,
+    "commands_bounded": true,
+    "posture": true,
+    "geometry_clearance": true,
+    "saved_map_unchanged": true,
+    "saved_map_amcl_sources": true,
+    "global_plan_observed": true,
+    "new_obstacle_clearance": true,
+    "passed_obstacle": true,
+    "guard_no_latched_fault": true,
+    "configured_stateful_goal_xy_entered": true,
+    "configured_goal_yaw_at_success": true,
+    "zero_target_after_disarm": true,
+    "actual_lower_branch_traversed": true
+  },
+  "obstacle_clearance_m": 1.387658980238617,
+  "global_plans_seen": 1,
+  "lateral_excursion_m": 2.6938005909323692,
+  "informational_checks": {
+    "sustained_stop": true,
+    "post_stop_xy_le_025": false,
+    "post_stop_yaw_le_030": false
+  },
+  "arrival_position_error_m": 0.2668147829421789,
+  "arrival_yaw_error_rad": 0.4952072130184202,
+  "closest_goal_error_m": 0.1976249939775596,
+  "acceptance": "Nav2 configured stateful xy=.20m/yaw=.50rad; post-stop precision informational per user; cruise >=.6m/s unchanged",
+  "middle_section_y_range": [
+    -2.6925127506256104,
+    -2.5971105098724365
+  ],
+  "scope": "Preblocked branch actual traversal after stationary before/after native planning; obstacle is not inserted during motion",
+  "passed": true
+}

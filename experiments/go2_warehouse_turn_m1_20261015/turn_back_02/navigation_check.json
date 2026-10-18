@@ -1,0 +1,62 @@
+{
+  "goal": {
+    "x": 6.0,
+    "y": -1.0,
+    "yaw": -0.7853981634
+  },
+  "start": {
+    "wall": 4137.832430204,
+    "sim": 15.684999649,
+    "x": 3.803597927093506,
+    "y": 1.1144510507583618,
+    "z": 0.4140053391456604,
+    "vx": -5.0033988372888416e-05,
+    "speed": 5.4490940990135e-05,
+    "wz": 0.0006192617584019899,
+    "yaw": 0.2743155847581977,
+    "tilt": 0.11179042874784528
+  },
+  "action_status": 4,
+  "action_end": {
+    "wall": 4168.055722239,
+    "sim": 23.23499948,
+    "x": 5.955216407775879,
+    "y": -0.8472917675971985,
+    "z": 0.3997988998889923,
+    "vx": -0.0457044318318367,
+    "speed": 0.047569389338132,
+    "wz": 0.059317540377378464,
+    "yaw": -1.0341047207573404,
+    "tilt": 0.17443802489480997
+  },
+  "final": {
+    "wall": 4188.250274607,
+    "sim": 28.259999368,
+    "x": 5.928995609283447,
+    "y": -0.7779799699783325,
+    "z": 0.41106563806533813,
+    "vx": -0.0006036341655999422,
+    "speed": 0.0007301929015840344,
+    "wz": 0.015910441055893898,
+    "yaw": -1.2785366832174252,
+    "tilt": 0.051126352664466156
+  },
+  "final_goal_error_m": 0.23309765599819104,
+  "minimum_center_aabb_clearance_m": 1.6041158642289557,
+  "cruise_samples": 21,
+  "final_yaw_error_rad": 0.4931385198174251,
+  "actual_cruise_mean_mps": 0.7646858890851339,
+  "checks": {
+    "no_error": true,
+    "action_succeeded": true,
+    "goal_error_le_025": true,
+    "actual_cruise_ge_06": true,
+    "nonzero_controller_commands": true,
+    "final_yaw_bounded": false,
+    "commands_bounded": true,
+    "sustained_stop_2sim_seconds": true,
+    "posture_bounded": true,
+    "geometry_clearance": true
+  },
+  "passed": false
+}

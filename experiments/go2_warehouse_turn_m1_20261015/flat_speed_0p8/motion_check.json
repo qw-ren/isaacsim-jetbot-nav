@@ -1,0 +1,47 @@
+{
+  "case": "normal",
+  "command_speed_mps": 0.8,
+  "start": {
+    "wall": 4517.819466844,
+    "sim": 2.059999953,
+    "stage": "standing",
+    "x": -0.027062928304076195,
+    "y": -0.9783830642700195,
+    "z": 0.2758660912513733,
+    "yaw": -0.045069663412848945,
+    "tilt": 0.031180205707887328,
+    "vx": -0.02682647295296192,
+    "vy": 0.004074071999639273,
+    "speed": 0.027134069244295855,
+    "wz": 0.0024974243715405464
+  },
+  "forward_end": {
+    "wall": 4529.889065935,
+    "sim": 5.084999886,
+    "stage": "forward",
+    "x": 2.1510980129241943,
+    "y": -1.0604130029678345,
+    "z": 0.2416253387928009,
+    "yaw": -0.14442867557943212,
+    "tilt": 0.06191927211035178,
+    "vx": 0.728333055973053,
+    "vy": 0.01857234537601471,
+    "speed": 0.7285698130143825,
+    "wz": -0.020998049527406693
+  },
+  "trigger_wall": 4529.924957933,
+  "error": "Posture limit",
+  "min_center_aabb_clearance_m": 1.1928083743302196,
+  "checks": {
+    "no_error": false,
+    "runtime_command_received": true,
+    "forward_motion": false,
+    "steady_speed_tracks_command": false,
+    "stopped_speed_low": false,
+    "posture_bounded": true,
+    "static_clearance": true,
+    "runtime_watchdog_or_stop": false,
+    "runtime_limit": true
+  },
+  "passed": false
+}

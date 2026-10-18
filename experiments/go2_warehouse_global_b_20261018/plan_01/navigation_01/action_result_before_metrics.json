@@ -1,0 +1,60 @@
+{
+  "map": "/home/admin/go2-warehouse/nav_stage2/maps/slam_b_prior_20261018_v2/map_nav.yaml",
+  "mode": "B_preblocked_upper_branch_actual_lower_branch_NavigateToPose_with_AMCL",
+  "fixture": {
+    "id": "planning_enabled",
+    "enabled": true,
+    "center": [
+      4.3,
+      1.4,
+      0.5
+    ],
+    "size": [
+      0.6,
+      5.0,
+      1.0
+    ],
+    "prior_divider": {
+      "center": [
+        4.3,
+        -1.3,
+        0.5
+      ],
+      "size": [
+        2.0,
+        0.4,
+        1.0
+      ]
+    }
+  },
+  "initial_box_lethal_cells": 20,
+  "start": {
+    "wall": 6080.362025837,
+    "stamp": 29.609999338,
+    "x": 0.9873970584490268,
+    "y": -0.047677803690745035,
+    "yaw": 0.003129071921460663
+  },
+  "target": {
+    "x": 6.487397058449027,
+    "y": -0.047677803690745035,
+    "yaw": 0.0
+  },
+  "start_wall": 6080.362097638,
+  "start_sim": 29.629999337,
+  "action_status": 4,
+  "action_end_pose": {
+    "wall": 6163.023482626,
+    "stamp": 49.329998897,
+    "x": 6.436705034294112,
+    "y": -0.3096328515206344,
+    "yaw": 0.4952072130184202
+  },
+  "final_map_pose": {
+    "wall": 6183.738037231,
+    "stamp": 54.329998785,
+    "x": 6.438681984315017,
+    "y": -0.3066318197291465,
+    "yaw": 0.7013567922668774
+  }
+}
