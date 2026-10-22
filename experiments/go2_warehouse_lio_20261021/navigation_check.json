@@ -1,0 +1,224 @@
+{
+  "mode": "isolated_LIO_odom_AMCL_NavigateToPose",
+  "goals": [
+    [
+      -3.4749999999999996,
+      15.725000000000001
+    ],
+    [
+      4.324999999999999,
+      -9.975
+    ],
+    [
+      2.0250000000000004,
+      -0.9749999999999979
+    ],
+    [
+      -3.4749999999999996,
+      15.725000000000001
+    ],
+    [
+      4.324999999999999,
+      -9.975
+    ],
+    [
+      2.0250000000000004,
+      -0.9749999999999979
+    ]
+  ],
+  "legs": [
+    {
+      "index": 0,
+      "goal": [
+        -3.4749999999999996,
+        15.725000000000001
+      ],
+      "start_pose": {
+        "wall": 5853.939031342,
+        "stamp": 9.949999779,
+        "x": 1.9758549480397696,
+        "y": -0.9857030605589335,
+        "yaw": -0.011274979790938623
+      },
+      "status": 4,
+      "arrival_pose": {
+        "wall": 5945.921833634,
+        "stamp": 39.249999123,
+        "x": -3.119192190523124,
+        "y": 15.584329681832639,
+        "yaw": 2.884562584335906
+      }
+    },
+    {
+      "index": 1,
+      "goal": [
+        4.324999999999999,
+        -9.975
+      ],
+      "start_pose": {
+        "wall": 5947.92522316,
+        "stamp": 39.84999911,
+        "x": -3.130808438973545,
+        "y": 15.609845501381072,
+        "yaw": 2.879546882182619
+      },
+      "status": 4,
+      "arrival_pose": {
+        "wall": 6107.63661762,
+        "stamp": 90.749997972,
+        "x": 4.207305158806148,
+        "y": -9.597758193689103,
+        "yaw": -1.3142752315010067
+      }
+    },
+    {
+      "index": 2,
+      "goal": [
+        2.0250000000000004,
+        -0.9749999999999979
+      ],
+      "start_pose": {
+        "wall": 6109.649786058,
+        "stamp": 91.349997959,
+        "x": 4.219497690371794,
+        "y": -9.631609622322806,
+        "yaw": -1.3528642325395441
+      },
+      "status": 4,
+      "arrival_pose": {
+        "wall": 6190.111325637,
+        "stamp": 117.149997382,
+        "x": 2.117036872936774,
+        "y": -1.3509964812674085,
+        "yaw": 1.7216614824964145
+      }
+    },
+    {
+      "index": 3,
+      "goal": [
+        -3.4749999999999996,
+        15.725000000000001
+      ],
+      "start_pose": {
+        "wall": 6192.123153654,
+        "stamp": 117.74999737,
+        "x": 2.0358260061023277,
+        "y": -1.3144961128941703,
+        "yaw": 1.665798626113567
+      },
+      "status": 4,
+      "arrival_pose": {
+        "wall": 6278.18463134,
+        "stamp": 145.249996755,
+        "x": -3.0893873582472375,
+        "y": 15.620222068980262,
+        "yaw": 2.8563063053572013
+      }
+    },
+    {
+      "index": 4,
+      "goal": [
+        4.324999999999999,
+        -9.975
+      ],
+      "start_pose": {
+        "wall": 6280.204595009,
+        "stamp": 145.849996742,
+        "x": -3.1411086285487544,
+        "y": 15.611242078670088,
+        "yaw": 2.79966515076168
+      },
+      "status": 4,
+      "arrival_pose": {
+        "wall": 6423.766028208,
+        "stamp": 191.849995714,
+        "x": 4.190180001214269,
+        "y": -9.599110628013264,
+        "yaw": -1.2811366719636321
+      }
+    },
+    {
+      "index": 5,
+      "goal": [
+        2.0250000000000004,
+        -0.9749999999999979
+      ],
+      "start_pose": {
+        "wall": 6425.769495399,
+        "stamp": 192.4499957,
+        "x": 4.190075740954705,
+        "y": -9.615274100783777,
+        "yaw": -1.3218137650996362
+      },
+      "status": 4,
+      "arrival_pose": {
+        "wall": 6505.481071773,
+        "stamp": 218.149995126,
+        "x": 2.113312853990524,
+        "y": -1.3578718211444454,
+        "yaw": 1.7848779326478228
+      }
+    }
+  ],
+  "truth_used_for_control": false,
+  "map": "/home/admin/go2-warehouse/nav_stage2/maps/warehouse_lio_cad_v2_20261021/map.yaml",
+  "start_pose": {
+    "wall": 5853.938880651,
+    "stamp": 9.949999779,
+    "x": 1.9758549480397696,
+    "y": -0.9857030605589335,
+    "yaw": -0.011274979790938623
+  },
+  "action_status": 4,
+  "arrival_pose": {
+    "wall": 6507.48831967,
+    "stamp": 218.749995112,
+    "x": 2.0933424507117837,
+    "y": -1.3474235850326548,
+    "yaw": 1.7700841900039461
+  },
+  "interfaces": {
+    "odom_sources": [
+      "go2_lio_nav_odometry"
+    ],
+    "dynamic_edges": [
+      {
+        "parent": "map",
+        "child": "odom"
+      },
+      {
+        "parent": "odom",
+        "child": "unitree_go2/base_link"
+      },
+      {
+        "parent": "odom",
+        "child": "unitree_go2/scan_ground"
+      }
+    ],
+    "tf_sources": [
+      "amcl",
+      "go2_lio_nav_odometry",
+      "go2_scan_ground_frame"
+    ],
+    "tf_audit_basis": "node graph plus frozen Bridge isolation; cloud rclpy has no per-message MessageInfo callback"
+  },
+  "checks": {
+    "no_error": true,
+    "action_succeeded": true,
+    "exclusively_estimated_odom": true,
+    "exclusively_estimated_base_tf": true,
+    "lio_adapter_healthy": true,
+    "commands_bounded": true,
+    "guard_not_latched": true,
+    "disarmed_zero": true,
+    "saved_map_unchanged": true
+  },
+  "information": {
+    "estimated_vx_mean_mps": 0.5429556801050547,
+    "odom_max_wall_interval_s": 3.7616774799998893,
+    "amcl_pose_updates": 960,
+    "map_source": "USD collision-derived auxiliary CAD prior; not SLAM",
+    "precision_docking_test": false
+  },
+  "passed": true
+}
