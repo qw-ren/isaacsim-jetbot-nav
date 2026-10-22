@@ -1,0 +1,341 @@
+{
+  "scope": "All attempts retained; stopped/startup/pre-insertion failures are not passes",
+  "cases": [
+    {
+      "case": "moving_20261022_B_native_long_01",
+      "files": {
+        "RUNNER_RESULT.json": "2b1542e8c22c880c0402bca9b24ffd14c58bf66e89eb8edb0b8f16cc3fe119ec"
+      },
+      "runner_or_external_audit": {
+        "exit_code": 1,
+        "time": "2026-10-22T11:15:46.374993+08:00",
+        "power_operation": false,
+        "remaining_sessions": []
+      }
+    },
+    {
+      "case": "moving_20261022_B_native_long_02",
+      "files": {
+        "RUNNER_RESULT.json": "dbc5c8033cab04d5444b93c3d87c82cfe6882efeb0cddba96f03d93c0e397d01",
+        "navigation/navigation_check.json": "5484bb7ded2958f03dc261c913a12b61672692220451ec4aff7cccd01d6cf207"
+      },
+      "runner_or_external_audit": {
+        "exit_code": 1,
+        "time": "2026-10-22T11:33:27.968478+08:00",
+        "power_operation": false,
+        "remaining_sessions": []
+      },
+      "passed": false,
+      "error": "Unexpected native action result 6",
+      "checks": {
+        "no_error": false,
+        "estimated_odom_only": true,
+        "all_prelude_goals_succeeded": true,
+        "final_native_result": false,
+        "physical_insertion_acknowledged": false,
+        "moving_trigger": false,
+        "commands_bounded": true,
+        "saved_map_unchanged": true,
+        "disarmed_zero": true,
+        "adapter_healthy": true,
+        "post_insertion_native_plan": false,
+        "guard_not_latched": true
+      },
+      "native_statuses": [
+        6
+      ]
+    },
+    {
+      "case": "moving_20261022_B_native_long_03",
+      "files": {
+        "RUNNER_RESULT.json": "9e774882cf01d4addb6b92a502b74e8b3ad5b0a1af2ebd010425436bb2f7e929",
+        "navigation/navigation_check.json": "c178fd12f8e7375af339f32785915408773fa775fd9b8c8b3a5fc878471357c8"
+      },
+      "runner_or_external_audit": {
+        "exit_code": 1,
+        "time": "2026-10-22T11:39:33.565272+08:00",
+        "power_operation": false,
+        "remaining_sessions": []
+      },
+      "passed": false,
+      "error": "Unexpected native action result 6",
+      "checks": {
+        "no_error": false,
+        "estimated_odom_only": true,
+        "all_prelude_goals_succeeded": true,
+        "final_native_result": false,
+        "physical_insertion_acknowledged": false,
+        "moving_trigger": false,
+        "commands_bounded": true,
+        "saved_map_unchanged": true,
+        "disarmed_zero": true,
+        "adapter_healthy": true,
+        "post_insertion_native_plan": false,
+        "guard_not_latched": true
+      },
+      "native_statuses": [
+        6
+      ]
+    },
+    {
+      "case": "moving_20261022_B_native_long_04",
+      "files": {
+        "RUNNER_RESULT.json": "eca33e4236a25d58fa4e3a40914dd6e88b4ef88cbf0d530d7431973b7af53596",
+        "navigation/navigation_check.json": "82104a8e01bdbc9a496a540cfdc21d729ad253034fe364835bf15a721eb3fa34"
+      },
+      "runner_or_external_audit": {
+        "exit_code": 1,
+        "time": "2026-10-22T11:43:12.163650+08:00",
+        "power_operation": false,
+        "remaining_sessions": []
+      },
+      "passed": false,
+      "error": "Unexpected native action result 6",
+      "checks": {
+        "no_error": false,
+        "estimated_odom_only": true,
+        "all_prelude_goals_succeeded": true,
+        "final_native_result": false,
+        "physical_insertion_acknowledged": false,
+        "moving_trigger": false,
+        "commands_bounded": true,
+        "saved_map_unchanged": true,
+        "disarmed_zero": true,
+        "adapter_healthy": true,
+        "post_insertion_native_plan": false,
+        "guard_not_latched": true
+      },
+      "native_statuses": [
+        6
+      ]
+    },
+    {
+      "case": "moving_20261022_B_native_long_05",
+      "files": {
+        "RUNNER_RESULT.json": "6b041b2fcfc5adc236af51bb91375de1988e543038e8ba724db2f6f5ce08f33e",
+        "navigation/navigation_check.json": "dc13d3dcd7d4fd5297d51ab6d2feeedd6bcb83da655bdef5774a8b2770beaf0c"
+      },
+      "runner_or_external_audit": {
+        "exit_code": 1,
+        "time": "2026-10-22T11:55:36.017300+08:00",
+        "power_operation": false,
+        "remaining_sessions": []
+      },
+      "passed": false,
+      "error": "Unexpected native action result 6",
+      "checks": {
+        "no_error": false,
+        "estimated_odom_only": true,
+        "all_prelude_goals_succeeded": true,
+        "final_native_result": false,
+        "physical_insertion_acknowledged": false,
+        "moving_trigger": false,
+        "commands_bounded": true,
+        "saved_map_unchanged": true,
+        "disarmed_zero": true,
+        "adapter_healthy": true,
+        "post_insertion_native_plan": false,
+        "guard_not_latched": true
+      },
+      "native_statuses": [
+        4,
+        6
+      ]
+    },
+    {
+      "case": "moving_20261022_B_native_long_06",
+      "files": {
+        "RUNNER_RESULT.json": "5a3fd667edcfdc62342c1c6315a4503a4aed073bbb1a3a4bd2d18e1f13e164fa",
+        "navigation/navigation_check.json": "ba2f12bd391db696fad3fffc9f23eab922be7cdf57863bc060b1276ef8f986f0"
+      },
+      "runner_or_external_audit": {
+        "exit_code": 1,
+        "time": "2026-10-22T12:13:13.254178+08:00",
+        "power_operation": false,
+        "remaining_sessions": []
+      },
+      "passed": false,
+      "error": "Unexpected native action result 6",
+      "checks": {
+        "no_error": false,
+        "estimated_odom_only": true,
+        "all_prelude_goals_succeeded": true,
+        "final_native_result": false,
+        "physical_insertion_acknowledged": false,
+        "moving_trigger": false,
+        "commands_bounded": true,
+        "saved_map_unchanged": true,
+        "disarmed_zero": true,
+        "adapter_healthy": true,
+        "post_insertion_native_plan": false,
+        "guard_not_latched": true
+      },
+      "native_statuses": [
+        6
+      ]
+    },
+    {
+      "case": "moving_20261022_B_native_long_07",
+      "files": {
+        "RUNNER_RESULT.json": "c356d623d6ff291843864b13b1d7e89f53fa89acf250144076a6782807aac960",
+        "navigation/navigation_check.json": "a3696c2750a255fa24e71e044459c289fb683fd673304ca6791e684d2d57f61d"
+      },
+      "runner_or_external_audit": {
+        "exit_code": 1,
+        "time": "2026-10-22T12:16:47.433179+08:00",
+        "power_operation": false,
+        "remaining_sessions": []
+      },
+      "passed": false,
+      "error": "Unexpected native action result 6",
+      "checks": {
+        "no_error": false,
+        "estimated_odom_only": true,
+        "all_prelude_goals_succeeded": true,
+        "final_native_result": false,
+        "physical_insertion_acknowledged": false,
+        "moving_trigger": false,
+        "commands_bounded": false,
+        "saved_map_unchanged": true,
+        "disarmed_zero": true,
+        "adapter_healthy": true,
+        "post_insertion_native_plan": false,
+        "guard_not_latched": true
+      },
+      "native_statuses": [
+        6
+      ]
+    },
+    {
+      "case": "moving_20261022_B_native_long_08",
+      "files": {
+        "POST_STOP_AUDIT.json": "23532a0121ba8fef46d9ab0f94a5ba6584387464b75ee51c66edc91dc5855d88",
+        "STOP_REQUEST.json": "cf1c64153466d3c3a267accdb577642af9f73eece306a06a47cdaf7160fd43f5"
+      },
+      "runner_or_external_audit": {
+        "time": "2026-10-22T12:22:50.525203+08:00",
+        "source": "external post-stop audit; NOT native supervisor exit report",
+        "exit_code": null,
+        "native_supervisor_report_missing": true,
+        "reason": "AMCL startup state service timed out before navigation; stop request overlapped existing cleanup; no motion enabled",
+        "remaining_case_processes": [],
+        "power_operation": false,
+        "algorithm_validation": false,
+        "shared_sessions_currently_owned_by_other_case": [
+          "go2-lio-nav-task",
+          "go2-warehouse"
+        ],
+        "other_case": "moving_20261022_B_native_long_09"
+      }
+    },
+    {
+      "case": "moving_20261022_B_native_long_09",
+      "files": {
+        "RUNNER_RESULT.json": "c4b109b3a3c0d46f83d9e9b510ef641d8b393c6cbb1d18adae0559c9ca248244",
+        "navigation/navigation_check.json": "83214edc19d31aa7b624c5516531dcc71ea1017bcbe9c10955f709fa0fc219ae"
+      },
+      "runner_or_external_audit": {
+        "exit_code": 0,
+        "time": "2026-10-22T12:31:36.683505+08:00",
+        "power_operation": false,
+        "remaining_sessions": []
+      },
+      "passed": true,
+      "error": null,
+      "checks": {
+        "no_error": true,
+        "estimated_odom_only": true,
+        "all_prelude_goals_succeeded": true,
+        "final_native_result": true,
+        "physical_insertion_acknowledged": true,
+        "moving_trigger": true,
+        "commands_bounded": true,
+        "saved_map_unchanged": true,
+        "disarmed_zero": true,
+        "adapter_healthy": true,
+        "post_insertion_native_plan": true,
+        "guard_not_latched": true
+      },
+      "native_statuses": [
+        4
+      ]
+    },
+    {
+      "case": "moving_20261022_A_fastvideo_preflight_01",
+      "files": {
+        "RUNNER_RESULT.json": "8fe0edc5929bd0b83cc134009609fd06f5967db3817f765518405440a1d93eff",
+        "STOP_REQUEST.json": "416598b8686cb6b159687303830b8dbd707d6487bdf4eae42867db129cace899"
+      },
+      "runner_or_external_audit": {
+        "exit_code": 1,
+        "time": "2026-10-22T12:33:37.248380+08:00",
+        "power_operation": false,
+        "remaining_sessions": []
+      }
+    },
+    {
+      "case": "moving_20261022_A_fastvideo_long_01",
+      "files": {
+        "RUNNER_RESULT.json": "4e9a920467addf9084052333b240b3aafecade04107f7f4f208905451ea78cc2",
+        "navigation/navigation_check.json": "ce3c14e8978a13a4e0f9e8365218c4d162aea2d2632be26bd9db8502c70a2b43"
+      },
+      "runner_or_external_audit": {
+        "exit_code": 1,
+        "time": "2026-10-22T12:42:04.434941+08:00",
+        "power_operation": false,
+        "remaining_sessions": []
+      },
+      "passed": false,
+      "error": "Missed safe insertion window",
+      "checks": {
+        "no_error": false,
+        "estimated_odom_only": true,
+        "all_prelude_goals_succeeded": true,
+        "final_native_result": false,
+        "physical_insertion_acknowledged": false,
+        "moving_trigger": false,
+        "commands_bounded": true,
+        "saved_map_unchanged": true,
+        "disarmed_zero": true,
+        "adapter_healthy": true,
+        "post_insertion_native_plan": false,
+        "guard_not_latched": true
+      },
+      "native_statuses": [
+        null
+      ]
+    },
+    {
+      "case": "moving_20261022_A_fastvideo_long_02",
+      "files": {
+        "RUNNER_RESULT.json": "ea03defa84bd15e74eb3c1dc599e79cc83c1cc52d2eb72df521b0941f483b9e5",
+        "navigation/navigation_check.json": "c8793ae138dd589653832a84d09623226d096148a36a7936cedaf6c1ea703514"
+      },
+      "runner_or_external_audit": {
+        "exit_code": 1,
+        "time": "2026-10-22T12:47:00.399724+08:00",
+        "power_operation": false,
+        "remaining_sessions": []
+      },
+      "passed": false,
+      "error": "Guard latched: PREDICTED_STATIC_CLEARANCE",
+      "checks": {
+        "no_error": false,
+        "estimated_odom_only": true,
+        "all_prelude_goals_succeeded": true,
+        "final_native_result": false,
+        "physical_insertion_acknowledged": false,
+        "moving_trigger": false,
+        "commands_bounded": true,
+        "saved_map_unchanged": true,
+        "disarmed_zero": true,
+        "adapter_healthy": true,
+        "post_insertion_native_plan": false,
+        "guard_not_latched": false
+      },
+      "native_statuses": [
+        null
+      ]
+    }
+  ]
+}

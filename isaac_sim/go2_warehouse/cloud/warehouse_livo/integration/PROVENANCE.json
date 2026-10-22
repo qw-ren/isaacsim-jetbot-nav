@@ -1,0 +1,16 @@
+{
+  "upstream_ros2": "837b7bbc1431cb04cf936528e52c83c835efba8e",
+  "vikit_upstream": "4b7abc838f5d2ca9137f70f122eaaeff9eaf0f50",
+  "sophus_template_source": "de0f8d3d92bf776271e16de56d1803940ebccab9",
+  "binary_sha256": "8a8e61dd543befa5f9da26bdf2674af804f7d2d5a81542d9f1fb7a9cf11e958f",
+  "scope": "ROS2 community port, isolated custom CMake; no cloud system installation",
+  "integration_changes": [
+    "initialize ImageTransport with actual non-null mapper node",
+    "local explicit native-camera parameters; no blackboard service dependency",
+    "PointCloud2 time field seconds to internal milliseconds",
+    "output actual state measurement time",
+    "also export post-VIO estimate at same stamp"
+  ],
+  "mathematical_estimator_updates_modified": false,
+  "upstream_url": "https://github.com/Robotic-Developer-Road/FAST-LIVO2/tree/humble"
+}

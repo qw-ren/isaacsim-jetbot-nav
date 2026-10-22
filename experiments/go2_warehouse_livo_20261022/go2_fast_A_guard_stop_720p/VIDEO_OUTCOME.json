@@ -1,0 +1,10 @@
+{
+  "case": "moving_20261022_A_fastvideo_long_03",
+  "native_navigation_passed": false,
+  "native_status": null,
+  "error": "Guard latched: PREDICTED_STATIC_CLEARANCE",
+  "guard_stop_sim_s": 66.569998512,
+  "guard_reason": "PREDICTED_STATIC_CLEARANCE",
+  "success_sim_s": null,
+  "native_check_sha256": "c1c5fcaaed4943aefa537bda81650b76c19f35853a7794fb0ab57631f654ce75"
+}

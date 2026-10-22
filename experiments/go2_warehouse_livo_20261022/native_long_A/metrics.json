@@ -1,0 +1,243 @@
+{
+  "raw_estimator_accuracy": {
+    "samples": 14720,
+    "begin_s": 5.005000114,
+    "end_s": 129.125,
+    "physical_xy_path_m": 80.46954772806053,
+    "alignment": "single initial SE3, no full-trajectory/scale fit",
+    "xy_error_m": {
+      "mean": 0.010949585108633544,
+      "p50": 0.00861525030732768,
+      "p95": 0.0274762572793903,
+      "maximum": 0.07076256393859898
+    },
+    "xyz_error_m": {
+      "mean": 0.013754955205034345,
+      "p50": 0.01188642310281637,
+      "p95": 0.030152327432871658,
+      "maximum": 0.07080780825013835
+    },
+    "z_error_m": {
+      "mean": 0.006811663312203754,
+      "p50": 0.005611204127845076,
+      "p95": 0.017362864193319782,
+      "maximum": 0.048041143735507774
+    },
+    "orientation_error_rad": {
+      "mean": 0.004368012106648086,
+      "p50": 0.0038080942978834364,
+      "p95": 0.009767361644029898,
+      "maximum": 0.0189584831453661
+    },
+    "endpoint_xy_error_m": 0.00203219246028526,
+    "endpoint_xy_drift_percent": 0.0025254180216755634,
+    "relative_pose_error": {
+      "5.0m": {
+        "translation_m": {
+          "mean": 0.023527071358068117,
+          "p50": 0.020724296745393122,
+          "p95": 0.0506767284603164,
+          "maximum": 0.10150165282577672
+        },
+        "rotation_rad": {
+          "mean": 0.006691337163192604,
+          "p50": 0.005850723050973045,
+          "p95": 0.014336501785320484,
+          "maximum": 0.024331725713579395
+        },
+        "segments": 13425
+      },
+      "10.0m": {
+        "translation_m": {
+          "mean": 0.032598845046967875,
+          "p50": 0.027772019323514106,
+          "p95": 0.07329733667415493,
+          "maximum": 0.17928254715074204
+        },
+        "rotation_rad": {
+          "mean": 0.006444737267206747,
+          "p50": 0.006080691220925927,
+          "p95": 0.012566793635664696,
+          "maximum": 0.023318976297113256
+        },
+        "segments": 12359
+      },
+      "20.0m": {
+        "translation_m": {
+          "mean": 0.0448715546222477,
+          "p50": 0.033994074062840995,
+          "p95": 0.11724497638000078,
+          "maximum": 0.2813650568354438
+        },
+        "rotation_rad": {
+          "mean": 0.006609556342046189,
+          "p50": 0.00606658803498494,
+          "p95": 0.013437856183807004,
+          "maximum": 0.024856969864365537
+        },
+        "segments": 9878
+      }
+    }
+  },
+  "truth_usage": "offline evaluation only; no controller/estimator input",
+  "source_case": "/home/admin/go2-warehouse/artifacts/moving_20261022_A_native_long_04",
+  "source_case_config_sha256": "4f11f47e5e904b55460f68857743bc0ef5159771b4c41b65a808435803101e71",
+  "native_imu_proof": {
+    "paired_samples": 25828,
+    "supplied_samples": 25828,
+    "maximum_acceleration_gyro_difference": 0.0,
+    "artificial_noise_disabled": true,
+    "exact_samples_preserved": true,
+    "note": "Historical noise-profile seed/bias fields can remain in metadata but are inactive; supplied vectors are checked directly"
+  },
+  "native_plan_evidence_source": "recorded /plan CDR",
+  "native_plan_goal_checks": [
+    {
+      "leg": 0,
+      "goal": [
+        -3.0,
+        0.0
+      ],
+      "native_plans": 1294,
+      "endpoint_error_max_m": 0.0
+    },
+    {
+      "leg": 1,
+      "goal": [
+        1.0,
+        0.0
+      ],
+      "native_plans": 193,
+      "endpoint_error_max_m": 0.0
+    },
+    {
+      "leg": 2,
+      "goal": [
+        6.0,
+        0.0
+      ],
+      "native_plans": 140,
+      "endpoint_error_max_m": 0.0
+    }
+  ],
+  "recorded_insertion_images": [
+    {
+      "file": "insertion_before.png",
+      "stamp_s": 116.78999739,
+      "sha256": "d3e99b5ef269f30ff4677721319b61f7e4cbbac3aacc1db1740cc7c5a70bf41a",
+      "source": "actual recorded native RGB, no generated rendering"
+    },
+    {
+      "file": "insertion_after.png",
+      "stamp_s": 117.149997381,
+      "sha256": "394262875dc7846b56c565298dddd1902257ab1b2df3949d2cdfaaba100e6598",
+      "source": "actual recorded native RGB, no generated rendering"
+    },
+    {
+      "file": "insertion_after_1s.png",
+      "stamp_s": 117.989997363,
+      "sha256": "55fbe3deee5371afe44689498e1dcb7b66f658c3538328182de41864e5b34564",
+      "source": "actual recorded native RGB, no generated rendering"
+    }
+  ],
+  "reference_path_before_insertion_m": 74.45522215623583,
+  "continuous_prelude_evidence": [
+    {
+      "native_action": "NavigateThroughPoses",
+      "minimum_remaining": 1,
+      "closest_reference_distances_m": [
+        {
+          "xy": [
+            4.0,
+            -6.0
+          ],
+          "distance": 0.34395370105496154
+        },
+        {
+          "xy": [
+            2.0,
+            -8.0
+          ],
+          "distance": 0.14335952686410539
+        },
+        {
+          "xy": [
+            -2.0,
+            -8.0
+          ],
+          "distance": 0.17508930794610297
+        },
+        {
+          "xy": [
+            -4.0,
+            -6.0
+          ],
+          "distance": 0.21297320989748558
+        },
+        {
+          "xy": [
+            -4.0,
+            13.0
+          ],
+          "distance": 0.10649593181834195
+        },
+        {
+          "xy": [
+            -2.0,
+            15.0
+          ],
+          "distance": 0.24357761052806237
+        },
+        {
+          "xy": [
+            2.0,
+            15.0
+          ],
+          "distance": 0.46261821389572877
+        },
+        {
+          "xy": [
+            2.0,
+            12.0
+          ],
+          "distance": 0.4857447223064695
+        },
+        {
+          "xy": [
+            4.0,
+            10.0
+          ],
+          "distance": 0.17422305057867943
+        },
+        {
+          "xy": [
+            4.0,
+            1.0
+          ],
+          "distance": 0.008719716188740486
+        },
+        {
+          "xy": [
+            -3.0,
+            0.0
+          ],
+          "distance": 0.2000868205176666
+        }
+      ]
+    }
+  ],
+  "actual_insertion": {
+    "stamp_s": 116.8899973873049,
+    "reference_planar_speed_mps": 0.784108975604199,
+    "motion_confirmed": true,
+    "minimum_center_to_added_aabb_m": 0.8598637312154026,
+    "body_center_outside_obstacle_margin": true,
+    "reference_used_for_control": false,
+    "crossing_y_range_m": [
+      1.2985936403274536,
+      1.3914885520935059
+    ],
+    "physically_passed_obstacle": true
+  },
+  "physical_checks_passed": true
+}

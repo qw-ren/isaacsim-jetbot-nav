@@ -1,0 +1,99 @@
+{
+  "raw_estimator_accuracy": {
+    "samples": 2610,
+    "begin_s": 5.0,
+    "end_s": 27.104999542,
+    "physical_xy_path_m": 8.338905354354061,
+    "alignment": "single initial SE3, no full-trajectory/scale fit",
+    "xy_error_m": {
+      "mean": 0.009714199363425845,
+      "p50": 0.008579337150193957,
+      "p95": 0.025147314287130164,
+      "maximum": 0.041803333545924075
+    },
+    "xyz_error_m": {
+      "mean": 0.011728513430240046,
+      "p50": 0.01136881949259786,
+      "p95": 0.02718952922997251,
+      "maximum": 0.04628523008843515
+    },
+    "z_error_m": {
+      "mean": 0.0051065935058441534,
+      "p50": 0.003186423353125495,
+      "p95": 0.01582745327352943,
+      "maximum": 0.028343316805326313
+    },
+    "orientation_error_rad": {
+      "mean": 0.004201452718329463,
+      "p50": 0.003907387667743402,
+      "p95": 0.010187807338625692,
+      "maximum": 0.023767919244518123
+    },
+    "endpoint_xy_error_m": 0.007999201035463595,
+    "endpoint_xy_drift_percent": 0.09592627204105279,
+    "relative_pose_error": {
+      "5.0m": {
+        "translation_m": {
+          "mean": 0.022703713178625375,
+          "p50": 0.012354976497972773,
+          "p95": 0.05670748890034813,
+          "maximum": 0.09594404621901466
+        },
+        "rotation_rad": {
+          "mean": 0.00806689893761958,
+          "p50": 0.008165365487834213,
+          "p95": 0.011148177337289721,
+          "maximum": 0.02862539936897006
+        },
+        "segments": 1405
+      },
+      "10.0m": {
+        "translation_m": null,
+        "rotation_rad": null,
+        "segments": 0
+      },
+      "20.0m": {
+        "translation_m": null,
+        "rotation_rad": null,
+        "segments": 0
+      }
+    }
+  },
+  "truth_usage": "offline evaluation only; no controller/estimator input",
+  "source_case": "/home/admin/go2-warehouse/artifacts/moving_20261022_B_native_short_01",
+  "source_case_config_sha256": "beb8128bcfbe4b7be04e8fd1b8e0cfb3962816e9f1274e9703eca5b90e36b0f8",
+  "native_imu_proof": {
+    "paired_samples": 5420,
+    "supplied_samples": 5420,
+    "maximum_acceleration_gyro_difference": 0.0,
+    "artificial_noise_disabled": true,
+    "exact_samples_preserved": true,
+    "note": "Historical noise-profile seed/bias fields can remain in metadata but are inactive; supplied vectors are checked directly"
+  },
+  "native_plan_evidence_source": "navigation observer /plan telemetry; CDR absent",
+  "native_plan_goal_checks": [
+    {
+      "leg": 0,
+      "goal": [
+        6.0,
+        0.0
+      ],
+      "native_plans": 205,
+      "endpoint_error_max_m": 0.0
+    }
+  ],
+  "actual_insertion": {
+    "stamp_s": 11.749999737367034,
+    "reference_planar_speed_mps": 0.699759030747712,
+    "motion_confirmed": true,
+    "minimum_center_to_added_aabb_m": 1.369808208529053,
+    "body_center_outside_obstacle_margin": true,
+    "reference_used_for_control": false,
+    "crossing_y_range_m": [
+      -2.610846519470215,
+      -2.5169808864593506
+    ],
+    "physically_passed_obstacle": true
+  },
+  "physical_checks_passed": true
+}

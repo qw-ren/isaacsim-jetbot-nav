@@ -1,0 +1,352 @@
+{
+  "kind": "B",
+  "scope": "native continuous navigation; physical insertion after completed prefix while moving",
+  "truth_used_for_control": false,
+  "direct_velocity_publisher": false,
+  "costmap_clear_requested": false,
+  "prelude_warmup": {
+    "native_status": 6,
+    "guard_disarmed": true,
+    "counted_as_navigation_success": false
+  },
+  "trigger": {
+    "wall": 57235.528064974,
+    "estimated_map_pose": {
+      "wall": 57235.528037823,
+      "stamp": 110.444999695,
+      "x": 1.0144537493063857,
+      "y": -0.6006348042643127,
+      "yaw": 0.19625997467184356
+    },
+    "estimated_motion": [
+      {
+        "wall": 57234.819823144,
+        "sim": 110.264999388,
+        "x": 0.8895596960080037,
+        "y": -0.6250066879270513,
+        "z": 0.39315336571391507,
+        "vx": 0.72996034719786,
+        "speed": 0.7304462480889217,
+        "tilt": 0.07268367960719654,
+        "wz": 0.046407566093957006
+      },
+      {
+        "wall": 57234.859427142,
+        "sim": 110.284996031,
+        "x": 0.9038198967676395,
+        "y": -0.6208162219495689,
+        "z": 0.39349162186614856,
+        "vx": 0.7580422742343936,
+        "speed": 0.7586316932991095,
+        "tilt": 0.07530169851123675,
+        "wz": 0.11282861589520302
+      },
+      {
+        "wall": 57234.927182598,
+        "sim": 110.305000304,
+        "x": 0.9184991848800634,
+        "y": -0.6164536125814636,
+        "z": 0.39311019077860765,
+        "vx": 0.7741314796486385,
+        "speed": 0.7750252191822657,
+        "tilt": 0.08410026741759417,
+        "wz": 0.07602637025331625
+      },
+      {
+        "wall": 57235.047804336,
+        "sim": 110.324996948,
+        "x": 0.933010684064066,
+        "y": -0.6120222329282895,
+        "z": 0.3919497469717885,
+        "vx": 0.7439997000703564,
+        "speed": 0.7451133313185415,
+        "tilt": 0.09051834153168442,
+        "wz": 0.04791387637345469
+      },
+      {
+        "wall": 57235.124435497,
+        "sim": 110.345001221,
+        "x": 0.9467060460588649,
+        "y": -0.6076611950366769,
+        "z": 0.39230977680865114,
+        "vx": 0.6880178644830166,
+        "speed": 0.6890587992202309,
+        "tilt": 0.09612941179344277,
+        "wz": 0.0345585991334974
+      },
+      {
+        "wall": 57235.223482976,
+        "sim": 110.364997864,
+        "x": 0.9736920496100384,
+        "y": -0.5974526253969544,
+        "z": 0.38811173491341233,
+        "vx": 0.7686477382281804,
+        "speed": 0.770023877583459,
+        "tilt": 0.09610097070015025,
+        "wz": 0.07594399281362967
+      },
+      {
+        "wall": 57235.271390197,
+        "sim": 110.384994507,
+        "x": 0.9882972544488611,
+        "y": -0.5927740445003296,
+        "z": 0.3881799657071766,
+        "vx": 0.7645528120092169,
+        "speed": 0.76560002118946,
+        "tilt": 0.09598728147988354,
+        "wz": -0.012554393468889032
+      },
+      {
+        "wall": 57235.339301665,
+        "sim": 110.404998778,
+        "x": 1.0029687816414978,
+        "y": -0.5881477179878266,
+        "z": 0.38862618114134295,
+        "vx": 0.7694739484275065,
+        "speed": 0.770333927461537,
+        "tilt": 0.09484893441997319,
+        "wz": -0.022995874662046834
+      },
+      {
+        "wall": 57235.40741903,
+        "sim": 110.424995421,
+        "x": 1.0177779370100155,
+        "y": -0.5835352940226133,
+        "z": 0.38936479720984274,
+        "vx": 0.7785943828069792,
+        "speed": 0.779314418641685,
+        "tilt": 0.09548628973426614,
+        "wz": -0.00940474991753657
+      },
+      {
+        "wall": 57235.527575826,
+        "sim": 110.444999695,
+        "x": 1.032829181241824,
+        "y": -0.5788954663931144,
+        "z": 0.39041078623824027,
+        "vx": 0.7924174808565367,
+        "speed": 0.7929957824900492,
+        "tilt": 0.09922589668099809,
+        "wz": 0.005855190427470561
+      }
+    ],
+    "displacement_m": 79.43171757136726,
+    "displacement_basis": "cumulative estimated odom",
+    "native_remaining": 1,
+    "last_native_command": {
+      "wall": 57235.519891407,
+      "vx": 0.8000000000000002,
+      "wz": -5.551115123125783e-17
+    }
+  },
+  "applied_obstacle": {
+    "id": "insert_during_motion",
+    "enabled": true,
+    "kind": "B",
+    "simulation_stamp_s": 110.44999753125012,
+    "dynamic_boxes": [
+      {
+        "min": [
+          4.0,
+          -1.1,
+          0.0
+        ],
+        "max": [
+          4.6,
+          3.9,
+          1.0
+        ],
+        "source": "actual inserted /World/Go2DynamicTrial/added_0"
+      }
+    ],
+    "actual_usd": [
+      {
+        "center": [
+          4.3,
+          1.4,
+          0.5
+        ],
+        "size": [
+          0.6,
+          5.0,
+          1.0
+        ],
+        "prim": "/World/Go2DynamicTrial/added_0",
+        "present": true,
+        "collision_enabled": true
+      }
+    ],
+    "scope": "controlled simulation fixture; no robot pose modification"
+  },
+  "checks": {
+    "no_error": true,
+    "estimated_odom_only": true,
+    "all_prelude_goals_succeeded": true,
+    "final_native_result": true,
+    "physical_insertion_acknowledged": true,
+    "moving_trigger": true,
+    "commands_bounded": true,
+    "saved_map_unchanged": true,
+    "disarmed_zero": true,
+    "adapter_healthy": true,
+    "post_insertion_native_plan": true,
+    "guard_not_latched": true
+  },
+  "passed": true,
+  "native_plans_after_insertion": 190,
+  "acceptance": "functional dynamic navigation and fail-stop; no precise docking requirement",
+  "legs": [
+    {
+      "index": 0,
+      "goal": [
+        6.0,
+        0.0
+      ],
+      "final_blockage_leg": true,
+      "start_pose": {
+        "wall": 56838.461993188,
+        "stamp": 9.965000153,
+        "x": 1.0186791418233094,
+        "y": 0.007902807762715465,
+        "yaw": -0.01835034685204926
+      },
+      "waypoints": [
+        [
+          4.0,
+          -6.0
+        ],
+        [
+          2.0,
+          -8.0
+        ],
+        [
+          -2.0,
+          -8.0
+        ],
+        [
+          -4.0,
+          -6.0
+        ],
+        [
+          -4.0,
+          13.0
+        ],
+        [
+          -2.0,
+          15.0
+        ],
+        [
+          2.0,
+          15.0
+        ],
+        [
+          2.0,
+          12.0
+        ],
+        [
+          4.0,
+          10.0
+        ],
+        [
+          4.0,
+          4.0
+        ],
+        [
+          2.0,
+          0.0
+        ],
+        [
+          -3.0,
+          -4.0
+        ],
+        [
+          -5.0,
+          -2.0
+        ],
+        [
+          -4.0,
+          0.0
+        ],
+        [
+          -2.0,
+          0.0
+        ],
+        [
+          6.0,
+          0.0
+        ]
+      ],
+      "pre_insertion_waypoints": [
+        [
+          4.0,
+          -6.0
+        ],
+        [
+          2.0,
+          -8.0
+        ],
+        [
+          -2.0,
+          -8.0
+        ],
+        [
+          -4.0,
+          -6.0
+        ],
+        [
+          -4.0,
+          13.0
+        ],
+        [
+          -2.0,
+          15.0
+        ],
+        [
+          2.0,
+          15.0
+        ],
+        [
+          2.0,
+          12.0
+        ],
+        [
+          4.0,
+          10.0
+        ],
+        [
+          4.0,
+          4.0
+        ],
+        [
+          2.0,
+          0.0
+        ],
+        [
+          -3.0,
+          -4.0
+        ],
+        [
+          -5.0,
+          -2.0
+        ],
+        [
+          -4.0,
+          0.0
+        ]
+      ],
+      "native_action": "NavigateThroughPoses",
+      "status": 4,
+      "arrival_pose": {
+        "wall": 57291.103942006,
+        "stamp": 124.264999388,
+        "x": 6.207845340490582,
+        "y": -0.33766487470394363,
+        "yaw": 2.1550747459356128
+      },
+      "feedback_count": 44019,
+      "minimum_remaining": 1
+    }
+  ],
+  "full_native_check_sha256": "83214edc19d31aa7b624c5516531dcc71ea1017bcbe9c10955f709fa0fc219ae",
+  "full_native_check_location": "navigation/navigation_check.json in selected backup, feedback retained"
+}

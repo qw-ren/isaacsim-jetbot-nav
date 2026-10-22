@@ -1,0 +1,425 @@
+{
+  "methods": {
+    "lio_noisy": {
+      "samples": 911,
+      "begin_s": 5.5,
+      "end_s": 96.49999999999967,
+      "physical_xy_path_m": 40.96562889244594,
+      "alignment": "single initial SE3, no full-trajectory/scale fit",
+      "xy_error_m": {
+        "mean": 0.028500553836515553,
+        "p50": 0.02885500159501946,
+        "p95": 0.04226913492621376,
+        "maximum": 0.049419022235533495
+      },
+      "xyz_error_m": {
+        "mean": 0.03163123822557572,
+        "p50": 0.030976852082029552,
+        "p95": 0.05057264551346474,
+        "maximum": 0.05836590295065653
+      },
+      "z_error_m": {
+        "mean": 0.01232355058861696,
+        "p50": 0.011276374523948363,
+        "p95": 0.02873069938001671,
+        "maximum": 0.031917686030066394
+      },
+      "orientation_error_rad": {
+        "mean": 0.00888645911664793,
+        "p50": 0.007356760084242835,
+        "p95": 0.01941947258821457,
+        "maximum": 0.029857759189923297
+      },
+      "endpoint_xy_error_m": 0.04184591385322811,
+      "endpoint_xy_drift_percent": 0.10214883790285102,
+      "relative_pose_error": {
+        "5.0m": {
+          "translation_m": {
+            "mean": 0.023838634313696972,
+            "p50": 0.018083386108979586,
+            "p95": 0.05718865438824252,
+            "maximum": 0.15018772148946205
+          },
+          "rotation_rad": {
+            "mean": 0.01377911342833936,
+            "p50": 0.01366481518421145,
+            "p95": 0.025836908328003873,
+            "maximum": 0.03508881496165318
+          },
+          "segments": 671
+        },
+        "10.0m": {
+          "translation_m": {
+            "mean": 0.041254550848259526,
+            "p50": 0.03025995235537151,
+            "p95": 0.11231260790249026,
+            "maximum": 0.22209644194662445
+          },
+          "rotation_rad": {
+            "mean": 0.013484477957593496,
+            "p50": 0.013095624122257576,
+            "p95": 0.0294551013063048,
+            "maximum": 0.04163380852340778
+          },
+          "segments": 604
+        },
+        "20.0m": {
+          "translation_m": {
+            "mean": 0.061492549036091,
+            "p50": 0.04110742392122599,
+            "p95": 0.17794803899735462,
+            "maximum": 0.40629620782964965
+          },
+          "rotation_rad": {
+            "mean": 0.011601639131421038,
+            "p50": 0.010545923965338405,
+            "p95": 0.022454412089179306,
+            "maximum": 0.042760933187490205
+          },
+          "segments": 474
+        }
+      }
+    },
+    "livo_noisy": {
+      "samples": 911,
+      "begin_s": 5.5,
+      "end_s": 96.49999999999967,
+      "physical_xy_path_m": 40.96562889244594,
+      "alignment": "single initial SE3, no full-trajectory/scale fit",
+      "xy_error_m": {
+        "mean": 0.007605740743410116,
+        "p50": 0.00714183660327962,
+        "p95": 0.016061700024838026,
+        "maximum": 0.027090277327559854
+      },
+      "xyz_error_m": {
+        "mean": 0.00971933825838895,
+        "p50": 0.009537601718094478,
+        "p95": 0.018547631007063185,
+        "maximum": 0.027535541361567176
+      },
+      "z_error_m": {
+        "mean": 0.004895307998801073,
+        "p50": 0.0037247538986747153,
+        "p95": 0.012255875388684445,
+        "maximum": 0.025829881734237392
+      },
+      "orientation_error_rad": {
+        "mean": 0.0069408688475243435,
+        "p50": 0.005501749473156857,
+        "p95": 0.018389568216482695,
+        "maximum": 0.03574193925624779
+      },
+      "endpoint_xy_error_m": 0.0010954814270862667,
+      "endpoint_xy_drift_percent": 0.0026741477104194377,
+      "relative_pose_error": {
+        "5.0m": {
+          "translation_m": {
+            "mean": 0.02406550064581622,
+            "p50": 0.01912156803091326,
+            "p95": 0.057515934486738446,
+            "maximum": 0.12907022002511237
+          },
+          "rotation_rad": {
+            "mean": 0.011400395995564097,
+            "p50": 0.009601567980040854,
+            "p95": 0.025686286297392908,
+            "maximum": 0.0410347846271823
+          },
+          "segments": 671
+        },
+        "10.0m": {
+          "translation_m": {
+            "mean": 0.03793857758299329,
+            "p50": 0.027733968425165928,
+            "p95": 0.09666199670282609,
+            "maximum": 0.222726233588169
+          },
+          "rotation_rad": {
+            "mean": 0.011681753561888511,
+            "p50": 0.00945614751226344,
+            "p95": 0.02567612942131774,
+            "maximum": 0.04304611777185111
+          },
+          "segments": 604
+        },
+        "20.0m": {
+          "translation_m": {
+            "mean": 0.05231715879579418,
+            "p50": 0.03442772870526553,
+            "p95": 0.1556707038451282,
+            "maximum": 0.42882082056069365
+          },
+          "rotation_rad": {
+            "mean": 0.010455629555473744,
+            "p50": 0.008981462948872258,
+            "p95": 0.021281792585963143,
+            "maximum": 0.042399969697269974
+          },
+          "segments": 474
+        }
+      }
+    },
+    "lio_native": {
+      "samples": 911,
+      "begin_s": 5.5,
+      "end_s": 96.49999999999967,
+      "physical_xy_path_m": 40.96562889244594,
+      "alignment": "single initial SE3, no full-trajectory/scale fit",
+      "xy_error_m": {
+        "mean": 0.02827869904769607,
+        "p50": 0.028975147452801216,
+        "p95": 0.041899304813598076,
+        "maximum": 0.04868485558625803
+      },
+      "xyz_error_m": {
+        "mean": 0.03129485047362503,
+        "p50": 0.03060447208592595,
+        "p95": 0.04986435236856432,
+        "maximum": 0.057190464741675
+      },
+      "z_error_m": {
+        "mean": 0.011912009295411531,
+        "p50": 0.010378666612731569,
+        "p95": 0.028218376631888142,
+        "maximum": 0.03155265422797243
+      },
+      "orientation_error_rad": {
+        "mean": 0.008863391437935223,
+        "p50": 0.007277643338702186,
+        "p95": 0.019368277253423608,
+        "maximum": 0.02988300305834713
+      },
+      "endpoint_xy_error_m": 0.04114960798682215,
+      "endpoint_xy_drift_percent": 0.10044910599287817,
+      "relative_pose_error": {
+        "5.0m": {
+          "translation_m": {
+            "mean": 0.023802821493406647,
+            "p50": 0.017871555443708224,
+            "p95": 0.057176063304946984,
+            "maximum": 0.15028007440595176
+          },
+          "rotation_rad": {
+            "mean": 0.013771803590598297,
+            "p50": 0.013683753805772539,
+            "p95": 0.025905249187440596,
+            "maximum": 0.03514249171049754
+          },
+          "segments": 671
+        },
+        "10.0m": {
+          "translation_m": {
+            "mean": 0.041285739506079146,
+            "p50": 0.030272435598012525,
+            "p95": 0.11173655506984359,
+            "maximum": 0.22325809610751937
+          },
+          "rotation_rad": {
+            "mean": 0.013466404054780766,
+            "p50": 0.012993195881262243,
+            "p95": 0.029494672584878732,
+            "maximum": 0.04165936561114645
+          },
+          "segments": 604
+        },
+        "20.0m": {
+          "translation_m": {
+            "mean": 0.06137302981030822,
+            "p50": 0.04081453337451031,
+            "p95": 0.17814832189931074,
+            "maximum": 0.4056274781012198
+          },
+          "rotation_rad": {
+            "mean": 0.011616971852119504,
+            "p50": 0.010657298026487468,
+            "p95": 0.022440230440642514,
+            "maximum": 0.04270070209619577
+          },
+          "segments": 474
+        }
+      }
+    },
+    "livo_native": {
+      "samples": 911,
+      "begin_s": 5.5,
+      "end_s": 96.49999999999967,
+      "physical_xy_path_m": 40.96562889244594,
+      "alignment": "single initial SE3, no full-trajectory/scale fit",
+      "xy_error_m": {
+        "mean": 0.007067996006354629,
+        "p50": 0.006378097692008029,
+        "p95": 0.015199804154948838,
+        "maximum": 0.026043221261513014
+      },
+      "xyz_error_m": {
+        "mean": 0.008840624153159672,
+        "p50": 0.008362593231123294,
+        "p95": 0.01743328412479618,
+        "maximum": 0.02631749035340649
+      },
+      "z_error_m": {
+        "mean": 0.004270311427701747,
+        "p50": 0.003433187262682602,
+        "p95": 0.010699962985470796,
+        "maximum": 0.024569562351515917
+      },
+      "orientation_error_rad": {
+        "mean": 0.006904073366716816,
+        "p50": 0.005373698823038814,
+        "p95": 0.01837172784864103,
+        "maximum": 0.03565841918260615
+      },
+      "endpoint_xy_error_m": 0.003951257331286399,
+      "endpoint_xy_drift_percent": 0.00964529884713917,
+      "relative_pose_error": {
+        "5.0m": {
+          "translation_m": {
+            "mean": 0.02412398959478882,
+            "p50": 0.019254840617437846,
+            "p95": 0.05751628052100148,
+            "maximum": 0.13107955188226603
+          },
+          "rotation_rad": {
+            "mean": 0.011398729399592446,
+            "p50": 0.00958050382980898,
+            "p95": 0.025731217685097663,
+            "maximum": 0.04127989491209079
+          },
+          "segments": 671
+        },
+        "10.0m": {
+          "translation_m": {
+            "mean": 0.03764663220403937,
+            "p50": 0.026898682575354955,
+            "p95": 0.10178144166104618,
+            "maximum": 0.22164225961138598
+          },
+          "rotation_rad": {
+            "mean": 0.011623256824403122,
+            "p50": 0.009487852748597963,
+            "p95": 0.02569902641259528,
+            "maximum": 0.04309193443713811
+          },
+          "segments": 604
+        },
+        "20.0m": {
+          "translation_m": {
+            "mean": 0.05256760806574682,
+            "p50": 0.03573049428176391,
+            "p95": 0.15879658343834988,
+            "maximum": 0.4261176524728622
+          },
+          "rotation_rad": {
+            "mean": 0.010409125111442631,
+            "p50": 0.009009376793616894,
+            "p95": 0.021259967492257233,
+            "maximum": 0.042483068113578194
+          },
+          "segments": 474
+        }
+      }
+    }
+  },
+  "interval_s": [
+    5.5,
+    96.49999999999967
+  ],
+  "evaluation_sampling": "common 10Hz output interpolation, XYZ linear and orientation SLERP; same initial anchor time",
+  "replay_input_proof": {
+    "lio_noisy": {
+      "imu_topic": "/lio/imu",
+      "rate": 1.0,
+      "domain": "47",
+      "truth_replayed": false,
+      "counts": {
+        "/lio/imu": 18318,
+        "/lio/points_frame20ms": 915
+      },
+      "source_database": "/home/admin/go2-warehouse/artifacts/livo_rgb_20261022_long_02/recording/sensors.sqlite3",
+      "requested_begin_s": 5.0,
+      "reliable_lidar_confirmed": true,
+      "common_sensor_end_s": 96.584999084,
+      "last_input_stamp_s": 96.584999084,
+      "wall_seconds": 116.13151369099796,
+      "point_input_sha256": "257292cde0d3e2145b3b7aa2d6d78ef22662dbb7367954d3aa265e27e74ffa77",
+      "imu_timestamps_sha256": "7b6132da49056bac6ffc7702db944ee8150cbad5269414f8ab603fc437176d48",
+      "error": null,
+      "output_poses": 912,
+      "last_output_stamp_s": 96.549997844
+    },
+    "livo_noisy": {
+      "imu_topic": "/lio/imu",
+      "rate": 1.0,
+      "domain": "47",
+      "truth_replayed": false,
+      "counts": {
+        "/lio/imu": 18318,
+        "/livo/image_raw": 763,
+        "/lio/points_frame20ms": 915
+      },
+      "source_database": "/home/admin/go2-warehouse/artifacts/livo_rgb_20261022_long_02/recording/sensors.sqlite3",
+      "requested_begin_s": 5.0,
+      "transport": "reliable ROS2 default subscriptions, confirmed by source and graph",
+      "common_sensor_end_s": 96.584999084,
+      "last_input_stamp_s": 96.584999084,
+      "wall_seconds": 118.29634720100148,
+      "point_input_sha256": "257292cde0d3e2145b3b7aa2d6d78ef22662dbb7367954d3aa265e27e74ffa77",
+      "imu_timestamps_sha256": "7b6132da49056bac6ffc7702db944ee8150cbad5269414f8ab603fc437176d48",
+      "image_input_sha256": "4a19fb83e7f6a8b4962c8bc2c242b02ea1ae53af2826183264021cfa44a5d4d1",
+      "error": null,
+      "output_poses": 1519,
+      "last_output_stamp_s": 96.509997842
+    },
+    "lio_native": {
+      "imu_topic": "/evaluation/imu_ideal",
+      "rate": 1.0,
+      "domain": "47",
+      "truth_replayed": false,
+      "counts": {
+        "/evaluation/imu_ideal": 18318,
+        "/lio/points_frame20ms": 915
+      },
+      "source_database": "/home/admin/go2-warehouse/artifacts/livo_rgb_20261022_long_02/recording/sensors.sqlite3",
+      "requested_begin_s": 5.0,
+      "reliable_lidar_confirmed": true,
+      "common_sensor_end_s": 96.584999084,
+      "last_input_stamp_s": 96.584999084,
+      "wall_seconds": 116.19080232599663,
+      "point_input_sha256": "257292cde0d3e2145b3b7aa2d6d78ef22662dbb7367954d3aa265e27e74ffa77",
+      "imu_timestamps_sha256": "7b6132da49056bac6ffc7702db944ee8150cbad5269414f8ab603fc437176d48",
+      "error": null,
+      "output_poses": 912,
+      "last_output_stamp_s": 96.549997844
+    },
+    "livo_native": {
+      "imu_topic": "/evaluation/imu_ideal",
+      "rate": 1.0,
+      "domain": "47",
+      "truth_replayed": false,
+      "counts": {
+        "/evaluation/imu_ideal": 18318,
+        "/livo/image_raw": 763,
+        "/lio/points_frame20ms": 915
+      },
+      "source_database": "/home/admin/go2-warehouse/artifacts/livo_rgb_20261022_long_02/recording/sensors.sqlite3",
+      "requested_begin_s": 5.0,
+      "transport": "reliable ROS2 default subscriptions, confirmed by source and graph",
+      "common_sensor_end_s": 96.584999084,
+      "last_input_stamp_s": 96.584999084,
+      "wall_seconds": 117.37655224499758,
+      "point_input_sha256": "257292cde0d3e2145b3b7aa2d6d78ef22662dbb7367954d3aa265e27e74ffa77",
+      "imu_timestamps_sha256": "7b6132da49056bac6ffc7702db944ee8150cbad5269414f8ab603fc437176d48",
+      "image_input_sha256": "4a19fb83e7f6a8b4962c8bc2c242b02ea1ae53af2826183264021cfa44a5d4d1",
+      "error": null,
+      "output_poses": 1519,
+      "last_output_stamp_s": 96.509997842
+    }
+  },
+  "native_input": "/evaluation/imu_ideal: native accelerometer/gyro captured before artificial noise",
+  "noisy_input": "/lio/imu: same original recording with historical artificial noise enabled",
+  "alignment": "single initial SE3 for each estimate; no trajectory/scale fitting",
+  "truth_usage": "offline evaluation only",
+  "case": "/home/admin/go2-warehouse/artifacts/livo_rgb_20261022_long_02",
+  "limitation": "One simulated warehouse recording and noise seed; not real sensor accuracy or statistical significance"
+}

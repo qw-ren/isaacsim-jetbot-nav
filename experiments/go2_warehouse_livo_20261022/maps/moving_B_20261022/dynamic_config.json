@@ -1,0 +1,41 @@
+{
+  "kind": "B",
+  "prior": [
+    {
+      "center": [
+        4.3,
+        -1.3,
+        0.5
+      ],
+      "size": [
+        2.0,
+        0.4,
+        1.0
+      ]
+    }
+  ],
+  "obstacles": [
+    {
+      "center": [
+        4.3,
+        1.4,
+        0.5
+      ],
+      "size": [
+        0.6,
+        5.0,
+        1.0
+      ]
+    }
+  ],
+  "start_xy": [
+    1.0,
+    0.0
+  ],
+  "goal_xy": [
+    6.0,
+    0.0
+  ],
+  "description": "controlled mid-motion local bypass / alternate passage / full cross-warehouse closure",
+  "expected_after_connected": true
+}

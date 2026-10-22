@@ -1,0 +1,29 @@
+{
+  "case": "moving_20261022_A_native_long_04",
+  "estimator": "FAST-LIVO2",
+  "artificial_imu_noise": false,
+  "native_statuses": {
+    "continuous_prelude": "SUCCEEDED",
+    "return_to_entrance": "SUCCEEDED",
+    "moving_obstacle_goal": "SUCCEEDED"
+  },
+  "functional_checks_passed": 12,
+  "actual_path_before_insertion_m": 74.45522215623583,
+  "actual_total_path_m": 80.46954772806053,
+  "actual_insertion_speed_mps": 0.784108975604199,
+  "minimum_center_to_added_aabb_m": 0.8598637312154026,
+  "xy_error_p95_m": 0.0274762572793903,
+  "xy_error_max_m": 0.07076256393859898,
+  "native_imu_paired_samples": 25828,
+  "imu_vector_max_difference": 0.0,
+  "native_remaining_waypoints_at_end": 1,
+  "largest_nearest_reference_distance_to_waypoint_m": 0.4857447223064695,
+  "runner_exit_code": 0,
+  "runner_end": "2026-10-22T11:11:15.817997+08:00",
+  "remaining_sessions_at_end": [],
+  "evidence_source": "Full selected archive02 fetched and SHA verified locally; actual CASE/RUNNER/metrics and condensed acceptance JSON published in native_long_A/",
+  "truth_usage": "offline evaluation only",
+  "long_B": "passed: moving_20261022_B_native_long_09, actual84.286m",
+  "long_C": "skipped this round at user request; historical native short C passed",
+  "selected_archive_sha256": "c24e2aaae7bce3aec8e358bdb18adfe8f2a206ee64c30e2a9a5c273573f4f108"
+}

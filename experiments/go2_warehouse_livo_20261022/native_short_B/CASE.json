@@ -1,0 +1,35 @@
+{
+  "runtime": "motion_dynamic_livo_20261022",
+  "spawn": [
+    1.0,
+    0.0,
+    0.0
+  ],
+  "odom_anchor": [
+    1.0,
+    0.0,
+    0.4
+  ],
+  "goal": [
+    6.0,
+    0.0
+  ],
+  "imu_noise_enabled": false,
+  "imu_noise_seed": 20261021,
+  "map": "/home/admin/go2-warehouse/nav_stage2/maps/moving_B_20261022/map.yaml",
+  "route": null,
+  "map_source": "USD auxiliary CAD prior, not SLAM",
+  "scene": "warehouse plus declared controlled prior/dynamic fixture",
+  "stable_defaults_modified": false,
+  "reliable_lidar": true,
+  "guard_geometry_frame": "map via AMCL; original guard limits unchanged",
+  "imu_mode": "native_accelerometer_gyro; artificial_noise_disabled",
+  "kind": "B",
+  "trial_route": "short",
+  "dynamic_obstacles": "inserted only after estimated actual movement",
+  "chosen_estimator": "FAST-LIVO2",
+  "rgb_enabled": true,
+  "livo_used_for_control": true,
+  "estimator_output": "native LIVO IMU propagation with LiDAR/visual corrections",
+  "estimator_binary": "/home/admin/go2-warehouse/nav_stage2/deps/fastlivo_trial_20261022/bin/fastlivo_mapping"
+}

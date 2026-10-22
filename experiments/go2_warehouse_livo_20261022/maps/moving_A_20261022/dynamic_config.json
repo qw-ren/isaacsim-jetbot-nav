@@ -1,0 +1,28 @@
+{
+  "kind": "A",
+  "prior": [],
+  "obstacles": [
+    {
+      "center": [
+        4.3,
+        0.0,
+        0.5
+      ],
+      "size": [
+        0.8,
+        0.8,
+        1.0
+      ]
+    }
+  ],
+  "start_xy": [
+    1.0,
+    0.0
+  ],
+  "goal_xy": [
+    6.0,
+    0.0
+  ],
+  "description": "controlled mid-motion local bypass / alternate passage / full cross-warehouse closure",
+  "expected_after_connected": true
+}
