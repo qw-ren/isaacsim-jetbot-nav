@@ -27,12 +27,23 @@
 | --- | --- | --- |
 | 机器人速度控制 | `/cmd_vel` | — |
 | 仿真时间 | `/clock` | — |
-| RGB 相机 | `/rgb` | `sim_camera` |
-| IMU | `/imu` | `sim_imu` |
-| 雷达扫描 | `/scan` | `sim_lidar` |
-| 里程计 | `/odom` | — |
+| RGB 相机 | `/rgb` | `jetbot_camera` |
+| IMU | `/imu` | `imu` |
+| 雷达扫描 | `/scan` | `lidar` |
+| 雷达点云 | `/point_cloud` | `lidar` |
+| 里程计 | `/odom` | `odom` |
 | IMU、相机和雷达的静态 TF | `/tf_static` | — |
 | 里程计 TF | `/tf` | — |
+
+### TF 树
+
+```text
+odom
+└── chassis
+    ├── jetbot_camera
+    ├── imu
+    └── lidar
+```
 
 ## 备注
 
