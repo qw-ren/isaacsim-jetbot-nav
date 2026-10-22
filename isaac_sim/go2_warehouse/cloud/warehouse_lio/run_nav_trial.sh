@@ -47,7 +47,7 @@ PY
  status)
   tmux list-panes -t "$go2_session:0" -F '#{session_name} pid=#{pane_pid} command=#{pane_current_command}' 2>/dev/null || true;;
  stop)
-  if tmux has-session -t "=$go2_session" 2>/dev/null;then tmux send-keys -t "$go2_session:0.0" C-c;fi;;
+  python3 "$go2_lio_dir/request_trial_stop.py";;
  __run)
   go2_case=$2
   go2_lio_dir="$go2_case/source/warehouse_lio"

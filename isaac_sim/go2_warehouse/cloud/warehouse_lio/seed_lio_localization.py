@@ -52,9 +52,19 @@ def main():
     try:
         if not n.life.wait_for_service(timeout_sec=30):
             raise RuntimeError('AMCL service unavailable')
-        future = n.life.call_async(GetState.Request())
-        if not n.wait(10,lambda:future.done()) or future.result().current_state.id!=3:
-            raise RuntimeError('AMCL not active')
+        active=False
+        deadline=time.monotonic()+30
+        while time.monotonic()<deadline:
+            future=n.life.call_async(GetState.Request())
+            if n.wait(min(5.,max(0.,deadline-time.monotonic())),lambda:future.done()):
+                if future.result().current_state.id==3:
+                    active=True;break
+            else:
+                n.life.remove_pending_request(future)
+                future.cancel()
+            n.wait(.2,lambda:False)
+        if not active:
+            raise RuntimeError('AMCL active state not acknowledged within 30s; controller remains disarmed')
         if not n.wait(20,lambda:n.odom is not None and n.pub.get_subscription_count()>0):
             raise RuntimeError('Estimated odom or initial-pose subscriber missing')
         for attempt in range(1,4):
