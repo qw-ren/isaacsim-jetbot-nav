@@ -1,0 +1,12 @@
+[
+  {
+    "case": "moving_20261022_A_fastvideo_long_03",
+    "encoded_source_frames_verified": 744,
+    "cloud_manifest_and_local_original_match": true
+  },
+  {
+    "case": "moving_20261022_A_fastvideo_long_04",
+    "encoded_source_frames_verified": 972,
+    "cloud_manifest_and_local_original_match": true
+  }
+]

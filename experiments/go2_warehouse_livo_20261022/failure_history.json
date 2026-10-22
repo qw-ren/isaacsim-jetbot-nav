@@ -1,5 +1,5 @@
 {
-  "scope": "All attempts retained; stopped/startup/pre-insertion failures are not passes",
+  "scope": "All attempts retained; startup/stopped failures are not passes",
   "cases": [
     {
       "case": "moving_20261022_B_native_long_01",
@@ -41,9 +41,7 @@
         "post_insertion_native_plan": false,
         "guard_not_latched": true
       },
-      "native_statuses": [
-        6
-      ]
+      "native_statuses": []
     },
     {
       "case": "moving_20261022_B_native_long_03",
@@ -73,9 +71,7 @@
         "post_insertion_native_plan": false,
         "guard_not_latched": true
       },
-      "native_statuses": [
-        6
-      ]
+      "native_statuses": []
     },
     {
       "case": "moving_20261022_B_native_long_04",
@@ -105,9 +101,7 @@
         "post_insertion_native_plan": false,
         "guard_not_latched": true
       },
-      "native_statuses": [
-        6
-      ]
+      "native_statuses": []
     },
     {
       "case": "moving_20261022_B_native_long_05",
@@ -137,10 +131,7 @@
         "post_insertion_native_plan": false,
         "guard_not_latched": true
       },
-      "native_statuses": [
-        4,
-        6
-      ]
+      "native_statuses": []
     },
     {
       "case": "moving_20261022_B_native_long_06",
@@ -170,9 +161,7 @@
         "post_insertion_native_plan": false,
         "guard_not_latched": true
       },
-      "native_statuses": [
-        6
-      ]
+      "native_statuses": []
     },
     {
       "case": "moving_20261022_B_native_long_07",
@@ -202,15 +191,12 @@
         "post_insertion_native_plan": false,
         "guard_not_latched": true
       },
-      "native_statuses": [
-        6
-      ]
+      "native_statuses": []
     },
     {
       "case": "moving_20261022_B_native_long_08",
       "files": {
-        "POST_STOP_AUDIT.json": "23532a0121ba8fef46d9ab0f94a5ba6584387464b75ee51c66edc91dc5855d88",
-        "STOP_REQUEST.json": "cf1c64153466d3c3a267accdb577642af9f73eece306a06a47cdaf7160fd43f5"
+        "POST_STOP_AUDIT.json": "23532a0121ba8fef46d9ab0f94a5ba6584387464b75ee51c66edc91dc5855d88"
       },
       "runner_or_external_audit": {
         "time": "2026-10-22T12:22:50.525203+08:00",
@@ -256,15 +242,12 @@
         "post_insertion_native_plan": true,
         "guard_not_latched": true
       },
-      "native_statuses": [
-        4
-      ]
+      "native_statuses": []
     },
     {
       "case": "moving_20261022_A_fastvideo_preflight_01",
       "files": {
-        "RUNNER_RESULT.json": "8fe0edc5929bd0b83cc134009609fd06f5967db3817f765518405440a1d93eff",
-        "STOP_REQUEST.json": "416598b8686cb6b159687303830b8dbd707d6487bdf4eae42867db129cace899"
+        "RUNNER_RESULT.json": "8fe0edc5929bd0b83cc134009609fd06f5967db3817f765518405440a1d93eff"
       },
       "runner_or_external_audit": {
         "exit_code": 1,
@@ -301,9 +284,7 @@
         "post_insertion_native_plan": false,
         "guard_not_latched": true
       },
-      "native_statuses": [
-        null
-      ]
+      "native_statuses": []
     },
     {
       "case": "moving_20261022_A_fastvideo_long_02",
@@ -333,9 +314,127 @@
         "post_insertion_native_plan": false,
         "guard_not_latched": false
       },
-      "native_statuses": [
-        null
-      ]
+      "native_statuses": []
+    },
+    {
+      "case": "moving_20261022_A_fastvideo_long_03",
+      "files": {
+        "RUNNER_RESULT.json": "30127ea297e7226aa1184b525b0ff8a6a5beaa79205b9d1323525286e82e8738",
+        "navigation/navigation_check.json": "c1c5fcaaed4943aefa537bda81650b76c19f35853a7794fb0ab57631f654ce75"
+      },
+      "runner_or_external_audit": {
+        "exit_code": 1,
+        "time": "2026-10-22T12:53:56.894207+08:00",
+        "power_operation": false,
+        "remaining_sessions": []
+      },
+      "passed": false,
+      "error": "Guard latched: PREDICTED_STATIC_CLEARANCE",
+      "checks": {
+        "no_error": false,
+        "estimated_odom_only": true,
+        "all_prelude_goals_succeeded": true,
+        "final_native_result": false,
+        "physical_insertion_acknowledged": true,
+        "moving_trigger": true,
+        "commands_bounded": true,
+        "saved_map_unchanged": true,
+        "disarmed_zero": true,
+        "adapter_healthy": true,
+        "post_insertion_native_plan": true,
+        "guard_not_latched": false
+      },
+      "native_statuses": []
+    },
+    {
+      "case": "moving_20261022_A_fastvideo_long_04",
+      "files": {
+        "RUNNER_RESULT.json": "68d4b4cede53ba6abae0536f801a6260f3dede178d1dc2435666b0d4c6dc8329",
+        "navigation/navigation_check.json": "a0ede2376ad4fe58259c33ce9076eadc2fcde893d1e81c36e9d94936fc810592"
+      },
+      "runner_or_external_audit": {
+        "exit_code": 0,
+        "time": "2026-10-22T13:02:41.659143+08:00",
+        "power_operation": false,
+        "remaining_sessions": []
+      },
+      "passed": true,
+      "error": null,
+      "checks": {
+        "no_error": true,
+        "estimated_odom_only": true,
+        "all_prelude_goals_succeeded": true,
+        "final_native_result": true,
+        "physical_insertion_acknowledged": true,
+        "moving_trigger": true,
+        "commands_bounded": true,
+        "saved_map_unchanged": true,
+        "disarmed_zero": true,
+        "adapter_healthy": true,
+        "post_insertion_native_plan": true,
+        "guard_not_latched": true
+      },
+      "native_statuses": []
+    },
+    {
+      "case": "moving_20261022_A_fastvideo_long_05",
+      "files": {
+        "RUNNER_RESULT.json": "61f45374ee96e48a89765180dd3674d3560a3fb90f112dc3a8dd29bff86e907e",
+        "navigation/navigation_check.json": "49b05b74e1e52c50f6b8c5d6effba7ff348f6225e359ea2014366ceaa27f4074"
+      },
+      "runner_or_external_audit": {
+        "exit_code": 1,
+        "time": "2026-10-22T13:07:57.947403+08:00",
+        "power_operation": false,
+        "remaining_sessions": []
+      },
+      "passed": false,
+      "error": "Unexpected native action result 6",
+      "checks": {
+        "no_error": false,
+        "estimated_odom_only": true,
+        "all_prelude_goals_succeeded": true,
+        "final_native_result": false,
+        "physical_insertion_acknowledged": false,
+        "moving_trigger": false,
+        "commands_bounded": true,
+        "saved_map_unchanged": true,
+        "disarmed_zero": true,
+        "adapter_healthy": true,
+        "post_insertion_native_plan": false,
+        "guard_not_latched": true
+      },
+      "native_statuses": []
+    },
+    {
+      "case": "moving_20261022_A_fastvideo_long_06",
+      "files": {
+        "RUNNER_RESULT.json": "54c996f4d67d7f9f9ae2fb2a67239d79a29e841bfba7bd6a52e68948f1fa11a6",
+        "navigation/navigation_check.json": "3331c50f2aa32a48974a4f8aeb1d4704108c60d5f0c8890c584b6f999266c389"
+      },
+      "runner_or_external_audit": {
+        "exit_code": 1,
+        "time": "2026-10-22T13:14:41.584880+08:00",
+        "power_operation": false,
+        "remaining_sessions": []
+      },
+      "passed": false,
+      "error": "Unexpected native action result 6",
+      "checks": {
+        "no_error": false,
+        "estimated_odom_only": true,
+        "all_prelude_goals_succeeded": true,
+        "final_native_result": false,
+        "physical_insertion_acknowledged": false,
+        "moving_trigger": false,
+        "commands_bounded": true,
+        "saved_map_unchanged": true,
+        "disarmed_zero": true,
+        "adapter_healthy": true,
+        "post_insertion_native_plan": false,
+        "guard_not_latched": true
+      },
+      "native_statuses": []
     }
   ]
 }

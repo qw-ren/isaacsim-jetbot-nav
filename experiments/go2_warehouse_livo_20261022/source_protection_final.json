@@ -1,0 +1,43 @@
+{
+  "time": "2026-10-22T13:17:55.023024+08:00",
+  "checks": [
+    {
+      "manifest": "/home/admin/go2-warehouse/work/cloud/warehouse_stage1/baseline.sha256",
+      "root": "/home/admin/go2-warehouse/baseline",
+      "files": 12,
+      "failures": [],
+      "passed": true
+    },
+    {
+      "manifest": "/home/admin/go2-warehouse/artifacts/mainline_20261020_branch_01/source/source_cloud.sha256",
+      "root": "/home/admin/go2-warehouse/nav_stage2/cloud/warehouse_stage2",
+      "files": 107,
+      "failures": [],
+      "passed": true
+    },
+    {
+      "reference": "/home/admin/go2-warehouse/artifacts/mainline_20261020_branch_01/source",
+      "files": 121,
+      "failures": [],
+      "passed": true
+    }
+  ],
+  "estimator_binaries": [
+    {
+      "file": "nav_stage2/deps/fastlivo_trial_20261022/bin/fastlivo_mapping",
+      "sha256": "8a8e61dd543befa5f9da26bdf2674af804f7d2d5a81542d9f1fb7a9cf11e958f",
+      "expected": "8a8e61dd543befa5f9da26bdf2674af804f7d2d5a81542d9f1fb7a9cf11e958f",
+      "passed": true
+    },
+    {
+      "file": "nav_stage2/deps/fastlio_reliable_20261021/bin/fastlio_mapping",
+      "sha256": "a87ad6e662ce864ef757e956b82b9cac0f32b3f2f2c6b965e3ab3e39291b5da6",
+      "expected": "a87ad6e662ce864ef757e956b82b9cac0f32b3f2f2c6b965e3ab3e39291b5da6",
+      "passed": true
+    }
+  ],
+  "remaining_sessions": [],
+  "remaining_simulator_estimators": [],
+  "power_operation": false,
+  "passed": true
+}
