@@ -1,0 +1,9 @@
+{
+  "case": "moving_20261022_showcase_AB_12",
+  "native_navigation_passed": false,
+  "native_status": null,
+  "error": "Guard latched: PREDICTED_STATIC_CLEARANCE",
+  "guard_reason": "PREDICTED_STATIC_CLEARANCE",
+  "guard_stop_sim_s": 181.209995949,
+  "success_sim_s": null
+}

@@ -1,0 +1,50 @@
+{
+  "runtime": "motion_showcase_20261022_showcase_AB_12",
+  "spawn": [
+    1.0,
+    0.0,
+    0.0
+  ],
+  "odom_anchor": [
+    1.0,
+    0.0,
+    0.4
+  ],
+  "goal": [
+    4.0,
+    -11.0
+  ],
+  "imu_noise_enabled": false,
+  "imu_noise_seed": 20261021,
+  "map": "/home/admin/go2-warehouse/nav_stage2/maps/moving_B_20261022/map.yaml",
+  "route": null,
+  "map_source": "USD auxiliary CAD prior, not SLAM",
+  "scene": "warehouse plus declared controlled prior/dynamic fixture",
+  "stable_defaults_modified": false,
+  "reliable_lidar": true,
+  "guard_geometry_frame": "map via AMCL; original guard limits unchanged",
+  "trial_profile": "unpublished_showcase",
+  "configured_max_vx_mps": 1.0,
+  "imu_mode": "native_accelerometer_gyro; artificial_noise_disabled",
+  "kind": "B",
+  "trial_route": "long",
+  "dynamic_obstacles": "inserted only after estimated actual movement",
+  "chosen_estimator": "FAST-LIVO2",
+  "rgb_enabled": true,
+  "livo_used_for_control": true,
+  "estimator_output": "native LIVO IMU propagation with LiDAR/visual corrections",
+  "estimator_binary": "/home/admin/go2-warehouse/nav_stage2/deps/fastlivo_trial_20261022/bin/fastlivo_mapping",
+  "showcase_events": [
+    "A_cart",
+    "A_pallet",
+    "B_rack"
+  ],
+  "route_scope": "first warehouse loop plus long outer section after B; distinct final goal",
+  "scan_watchdog_profile": {
+    "simulation_age_limit_s": 0.2,
+    "wall_fallback_limit_s": 1.0,
+    "other_stream_deadlines_unchanged": true,
+    "scope": "simulation only; no timestamp rewriting"
+  },
+  "recording_scope": "native IMU/RGB/odom/scan/costmaps/plan; no duplicate bulk PointCloud2 recording; live estimator inputs unchanged"
+}

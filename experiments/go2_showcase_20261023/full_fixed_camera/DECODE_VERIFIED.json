@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "method": "ffmpeg -v error -i movie -f null -",
+  "exit_code": 0,
+  "video_sha256": "316cf0c238935af64995c5c242fff68559945e191115f0276e99cffdb4f9bc34"
+}

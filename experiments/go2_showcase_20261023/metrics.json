@@ -1,0 +1,179 @@
+{
+  "speed_summary": {
+    "max_mps": 1.0165907281182973,
+    "moving_median_mps": 0.9708242944754558,
+    "seconds_above_1_mps": 10.8,
+    "seconds_above_1_5_mps": 0.0
+  },
+  "case": "moving_20261022_showcase_AB_12",
+  "navigation_passed": false,
+  "native_checks": {
+    "no_error": false,
+    "estimated_odom_only": true,
+    "all_prelude_goals_succeeded": true,
+    "final_native_result": false,
+    "physical_insertion_acknowledged": true,
+    "moving_trigger": true,
+    "commands_bounded": true,
+    "saved_map_unchanged": true,
+    "disarmed_zero": true,
+    "adapter_healthy": true,
+    "post_insertion_native_plan": true,
+    "guard_not_latched": false,
+    "all_showcase_events_acknowledged": true,
+    "native_plan_after_each_event": true
+  },
+  "error": "Guard latched: PREDICTED_STATIC_CLEARANCE",
+  "actual_path_m": 129.12178496612916,
+  "events": [
+    {
+      "name": "A_cart",
+      "kind": "A",
+      "simulation_stamp_s": 32.089999282732606,
+      "actual_path_before_m": 22.279489910856793,
+      "actual_path_remaining_m": 106.84229505527236,
+      "actual_insertion_speed_mps": 0.999596647623898,
+      "minimum_center_to_present_envelopes_m": 1.2166872484239863,
+      "active": [
+        0
+      ]
+    },
+    {
+      "name": "A_pallet",
+      "kind": "A",
+      "simulation_stamp_s": 57.409998716786504,
+      "actual_path_before_m": 46.714493601909865,
+      "actual_path_remaining_m": 82.40729136421929,
+      "actual_insertion_speed_mps": 0.9880000445095846,
+      "minimum_center_to_present_envelopes_m": 0.9930998537006611,
+      "active": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "B_rack",
+      "kind": "B",
+      "simulation_stamp_s": 87.86999803595245,
+      "actual_path_before_m": 76.26512524876402,
+      "actual_path_remaining_m": 52.85665971736513,
+      "actual_insertion_speed_mps": 0.9353340252966577,
+      "minimum_center_to_present_envelopes_m": 1.1717401143569028,
+      "active": [
+        0,
+        1,
+        2
+      ]
+    }
+  ],
+  "raw_estimator_accuracy": {
+    "samples": 22090,
+    "begin_s": 5.0,
+    "end_s": 185.604995728,
+    "physical_xy_path_m": 129.08442812131133,
+    "alignment": "single initial SE3, no full-trajectory/scale fit",
+    "xy_error_m": {
+      "mean": 0.01308193739372409,
+      "p50": 0.009961241414126298,
+      "p95": 0.0336014942229443,
+      "maximum": 0.07479609009288314
+    },
+    "xyz_error_m": {
+      "mean": 0.020491139901446513,
+      "p50": 0.019219292033524328,
+      "p95": 0.039179299438012245,
+      "maximum": 0.0769855035196861
+    },
+    "z_error_m": {
+      "mean": 0.013369103029166456,
+      "p50": 0.01256685968880017,
+      "p95": 0.027839734964615354,
+      "maximum": 0.047646179445641035
+    },
+    "orientation_error_rad": {
+      "mean": 0.0043701844416998365,
+      "p50": 0.004035369798378518,
+      "p95": 0.008736556685896756,
+      "maximum": 0.019258575905566778
+    },
+    "endpoint_xy_error_m": 0.003112327840339628,
+    "endpoint_xy_drift_percent": 0.0024110792336738836,
+    "relative_pose_error": {
+      "5.0m": {
+        "translation_m": {
+          "mean": 0.03005758973367334,
+          "p50": 0.027144453949381198,
+          "p95": 0.06013355512546759,
+          "maximum": 0.10549460001797677
+        },
+        "rotation_rad": {
+          "mean": 0.005698346480276883,
+          "p50": 0.005306716119380021,
+          "p95": 0.010843928673122668,
+          "maximum": 0.022499648316787167
+        },
+        "segments": 19243
+      },
+      "10.0m": {
+        "translation_m": {
+          "mean": 0.03661052900277024,
+          "p50": 0.03157308546635222,
+          "p95": 0.07745758535941973,
+          "maximum": 0.18030431135730565
+        },
+        "rotation_rad": {
+          "mean": 0.006141406541094864,
+          "p50": 0.0056480932833019104,
+          "p95": 0.011731783104886198,
+          "maximum": 0.024507313857139047
+        },
+        "segments": 18053
+      },
+      "20.0m": {
+        "translation_m": {
+          "mean": 0.04285924419283856,
+          "p50": 0.034421402997361204,
+          "p95": 0.1047807324408895,
+          "maximum": 0.22339263671771944
+        },
+        "rotation_rad": {
+          "mean": 0.005934150293439293,
+          "p50": 0.005505937643994671,
+          "p95": 0.011171777155284227,
+          "maximum": 0.022891121096366207
+        },
+        "segments": 15722
+      }
+    }
+  },
+  "native_imu": {
+    "paired_samples": 37120,
+    "maximum_difference": 0.0,
+    "exact_vectors_preserved": true
+  },
+  "display": {
+    "audit_samples": 1856,
+    "samples_local_path": 1734,
+    "actual_topics": [
+      "/local_plan"
+    ],
+    "global_display_requested": false,
+    "local_shape": "actual DWB local plan relative to estimated body, anchored at visible actor for display only",
+    "ribbon_width_m": 0.38,
+    "arrow_base_width_m": 0.85
+  },
+  "truth_usage": "offline accuracy/speed and viewport only; no navigation input",
+  "power_operation": false,
+  "fixed_camera_proof": {
+    "frame_snapshots": 2320,
+    "frames_with_actual_local_plan": 2167,
+    "maximum_requested_relative_offset_error_m": 2.63916545506504e-07,
+    "maximum_captured_relative_offset_error_after20s_m": 0.03847770386326477,
+    "adaptive_reposition": false
+  },
+  "sensor_display_isolation": {
+    "architecture": "raw viewport capture; path polygons composed in independent image process only",
+    "old_scene_debug_drawing_disabled": true
+  },
+  "algorithm_validation_valid": false
+}
