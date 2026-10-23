@@ -1,0 +1,10 @@
+{
+  "case": "moving_20261022_A_fastvideo_long_04",
+  "native_navigation_passed": true,
+  "native_status": 4,
+  "error": null,
+  "guard_stop_sim_s": null,
+  "guard_reason": null,
+  "success_sim_s": 84.084999084,
+  "native_check_sha256": "a0ede2376ad4fe58259c33ce9076eadc2fcde893d1e81c36e9d94936fc810592"
+}

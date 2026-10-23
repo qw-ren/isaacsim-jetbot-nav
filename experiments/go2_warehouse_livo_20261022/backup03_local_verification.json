@@ -1,0 +1,10 @@
+{
+  "archive": "livo_selected_20261022_03.tar.gz",
+  "bytes": 343792298,
+  "sha256": "f2f0f6449ae0ec16cc4c217d2b631c2aa6f86318262a3ebea844e7d2e0533d17",
+  "cases": 14,
+  "selected_files_verified": 4304,
+  "source_files_verified": 3437,
+  "passed": true,
+  "scope": "Selected files only; complete cloud SHA included; full CDR/NPZ/weights/Isaac assets excluded"
+}

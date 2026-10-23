@@ -1,0 +1,144 @@
+--- upstream/fast_livo/src/LIVMapper.cpp
++++ trial/fast_livo/src/LIVMapper.cpp
+@@ -395,6 +395,7 @@
+ 
+   publish_frame_world(pubLaserCloudFullRes, vio_manager);
+   publish_img_rgb(pubImage, vio_manager);
++  publish_odometry(pubOdomAftMapped); // post-VIO estimate at same measurement time
+ 
+   euler_cur = RotMtoEuler(_state.rot_end);
+   fout_out << std::setw(20) << LidarMeasures.last_lio_update_time - _first_lidar_time << " " << euler_cur.transpose() * 57.3 << " "
+@@ -1414,7 +1415,7 @@
+ {
+   odomAftMapped.header.frame_id = "camera_init";
+   odomAftMapped.child_frame_id = "aft_mapped";
+-  odomAftMapped.header.stamp = this->node->get_clock()->now(); //.ros::Time()fromSec(last_timestamp_lidar);
++  odomAftMapped.header.stamp = sec2Stamp(LidarMeasures.last_lio_update_time); // state measurement time, not replay wall/current clock
+   set_posestamp(odomAftMapped.pose.pose);
+ 
+   static std::shared_ptr<tf2_ros::TransformBroadcaster> br;
+--- upstream/fast_livo/src/main.cpp
++++ trial/fast_livo/src/main.cpp
+@@ -5,8 +5,9 @@
+   rclcpp::init(argc, argv);
+   rclcpp::NodeOptions options;
+   rclcpp::Node::SharedPtr nh;
++  LIVMapper mapper(nh, "laserMapping");
++  nh = mapper.node;
+   image_transport::ImageTransport it_(nh);
+-  LIVMapper mapper(nh, "laserMapping");
+   mapper.initializeSubscribersAndPublishers(nh, it_);
+   mapper.run(nh);
+   rclcpp::shutdown();
+--- upstream/fast_livo/src/preprocess.cpp
++++ trial/fast_livo/src/preprocess.cpp
+@@ -399,7 +399,7 @@
+       added_pt.y = pl_orig.points[i].y;
+       added_pt.z = pl_orig.points[i].z;
+       added_pt.intensity = pl_orig.points[i].intensity;
+-      added_pt.curvature = pl_orig.points[i].time / 1000.0; // units: ms
++      added_pt.curvature = pl_orig.points[i].time * 1000.0; // units: ms
+ 
+       if (!given_offset_time)
+       {
+@@ -462,7 +462,7 @@
+       added_pt.y = pl_orig.points[i].y;
+       added_pt.z = pl_orig.points[i].z;
+       added_pt.intensity = pl_orig.points[i].intensity;
+-      added_pt.curvature = pl_orig.points[i].time / 1000.0;
++      added_pt.curvature = pl_orig.points[i].time * 1000.0;
+ 
+       if (!given_offset_time)
+       {
+--- upstream/vikit/vikit_ros/src/camera_loader.cpp
++++ trial/vikit/vikit_ros/src/camera_loader.cpp
+@@ -15,77 +15,18 @@
+ /// Load from ROS Namespace
+ bool loadFromRosNs(const rclcpp::Node::SharedPtr & nh, const std::string& ns, vk::AbstractCamera*& cam)
+ {
+-  bool res = true;
+-  std::string cam_model(getRemoteParam<std::string>(nh, ns, "cam_model", ""));
+-  if(cam_model == "Ocam")
+-  {
+-    cam = new vk::OmniCamera(getRemoteParam<std::string>(nh, ns, "cam_calib_file", ""));
+-  }
+-  else if(cam_model == "Pinhole")
+-  {
+-    cam = new vk::PinholeCamera(
+-        getRemoteParam<int>(nh, ns, "cam_width", 0),
+-        getRemoteParam<int>(nh, ns, "cam_height", 0),
+-        getRemoteParam<double>(nh, ns, "scale", 1.0),
+-        getRemoteParam<double>(nh, ns, "cam_fx", 0.0),
+-        getRemoteParam<double>(nh, ns, "cam_fy", 0.0),
+-        getRemoteParam<double>(nh, ns, "cam_cx", 0.0),
+-        getRemoteParam<double>(nh, ns, "cam_cy", 0.0),
+-        getRemoteParam<double>(nh, ns, "cam_d0", 0.0),
+-        getRemoteParam<double>(nh, ns, "cam_d1", 0.0),
+-        getRemoteParam<double>(nh, ns, "cam_d2", 0.0),
+-        getRemoteParam<double>(nh, ns, "cam_d3", 0.0));
+-  }
+-  else if(cam_model == "EquidistantCamera")
+-  {
+-    cam = new vk::EquidistantCamera(
+-        getParam<int>(nh, ns+"/cam_width"),
+-        getParam<int>(nh, ns+"/cam_height"),
+-        getParam<double>(nh, ns+"/scale", 1.0),
+-        getParam<double>(nh, ns+"/cam_fx"),
+-        getParam<double>(nh, ns+"/cam_fy"),
+-        getParam<double>(nh, ns+"/cam_cx"),
+-        getParam<double>(nh, ns+"/cam_cy"),
+-        getParam<double>(nh, ns+"/k1", 0.0),
+-        getParam<double>(nh, ns+"/k2", 0.0),
+-        getParam<double>(nh, ns+"/k3", 0.0),
+-        getParam<double>(nh, ns+"/k4", 0.0));
+-  }
+-  else if(cam_model == "PolynomialCamera")
+-  {
+-    cam = new vk::PolynomialCamera(
+-        getParam<int>(nh, ns+"/cam_width"),
+-        getParam<int>(nh, ns+"/cam_height"),
+-        // getParam<double>(nh, ns+"/scale", 1.0),
+-        getParam<double>(nh, ns+"/cam_fx"),
+-        getParam<double>(nh, ns+"/cam_fy"),
+-        getParam<double>(nh, ns+"/cam_cx"),
+-        getParam<double>(nh, ns+"/cam_cy"),
+-        getParam<double>(nh, ns+"/cam_skew"),
+-        getParam<double>(nh, ns+"/k2", 0.0),
+-        getParam<double>(nh, ns+"/k3", 0.0),
+-        getParam<double>(nh, ns+"/k4", 0.0),
+-        getParam<double>(nh, ns+"/k5", 0.0),
+-        getParam<double>(nh, ns+"/k6", 0.0),
+-        getParam<double>(nh, ns+"/k7", 0.0));
+-  }
+-  else if(cam_model == "ATAN")
+-  {
+-    cam = new vk::ATANCamera(
+-        getParam<int>(nh, ns+"/cam_width"),
+-        getParam<int>(nh, ns+"/cam_height"),
+-        getParam<double>(nh, ns+"/cam_fx"),
+-        getParam<double>(nh, ns+"/cam_fy"),
+-        getParam<double>(nh, ns+"/cam_cx"),
+-        getParam<double>(nh, ns+"/cam_cy"),
+-        getParam<double>(nh, ns+"/cam_d0"));
+-  }
+-  else
+-  {
+-    cam = NULL;
+-    res = false;
+-  }
+-  return res;
++  // Isolated trial: use explicit local camera parameters, avoiding an external blackboard node.
++  auto param = [&](const std::string& key, auto fallback) {
++    using T = decltype(fallback);
++    const auto full = "camera." + key;
++    if (!nh->has_parameter(full)) nh->declare_parameter<T>(full, fallback);
++    return nh->get_parameter(full).get_value<T>();
++  };
++  const int width=param("width",640), height=param("height",480);
++  const double fx=param("fx",0.), fy=param("fy",0.);
++  if (fx<=0. || fy<=0.) return false;
++  cam = new vk::PinholeCamera(width,height,1.0,fx,fy,param("cx",320.),param("cy",240.),0.,0.,0.,0.);
++  return true;
+ }
+ 
+ bool loadFromRosNs(const rclcpp::Node::SharedPtr & nh, const std::string& ns, std::vector<vk::AbstractCamera*>& cam_list)

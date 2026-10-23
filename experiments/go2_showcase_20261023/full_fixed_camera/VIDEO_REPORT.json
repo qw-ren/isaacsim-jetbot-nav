@@ -1,0 +1,49 @@
+{
+  "video": "go2_rear_follow_AAB_showcase.mp4",
+  "navigation_outcome": {
+    "case": "moving_20261022_showcase_AB_12",
+    "native_navigation_passed": false,
+    "native_status": null,
+    "error": "Guard latched: PREDICTED_STATIC_CLEARANCE",
+    "guard_reason": "PREDICTED_STATIC_CLEARANCE",
+    "guard_stop_sim_s": 181.209995949,
+    "success_sim_s": null
+  },
+  "events": [
+    {
+      "name": "A_cart",
+      "kind": "A",
+      "simulation_stamp_s": 32.089999282732606
+    },
+    {
+      "name": "A_pallet",
+      "kind": "A",
+      "simulation_stamp_s": 57.409998716786504
+    },
+    {
+      "name": "B_rack",
+      "kind": "B",
+      "simulation_stamp_s": 87.86999803595245
+    }
+  ],
+  "sha256": "316cf0c238935af64995c5c242fff68559945e191115f0276e99cffdb4f9bc34",
+  "bytes": 35370906,
+  "playback": "1x simulation time; source requests retimed with recorded simulation intervals",
+  "frame_count": 2070,
+  "source_time_range_s": [
+    20.029999552294612,
+    185.5499958526343
+  ],
+  "requested_duration_s": 165.5999963003397,
+  "actual_full_trial_path_m": 129.12178496612867,
+  "actual_video_path_m": 118.67935770263698,
+  "source_frame_count": 2320,
+  "trimmed_initial_sim_seconds": 20.029999552294612,
+  "maximum_measured_speed_mps": 1.0108870794316238,
+  "seconds_above_1_5_mps": 0.0,
+  "speed_method": "offline reference XY displacement over .2s; no use by control",
+  "fast_segments": [],
+  "obstacle_insert_sim_s": 87.86999803595245,
+  "maximum_capture_completion_delay_s": 0.019999999552965164,
+  "limitations": "Turns/avoidance may slow; viewport readback is asynchronous, request/completion bounds retained"
+}

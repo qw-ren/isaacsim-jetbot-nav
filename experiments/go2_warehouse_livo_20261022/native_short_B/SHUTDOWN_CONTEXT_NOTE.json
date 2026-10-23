@@ -1,0 +1,6 @@
+{
+  "note": "Native action SUCCEEDED and all observer checks passed before disarm/cleanup; preserved FAULT.json is publisher context invalid during ROS shutdown, not an observed active-run input timeout.",
+  "navigation_check_preserved": true,
+  "fault_file_preserved": true,
+  "next_source_fix": "Only mark callback failures while ROS context remains active; all active-run faults remain fail-closed"
+}

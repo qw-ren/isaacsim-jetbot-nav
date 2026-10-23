@@ -1,0 +1,195 @@
+{
+  "kind": "A",
+  "scope": "compact acceptance summary; full navigation JSON is in verified selected archive 02",
+  "truth_used_for_control": false,
+  "direct_velocity_publisher": false,
+  "costmap_clear_requested": false,
+  "prelude_warmup": {
+    "native_status": 6,
+    "guard_disarmed": true,
+    "counted_as_navigation_success": false
+  },
+  "applied_obstacle": {
+    "id": "insert_during_motion",
+    "enabled": true,
+    "kind": "A",
+    "simulation_stamp_s": 116.8899973873049,
+    "dynamic_boxes": [
+      {
+        "min": [
+          3.9,
+          -0.4,
+          0.0
+        ],
+        "max": [
+          4.7,
+          0.4,
+          1.0
+        ],
+        "source": "actual inserted /World/Go2DynamicTrial/added_0"
+      }
+    ],
+    "actual_usd": [
+      {
+        "center": [
+          4.3,
+          0.0,
+          0.5
+        ],
+        "size": [
+          0.8,
+          0.8,
+          1.0
+        ],
+        "prim": "/World/Go2DynamicTrial/added_0",
+        "present": true,
+        "collision_enabled": true
+      }
+    ],
+    "scope": "controlled simulation fixture; no robot pose modification"
+  },
+  "checks": {
+    "no_error": true,
+    "estimated_odom_only": true,
+    "all_prelude_goals_succeeded": true,
+    "final_native_result": true,
+    "physical_insertion_acknowledged": true,
+    "moving_trigger": true,
+    "commands_bounded": true,
+    "saved_map_unchanged": true,
+    "disarmed_zero": true,
+    "adapter_healthy": true,
+    "post_insertion_native_plan": true,
+    "guard_not_latched": true
+  },
+  "passed": true,
+  "native_plans_after_insertion": 134,
+  "acceptance": "functional dynamic navigation and fail-stop; no precise docking requirement",
+  "legs": [
+    {
+      "index": 0,
+      "goal": [
+        -3.0,
+        0.0
+      ],
+      "final_blockage_leg": false,
+      "start_pose": {
+        "wall": 52003.86265397,
+        "stamp": 9.345000265,
+        "x": 1.0010077363655343,
+        "y": 0.008780464906437045,
+        "yaw": -0.01590229466134784
+      },
+      "waypoints": [
+        [
+          4.0,
+          -6.0
+        ],
+        [
+          2.0,
+          -8.0
+        ],
+        [
+          -2.0,
+          -8.0
+        ],
+        [
+          -4.0,
+          -6.0
+        ],
+        [
+          -4.0,
+          13.0
+        ],
+        [
+          -2.0,
+          15.0
+        ],
+        [
+          2.0,
+          15.0
+        ],
+        [
+          2.0,
+          12.0
+        ],
+        [
+          4.0,
+          10.0
+        ],
+        [
+          4.0,
+          1.0
+        ],
+        [
+          -3.0,
+          0.0
+        ]
+      ],
+      "native_action": "NavigateThroughPoses",
+      "status": 4,
+      "arrival_pose": {
+        "wall": 52373.494800772,
+        "stamp": 101.744995117,
+        "x": -2.942295843173656,
+        "y": -0.3923296844844059,
+        "yaw": 1.9610460750879253
+      },
+      "feedback_samples": 36562,
+      "minimum_remaining": 1
+    },
+    {
+      "index": 1,
+      "goal": [
+        1.0,
+        0.0
+      ],
+      "final_blockage_leg": false,
+      "start_pose": {
+        "wall": 52375.370253461,
+        "stamp": 102.224998474,
+        "x": -2.9066464274459105,
+        "y": -0.3418371136849157,
+        "yaw": 1.9108403546956014
+      },
+      "native_action": "NavigateToPose",
+      "status": 4,
+      "arrival_pose": {
+        "wall": 52429.831772346,
+        "stamp": 115.884994507,
+        "x": 0.8656551043048272,
+        "y": -0.3727374824185641,
+        "yaw": 0.7002851378346542
+      },
+      "feedback_samples": 0,
+      "minimum_remaining": null
+    },
+    {
+      "index": 2,
+      "goal": [
+        6.0,
+        0.0
+      ],
+      "final_blockage_leg": true,
+      "start_pose": {
+        "wall": 52431.831836938,
+        "stamp": 116.364997864,
+        "x": 0.8968478246686088,
+        "y": -0.3707945662596524,
+        "yaw": 0.6531130872649973
+      },
+      "native_action": "NavigateToPose",
+      "status": 4,
+      "arrival_pose": {
+        "wall": 52471.363490254,
+        "stamp": 126.324996948,
+        "x": 5.9360336077556735,
+        "y": 0.37581015046956245,
+        "yaw": -1.169716707909729
+      },
+      "feedback_samples": 0,
+      "minimum_remaining": null
+    }
+  ],
+  "raw_navigation_sha256": "d40829b3cb72fc5faa9d38e3d052af50c70d933cd4c3b1af9fe604f2d7de5e3d"
+}

@@ -1,0 +1,41 @@
+/**:
+  ros__parameters:
+    use_sim_time: true
+    feature_extract_enable: false
+    point_filter_num: 4
+    max_iteration: 3
+    filter_size_surf: 0.3
+    filter_size_map: 0.3
+    cube_side_length: 100.0
+    runtime_pos_log_enable: false
+    common:
+      lid_topic: /lio/points_frame20ms
+      imu_topic: /lio/imu
+      time_sync_en: false
+      time_offset_lidar_to_imu: 0.0
+    preprocess:
+      lidar_type: 2
+      scan_line: 32
+      scan_rate: 10
+      timestamp_unit: 0
+      blind: 0.3
+    mapping:
+      acc_cov: 0.1
+      gyr_cov: 0.1
+      b_acc_cov: 0.0001
+      b_gyr_cov: 0.0001
+      fov_degree: 360.0
+      det_range: 30.0
+      extrinsic_est_en: false
+      extrinsic_T: [0.2, 0.0, 0.2]
+      extrinsic_R: [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0]
+    publish:
+      path_en: false
+      effect_map_en: false
+      map_en: false
+      scan_publish_en: false
+      dense_publish_en: false
+      scan_bodyframe_pub_en: false
+    pcd_save:
+      pcd_save_en: false
+      interval: -1

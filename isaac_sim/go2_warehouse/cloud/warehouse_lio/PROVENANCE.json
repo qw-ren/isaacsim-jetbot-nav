@@ -1,0 +1,6 @@
+{
+  "source": "/home/liswnux/isaac-go2-ros2/data/cloud_warehouse/fastlio_eval_runtime_20261019/source",
+  "baseline_source_cpp_sha256": "2055037366b7f0451a914fc4b9fae90527d4ac1388fd31daa7491d41904adb61",
+  "modified_source_cpp_sha256": "87c80676623005538dcdd8b1ae2a6e45af6cb7ac2baf0e937607822f4d43da8b",
+  "scope": "ROS2 point-cloud subscriber reliability only; estimation/preprocessing/mapping code unchanged"
+}

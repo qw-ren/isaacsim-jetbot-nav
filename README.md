@@ -39,4 +39,4 @@ assets/         必要的小型资源与资源下载说明
 
 [运行源码与说明](isaac_sim/go2_warehouse/README.md) · [阶段一验收](docs/GO2_WAREHOUSE_STAGE1.md) · [外部资源清单](assets/go2_warehouse_resources.md)
 
-2026-10-13阶段一M0–M3通过。10月18日阶段二已完成真实SLAM先验、AMCL、受保护Nav2及A/B障碍任务验证；B实际巡航.714m/s。详见[阶段二进度与限制](docs/GO2_WAREHOUSE_STAGE2.md)。精准驻足、障碍移除残留、FAST-LIO2和JetBot仍未完成。
+2026-10-13阶段一M0–M3通过。10月18日阶段二已完成真实SLAM先验、AMCL、受保护Nav2及A/B障碍任务验证；B实际巡航.714m/s。详见[阶段二进度与限制](docs/GO2_WAREHOUSE_STAGE2.md)。该句为10月18日历史范围。10月22日LIO已独立部署并完成116.645m历史长程；LIVO已完成同记录对比、原生IMU短程A/B/C与80.47m长程A，长程B也已通过（84.286m），本轮跳过长程C，高速实测1.67m/s录像及约1.3m/s完整绕行录像分别发布，高速完整绕行未通过，JetBot未迁移。分别见[LIO记录](docs/GO2_WAREHOUSE_LIO.md)、[LIVO记录](docs/GO2_WAREHOUSE_LIVO.md)。

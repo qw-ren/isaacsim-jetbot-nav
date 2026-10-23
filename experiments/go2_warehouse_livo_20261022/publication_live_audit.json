@@ -1,0 +1,14 @@
+{
+  "time": "2026-10-22T20:44:31.484101+08:00",
+  "remaining_simulator_estimators": [],
+  "sessions": {
+    "root": [],
+    "admin": []
+  },
+  "power_operation": false,
+  "archive_exit": {
+    "exit_code": 0,
+    "time": "2026-10-22T20:43:11.024758+08:00"
+  },
+  "passed": true
+}

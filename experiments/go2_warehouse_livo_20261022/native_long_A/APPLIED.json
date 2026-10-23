@@ -1,0 +1,39 @@
+{
+  "id": "insert_during_motion",
+  "enabled": true,
+  "kind": "A",
+  "simulation_stamp_s": 116.8899973873049,
+  "dynamic_boxes": [
+    {
+      "min": [
+        3.9,
+        -0.4,
+        0.0
+      ],
+      "max": [
+        4.7,
+        0.4,
+        1.0
+      ],
+      "source": "actual inserted /World/Go2DynamicTrial/added_0"
+    }
+  ],
+  "actual_usd": [
+    {
+      "center": [
+        4.3,
+        0.0,
+        0.5
+      ],
+      "size": [
+        0.8,
+        0.8,
+        1.0
+      ],
+      "prim": "/World/Go2DynamicTrial/added_0",
+      "present": true,
+      "collision_enabled": true
+    }
+  ],
+  "scope": "controlled simulation fixture; no robot pose modification"
+}

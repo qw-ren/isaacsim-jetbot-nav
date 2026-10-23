@@ -1,0 +1,274 @@
+[
+  {
+    "case": "moving_20261022_showcase_AB_01",
+    "RUNNER_RESULT.json": {
+      "exit_code": 143,
+      "time": "2026-10-22T21:14:49.993603+08:00",
+      "remaining_sessions": []
+    },
+    "navigation/navigation_check.json": "missing; do not infer success",
+    "sensor_isolation_invalid": false
+  },
+  {
+    "case": "moving_20261022_showcase_AB_02",
+    "RUNNER_RESULT.json": {
+      "exit_code": 1,
+      "time": "2026-10-22T21:23:13.839576+08:00",
+      "remaining_sessions": []
+    },
+    "navigation/navigation_check.json": "missing; do not infer success",
+    "sensor_isolation_invalid": true
+  },
+  {
+    "case": "moving_20261022_showcase_AB_03",
+    "RUNNER_RESULT.json": {
+      "exit_code": 1,
+      "time": "2026-10-22T21:25:08.222508+08:00",
+      "remaining_sessions": []
+    },
+    "navigation/navigation_check.json": {
+      "passed": false,
+      "error": "Unexpected native action result 6",
+      "checks": {
+        "no_error": false,
+        "estimated_odom_only": true,
+        "all_prelude_goals_succeeded": true,
+        "final_native_result": false,
+        "physical_insertion_acknowledged": false,
+        "moving_trigger": false,
+        "commands_bounded": true,
+        "saved_map_unchanged": true,
+        "disarmed_zero": true,
+        "adapter_healthy": true,
+        "post_insertion_native_plan": false,
+        "guard_not_latched": true,
+        "all_showcase_events_acknowledged": false,
+        "native_plan_after_each_event": false
+      }
+    },
+    "sensor_isolation_invalid": true
+  },
+  {
+    "case": "moving_20261022_showcase_AB_04",
+    "RUNNER_RESULT.json": {
+      "exit_code": 1,
+      "time": "2026-10-22T21:28:30.281824+08:00",
+      "remaining_sessions": []
+    },
+    "navigation/navigation_check.json": {
+      "passed": false,
+      "error": "Async request timeout",
+      "checks": {
+        "no_error": false,
+        "estimated_odom_only": true,
+        "all_prelude_goals_succeeded": true,
+        "final_native_result": false,
+        "physical_insertion_acknowledged": false,
+        "moving_trigger": false,
+        "commands_bounded": false,
+        "saved_map_unchanged": true,
+        "disarmed_zero": true,
+        "adapter_healthy": true,
+        "post_insertion_native_plan": false,
+        "guard_not_latched": true,
+        "all_showcase_events_acknowledged": false,
+        "native_plan_after_each_event": false
+      }
+    },
+    "sensor_isolation_invalid": false
+  },
+  {
+    "case": "moving_20261022_showcase_AB_05",
+    "RUNNER_RESULT.json": {
+      "exit_code": 1,
+      "time": "2026-10-22T21:38:01.896481+08:00",
+      "remaining_sessions": []
+    },
+    "navigation/navigation_check.json": {
+      "passed": false,
+      "error": "Unexpected native action result 6",
+      "checks": {
+        "no_error": false,
+        "estimated_odom_only": true,
+        "all_prelude_goals_succeeded": true,
+        "final_native_result": false,
+        "physical_insertion_acknowledged": true,
+        "moving_trigger": true,
+        "commands_bounded": true,
+        "saved_map_unchanged": true,
+        "disarmed_zero": true,
+        "adapter_healthy": true,
+        "post_insertion_native_plan": true,
+        "guard_not_latched": true,
+        "all_showcase_events_acknowledged": true,
+        "native_plan_after_each_event": true
+      }
+    },
+    "sensor_isolation_invalid": true
+  },
+  {
+    "case": "moving_20261022_showcase_AB_06",
+    "RUNNER_RESULT.json": {
+      "exit_code": 1,
+      "time": "2026-10-22T21:43:35.992614+08:00",
+      "remaining_sessions": []
+    },
+    "navigation/navigation_check.json": {
+      "passed": false,
+      "error": "Unexpected native action result 6",
+      "checks": {
+        "no_error": false,
+        "estimated_odom_only": true,
+        "all_prelude_goals_succeeded": true,
+        "final_native_result": false,
+        "physical_insertion_acknowledged": false,
+        "moving_trigger": false,
+        "commands_bounded": false,
+        "saved_map_unchanged": true,
+        "disarmed_zero": true,
+        "adapter_healthy": true,
+        "post_insertion_native_plan": false,
+        "guard_not_latched": true,
+        "all_showcase_events_acknowledged": false,
+        "native_plan_after_each_event": false
+      }
+    },
+    "sensor_isolation_invalid": false
+  },
+  {
+    "case": "moving_20261022_showcase_AB_07",
+    "RUNNER_RESULT.json": {
+      "exit_code": 1,
+      "time": "2026-10-22T21:51:39.812926+08:00",
+      "remaining_sessions": []
+    },
+    "navigation/navigation_check.json": "missing; do not infer success",
+    "sensor_isolation_invalid": true
+  },
+  {
+    "case": "moving_20261022_showcase_AB_08",
+    "RUNNER_RESULT.json": {
+      "exit_code": 1,
+      "time": "2026-10-22T22:04:42.037185+08:00",
+      "remaining_sessions": []
+    },
+    "navigation/navigation_check.json": {
+      "passed": false,
+      "error": "Native prelude ended without passing declared waypoints",
+      "checks": {
+        "no_error": false,
+        "estimated_odom_only": true,
+        "all_prelude_goals_succeeded": true,
+        "final_native_result": true,
+        "physical_insertion_acknowledged": true,
+        "moving_trigger": true,
+        "commands_bounded": true,
+        "saved_map_unchanged": true,
+        "disarmed_zero": true,
+        "adapter_healthy": true,
+        "post_insertion_native_plan": true,
+        "guard_not_latched": true,
+        "all_showcase_events_acknowledged": true,
+        "native_plan_after_each_event": true
+      }
+    },
+    "sensor_isolation_invalid": false
+  },
+  {
+    "case": "moving_20261022_showcase_AB_09",
+    "RUNNER_RESULT.json": {
+      "exit_code": 1,
+      "time": "2026-10-22T22:07:27.594048+08:00",
+      "remaining_sessions": []
+    },
+    "navigation/navigation_check.json": "missing; do not infer success",
+    "sensor_isolation_invalid": false
+  },
+  {
+    "case": "moving_20261022_showcase_AB_10",
+    "RUNNER_RESULT.json": {
+      "exit_code": 1,
+      "time": "2026-10-22T22:22:27.371003+08:00",
+      "remaining_sessions": []
+    },
+    "navigation/navigation_check.json": {
+      "passed": false,
+      "error": "Guard latched: SCAN_TIMEOUT",
+      "checks": {
+        "no_error": false,
+        "estimated_odom_only": true,
+        "all_prelude_goals_succeeded": true,
+        "final_native_result": false,
+        "physical_insertion_acknowledged": true,
+        "moving_trigger": true,
+        "commands_bounded": true,
+        "saved_map_unchanged": true,
+        "disarmed_zero": true,
+        "adapter_healthy": true,
+        "post_insertion_native_plan": true,
+        "guard_not_latched": false,
+        "all_showcase_events_acknowledged": true,
+        "native_plan_after_each_event": true
+      }
+    },
+    "sensor_isolation_invalid": false
+  },
+  {
+    "case": "moving_20261022_showcase_AB_11",
+    "RUNNER_RESULT.json": {
+      "exit_code": 1,
+      "time": "2026-10-22T22:39:16.127994+08:00",
+      "remaining_sessions": []
+    },
+    "navigation/navigation_check.json": {
+      "passed": false,
+      "error": "Guard latched: SCAN_TIMEOUT",
+      "checks": {
+        "no_error": false,
+        "estimated_odom_only": true,
+        "all_prelude_goals_succeeded": true,
+        "final_native_result": false,
+        "physical_insertion_acknowledged": true,
+        "moving_trigger": true,
+        "commands_bounded": true,
+        "saved_map_unchanged": true,
+        "disarmed_zero": true,
+        "adapter_healthy": true,
+        "post_insertion_native_plan": true,
+        "guard_not_latched": false,
+        "all_showcase_events_acknowledged": false,
+        "native_plan_after_each_event": false
+      }
+    },
+    "sensor_isolation_invalid": false
+  },
+  {
+    "case": "moving_20261022_showcase_AB_12",
+    "RUNNER_RESULT.json": {
+      "exit_code": 1,
+      "time": "2026-10-22T23:10:06.486100+08:00",
+      "remaining_sessions": []
+    },
+    "navigation/navigation_check.json": {
+      "passed": false,
+      "error": "Guard latched: PREDICTED_STATIC_CLEARANCE",
+      "checks": {
+        "no_error": false,
+        "estimated_odom_only": true,
+        "all_prelude_goals_succeeded": true,
+        "final_native_result": false,
+        "physical_insertion_acknowledged": true,
+        "moving_trigger": true,
+        "commands_bounded": true,
+        "saved_map_unchanged": true,
+        "disarmed_zero": true,
+        "adapter_healthy": true,
+        "post_insertion_native_plan": true,
+        "guard_not_latched": false,
+        "all_showcase_events_acknowledged": true,
+        "native_plan_after_each_event": true
+      }
+    },
+    "sensor_isolation_invalid": false
+  }
+]

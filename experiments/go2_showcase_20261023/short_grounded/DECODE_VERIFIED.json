@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "exit_code": 0,
+  "method": "ffmpeg full decode to null",
+  "video_sha256": "b388b226cc52542880ee610f5f8c5d882eab7d8a73d1f8a336093aa11ff9a1a7"
+}

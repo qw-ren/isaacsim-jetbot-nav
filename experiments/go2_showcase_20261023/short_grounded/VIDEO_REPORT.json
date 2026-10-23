@@ -1,0 +1,74 @@
+{
+  "video": "go2_rear_follow_AB_short.mp4",
+  "navigation_outcome": {
+    "case": "moving_20261022_showcase_AB_12",
+    "native_navigation_passed": false,
+    "native_status": null,
+    "error": "Guard latched: PREDICTED_STATIC_CLEARANCE",
+    "guard_reason": "PREDICTED_STATIC_CLEARANCE",
+    "guard_stop_sim_s": 181.209995949,
+    "success_sim_s": null
+  },
+  "events": [
+    {
+      "name": "A_cart",
+      "kind": "A",
+      "simulation_stamp_s": 32.089999282732606
+    },
+    {
+      "name": "A_pallet",
+      "kind": "A",
+      "simulation_stamp_s": 57.409998716786504
+    },
+    {
+      "name": "B_rack",
+      "kind": "B",
+      "simulation_stamp_s": 87.86999803595245
+    }
+  ],
+  "sha256": "b388b226cc52542880ee610f5f8c5d882eab7d8a73d1f8a336093aa11ff9a1a7",
+  "bytes": 14053428,
+  "clip_scope": "distance-limited excerpt of existing trial; not a new full navigation acceptance",
+  "requested_distance_m": 48.0,
+  "display_style": {
+    "shape": "single connected ground-plane polygon",
+    "ground_z_m": 0.003,
+    "opacity": 0.7450980392156863,
+    "shaft_width_m": 0.3,
+    "head_base_width_m": 0.64,
+    "head_max_length_m": 0.3,
+    "body_forward_display_offset_m": 0.65,
+    "robot_occlusion": "conservative projected envelope",
+    "curve": "recorded local-plan shape, shifted forward for display only; no extrapolation or navigation changes"
+  },
+  "events_within_clip": [
+    {
+      "name": "A_pallet",
+      "kind": "A",
+      "simulation_stamp_s": 57.409998716786504
+    },
+    {
+      "name": "B_rack",
+      "kind": "B",
+      "simulation_stamp_s": 87.86999803595245
+    }
+  ],
+  "playback": "1x simulation time; source requests retimed with recorded simulation intervals",
+  "frame_count": 637,
+  "source_time_range_s": [
+    50.02999888174236,
+    100.90999774448574
+  ],
+  "requested_duration_s": 50.959998862743376,
+  "actual_full_trial_path_m": 129.12178496612867,
+  "actual_video_path_m": 47.95139935658832,
+  "source_frame_count": 2320,
+  "trimmed_initial_sim_seconds": 50.02999888174236,
+  "maximum_measured_speed_mps": 1.0075749491979324,
+  "seconds_above_1_5_mps": 0.0,
+  "speed_method": "offline reference XY displacement over .2s; no use by control",
+  "fast_segments": [],
+  "obstacle_insert_sim_s": 87.86999803595245,
+  "maximum_capture_completion_delay_s": 0.019999999552965164,
+  "limitations": "Turns/avoidance may slow; viewport readback is asynchronous, request/completion bounds retained"
+}

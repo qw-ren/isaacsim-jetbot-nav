@@ -1,0 +1,14 @@
+{
+  "python": "3.10.20",
+  "ffmpeg": "ffmpeg version 7.0.2-static https://johnvansickle.com/ffmpeg/  Copyright (c) 2000-2024 the FFmpeg developers",
+  "ffmpeg_binary_sha256": "e7e7fb30477f717e6f55f9180a70386c62677ef8a4d4d1a5d948f4098aa3eb99",
+  "encoding_source_sha256": "71286299f2ae3347093be806cab5e2377c1f8b01d0eb4ff7b2bfb1096311e970",
+  "inputs_sha256": {
+    "APPLIED.json": "6e0c71a3fea659e1afcf9d7fd287e63c25fcffa72f8b199d67fc2f3a28b15322",
+    "VIDEO_OUTCOME.json": "a3c2c11c29f6143b88a61d08059b080dc8ecdc69f05005ccbbc64dc1199657ab",
+    "trajectories.json.gz": "f3ac39de838d7e2ce2c04ce8285e28c62555dd84909106171b0ded84cb247a32",
+    "frames.csv": "60f5fd1352d07b0a689a82987108b195b1eefee889e77376f2cba56d16b49980"
+  },
+  "playback": "1x simulation time",
+  "overlay": "offline reference speed and actual native outcome; no generated scene frames"
+}

@@ -1,0 +1,23 @@
+{
+  "time": "2026-10-22T23:13:26.286066+08:00",
+  "checks": {
+    "baseline": {
+      "exit_code": 0,
+      "verified": 12,
+      "errors": "\n"
+    },
+    "stable_stage2": {
+      "exit_code": 0,
+      "verified": 107,
+      "errors": ""
+    },
+    "case_frozen": {
+      "exit_code": 0,
+      "verified": 264,
+      "errors": "\n"
+    }
+  },
+  "active_workers": [],
+  "power_operation": false,
+  "audit_note": "Stable manifest paths relative to nav_stage2/cloud/warehouse_stage2; initial wrong-base invocation corrected."
+}

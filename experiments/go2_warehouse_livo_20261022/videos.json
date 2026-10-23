@@ -1,0 +1,16 @@
+[
+  {
+    "asset": "go2_fast_A_guard_stop_720p.mp4",
+    "url": "https://github.com/qw-ren/go2-navigation-experiments/releases/download/go2-cloud-nav-20261022/go2_fast_A_guard_stop_720p.mp4",
+    "sha256": "42977755fb3efb5466947553693e3f848a87f4cefbb47d7c8986c9b8a6475777",
+    "bytes": 13641950,
+    "navigation_passed": false
+  },
+  {
+    "asset": "go2_A_complete_bypass_720p.mp4",
+    "url": "https://github.com/qw-ren/go2-navigation-experiments/releases/download/go2-cloud-nav-20261022/go2_A_complete_bypass_720p.mp4",
+    "sha256": "c6cc561d6e721fbf2e81895fb74cfc50ca4af58d5b6e8896098c0995c5cea10b",
+    "bytes": 16853624,
+    "navigation_passed": true
+  }
+]

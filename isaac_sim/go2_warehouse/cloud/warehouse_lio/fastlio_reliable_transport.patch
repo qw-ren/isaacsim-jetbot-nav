@@ -1,0 +1,14 @@
+--- a/src/laserMapping.cpp
++++ b/src/laserMapping.cpp
+@@ -924,7 +924,10 @@
+         }
+         else
+         {
+-            sub_pcl_pc_ = this->create_subscription<sensor_msgs::msg::PointCloud2>(lid_topic, rclcpp::SensorDataQoS(), standard_pcl_cbk);
++            auto cloud_qos = rclcpp::SensorDataQoS();
++            if (this->declare_parameter<bool>("reliable_lidar", true))
++                cloud_qos.reliable();
++            sub_pcl_pc_ = this->create_subscription<sensor_msgs::msg::PointCloud2>(lid_topic, cloud_qos, standard_pcl_cbk);
+         }
+         sub_imu_ = this->create_subscription<sensor_msgs::msg::Imu>(imu_topic, 10, imu_cbk);
+         pubLaserCloudFull_ = this->create_publisher<sensor_msgs::msg::PointCloud2>("/cloud_registered", 20);

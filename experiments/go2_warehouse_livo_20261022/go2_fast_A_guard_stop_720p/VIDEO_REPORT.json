@@ -1,0 +1,94 @@
+{
+  "video": "go2_long_dynamic_follow.mp4",
+  "navigation_outcome": {
+    "case": "moving_20261022_A_fastvideo_long_03",
+    "native_navigation_passed": false,
+    "native_status": null,
+    "error": "Guard latched: PREDICTED_STATIC_CLEARANCE",
+    "guard_stop_sim_s": 66.569998512,
+    "guard_reason": "PREDICTED_STATIC_CLEARANCE",
+    "success_sim_s": null,
+    "native_check_sha256": "c1c5fcaaed4943aefa537bda81650b76c19f35853a7794fb0ab57631f654ce75"
+  },
+  "sha256": "42977755fb3efb5466947553693e3f848a87f4cefbb47d7c8986c9b8a6475777",
+  "bytes": 13641950,
+  "playback": "1x simulation time; source requests retimed with recorded simulation intervals",
+  "frame_count": 744,
+  "source_time_range_s": [
+    9.069999797269702,
+    68.50999846868217
+  ],
+  "requested_duration_s": 59.519998671412466,
+  "actual_full_trial_path_m": 82.52199929362395,
+  "actual_video_path_m": 82.48283469886603,
+  "source_frame_count": 857,
+  "trimmed_initial_sim_seconds": 9.069999797269702,
+  "maximum_measured_speed_mps": 1.6699941467874984,
+  "seconds_above_1_5_mps": 43.2,
+  "speed_method": "offline reference XY displacement over .2s; no use by control",
+  "fast_segments": [
+    {
+      "start_sim_s": 16.769999797269676,
+      "end_sim_s": 34.06999979726962,
+      "duration_s": 17.3,
+      "mean_speed_mps": 1.618557195327755
+    },
+    {
+      "start_sim_s": 41.56999979726959,
+      "end_sim_s": 51.86999979726955,
+      "duration_s": 10.3,
+      "mean_speed_mps": 1.6237398713514724
+    },
+    {
+      "start_sim_s": 54.56999979726954,
+      "end_sim_s": 58.06999979726953,
+      "duration_s": 3.5,
+      "mean_speed_mps": 1.5953528823100736
+    },
+    {
+      "start_sim_s": 11.269999797269694,
+      "end_sim_s": 14.169999797269684,
+      "duration_s": 2.9000000000000004,
+      "mean_speed_mps": 1.614412881468185
+    },
+    {
+      "start_sim_s": 64.2699997972695,
+      "end_sim_s": 66.6699997972695,
+      "duration_s": 2.4000000000000004,
+      "mean_speed_mps": 1.6105319587500866
+    },
+    {
+      "start_sim_s": 52.26999979726955,
+      "end_sim_s": 54.36999979726954,
+      "duration_s": 2.1,
+      "mean_speed_mps": 1.5964679823822494
+    },
+    {
+      "start_sim_s": 34.56999979726961,
+      "end_sim_s": 36.269999797269605,
+      "duration_s": 1.7000000000000002,
+      "mean_speed_mps": 1.6067884021542214
+    },
+    {
+      "start_sim_s": 38.2699997972696,
+      "end_sim_s": 39.36999979726959,
+      "duration_s": 1.1,
+      "mean_speed_mps": 1.5845509638810384
+    },
+    {
+      "start_sim_s": 39.6699997972696,
+      "end_sim_s": 40.76999979726959,
+      "duration_s": 1.1,
+      "mean_speed_mps": 1.589973117148478
+    },
+    {
+      "start_sim_s": 15.06999979726968,
+      "end_sim_s": 15.869999797269678,
+      "duration_s": 0.8,
+      "mean_speed_mps": 1.5539194609078408
+    }
+  ],
+  "obstacle_insert_sim_s": 59.94999866001308,
+  "maximum_capture_completion_delay_s": 0.019999999552965164,
+  "limitations": "Turns/avoidance may slow; viewport readback is asynchronous, request/completion bounds retained"
+}
