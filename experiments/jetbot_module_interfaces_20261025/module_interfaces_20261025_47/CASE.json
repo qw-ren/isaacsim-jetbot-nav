@@ -1,0 +1,56 @@
+{
+  "duration_sim_s": 180.0,
+  "ros_domain_id": 51,
+  "simulation_only": true,
+  "backend": "FAST-LIVO2 migration",
+  "initial_mode": "native operator mission session",
+  "backend_enabled": true,
+  "motion_enabled": false,
+  "nav2_enabled": true,
+  "operator_enabled": true,
+  "navigation": {
+    "goals": [
+      [
+        0.0,
+        6.0,
+        0.0
+      ]
+    ],
+    "timeout_wall_s": 900.0,
+    "point_time_mode": "native_frame_rays",
+    "scan_deskew_gyro": true,
+    "visualization": {
+      "headless": false,
+      "follow": true,
+      "record_video": false
+    },
+    "extensions": {
+      "command_mux": true,
+      "control_source": "nav2",
+      "probe": true,
+      "depth": true
+    }
+  },
+  "runtime_wall_s": 1000.0,
+  "motion_limits": {
+    "max_linear_m_s": 0.37,
+    "max_angular_rad_s": 0.6,
+    "wheel_radius_m": 0.03,
+    "wheel_base_m": 0.1125,
+    "max_wheel_rad_s": 12.560000333031704,
+    "joint_limits_modified": false
+  },
+  "visualization": {
+    "headless": false,
+    "follow": true,
+    "record_video": false,
+    "observer_camera": "/World/JetbotObserverCamera",
+    "environment": {
+      "XDG_RUNTIME_DIR": "/run/user/1000",
+      "DISPLAY": ":1",
+      "XAUTHORITY": "/tmp/xauth_ncgIrr"
+    },
+    "source_pid": 2728,
+    "source": "existing desktop session; paths only, no credential contents"
+  }
+}

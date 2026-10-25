@@ -1,0 +1,68 @@
+{
+  "scope": "CAD AABB route preflight only, not actual navigation success",
+  "segment_center_clearance_m": [
+    2.1999955841902206,
+    1.8068687494653215,
+    1.9017923125592873,
+    1.8386715093360966
+  ],
+  "route": {
+    "goals": [
+      [
+        -8.0,
+        6.0,
+        3.141592653589793
+      ],
+      [
+        -8.0,
+        27.0,
+        1.5707963267948966
+      ],
+      [
+        -13.0,
+        27.0,
+        3.141592653589793
+      ],
+      [
+        -13.0,
+        16.0,
+        -1.5707963267948966
+      ]
+    ],
+    "timeout_wall_s": 1400.0,
+    "nominal_route_length_m": 45.0,
+    "scope": "existing north warehouse rack aisles, end-of-rack turn and adjacent aisle; partial A/B aisle obstruction",
+    "obstacles": [
+      {
+        "kind": "A",
+        "center": [
+          -8.0,
+          16.0
+        ],
+        "trigger_axis": "y",
+        "trigger_above": 13.5
+      },
+      {
+        "kind": "B",
+        "center": [
+          -8.0,
+          22.0
+        ],
+        "trigger_axis": "y",
+        "trigger_above": 19.5,
+        "yaw_rad": 1.5707963267948966,
+        "span_m": 2.0
+      }
+    ],
+    "visualization": {
+      "headless": false,
+      "follow": true,
+      "record_video": true
+    },
+    "point_time_mode": "native_frame_rays",
+    "timing_audit": false,
+    "scan_deskew_gyro": true
+  },
+  "shelf_region": "north rack rows y8.6..25.1, aisles x-8 and-13",
+  "B": "2m partial aisle barrier, side bypass available; not a full topological closure"
+}

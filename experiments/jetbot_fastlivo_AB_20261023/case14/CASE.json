@@ -1,0 +1,10 @@
+{
+  "duration_sim_s": 280.0,
+  "ros_domain_id": 51,
+  "simulation_only": true,
+  "backend": "FAST-LIVO2 migration",
+  "initial_mode": "native Nav2 single goal",
+  "backend_enabled": true,
+  "motion_enabled": false,
+  "nav2_enabled": true
+}

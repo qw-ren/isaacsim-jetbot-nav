@@ -1,0 +1,23 @@
+{
+  "scope": "offline only, actual speed from simulator reference; command wheel rates use controller nominal geometry, not a physical joint-velocity measurement",
+  "source_sha256": "f65393b884b22cacae6d9ac315c72e3b04208890a3a6a181300286a1e63b6441",
+  "input_sha256": {
+    "CASE.json": "761a8cb022aa1bc71e3e89bed65a4c58527a4fe1fa4421a0f611f7453a05487e",
+    "control_audit.jsonl": "4a921c842f7e4b9c9a9ee331211f7e0041be0ba2a6dcbc53f71414782d2b5a49",
+    "truth_trajectory.jsonl": "7b510b827bb618624f84410fb64925e2a3781fda7a3546efa54713f945cc3509",
+    "RUNTIME_JOINT_LIMITS.json": "f08238bf15cf68495ee8795eff08c9d7661bee64baa25e9ae425a3486ec85af5"
+  },
+  "command_samples": 3529,
+  "max_abs_linear_command_m_s": 0.8,
+  "max_command_implied_wheel_rad_s": 8.764706558244391,
+  "original_wheel_limit_rad_s": 12.560000333031704,
+  "command_wheel_limit_violations": [],
+  "joint_properties_modified": false,
+  "straight_reference_speed": {
+    "selection": "abs(command_v)>=0.7200000000000001 m/s and abs(command_w)<0.05 rad/s; adjacent samples dt 15-30ms",
+    "samples": 1186,
+    "median_m_s": 0.7970836023195009,
+    "p95_m_s": 0.7972637895038616,
+    "max_m_s": 0.7975299837090651
+  }
+}

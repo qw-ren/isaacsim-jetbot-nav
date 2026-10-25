@@ -1,5 +1,24 @@
 # isaacsim-jetbot-nav
 
+阿童木机器人课题：JetBot仓储导航、视觉与激光融合、学习型局部避障。导航/系统集成负责人任权伟。
+
+## 当前可复现成果（2026-10-25）
+
+JetBot已接通原生传感器、FAST-LIVO估计里程计、AMCL、Nav2和受保护速度控制。原尺寸版本完成货架双通道与途中A/B障碍；新增3倍放大版本完成43.66m同类通道任务，直行实测约0.797m/s。PPO与视觉只留接口，未实现同学负责的模型/训练。语义导航目前只有人工地点名称到已有Nav2任务，完整视觉语义层仍为后续工作。
+
+- [导航源码与运行说明](isaac_sim/jetbot_fastlivo/README.md)
+- [3倍JetBot、速度实测及新录像](docs/JETBOT_SCALED_20261025.md)
+- [原尺寸录像、时序与精度记录](docs/JETBOT_VIDEO_PRECISION_20261025.md)
+- [给PPO和视觉同学的接口](docs/MODULE_INTERFACES.md) · [接口实测边界](docs/MODULE_INTERFACE_VALIDATION_20261025.md)
+- [外部资源、固定后端和备份边界](assets/jetbot_resources.md)
+
+视频在[2026-10-25 Release](https://github.com/qw-ren/isaacsim-jetbot-nav/releases/tag/jetbot-warehouse-20261025)提供，不进Git大文件；源码通过feature分支PR审阅后合入main。当前代码基于Isaac Sim4.5及现有云端依赖，不要求重装镜像。
+
+![3倍JetBot货架通道观察画面](experiments/jetbot_scaled_20261025/scaled_3x_observer.png)
+
+下方为团队课题最初规划与分工，2026-10-16节点属于历史目标，不覆盖上述实测范围。
+
+
 阿童木机器人课题：**基于 Isaac Sim 的 JetBot 视觉-激光融合导航与学习型局部避障**（暂定）。
 
 先跑通 Isaac Sim + JetBot + ROS 2 + SLAM/Nav2 的目标点导航 baseline，再推进 PPO 局部避障及与传统局部规划器的对比，逐步接入视觉与激光感知融合。当前仓库为项目骨架，尚未实现各模块 Demo。

@@ -1,0 +1,46 @@
+{
+  "scope": "offline recorded global costmaps; physical obstacle footprints with explicit 0.20m query margin, no pose fitting; occupancy evidence is distinct from collision clearance",
+  "events": [
+    {
+      "kind": "A",
+      "event_sim": 26.969999397173524,
+      "snapshot_sim": 29.849999333,
+      "initial": {
+        "cells": 528,
+        "lethal_or_inscribed_cells": 0,
+        "occupied_threshold65_cells": 0,
+        "max_cost": 0
+      },
+      "after": {
+        "cells": 528,
+        "lethal_or_inscribed_cells": 427,
+        "occupied_threshold65_cells": 481,
+        "max_cost": 100
+      }
+    },
+    {
+      "kind": "B",
+      "event_sim": 34.909999219700694,
+      "snapshot_sim": 37.549999161,
+      "initial": {
+        "cells": 741,
+        "lethal_or_inscribed_cells": 0,
+        "occupied_threshold65_cells": 0,
+        "max_cost": 0
+      },
+      "after": {
+        "cells": 741,
+        "lethal_or_inscribed_cells": 597,
+        "occupied_threshold65_cells": 636,
+        "max_cost": 100
+      }
+    }
+  ],
+  "source_sha256": "c40969b50cb2a4867a7659fb34c16540b89efb93544e2ec4f8e89c0cbd5c2e77",
+  "inputs": {
+    "obstacle_events.jsonl": "5a1d1d2e9c7159e4758858e6426ce3b938e1b788b001f1838f98865bb004e28e",
+    "global_costmap_initial.npz": "05d73ade5d2f533338d38cbedae94cdea960b4fd48e0c606dda0ddd00b680af7",
+    "global_costmap_A.npz": "0392cb296c099d49599a9dc39476af59796839eeeda76e02dfc927cc6a3e68f3",
+    "global_costmap_B.npz": "e508de973ad700e50ace921de737d28c644f990dfe1cb35ab4fed03b893c2485"
+  }
+}

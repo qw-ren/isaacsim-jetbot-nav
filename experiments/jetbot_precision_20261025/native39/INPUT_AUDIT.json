@@ -1,0 +1,60 @@
+{
+  "passed": true,
+  "audit_error": null,
+  "stop_requested": true,
+  "checks": {
+    "no_wire_errors": true,
+    "all_sensors_received": true,
+    "sensor_tf_connected": true,
+    "estimated_odom_received": true,
+    "estimated_odom_tf": true,
+    "native_corrections_received": true
+  },
+  "counts": {
+    "/tf_static": 1,
+    "/jetbot/imu": 21555,
+    "/jetbot/image_raw": 895,
+    "/jetbot/camera_info": 895,
+    "/jetbot/livo/points": 885,
+    "/jetbot/livo/filter_updates": 1781,
+    "/jetbot/livo/imu_propagated": 18702,
+    "/jetbot/odom": 5091,
+    "/tf": 5967
+  },
+  "errors": [],
+  "expected_same_fusion_time_corrections": {
+    "/jetbot/livo/filter_updates": 890
+  },
+  "ranges": {
+    "/jetbot/livo/points": {
+      "min_points": 47381,
+      "max_points": 56641,
+      "stride": 24,
+      "maximum_point_offset_s": 0.13999724388122559
+    }
+  },
+  "static_tf": {
+    "jetbot/imu": "chassis",
+    "jetbot/lidar": "chassis",
+    "jetbot/camera_optical": "chassis"
+  },
+  "dynamic_tf": {
+    "chassis": "odom",
+    "odom": "map"
+  },
+  "publishers_at_end": {
+    "/jetbot/odom": [
+      "jetbot_livo_odometry"
+    ],
+    "/tf": [
+      "amcl",
+      "jetbot_livo_odometry"
+    ],
+    "/jetbot/cmd_vel": [
+      "jetbot_velocity_gate"
+    ]
+  },
+  "truth_subscribed": false,
+  "commands_published": false,
+  "source_sha256": "fa0c4318e728eba60159cfbbdf220616319e128e1445390c8a57a97d5674887f"
+}

@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "simulation_only": true,
+  "online_truth_allowed": false,
+  "observation": {
+    "rgb": "/jetbot/image_raw",
+    "intrinsics": "/jetbot/camera_info",
+    "optical_frame": "jetbot/camera_optical",
+    "imu": "/jetbot/imu",
+    "imu_orientation_valid": false,
+    "scan": "/jetbot/scan",
+    "estimated_odometry": "/jetbot/odom",
+    "robot_frame": "chassis",
+    "global_frame": "map",
+    "clock": "/clock",
+    "depth_available": "optional extensions.depth=true; pending live validation",
+    "depth": "/jetbot/depth/image_rect_raw (sensor_msgs/Image 32FC1, meters optical Z, same RGB header/CameraInfo)"
+  },
+  "vision_output": {
+    "status": "contract only, detector not implemented",
+    "object_fields": [
+      "class_id",
+      "confidence",
+      "bbox_xyxy",
+      "image_stamp",
+      "optical_frame"
+    ],
+    "metric_3d_requires": "depth or LiDAR association and timestamped TF; monocular bounding box is not a map pose",
+    "implementation_owner": "vision teammate; reserved output schema, no detector running",
+    "detection_topic": "/perception/detections",
+    "object_pose_topic": "/perception/object_poses",
+    "suggested_wire_types": [
+      "vision_msgs/Detection2DArray",
+      "vision_msgs/Detection3DArray"
+    ],
+    "wire_status": "reserved contract; vision_msgs not installed on current cloud, no perception publisher/consumer implemented"
+  },
+  "ppo": {
+    "role": "local avoidance and velocity control",
+    "observation_fields": [
+      "raw LaserScan",
+      "estimated body velocity",
+      "global Path in map and timestamped TF to chassis",
+      "goal/mission state"
+    ],
+    "proposal_topic": "/jetbot/policy_proposal",
+    "message": "geometry_msgs/TwistStamped, frame_id chassis, simulation stamp",
+    "training_implemented": false,
+    "control_source": "frozen per run, nav2 or ppo; no automatic fallback",
+    "final_output": "existing velocity gate remains sole /jetbot/cmd_vel publisher",
+    "implementation_owner": "PPO teammate; this repository provides navigation-side proposal entry and gate only",
+    "global_plan_topic": "/plan (nav_msgs/Path, map)",
+    "preprocessing_owner": "PPO teammate; scan sector count, clipping, normalization and network dimension must match their checkpoint; no dimension fixed by navigation",
+    "action_units": "physical linear.x m/s, angular.z rad/s; read active CASE.json.motion_limits for caps/geometry (original 1x=.37m/s; scaled variants have separate limits); final wheel-coupled gate applies"
+  },
+  "semantic_navigation": {
+    "initial_stage": "exact named place lookup -> approach pose -> existing Nav2 action",
+    "future_stage": "vision object association -> semantic map -> ambiguous target clarification -> reachable approach goal",
+    "natural_language_understanding_implemented": false,
+    "implementation_owner": "navigation integrates approved approach poses; perception/semantic understanding supplied separately"
+  }
+}

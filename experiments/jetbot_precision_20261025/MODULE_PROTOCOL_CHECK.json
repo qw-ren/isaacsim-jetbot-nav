@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "source_sha256": "10f4d48c6eb56734c505bb26285b0165d6c5e77a8cf885df482992ffa18e448d",
+  "checks": [
+    "cold start no action",
+    "fresh selected command",
+    "stale command latched",
+    "no automatic resume",
+    "nonfinite/future stamps rejected",
+    "known manual label resolved",
+    "unknown/empty/ambiguous labels rejected"
+  ],
+  "model_implemented": false
+}
