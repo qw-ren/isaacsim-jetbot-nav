@@ -53,3 +53,7 @@ assets/         必要的小型资源与资源下载说明
 完善 baseline；评估 PPO 与传统局部规划器的成功率、碰撞率、到达时间等指标；接入视觉-激光融合。**语义目标导航与简单自然语言导航仅作为按进度开展的后续扩展，不是当前必做承诺。**
 
 协作方式见 [CONTRIBUTING.md](CONTRIBUTING.md)。大模型、数据集、训练产物和大型场景资源通过外部存储共享，在仓库中记录获取方式。
+
+## 2026-10-29 导航交付
+
+[JetBot A/B连续四倍速视频、实验图表/数据与汇报素材](docs/JETBOT_RELEASE_20261029.md) · [3倍模型视觉/PPO接口更新](docs/JETBOT_SCALED_MODULE_HANDOFF_20261029.md) · [LIO/LIVO同输入对比](docs/JETBOT_LIO_LIVO_COMPARISON_20261029.md)。

@@ -6,6 +6,7 @@ from rclpy.node import Node
 from rclpy.parameter import Parameter
 from rclpy.action import ActionClient
 from nav2_msgs.action import NavigateToPose, NavigateThroughPoses
+from nav2_msgs.srv import GetCostmap
 from geometry_msgs.msg import PoseStamped
 from nav_msgs.msg import Path as NavPath, OccupancyGrid
 import numpy as np
@@ -26,11 +27,12 @@ def record_path(m,topic):
  paths.write(json.dumps(dict(topic=topic,stamp=m.header.stamp.sec+m.header.stamp.nanosec*1e-9,frame=m.header.frame_id,xy=[[p.pose.position.x,p.pose.position.y] for p in m.poses]))+'\n');paths.flush()
 path_sub=node.create_subscription(NavPath,'/plan',lambda m:record_path(m,'/plan'),10)
 local_sub=node.create_subscription(NavPath,'/local_plan',lambda m:record_path(m,'/local_plan'),10)
-costmap_log=(a.case/'costmap_observations.jsonl').open('x');saved_costmaps=set()
+costmap_log=(a.case/'costmap_observations.jsonl').open('x');saved_costmaps=set();costmap_counter=[0];(a.case/'costmap_snapshots').mkdir()
 def record_costmap(m):
  ts=m.header.stamp.sec+m.header.stamp.nanosec*1e-9;grid=np.asarray(m.data,dtype=np.int8).reshape(m.info.height,m.info.width);events=[]
  f=a.case/'obstacle_events.jsonl'
  if f.exists():events=[json.loads(l)for l in f.read_text().splitlines()]
+ costmap_counter[0]+=1;np.savez_compressed(a.case/'costmap_snapshots'/('%05d.npz'%costmap_counter[0]),data=grid,origin=[m.info.origin.position.x,m.info.origin.position.y],resolution=m.info.resolution,stamp=ts)
  label='initial' if not events else events[-1]['kind']
  row=dict(stamp=ts,frame=m.header.frame_id,occupied_cells=int(np.sum(grid>=65)),events_seen=len(events))
  if label not in saved_costmaps and (not events or ts-events[-1]['sim']>=2.):
@@ -79,7 +81,7 @@ try:
   if time.monotonic()>end:raise RuntimeError('Gate refused enable: '+reply.message)
   rclpy.spin_once(node,timeout_sec=.1)
  response=wait(handle.get_result_async(),float(cfg.get('timeout_wall_s',120)));result['native_status']=response.status;result['final_map_pose']=pose();result['estimated_goal_error_m']=math.hypot(result['final_map_pose'][0]-goals[-1][0],result['final_map_pose'][1]-goals[-1][1])
- gate=json.loads((a.case/'GATE_PROGRESS.json').read_text());result['gate']=gate;result['passed']=response.status==4 and gate['reason']=='ENABLED'
+ gate=json.loads((a.case/'GATE_PROGRESS.json').read_text());result['gate']=gate;expected=int(cfg.get('expected_native_status',4));assert expected in(4,6);result['expected_native_status']=expected;result['navigation_succeeded']=response.status==4;result['passed']=response.status==expected and gate['fault']is None and gate['reason']=='ENABLED'
 except Exception as exc:
  result['error']=repr(exc)
  try:result['final_map_pose']=pose()
@@ -88,6 +90,13 @@ finally:
  try:
   request=SetBool.Request();request.data=False;wait(arm.call_async(request),3)
  except Exception:pass
+ # Read final obstacle-layer state after disarming; no actuation/ground truth.
+ try:
+  snapshot_client=node.create_client(GetCostmap,'/global_costmap/get_costmap')
+  if snapshot_client.wait_for_service(timeout_sec=1.):
+   response_map=wait(snapshot_client.call_async(GetCostmap.Request()),2.);m=response_map.map;info=m.metadata;raw=np.asarray(m.data,dtype=np.uint8).reshape(info.size_y,info.size_x);grid=np.where(raw==255,-1,np.where(raw==254,100,np.where(raw==253,99,np.rint(raw.astype(float)*98/252)))).astype(np.int8)
+   np.savez_compressed(a.case/'global_costmap_terminal.npz',data=grid,origin=[info.origin.position.x,info.origin.position.y],resolution=info.resolution,stamp=info.update_time.sec+info.update_time.nanosec*1e-9)
+ except Exception as exc:result['terminal_snapshot_error']=repr(exc)
  trace.close();paths.close();costmap_log.close()
  (a.case/'NAVIGATION_RESULT.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result,indent=2));node.destroy_node()
  if rclpy.ok():rclpy.shutdown()

@@ -61,6 +61,7 @@ __run)
  source /home/admin/go2-warehouse/nav_stage2/cloud/warehouse_stage2/nav_env.sh
  set -u
  export ROS_DOMAIN_ID=51
+ /home/admin/isaacsim/python.sh "$jetbot_case/source/prepare_fixture_prior.py" --case "$jetbot_case"
  exec python3 "$jetbot_case/source/supervise.py" --case "$jetbot_case";;
 stop)
  python3 - "$jetbot_root" <<'PY_STOP'

@@ -27,10 +27,15 @@ class DynamicFixture:
   for i,event in enumerate(self.events):
    axis=event.get('trigger_axis','x');assert axis in ('x','y')
    threshold=float(event.get('trigger_above',event.get('trigger_below',event.get('trigger_x_below',float('nan')))));assert math.isfinite(threshold)
+   bounds=event.get('trigger_bounds',{})
+   if any(not float(limits[0])<=pose['xy'][0 if name=='x'else 1]<=float(limits[1])for name,limits in bounds.items()):continue
    coordinate=pose['xy'][0 if axis=='x'else 1]
    if i in self.done or (coordinate<threshold if 'trigger_above'in event else coordinate>threshold):continue
    x,y=event['center'];self.event_center=[x,y];self.event_yaw=float(event.get('yaw_rad',0.));assert abs(self.event_yaw/(math.pi/2)-round(self.event_yaw/(math.pi/2)))<1e-7;kind=event['kind'];prefix=self.prefix+'/event_'+str(i);parts=[]
-   if kind=='A':
+   if event.get('reuse_asset',False):
+    from asset_fixture import place_event
+    parts=place_event(self.stage,prefix,event)
+   elif kind=='A':
     # Wooden pallet with four separate cardboard crates, sized for the small base.
     for j,dy in enumerate([-.30,0.,.30]):parts.append(self.box(prefix+'/plank_'+str(j),[x,y+dy,.035],[.65,.12,.07],[.48,.29,.12]))
     for j,(dx,dy) in enumerate([(-.15,-.17),(.15,-.17),(-.15,.17),(.15,.17)]):parts.append(self.box(prefix+'/crate_'+str(j),[x+dx,y+dy,.22],[.28,.31,.30],[.68,.46,.24]))

@@ -1,3 +1,7 @@
+## 2026-10-29：真实资产ABC与到点改进
+
+结果与限制见[本轮报告](../../docs/JETBOT_ASSET_ABC_PRECISION_20261029.md)。当前3倍车精度候选为`warehouse_precision_amcl_safe_20261029.json`，组合B封路回归为`warehouse_asset_B_precision_20261029.json`。均有头/原生IMU/0.8m/s上限，PoseProgressChecker、0.65m规划包络、0.40m原保护阈值；真实车体未再放大。真实到点无新增障碍约7cm，封路约12.6cm，不承诺所有场景7cm；退出清理偶发后端-6仍保留。原1倍和历史配置不变。
+
 > 2026-10-25最新：原尺寸和3倍放大副本分别保留。放大版完成43.66m货架A/B，直行实测0.797m/s；使用warehouse_scaled_video53.json显式选择。原尺寸默认仍为原始轮径/0.37m/s。下方10.23记录是历史，不把两种物理条件混成一组实验。详见[放大版验收](../../docs/JETBOT_SCALED_20261025.md)。
 
 # JetBot FAST-LIVO 仓储导航与有头运行
@@ -126,3 +130,5 @@ bash /home/admin/jetbot-warehouse/code/manage_jetbot.sh stop
 ## 给PPO与视觉同学留接口（2026-10-25）
 
 采用显式module_interfaces47.json配置，可选同相机RGB-D、导航侧启动时二选一控制仲裁、只读接收样例。参见docs/MODULE_INTERFACES.md与MODULE_INTERFACE_VALIDATION_20261025.md。仅提供集成接口，不实现模型或训练；视觉输出消息/依赖待双方对齐。旧运行配置默认不开这些扩展。47接口联调与隔离域仲裁检查通过，任务2成功/1规划失败；正常SIGINT停止，不称全部子进程0。
+
+2026-10-29交付：[PPT素材与A/B连续视频](../../docs/JETBOT_RELEASE_20261029.md)、[3倍视觉/PPO接口](../../docs/JETBOT_SCALED_MODULE_HANDOFF_20261029.md)、[同输入LIO/LIVO对比](../../docs/JETBOT_LIO_LIVO_COMPARISON_20261029.md)。

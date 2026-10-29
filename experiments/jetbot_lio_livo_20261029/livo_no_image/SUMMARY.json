@@ -1,0 +1,24 @@
+{
+  "imu_topic": "/lio/imu",
+  "rate": 0.5,
+  "domain": "57",
+  "truth_replayed": false,
+  "counts": {
+    "/lio/imu": 13198,
+    "/livo/image_raw": 550,
+    "/lio/points_frame20ms": 548
+  },
+  "source_database": "/home/admin/jetbot-warehouse/comparison_20261029_56_slow/capture/sensors.sqlite3",
+  "requested_begin_s": 3.0,
+  "transport": "reliable ROS2 default subscriptions, confirmed by source and graph",
+  "common_sensor_end_s": 68.98500061,
+  "last_input_stamp_s": 68.98500061,
+  "wall_seconds": 156.481828339,
+  "point_input_sha256": "84c52facb0008278286e0a64dc1313f2f942f30564c56a565d3a84462417b72f",
+  "imu_timestamps_sha256": "85d8a5f952e66d239f64245a5a1d8b783b9d0bfd34229992488aaa81566841ee",
+  "imu_input_sha256": "676abf3cf5ac6b44ec8ff4a14510ed0385f779fd340208b9d916de3d47dc8052",
+  "image_input_sha256": "5c90d43b97e8ab9dc20064dee12e46d384576366b46d02aa7cecd7249e3a625c",
+  "error": null,
+  "output_poses": 546,
+  "last_output_stamp_s": 68.849992672
+}

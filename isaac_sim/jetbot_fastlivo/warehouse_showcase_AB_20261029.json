@@ -1,0 +1,103 @@
+{
+  "goals": [
+    [
+      0.0,
+      7.0,
+      1.5707963267948966
+    ],
+    [
+      -8.1,
+      7.0,
+      3.141592653589793
+    ],
+    [
+      -8.1,
+      22.0,
+      -1.5707963267948966
+    ]
+  ],
+  "timeout_wall_s": 1500,
+  "nominal_route_length_m": 45.0,
+  "scope": "PPT demonstration: existing warehouse shelves, real USD A bypass then B full aisle closure/replanning, native IMU, 3x RGB-D and teammate interfaces enabled; offline display-only orange ribbon and goal beacon",
+  "obstacles": [
+    {
+      "kind": "A",
+      "center": [
+        -8.7,
+        10.5
+      ],
+      "trigger_axis": "y",
+      "trigger_above": 7.5,
+      "trigger_bounds": {
+        "x": [
+          -9.4,
+          -6.7
+        ],
+        "y": [
+          7.5,
+          9.0
+        ]
+      },
+      "reuse_asset": true
+    },
+    {
+      "kind": "B",
+      "center": [
+        -8.1,
+        16.0
+      ],
+      "trigger_axis": "y",
+      "trigger_above": 11.5,
+      "trigger_bounds": {
+        "x": [
+          -9.4,
+          -6.7
+        ],
+        "y": [
+          11.5,
+          14.0
+        ]
+      },
+      "reuse_asset": true
+    }
+  ],
+  "visualization": {
+    "headless": false,
+    "follow": true,
+    "record_video": true
+  },
+  "point_time_mode": "native_frame_rays",
+  "timing_audit": false,
+  "scan_deskew_gyro": true,
+  "robot_scale": 3.0,
+  "max_linear_m_s": 0.8,
+  "parameter_overrides": {
+    "local_costmap/local_costmap/ros__parameters/width": 5,
+    "local_costmap/local_costmap/ros__parameters/height": 5,
+    "controller_server/ros__parameters/general_goal_checker/xy_goal_tolerance": 0.03,
+    "controller_server/ros__parameters/general_goal_checker/yaw_goal_tolerance": 0.12,
+    "controller_server/ros__parameters/general_goal_checker/stateful": false,
+    "controller_server/ros__parameters/FollowPath/xy_goal_tolerance": 0.03,
+    "controller_server/ros__parameters/FollowPath/vx_samples": 25,
+    "controller_server/ros__parameters/FollowPath/RotateToGoal.slowing_factor": 10.0,
+    "amcl/ros__parameters/robot_model_type": "nav2_amcl::DifferentialMotionModel",
+    "amcl/ros__parameters/alpha1": 0.001,
+    "amcl/ros__parameters/alpha2": 0.001,
+    "amcl/ros__parameters/alpha3": 0.001,
+    "amcl/ros__parameters/alpha4": 0.001,
+    "amcl/ros__parameters/alpha5": 0.001,
+    "controller_server/ros__parameters/progress_checker/plugin": "nav2_controller::PoseProgressChecker",
+    "controller_server/ros__parameters/progress_checker/required_movement_angle": 0.1,
+    "local_costmap/local_costmap/ros__parameters/robot_radius": 0.65,
+    "local_costmap/local_costmap/ros__parameters/inflation_layer/inflation_radius": 1.0,
+    "global_costmap/global_costmap/ros__parameters/robot_radius": 0.65,
+    "global_costmap/global_costmap/ros__parameters/inflation_layer/inflation_radius": 1.0
+  },
+  "extensions": {
+    "localization_probe": true,
+    "depth": true,
+    "command_mux": true,
+    "control_source": "nav2",
+    "probe": true
+  }
+}

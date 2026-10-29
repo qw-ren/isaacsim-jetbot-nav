@@ -1,0 +1,34 @@
+{
+  "kind": "B",
+  "checks": {
+    "native_expected_status": false,
+    "no_gate_fault": true,
+    "shutdown_zero": true,
+    "inserted_while_driving": true,
+    "real_asset_collisions": true,
+    "physical_clearance": true,
+    "pre_event_plan_crossed_obstacle": true,
+    "post_event_plan_avoids_barrier": true,
+    "actual_alternate_aisle_crossing": true,
+    "goal_still_reachable": true
+  },
+  "passed": false,
+  "actual_xy_path_m": 43.69107407725032,
+  "actual_endpoint_error_m": 0.15080699775808282,
+  "minimum_reference_center_clearance_m": 1.9651310520055412,
+  "approximate_footprint_clearance_m": 1.625131052005541,
+  "paths_before": 96,
+  "paths_after": 256,
+  "avoiding_paths_after": 256,
+  "global_costmap_connectivity": {
+    "snapshot": "00085.npz",
+    "stamp": 95.229997871,
+    "start_cell": 0,
+    "goal_cell": 0,
+    "connected": true
+  },
+  "map_sha256": "d42be37e98acac1017e473188ad1f69bd8f202818d985ed9976450a9e8aed4d0",
+  "truth_input": false,
+  "reference_usage": "offline audit only",
+  "geometry_scope": "asset AABB and circular vehicle footprint approximation"
+}

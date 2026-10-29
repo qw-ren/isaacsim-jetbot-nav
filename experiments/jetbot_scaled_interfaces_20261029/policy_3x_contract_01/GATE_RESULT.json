@@ -1,0 +1,8 @@
+{
+  "fault": "INPUT_TIMEOUT",
+  "last_reason": "INPUT_TIMEOUT",
+  "runtime_error": null,
+  "shutdown_zero_published": true,
+  "automatic_rearm": false,
+  "simulation_only": true
+}

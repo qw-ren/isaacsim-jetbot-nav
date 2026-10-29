@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "simulation_only": true,
   "online_truth_allowed": false,
   "observation": {
@@ -13,7 +13,7 @@
     "robot_frame": "chassis",
     "global_frame": "map",
     "clock": "/clock",
-    "depth_available": "optional extensions.depth=true; pending live validation",
+    "depth_available": "optional extensions.depth=true; 3x live short-run validated in scaled_interface_20261029_69; simultaneous depth+video load not accepted",
     "depth": "/jetbot/depth/image_rect_raw (sensor_msgs/Image 32FC1, meters optical Z, same RGB header/CameraInfo)"
   },
   "vision_output": {
@@ -58,5 +58,17 @@
     "future_stage": "vision object association -> semantic map -> ambiguous target clarification -> reachable approach goal",
     "natural_language_understanding_implemented": false,
     "implementation_owner": "navigation integrates approved approach poses; perception/semantic understanding supplied separately"
+  },
+  "scaled_3x": {
+    "max_linear_m_s": 0.8,
+    "max_angular_rad_s": 0.6,
+    "wheel_radius_m": 0.10086589826198145,
+    "wheel_base_m": 0.2802,
+    "wheel_max_rad_s": 12.560000333,
+    "physical_radius_m": 0.34,
+    "gate_clearance_m": 0.4,
+    "planning_radius_m": 0.65,
+    "inflation_radius_m": 1.0,
+    "geometry_and_extrinsics": "experiments/jetbot_scaled_interfaces_20261029; runtime CASE.json remains authoritative"
   }
 }
