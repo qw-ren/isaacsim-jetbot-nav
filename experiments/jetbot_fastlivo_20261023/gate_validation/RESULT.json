@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "error": null,
+  "domain": 52,
+  "simulation_or_robot_connected": false,
+  "source_sha256": "3c5bf740a48b368c35fa56209895b3d4bd13d71972bbd72ce01bbb320cf8e7bb",
+  "facts": [
+    {
+      "case": "fresh native-shaped inputs",
+      "output": [
+        0.15,
+        0.0
+      ]
+    },
+    {
+      "case": "command loss while odom/clock/scan keep updating",
+      "stop_after_wall_s": 0.26303976200051693,
+      "output": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "case": "commands resume and enable requested",
+      "output": [
+        0.0,
+        0.0
+      ],
+      "enable_accepted": false,
+      "reason": "INPUT_TIMEOUT"
+    }
+  ],
+  "child_exit_code": 0
+}

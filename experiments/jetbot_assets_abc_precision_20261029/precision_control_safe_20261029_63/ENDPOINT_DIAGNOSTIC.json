@@ -1,0 +1,38 @@
+{
+  "scope": "offline only; no online truth input, no trajectory/endpoint fit",
+  "stamp": 74.125,
+  "goal": [
+    -13,
+    16
+  ],
+  "navigation_estimated_xy": [
+    -13.018699747822065,
+    15.989495254000364
+  ],
+  "reference_xy_at_feedback": [
+    -12.96853923766006,
+    16.090322493874808
+  ],
+  "estimated_goal_error_m": 0.021448315950808722,
+  "actual_goal_error_at_feedback_m": 0.09564482456868707,
+  "localization_bias_xy": [
+    -0.05016051016200507,
+    -0.10082723987444453
+  ],
+  "localization_error_m": 0.11261531459091784,
+  "livo_xy_in_declared_start_frame": [
+    -12.945143494016815,
+    16.10829966627958
+  ],
+  "livo_reference_error_m": 0.02950490719001506,
+  "odom_to_declared_world_assumption": {
+    "translation": [
+      0.0,
+      6.0
+    ],
+    "yaw": 0.0,
+    "fitted": false
+  },
+  "final_reference_goal_error_m": 0.09563315793501999,
+  "source_sha256": "c664af63b0b5b3533044a0e73d44af9a71ca6af12d5f78b50a2ccd44a5ca364b"
+}

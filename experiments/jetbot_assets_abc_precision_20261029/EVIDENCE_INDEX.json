@@ -1,0 +1,158 @@
+{
+  "archive": {
+    "archive": "jetbot_assets_abc_precision_20261029_01.tar.gz",
+    "bytes": 142674897,
+    "sha256": "dc5a69dd8ff029412a92a020d8ea3fbf5bf29264b4265b88ac6f26fdc9b859d4",
+    "files": 1919,
+    "full_isaac_assets_included": false
+  },
+  "per_case": {
+    "compare_20261029_56": {
+      "raw_evidence_sha256": {
+        "CASE.json": "f57292c6652eecfd41a3c999f2d88b5e211573473c0d8ae3d058550bfb3e8d0e",
+        "NAVIGATION_RESULT.json": "ff8437f7b890c7324421678ca443d441bb1688c4eb1af0e65cccf125f7af2f74",
+        "RUNNER_RESULT.json": "3bc3251802d6c90461a1fef7133fc71a11f528742cecdcc9b35eab646b389eb2",
+        "GATE_RESULT.json": "22af8e8277a55d0de72da0e86d14564d76ac28418e4cbf33a06d0e3813752d76",
+        "INPUT_AUDIT.json": "156bc19f7c55ec82750ba70591b028772aedd4bf50453ccd3cb14022775da800",
+        "SENSOR_RESULT.json": "9b3712e12a31b27dd1ca8e17e0d91e6f34cf12cd1e872df49e331fc405e154fd",
+        "OFFLINE_REFERENCE.json": "954aae57621c70c0c23f761f42483042ca6c3de856ada59c6b27822ec4e4a813",
+        "ENDPOINT_DIAGNOSTIC.json": "16e1ad52d3f39d33ac351f4a2cbf22d825e940a0fb6054e524c9bfa515f76cd9",
+        "TRAJECTORY_DIAGNOSTIC.json": "1196f82a4a1093a22266e72474a3972015d85040006efb6775ebf2e444d1d188"
+      },
+      "cleanup_all_children_zero": true
+    },
+    "asset_A_20261029_57": {
+      "raw_evidence_sha256": {
+        "CASE.json": "2cd14c2851e0077525995014a79cd194fdf9e2596562155f2ae764cd816d2878",
+        "NAVIGATION_RESULT.json": "d5eecef727e5205c67c5d481fb77640439aa810331359646ff747bbe6b0c7c85",
+        "RUNNER_RESULT.json": "658c6a77a78c70a551e8bfed2e614fe525659567de764375f57bc82f54c20985",
+        "GATE_RESULT.json": "22af8e8277a55d0de72da0e86d14564d76ac28418e4cbf33a06d0e3813752d76",
+        "INPUT_AUDIT.json": "12720045b1199b4b64d140bfe7e5d3d0af66eb429d47904281878de854d0b976",
+        "SENSOR_RESULT.json": "b91e51ab802a0556281a6baa1372326581b315cf98af7a4764b6aad6c99463a7",
+        "ASSET_TRIAL_AUDIT.json": "97535d5379c4076d88198b769a2e5b0fece6651ac7bca7efb7388e0d6657edfc",
+        "OFFLINE_REFERENCE.json": "cedda2a87b53abe0019bd58603473eea752f819207982a9b15cc4c44353ca696",
+        "ENDPOINT_DIAGNOSTIC.json": "e587cf601bf08d6e2352698cd9b68705e7f5b8ff46c498d60a39a5c2010114dd",
+        "PARAMETER_OVERRIDES.json": "b08d00c63efc840767bb741bde7f99055746e8f2f48f3ad5473a90ebfd85f571"
+      },
+      "cleanup_all_children_zero": true
+    },
+    "asset_B_20261029_58": {
+      "raw_evidence_sha256": {
+        "CASE.json": "6485be3551c9fe729b5cdb4c91ac11fa06bc45b9aa166d255ecb2f4be8098275",
+        "NAVIGATION_RESULT.json": "ac0d437fc10493e4480f63aa08c7849a21f8ee9d174cdd1f4dbfe21e6aad84b0",
+        "RUNNER_RESULT.json": "76b9d4c8f890a81a622947f9843c7d31919075bd9ad8fab26a22697aecb57c16",
+        "GATE_RESULT.json": "22af8e8277a55d0de72da0e86d14564d76ac28418e4cbf33a06d0e3813752d76",
+        "INPUT_AUDIT.json": "125bc7dccdadd0f82a381af38ba7e9ac9d931ff4029a004d69bc027c4b546147",
+        "SENSOR_RESULT.json": "fc5e8ab320ebed4ce82647048c043946824b5dd1380673345e1e48ca2f9a9d2a",
+        "ASSET_TRIAL_AUDIT.json": "9d5713749a113a6c587a49f264d32be87df619dca7e49565574c5184adfcdf55",
+        "PARAMETER_OVERRIDES.json": "b08d00c63efc840767bb741bde7f99055746e8f2f48f3ad5473a90ebfd85f571"
+      },
+      "cleanup_all_children_zero": false
+    },
+    "asset_C_20261029_59": {
+      "raw_evidence_sha256": {
+        "CASE.json": "2132f942624ba3468b3b33f9279ced19913bdf3d4aa93c965da47d003d572ef5",
+        "NAVIGATION_RESULT.json": "c849454cfd941d96a3af05adebf50fe28d8ef16d5a885adb42d0ec898db3dc01",
+        "RUNNER_RESULT.json": "931c188afe318288db1ad6b9904684cf98ea264d354341f1db7887ad3c2d6fc2",
+        "GATE_RESULT.json": "22af8e8277a55d0de72da0e86d14564d76ac28418e4cbf33a06d0e3813752d76",
+        "INPUT_AUDIT.json": "b8a46a867189a78a7656af3707a1094a0b995c93768ff009a240499c43605aca",
+        "SENSOR_RESULT.json": "e0e1a62fcd265ec323b62cdb9f98da32ff5081f4a3fadb69c0722920646c428b",
+        "ASSET_TRIAL_AUDIT.json": "721215b4d9cfc7b5c77c657b46b5173afb13dc90125ce7bf10af0e1f23715b30",
+        "PARAMETER_OVERRIDES.json": "b08d00c63efc840767bb741bde7f99055746e8f2f48f3ad5473a90ebfd85f571",
+        "STATIC_FIXTURES.json": "4b93f0f43157355e84638b6ad0310c53d5f420c8366a67da77f4c0630b0af5f0"
+      },
+      "cleanup_all_children_zero": true
+    },
+    "asset_B_arrival_20261029_60": {
+      "raw_evidence_sha256": {
+        "CASE.json": "d995ae6fc2aad7f0c9772e0e437fc13cfa2e23bc4dd9d04d673cc931f5408c8c",
+        "NAVIGATION_RESULT.json": "1ea111bba7221e9a01a2088050ba577da3a9bcd3edb84f910a258b408fdb2313",
+        "RUNNER_RESULT.json": "2cf60a9e03d487040b6f699a37577f597b54af019d3837d64239f2c704efc7d5",
+        "GATE_RESULT.json": "22af8e8277a55d0de72da0e86d14564d76ac28418e4cbf33a06d0e3813752d76",
+        "INPUT_AUDIT.json": "ca2426c115bfb1f61d46086264c96a35fed307e44927f952425d4d104290bb9a",
+        "SENSOR_RESULT.json": "b30c8e18ed83917306cbba21d6c8c9b23436714c77b260ff3607a3632b3e89f1",
+        "PARAMETER_OVERRIDES.json": "b08d00c63efc840767bb741bde7f99055746e8f2f48f3ad5473a90ebfd85f571"
+      },
+      "cleanup_all_children_zero": false
+    },
+    "asset_B_pose_20261029_61": {
+      "raw_evidence_sha256": {
+        "CASE.json": "4a5ada58dc052aa05996d61be377b89de88992a0cc690fb3747e51d7b50d11bd",
+        "NAVIGATION_RESULT.json": "41feb849a2871c265933328451ef33419d4528e36cc1a71914b1a8c9d5a73845",
+        "RUNNER_RESULT.json": "007919317c61f5a401a82e3269dc3877f0678249e0ed3943f6b8e2f2eb6b1540",
+        "GATE_RESULT.json": "3ab38bde660683feecb8d1e3c9e650f02d3a8c702a9030b031756477a35d4a2a",
+        "INPUT_AUDIT.json": "879ef18148aac27c35f2b48b472c760014b0be85a95042ad02d0e5ed9764a8fe",
+        "SENSOR_RESULT.json": "a488b80c773675c89d8ebbaf1bbe9a3615a0b930f000c4f32b06215bf2277ccc",
+        "ASSET_TRIAL_AUDIT.json": "d423fce3e656db30fb53309e44fbc3e498e2c163a17bcc608ebbcf22e7d4c549",
+        "PARAMETER_OVERRIDES.json": "22a3841757307ffa2effc519b82d7496bba0f18e5bfa06c25437b5bc2156a2cc"
+      },
+      "cleanup_all_children_zero": true
+    },
+    "asset_B_safe_20261029_62": {
+      "raw_evidence_sha256": {
+        "CASE.json": "60a1c42693edbfce9de68042208dbe5a1834d657308624b48414066c49f4b606",
+        "NAVIGATION_RESULT.json": "9b6cbb1ed16c26c9c35ff4ca67f1e39aaed077fcec58a6bed8e34ab4b72afc46",
+        "RUNNER_RESULT.json": "c6b18316a9c2e4cab3742b222dccde901e0939215da37436ec8cdf9cce74efd8",
+        "GATE_RESULT.json": "22af8e8277a55d0de72da0e86d14564d76ac28418e4cbf33a06d0e3813752d76",
+        "INPUT_AUDIT.json": "998bbed46e7e026aa0f7496aa750b401e2f3c5249e4f1f0ca76a94cc4af0883a",
+        "SENSOR_RESULT.json": "3c4119369a8e5c882dc24ca082dcca26ca242e494e6265e905b53c91a2db7a9b",
+        "ASSET_TRIAL_AUDIT.json": "adec937596bcfbd623ab4b54d32977b903a9089b77986871926e14d44f944452",
+        "OFFLINE_REFERENCE.json": "dad67916180c046c65c938ab19c00bdcf05a9046f8efd5d19da6a4dbc1797758",
+        "ENDPOINT_DIAGNOSTIC.json": "6536de93d21412c1131dc9e39067cc4586b4a3cb94944db69bb477a30fa2f7c6",
+        "PARAMETER_OVERRIDES.json": "7f7b2f31819b316401e8d175082f8a2df210149ed267c2f968c436e0f349ecf1"
+      },
+      "cleanup_all_children_zero": true
+    },
+    "precision_control_safe_20261029_63": {
+      "raw_evidence_sha256": {
+        "CASE.json": "9b04ad0877e950893d8f5055d10c2096fda594cd6833a06602d5c5916765939c",
+        "NAVIGATION_RESULT.json": "59a1e95f14f26a132cfb136ccfca50b6d751cc549a6c7c7347043647b70ddc25",
+        "RUNNER_RESULT.json": "c19e40834c48ed89f6b52b2ecde4a31ba571d97cdb9a6e25d57c5f7f2ed7e28d",
+        "GATE_RESULT.json": "22af8e8277a55d0de72da0e86d14564d76ac28418e4cbf33a06d0e3813752d76",
+        "INPUT_AUDIT.json": "ba23d3b3831afd1ff9fa2abfa9ecfe4c70ea4c0e55e5139f4a61f26300883c85",
+        "SENSOR_RESULT.json": "4bca619a0bd708e30cd166a4fd8fdaa6a8c0b15aa6f3b5244165aad1f6d88f50",
+        "OFFLINE_REFERENCE.json": "c52e5dc3fd4ab080235fa43d6f95b744c0ce17cb83608edd851ee2d84345ffb9",
+        "ENDPOINT_DIAGNOSTIC.json": "b624868307b6f93f5f898a1543dd75599d95a48f93dc6a43766d566fea2932ce",
+        "TRAJECTORY_DIAGNOSTIC.json": "527f9eb2698889dde6b365d7162318e7fa969286a03e5d8fc897afe30a07d3e8",
+        "LOCALIZATION_PROBE_RESULT.json": "6a4051c7fd2e25cb904a0f186c7cf960f1a008ac4b650e09eb4515f01e17262f",
+        "PARAMETER_OVERRIDES.json": "d21b20edf711be6cc4d7f3e06334fb7fd781d02e2fc478b4e23be3acca05bde8"
+      },
+      "cleanup_all_children_zero": true
+    },
+    "precision_amcl_safe_20261029_64": {
+      "raw_evidence_sha256": {
+        "CASE.json": "66828817a6fe6f6a2465fbb415488a8cfdf24f4c8d0e816d902550b4b624b1eb",
+        "NAVIGATION_RESULT.json": "11c644361deea2e12cbd0724e348cd187a512a74c2605b14014022bd8a8c68d7",
+        "RUNNER_RESULT.json": "83054a74d3caa7c5c1e562efa9b4bc82cfad0deaaac5ea58212b89ba5432748f",
+        "GATE_RESULT.json": "22af8e8277a55d0de72da0e86d14564d76ac28418e4cbf33a06d0e3813752d76",
+        "INPUT_AUDIT.json": "8477beea95eef41d6e4f3c90c6fd2df657c7ccaeb08687975886b3ca90b97bf7",
+        "SENSOR_RESULT.json": "5a7f2351f63bfc7f67c44dffaeeedc5f09fc8d1640fb50762776c8dea5c0b251",
+        "OFFLINE_REFERENCE.json": "1f5a3b35aa9c340f9cfba1d19ac803eaa523b704c99ff0ec078393228c415429",
+        "ENDPOINT_DIAGNOSTIC.json": "81faedf094f9a9dbdc32df12ae3d25be9b150e051e1eab627a8ca852f8315c5e",
+        "TRAJECTORY_DIAGNOSTIC.json": "9c3e0adc9d4fc0127e54abe5912a1c8bc7511e6ce651d5e2ef13e6d450e783cb",
+        "LOCALIZATION_PROBE_RESULT.json": "606add752f7df7553684142ecafa7f78e397e9dda545f1f89e566c6363ea5ae2",
+        "PARAMETER_OVERRIDES.json": "c32d7b7620b1b3881d98efc8d0d0ad47301afdce0d586e428f641c710eeba6ff"
+      },
+      "cleanup_all_children_zero": true
+    },
+    "asset_B_precision_20261029_65": {
+      "raw_evidence_sha256": {
+        "CASE.json": "fdec8020ee1cf00afa7d868c69e22657033e945fec9ff9b0ccb8f561dce3c7ba",
+        "NAVIGATION_RESULT.json": "cfb6048ccd8fd52cf03c05ae4cef2fe3acf6c8f67b7188820f2db76b7478a178",
+        "RUNNER_RESULT.json": "7c3cb0ce187488d7ed42c66b43bd31f36ba767cd669e261ec889f117440c3484",
+        "GATE_RESULT.json": "22af8e8277a55d0de72da0e86d14564d76ac28418e4cbf33a06d0e3813752d76",
+        "INPUT_AUDIT.json": "76fddf4726d2b6beb599713f7b88c0bf191fbe831841997f09dd0bfda35bbe69",
+        "SENSOR_RESULT.json": "f8193c37bf922ee1a10b480d9c33086f85b637df8d64bef1717e90bda1af417b",
+        "ASSET_TRIAL_AUDIT.json": "d946984b0fd7a32658cc1536c9cd851cc229b8ebbb7d5eee5919aa8f8a03340b",
+        "OFFLINE_REFERENCE.json": "8b17c90638dac186e637bf1f1ef66aa19a8cfe9a9052be6167bdb48321a9c783",
+        "ENDPOINT_DIAGNOSTIC.json": "92aeb74a3b9d26f1d63664f5fed00277674cd0037779092a829026866d2a4e55",
+        "TRAJECTORY_DIAGNOSTIC.json": "b8e2ff20fe6d0692ff57740b3f47f7a849f9011390d5b12b87f00f04577bcbe5",
+        "LOCALIZATION_PROBE_RESULT.json": "45ee660b3387e7910dbeac650d3346d6c7719d76918997ed4931f0c72cc227d7",
+        "PARAMETER_OVERRIDES.json": "c32d7b7620b1b3881d98efc8d0d0ad47301afdce0d586e428f641c710eeba6ff"
+      },
+      "cleanup_all_children_zero": false
+    }
+  },
+  "curated_json_may_omit_trajectory_arrays": true,
+  "raw_archive_is_authoritative": true
+}

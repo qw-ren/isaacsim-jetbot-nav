@@ -1,0 +1,58 @@
+{
+  "goals": [
+    [
+      0,
+      7,
+      1.5707963267948966
+    ],
+    [
+      -8,
+      7,
+      3.141592653589793
+    ],
+    [
+      -8,
+      27,
+      1.5707963267948966
+    ],
+    [
+      -13,
+      27,
+      3.141592653589793
+    ],
+    [
+      -13,
+      16,
+      -1.5707963267948966
+    ]
+  ],
+  "timeout_wall_s": 1500,
+  "nominal_route_length_m": 45.0,
+  "scope": "local bypass of a real USD cardboard box",
+  "obstacles": [
+    {
+      "kind": "A",
+      "center": [
+        -8.1,
+        16.0
+      ],
+      "trigger_axis": "y",
+      "trigger_above": 11.5,
+      "reuse_asset": true
+    }
+  ],
+  "visualization": {
+    "headless": false,
+    "follow": true,
+    "record_video": false
+  },
+  "point_time_mode": "native_frame_rays",
+  "timing_audit": false,
+  "scan_deskew_gyro": true,
+  "robot_scale": 3.0,
+  "max_linear_m_s": 0.8,
+  "parameter_overrides": {
+    "local_costmap/local_costmap/ros__parameters/width": 5,
+    "local_costmap/local_costmap/ros__parameters/height": 5
+  }
+}

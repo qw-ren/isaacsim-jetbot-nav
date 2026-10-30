@@ -1,0 +1,27 @@
+{
+  "passed": false,
+  "audit_error": null,
+  "stop_requested": true,
+  "checks": {
+    "no_wire_errors": true,
+    "all_sensors_received": false,
+    "sensor_tf_connected": false,
+    "estimated_odom_received": false,
+    "estimated_odom_tf": false,
+    "native_corrections_received": false
+  },
+  "counts": {},
+  "errors": [],
+  "expected_same_fusion_time_corrections": {},
+  "ranges": {},
+  "static_tf": {},
+  "dynamic_tf": {},
+  "publishers_at_end": {
+    "/jetbot/odom": [],
+    "/tf": [],
+    "/jetbot/cmd_vel": []
+  },
+  "truth_subscribed": false,
+  "commands_published": false,
+  "source_sha256": "3e23d04cfdd72258411e8a10c3aa314dbb8950f35b8116f060190ec60d7a5963"
+}

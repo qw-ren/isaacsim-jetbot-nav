@@ -1,0 +1,73 @@
+{
+  "scope": "Compare known offline true/estimated poses against AMCL's likelihood field.\nNo pose optimization, map shift, time shift, trajectory fitting, or online input.\nImplements Humble likelihood_field score and coordinate macros for this map.\n",
+  "sensor_model": {
+    "laser_model_type": "likelihood_field",
+    "sigma_hit": 0.2,
+    "z_hit": 0.5,
+    "z_rand": 0.5,
+    "laser_likelihood_max_dist": 2.0
+  },
+  "snapshots": [
+    {
+      "snapshot": "scan_0100.npz",
+      "stamp": 12.009998533,
+      "poses": {
+        "reference": [
+          -1.6578307151652603,
+          7.156336726696844,
+          3.080646354368935
+        ],
+        "navigation_estimate": [
+          -1.7096557686908074,
+          7.183900476428606,
+          3.0769081589580947
+        ]
+      },
+      "scores": {
+        "90": {
+          "reference": {
+            "valid_beams": 50,
+            "score": 8.226947254129694,
+            "mean_endpoint_distance_m": 0.0016,
+            "zero_distance_fraction": 0.92
+          },
+          "navigation_estimate": {
+            "valid_beams": 50,
+            "score": 8.09834184702435,
+            "mean_endpoint_distance_m": 0.016331370849898476,
+            "zero_distance_fraction": 0.44
+          }
+        },
+        "360": {
+          "reference": {
+            "valid_beams": 201,
+            "score": 30.05266794232743,
+            "mean_endpoint_distance_m": 0.0013930348258706469,
+            "zero_distance_fraction": 0.9353233830845771
+          },
+          "navigation_estimate": {
+            "valid_beams": 201,
+            "score": 29.571659633613898,
+            "mean_endpoint_distance_m": 0.01549400762608148,
+            "zero_distance_fraction": 0.4626865671641791
+          }
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "Only stored early scans; not the complete route.",
+    "Scores compare two recorded poses only; cannot isolate algorithm vs input error by themselves.",
+    "The navigation estimate includes AMCL plus estimated odometry, not a same-stamp raw AMCL update."
+  ],
+  "sha256": {
+    "/tmp/jetbot_amcl_runtime80.yaml": "43e5c2f2b9d9799dc7d6bfdcf750defde341fa6ec6663d6802e7ffaab11bb671",
+    "/home/liswnux/isaac-go2-ros2/data/cloud_warehouse/jetbot_baseline_20261030/localization_prior/localization_mesh_002_20261030/map.pgm": "275de5668cc828c0ae5c4a88bf60b37750c525a97839f2798aff6bb2f576200d",
+    "/home/liswnux/isaac-go2-ros2/data/cloud_warehouse/jetbot_baseline_20261030/localization_prior/localization_mesh_002_20261030/map.yaml": "6fb7aa54961240f6a815aa911b6e36d5474f0fd71395b627251f98544d1789e8",
+    "/home/liswnux/isaac-go2-ros2/data/cloud_warehouse/jetbot_baseline_20261030/precision_evidence/artifacts/precision_yaw_20261030_72/truth_trajectory.jsonl": "3e3919887c20c3c259f4837a3049a93be71208ab5fc16aabbd48d6271f322fc7",
+    "/home/liswnux/isaac-go2-ros2/data/cloud_warehouse/jetbot_baseline_20261030/precision_evidence/artifacts/precision_yaw_20261030_72/navigation_feedback.jsonl": "647a97d093c05d1eb421b611f259825b0652e008cecaa49213b293b06b076598",
+    "/home/liswnux/isaac-go2-ros2/data/cloud_warehouse/jetbot_baseline_20261030/precision_evidence/artifacts/precision_yaw_20261030_72/scan_0001.npz": "8f743c0aa76ff109bfdaad85443375e0112d42f067d7359ee15e04c97576dce5",
+    "/home/liswnux/isaac-go2-ros2/data/cloud_warehouse/jetbot_baseline_20261030/precision_evidence/artifacts/precision_yaw_20261030_72/scan_0010.npz": "059d8b15d26aef550c610d227c8cac8f23c3fadb4270a2e76824415cb611748d",
+    "/home/liswnux/isaac-go2-ros2/data/cloud_warehouse/jetbot_baseline_20261030/precision_evidence/artifacts/precision_yaw_20261030_72/scan_0100.npz": "604c1a0553aaed08a0a36ad11a0579702f00777796d0de0c8e0c8383aa19394b"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "scope": "offline reference used to verify traversal only, never navigation input; numerical camera checks do not replace visual review",
+  "passed": true,
+  "checks": {
+    "north_aisle_traversed": true,
+    "adjacent_aisle_traversed": true,
+    "both_obstacles_inside_aisle": true,
+    "fixed_eye_and_target_height": true,
+    "observer_yaw_rate_limited": true
+  },
+  "aisles": {
+    "northbound": {
+      "actual_distance_in_existing_rack_aisle_m": 15.3962048882794,
+      "samples": 1966
+    },
+    "southbound": {
+      "actual_distance_in_existing_rack_aisle_m": 8.737512503147775,
+      "samples": 1204
+    }
+  },
+  "max_observer_yaw_rate_rad_s": 0.40000000000000446,
+  "inputs": {
+    "truth_trajectory.jsonl": "2094b65a71080a8ae73dfd2f63d70860ad383233b9bbaf4d95fd1f59abf8846c",
+    "observer_pose.jsonl": "8207c44ba84c6a84a798d58a8301a4de4ee2424a664da6f861a271e61abb75b7",
+    "obstacle_events.jsonl": "3d8355a1eae672bddfe3556cf4e89bd0e156e2e33b41924939c82ef3924093ee"
+  },
+  "source_sha256": "0f3c0b2796af151ace4c0d1af554526ae5858906ee3b7c026a3f1af71794741d"
+}

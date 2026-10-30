@@ -1,0 +1,52 @@
+{
+  "known_configured_spawn": [
+    0,
+    6,
+    0
+  ],
+  "nominal": {
+    "yaw_deg": 0.0,
+    "mean": 0.0028881996090092087,
+    "median": 0.0,
+    "p90": 0.0,
+    "points": 829
+  },
+  "best": [
+    {
+      "yaw_deg": 1.0000000000000142,
+      "mean": 0.001688781664656212,
+      "median": 0.0,
+      "p90": 0.0,
+      "points": 829
+    },
+    {
+      "yaw_deg": 0.0,
+      "mean": 0.0028881996090092087,
+      "median": 0.0,
+      "p90": 0.0,
+      "points": 829
+    },
+    {
+      "yaw_deg": -0.9999999999999887,
+      "mean": 0.021496451180174035,
+      "median": 0.0,
+      "p90": 0.1,
+      "points": 829
+    },
+    {
+      "yaw_deg": 2.0000000000000027,
+      "mean": 0.042280055609246886,
+      "median": 0.0,
+      "p90": 0.1118033988749895,
+      "points": 829
+    },
+    {
+      "yaw_deg": -2.0000000000000027,
+      "mean": 0.05195775573036548,
+      "median": 0.0,
+      "p90": 0.15000000000000002,
+      "points": 829
+    }
+  ],
+  "purpose": "offline map/scan consistency diagnosis only; no estimator/TF correction"
+}

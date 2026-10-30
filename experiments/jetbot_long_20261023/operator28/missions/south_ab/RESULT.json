@@ -1,0 +1,42 @@
+{
+  "id": "south_ab",
+  "goal": [
+    -10.0,
+    -20.0,
+    -1.5707963267948966
+  ],
+  "passed": true,
+  "truth_input": false,
+  "velocity_publisher": false,
+  "request_sha256": "3bf6dc55bc211eb33f1eb3d898df6bcdb19a716e2877af39e4ea44c046a1946a",
+  "start_map_pose": [
+    -9.859183911900242,
+    5.9845931070928415
+  ],
+  "native_status": 4,
+  "final_map_pose": [
+    -10.059034797357686,
+    -19.97828200997609
+  ],
+  "estimated_goal_error_m": 0.06290292830816122,
+  "gate_at_result": {
+    "wall": 28398.892708996,
+    "sim": 140.289996864,
+    "armed": true,
+    "reason": "ENABLED",
+    "fault": null,
+    "output": [
+      0.0,
+      0.0
+    ],
+    "predicted_clearance_m": 3.351698398590088,
+    "scan_stamp": 140.089996869,
+    "stream_wall_ages": {
+      "odom": 0.026645388003089465,
+      "clock": 0.01082482399942819,
+      "scan": 0.39190191099987715,
+      "input": 0.007577330998174148
+    }
+  },
+  "disarm_success": true
+}

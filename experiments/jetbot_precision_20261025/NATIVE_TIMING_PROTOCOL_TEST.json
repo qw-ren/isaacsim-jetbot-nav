@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "scope": "actual captured native rays and render metadata; bad frame pairing and stale clock rejected; no pose input",
+  "frame_id": 46,
+  "frame_number_offset": 103,
+  "frame_start_sim_s": 0.9499999783188104,
+  "frame_end_sim_s": 0.9699999783188105,
+  "ray_offset_range_s": [
+    3.68e-07,
+    0.019997240000000003
+  ],
+  "source_sha256": "f9813884656f5a6e2115351c089a807295c25c4f92ce51923a3aa725e3292cb6"
+}

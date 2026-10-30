@@ -1,0 +1,33 @@
+{
+  "joints": [
+    {
+      "joint": "left_wheel_joint",
+      "max_deg_s": 719.635009765625,
+      "max_rad_s": 12.560000333031704,
+      "sources": [
+        {
+          "layer": "/home/admin/isaacsim_assets/Assets/Isaac/4.5/Isaac/Robots/Jetbot/jetbot.usd",
+          "path": "/jetbot/chassis/left_wheel_joint.physxJoint:maxJointVelocity",
+          "default": "719.635009765625"
+        }
+      ]
+    },
+    {
+      "joint": "right_wheel_joint",
+      "max_deg_s": 719.635009765625,
+      "max_rad_s": 12.560000333031704,
+      "sources": [
+        {
+          "layer": "/home/admin/isaacsim_assets/Assets/Isaac/4.5/Isaac/Robots/Jetbot/jetbot.usd",
+          "path": "/jetbot/chassis/right_wheel_joint.physxJoint:maxJointVelocity",
+          "default": "719.635009765625"
+        }
+      ]
+    }
+  ],
+  "wheel_radius_m": 0.10086589826198145,
+  "wheel_base_m": 0.28020000000000067,
+  "straight_limit_m_s": 1.266875715762029,
+  "robot_scale": 3.0,
+  "joint_limits_modified": false
+}

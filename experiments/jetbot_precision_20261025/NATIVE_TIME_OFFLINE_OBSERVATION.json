@@ -1,0 +1,22 @@
+{
+  "scope": "offline observation only; not permission to use unvalidated native ray times online",
+  "packets": 5649,
+  "native_minus_capture_s": {
+    "min": 7.867520975811672,
+    "max": 7.887520976363842,
+    "range": 0.02000000055216944
+  },
+  "maximum_native_vs_sim_dt_difference_s": 0.02000000044704109,
+  "first_native_delta_times_ns": {
+    "min": 368,
+    "max": 19997240
+  },
+  "sdk_reference": "/home/liswnux/isaac_sim_4_5/exts/isaacsim.sensors.rtx/ogn/docs/OgnIsaacReadRTXLidarData.rst lines55,71-73",
+  "sdk_definitions": {
+    "timestampNs": "start of frame",
+    "transform": "end of frame lidar-to-world",
+    "transformStart": "start of frame lidar-to-world",
+    "deltaTimes": "ns from head relative to tick timestamp"
+  },
+  "next_required_evidence": "moving-frame validation of native frame start/end versus simulated pose/time; no change to algorithm timestamps yet"
+}

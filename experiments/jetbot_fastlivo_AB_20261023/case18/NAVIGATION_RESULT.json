@@ -1,0 +1,34 @@
+{
+  "passed": false,
+  "goal": [
+    -10,
+    2,
+    -1.5707963267948966
+  ],
+  "goals": [
+    [
+      -4,
+      6,
+      3.141592653589793
+    ],
+    [
+      -8,
+      6,
+      3.141592653589793
+    ],
+    [
+      -10,
+      2,
+      -1.5707963267948966
+    ]
+  ],
+  "action": "NavigateThroughPoses",
+  "truth_input": false,
+  "velocity_publisher": false,
+  "initial_pose_source": "declared CAD scene spawn, one initialization only",
+  "scope": "JetBot FAST-LIVO + AMCL + native Nav2 configured route",
+  "start_map_pose": [
+    -0.0009132775200229966,
+    6.001133619278962
+  ]
+}

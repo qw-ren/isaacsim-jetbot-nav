@@ -1,0 +1,23 @@
+{
+  "camera_contract.json": {
+    "equal": true,
+    "sha256": [
+      "e11ae161d47d0a292f58c5834611f325b6da684abe7419ed211814ba16aed3f4",
+      "e11ae161d47d0a292f58c5834611f325b6da684abe7419ed211814ba16aed3f4"
+    ]
+  },
+  "ESTIMATOR_PROVENANCE.json": {
+    "equal": true,
+    "sha256": [
+      "bf420fdd8c48e7c90d785ccc11003e7088fbe019e619f1599e3f6124070cf7a5",
+      "bf420fdd8c48e7c90d785ccc11003e7088fbe019e619f1599e3f6124070cf7a5"
+    ]
+  },
+  "RUNTIME_JOINT_LIMITS.json": {
+    "equal": true,
+    "sha256": [
+      "f08238bf15cf68495ee8795eff08c9d7661bee64baa25e9ae425a3486ec85af5",
+      "f08238bf15cf68495ee8795eff08c9d7661bee64baa25e9ae425a3486ec85af5"
+    ]
+  }
+}

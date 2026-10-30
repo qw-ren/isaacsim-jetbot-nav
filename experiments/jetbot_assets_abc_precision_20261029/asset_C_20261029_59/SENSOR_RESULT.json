@@ -1,0 +1,15 @@
+{
+  "counts": {
+    "imu": 13448,
+    "points": 514,
+    "images": 515,
+    "packet_discontinuities": 0,
+    "commands": 3356,
+    "self_returns_filtered": 1283854,
+    "scan_deskew_frames": 514
+  },
+  "command_fault": null,
+  "last_imu": 67.26499938964844,
+  "last_rgb": 67.2299984972924,
+  "camera_contract_ready": true
+}

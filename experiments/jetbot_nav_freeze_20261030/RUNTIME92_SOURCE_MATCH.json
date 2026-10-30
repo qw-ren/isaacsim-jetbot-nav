@@ -1,0 +1,12 @@
+{
+  "case": "diffnav_precision_20261030_92",
+  "source_matches_local": true,
+  "files_sha256": {
+    "manage_jetbot.sh": "d5f4ebf76a46a48b3d40ce64b13d378fd79b58033e95ca1da36186a2e10108dc",
+    "nav_odometry.py": "385a277e601f568a2e76f9a1dadb5cb3472e787940bc072c4ae38b2b153bcf5c",
+    "prepare_fixture_prior.py": "27bd9a5f00de97f72fc49e8f3faf8a2a578d13ef9e510c1a073aecd55c22f20b",
+    "supervise.py": "5059242a998ad07a25218e265b4293cb06f85730010b9b36a558a5578fe0424f",
+    "check_navigation.py": "2d6635f316391adb4165065103886dcab5363d92c526e8e61939352f1e19f453",
+    "extension_contract.json": "7296b3a68f4135de175ef0ef6d5b3ff72112063893b7963ec05e634c9ec13004"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "scope": "Offline global pose accuracy, distinct from endpoint/arrival error.\nNo pose fitting. AMCL samples use their own scan timestamps, not receipt time.\nThe 5Hz probe can miss AMCL publications; sample metrics are not time-weighted.\n",
+  "case": "mesh_beamskip_BA_20261030_86",
+  "mission_window_s": [
+    3.964999913,
+    53.259998322
+  ],
+  "continuous_navigation_global_pose": {
+    "grid_dt_s": 0.05,
+    "samples": 986,
+    "xy_rmse_m": 0.23532748840057185,
+    "xy_median_m": 0.17508740027277003,
+    "xy_p95_m": 0.36793285932968695,
+    "xy_max_m": 0.42249222353843807,
+    "yaw_rmse_deg": 0.31046258238541685,
+    "yaw_p95_deg": 0.6527839437004237,
+    "mean_signed_xy_error_m": [
+      -0.0006844077720566993,
+      0.18179477139775338
+    ],
+    "distance_weighted_xy_rmse_m": 0.23988230868219546,
+    "moving_xy_rmse_m": 0.24153001555922174,
+    "moving_threshold_m_s": 0.1
+  },
+  "amcl_published_pose_samples": {
+    "coverage_s": [
+      5.289998683,
+      52.989997617
+    ],
+    "samples": 222,
+    "xy_rmse_m": 0.25196940565175696,
+    "xy_median_m": 0.21229880387004993,
+    "xy_p95_m": 0.3760902132279481,
+    "xy_max_m": 0.458419669762497,
+    "yaw_rmse_deg": 0.31786139726545587,
+    "yaw_p95_deg": 0.6511070487762117,
+    "mean_signed_xy_error_m": [
+      0.00364342750132659,
+      0.1996446251707262
+    ]
+  },
+  "inputs_sha256": {
+    "RUNNER_RESULT.json": "5574bd67e03d429b752950406c8ee31ee975014873056fd5ada1f2a5e107dcd8",
+    "truth_trajectory.jsonl": "75ebe2915cda2d6b363654af73a44ad514eec207905559c65b699987348298a7",
+    "navigation_feedback.jsonl": "4cf1b2f9809df09e3faaa9e3264ec97d1c7cd4fce486dc1ae2a1c39e3e8ef773",
+    "localization_probe.jsonl": "e7629353c2daf86a57dc14c99de9efb3f6f32983497ebe8e94fa6c8f8a994f88"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "binary": "/home/admin/go2-warehouse/nav_stage2/deps/fastlivo_trial_20261022/bin/fastlivo_mapping",
+  "sha256": "8a8e61dd543befa5f9da26bdf2674af804f7d2d5a81542d9f1fb7a9cf11e958f",
+  "base_params": "Go2 B_native_long_09 frozen configuration",
+  "sensor_params": "native JetBot camera_contract.json",
+  "truth_input": false,
+  "added_imu_noise": false,
+  "community_ros2_port": true
+}

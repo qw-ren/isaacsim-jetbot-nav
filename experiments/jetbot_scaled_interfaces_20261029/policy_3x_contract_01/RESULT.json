@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "checks": {
+    "positive_caps": {
+      "v_m_s": 0.8,
+      "w_rad_s": 0.6,
+      "actual_implied_max_wheel_rad_s": 8.764706558244391
+    },
+    "negative_caps": {
+      "v_m_s": -0.8,
+      "w_rad_s": -0.6,
+      "actual_implied_max_wheel_rad_s": 8.764706558244391
+    },
+    "unselected_nav_source_not_fallback": true,
+    "no_automatic_resume_after_source_loss": true
+  },
+  "error": null,
+  "child_exit_codes": [
+    0,
+    0
+  ],
+  "domain": 52,
+  "real_robot_or_simulator_connected": false,
+  "model_implemented": false,
+  "geometry_source_case": "/home/admin/jetbot-warehouse/artifacts/asset_B_precision_20261029_65",
+  "motion_limits": {
+    "max_linear_m_s": 0.8,
+    "max_angular_rad_s": 0.6,
+    "wheel_radius_m": 0.10086589826198145,
+    "wheel_base_m": 0.28020000000000067,
+    "footprint_radius_m": 0.34,
+    "scan_clearance_m": 0.4,
+    "max_wheel_rad_s": 12.560000333031704,
+    "joint_limits_modified": false
+  },
+  "source_sha256": "61561b223c36c84a1209e49946cfce05cb4f6f98e39c1bad33dcf5dc788d0808"
+}

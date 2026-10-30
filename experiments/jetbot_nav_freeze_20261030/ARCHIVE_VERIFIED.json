@@ -1,0 +1,25 @@
+{
+  "archive": "navigation_selected_20261030_01.tar.gz",
+  "sha256": "1d0e1786a2ecc366d831e211d380800fcd92d714f82c34df59c6e2bd2e543384",
+  "bytes": 100778033,
+  "verified_original_files": 2038,
+  "cases": [
+    "diffnav_BA_20261030_88",
+    "diffnav_BA_20261030_91",
+    "diffnav_C_20261030_90",
+    "diffnav_precision_20261030_89",
+    "diffnav_precision_20261030_92",
+    "localization_beams360_20261030_79",
+    "localization_beams360_20261030_80",
+    "localization_mesh_20261030_81",
+    "localization_mesh_20261030_82",
+    "localization_mesh_20261030_83",
+    "mesh_beamskip_BA_20261030_85",
+    "mesh_beamskip_BA_20261030_86",
+    "mesh_beamskip_sigma005_BA_20261030_87",
+    "mesh_regression_BA_20261030_84",
+    "stability_20261030_78"
+  ],
+  "outer_and_individual_sha256_verified": true,
+  "manifest_sha256": "aea90a7170d774296584bb663e32209bf11e25cac02f5e248957ad853262192c"
+}

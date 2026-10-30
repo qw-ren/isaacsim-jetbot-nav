@@ -1,0 +1,71 @@
+{
+  "global_costmap_A.npz": {
+    "stamp": 15.549999652,
+    "regions": {
+      "A": {
+        "cells_cost_ge65": 203,
+        "max_cost": 100,
+        "roi_center": [
+          -3,
+          6
+        ],
+        "roi_half_width_m": 0.5
+      },
+      "B": {
+        "cells_cost_ge65": 0,
+        "max_cost": 0,
+        "roi_center": [
+          -6,
+          6
+        ],
+        "roi_half_width_m": 0.5
+      }
+    }
+  },
+  "global_costmap_B.npz": {
+    "stamp": 29.889999332,
+    "regions": {
+      "A": {
+        "cells_cost_ge65": 219,
+        "max_cost": 100,
+        "roi_center": [
+          -3,
+          6
+        ],
+        "roi_half_width_m": 0.5
+      },
+      "B": {
+        "cells_cost_ge65": 219,
+        "max_cost": 100,
+        "roi_center": [
+          -6,
+          6
+        ],
+        "roi_half_width_m": 0.5
+      }
+    }
+  },
+  "global_costmap_initial.npz": {
+    "stamp": 3.56999992,
+    "regions": {
+      "A": {
+        "cells_cost_ge65": 0,
+        "max_cost": 0,
+        "roi_center": [
+          -3,
+          6
+        ],
+        "roi_half_width_m": 0.5
+      },
+      "B": {
+        "cells_cost_ge65": 0,
+        "max_cost": 0,
+        "roi_center": [
+          -6,
+          6
+        ],
+        "roi_half_width_m": 0.5
+      }
+    }
+  }
+}

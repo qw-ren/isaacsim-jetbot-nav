@@ -1,0 +1,8 @@
+{
+  "overrides": {
+    "local_costmap/local_costmap/ros__parameters/width": 5,
+    "local_costmap/local_costmap/ros__parameters/height": 5
+  },
+  "before_sha256": "e95fb9ea953795f8b94b7cc0db24d6ab616771808ab7e07856c73e1798eebdb7",
+  "after_sha256": "edafe82befc4b7066f0a470173a8020e9c5de295f68c3927dcaca9a4a98977ea"
+}

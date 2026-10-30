@@ -1,0 +1,43 @@
+{
+  "encoder_sha256": "0d8435b7ebfb4cb20c0d632b34d6c588c066050d142ae4542502e3cbd93c2e5c",
+  "composer_sha256": "cf4e0190633e07739e7f72b25491d4ec0d7b9d98e11cce383d1e371d835e0ddb",
+  "frame_index_sha256": "45ca3ac8940675866240abc0511082d904af2b725becb5fcf3d6fe01732f1d68",
+  "playback_speed": 4.0,
+  "timebase": "simulation clock",
+  "start_sim_s": 14.609999673441052,
+  "end_sim_s": 84.68999810703099,
+  "expected_duration_s": 17.519999608397484,
+  "input_frames": 439,
+  "maximum_source_gap_sim_s": 0.1599999964237213,
+  "overlays": "observer image only; native sensor products unchanged",
+  "ribbon": {
+    "source": "/local_plan",
+    "display_offset_forward_m": 1.1,
+    "floor_z_m": 0.003,
+    "shaft_width_m": 0.3,
+    "head_width_m": 0.64,
+    "one_closed_polygon": true,
+    "extrapolated": false
+  },
+  "goal_beacon": {
+    "source": "declared CAD goal",
+    "scene_geometry_added": false
+  },
+  "display_reference_pose_usage": "observer projection and vehicle masking only, never online estimation/control",
+  "arrow_frames": 354,
+  "goal_beacon_frames": 166,
+  "events": [
+    {
+      "kind": "B",
+      "sim_s": 27.449999386444688,
+      "video_s": 3.209999928250909
+    },
+    {
+      "kind": "A",
+      "sim_s": 55.209998765960336,
+      "video_s": 10.14999977312982
+    }
+  ],
+  "video_sha256": "9bbb372133e113f8cdf28d58f19cd6fd4fb77ae9f84a9a1ebd6a3f722a398bda",
+  "video_bytes": 12303234
+}

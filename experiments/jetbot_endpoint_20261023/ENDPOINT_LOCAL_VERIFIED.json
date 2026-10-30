@@ -1,0 +1,14 @@
+{
+  "archive": "jetbot_endpoint_20261023_01.tar.gz",
+  "bytes": 15043866,
+  "sha256": "c2a8e1b7d4a6e430a8b46b97b3701fe27e3e2c06a9330ecbf1e3db6cf23f24bb",
+  "manifest_files_verified": 213,
+  "safe_archive_paths": true,
+  "active_workers_at_archive": [],
+  "cases21_22_native_success": true,
+  "all_children_exit_zero": true,
+  "reference_final_errors_m": {
+    "case21": 0.22533151294127746,
+    "case22": 0.11945744561058907
+  }
+}

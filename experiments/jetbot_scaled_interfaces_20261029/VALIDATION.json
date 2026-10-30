@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "checks": {
+    "navigation_native4": true,
+    "module_formats": true,
+    "fresh": true,
+    "rgb_depth_pairs": true,
+    "mux_no_fault": true,
+    "gate_no_fault": true
+  },
+  "case": "scaled_interface_20261029_69",
+  "rgb_depth_pairs": 299,
+  "scope": "3x native RGB-D, estimated odometry, scan, global plan and nav2-selected command mux; short headed run without video, not policy inference"
+}
