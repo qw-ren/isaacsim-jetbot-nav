@@ -37,6 +37,7 @@ try:
    # The native bridge projects the same timed point packet into chassis scan.
    spawn([python,str(source/'velocity_gate.py'),'--case',str(a.case)],'velocity_gate.log')
    ros('nav2_map_server','map_server','map_server',['-p','yaml_filename:='+str(a.case/'map/map.yaml')])
+   if cfg.get('navigation',{}).get('localization_prior_dir'):ros('nav2_map_server','map_server','localization_map_server')
    ros('nav2_amcl','amcl','amcl')
    ros('nav2_planner','planner_server','planner_server')
    ros('nav2_controller','controller_server','controller_server',['-r','/cmd_vel:='+('/jetbot/nav2_proposal'if mux_enabled else'/jetbot/nav_cmd_vel')])

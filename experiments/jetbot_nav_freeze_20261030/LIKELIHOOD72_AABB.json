@@ -1,0 +1,68 @@
+{
+  "scope": "Compare known offline true/estimated poses against AMCL's likelihood field.\nNo pose optimization, map shift, time shift, trajectory fitting, or online input.\nImplements Humble likelihood_field score and coordinate macros for this map.\n",
+  "sensor_model": {
+    "laser_model_type": "likelihood_field",
+    "sigma_hit": 0.2,
+    "z_hit": 0.5,
+    "z_rand": 0.5,
+    "laser_likelihood_max_dist": 2.0
+  },
+  "snapshots": [
+    {
+      "snapshot": "scan_0100.npz",
+      "stamp": 12.009998533,
+      "poses": {
+        "reference": [
+          -1.6578307151652603,
+          7.156336726696844,
+          3.080646354368935
+        ],
+        "navigation_estimate": [
+          -1.7096557686908074,
+          7.183900476428606,
+          3.0769081589580947
+        ]
+      },
+      "scores": {
+        "90": {
+          "reference": {
+            "valid_beams": 50,
+            "score": 8.22280519625758,
+            "mean_endpoint_distance_m": 0.001,
+            "zero_distance_fraction": 0.98
+          },
+          "navigation_estimate": {
+            "valid_beams": 50,
+            "score": 8.21045414251516,
+            "mean_endpoint_distance_m": 0.002,
+            "zero_distance_fraction": 0.96
+          }
+        },
+        "360": {
+          "reference": {
+            "valid_beams": 201,
+            "score": 30.06062601751515,
+            "mean_endpoint_distance_m": 0.0004975124378109454,
+            "zero_distance_fraction": 0.9900497512437811
+          },
+          "navigation_estimate": {
+            "valid_beams": 201,
+            "score": 29.986519695060622,
+            "mean_endpoint_distance_m": 0.0019900497512437814,
+            "zero_distance_fraction": 0.9601990049751243
+          }
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "Only stored early scans; not the complete route.",
+    "Scores compare two recorded poses only; cannot isolate algorithm vs input error by themselves.",
+    "The navigation estimate includes AMCL plus estimated odometry, not a same-stamp raw AMCL update."
+  ],
+  "sha256": {
+    "/tmp/jetbot_amcl_runtime80.yaml": "43e5c2f2b9d9799dc7d6bfdcf750defde341fa6ec6663d6802e7ffaab11bb671",
+    "/home/liswnux/isaac-go2-ros2/data/cloud_warehouse/jetbot_baseline_20261030/precision_evidence/artifacts/precision_yaw_20261030_72/map/map.pgm": "d42be37e98acac1017e473188ad1f69bd8f202818d985ed9976450a9e8aed4d0",
+    "/home/liswnux/isaac-go2-ros2/data/cloud_warehouse/jetbot_baseline_20261030/precision_evidence/artifacts/precision_yaw_20261030_72/map/map.yaml": "3f9b0271afb41887ba9288f57635d869d833aa847fc07dc1c2fd2f703d31a734"
+  }
+}

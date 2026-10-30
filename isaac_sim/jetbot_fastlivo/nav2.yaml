@@ -19,6 +19,7 @@ amcl:
     alpha4: 0.005
     alpha5: 0.005
     laser_model_type: likelihood_field
+    sigma_hit: 0.2
     laser_max_range: 20.0
     laser_min_range: 0.15
     max_beams: 90
@@ -27,6 +28,9 @@ amcl:
     transform_tolerance: 0.5
     tf_broadcast: true
     do_beamskip: false
+    beam_skip_distance: 0.5
+    beam_skip_threshold: 0.3
+    beam_skip_error_threshold: 0.9
     resample_interval: 1
     pf_err: 0.05
     pf_z: 0.99

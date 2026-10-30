@@ -16,6 +16,8 @@ def seconds(s):return s.sec+s.nanosec*1e-9
 class EstimatedOdometry(Node):
  def __init__(self,case):
   super().__init__('jetbot_livo_odometry',parameter_overrides=[Parameter('use_sim_time',value=True)])
+  self.twist_projection=json.loads((case/'CASE.json').read_text()).get('navigation',{}).get('odom_twist_projection','native')
+  assert self.twist_projection in('native','differential_planar')
   self.root=case;self.latest=None;self.correction=None;self.gravity=[];self.alignment=None;self.origin=None;self.previous=None;self.fault=None;self.count=0;self.latest_gyro=None
   c=json.loads((case/'camera_contract.json').read_text());self.lever=np.array(c['mounts']['jetbot/imu']['T']);assert np.allclose(c['mounts']['jetbot/imu']['R'],np.eye(3),atol=1e-5)
   self.pub=self.create_publisher(Odometry,'/jetbot/odom',10);self.tf=TransformBroadcaster(self)
@@ -53,14 +55,19 @@ class EstimatedOdometry(Node):
    if self.latest_gyro is None or abs(self.latest_gyro[0]-ts)>.03:return
    angular=self.latest_gyro[1].copy()
    velocity=m.twist.twist.linear;native_velocity=np.array([velocity.x,velocity.y,velocity.z]);linear=rotation.inv().apply(native_velocity)-np.cross(angular,self.lever)
+   raw_body_linear=linear.copy()
+   if self.twist_projection=='differential_planar':
+    # Nonholonomic navigation twist only. Keep the estimated pose, forward
+    # velocity and native gyro unchanged; never use truth or wheel odometry.
+    linear[1:]=0.
    # Native filter corrections can change pose within one selected interval.
    # Do not mislabel a correction/dt as measured physical velocity. Keep native
    # propagated velocity and the actual native gyro, including the IMU lever arm.
-   if not np.isfinite(np.r_[position,linear,angular]).all() or np.linalg.norm(linear)>3 or np.linalg.norm(angular)>6 or pose_step>1. or rotation_step>1.:raise ValueError('Estimator discontinuity')
+   if not np.isfinite(np.r_[position,raw_body_linear,linear,angular]).all() or np.linalg.norm(raw_body_linear)>3 or np.linalg.norm(angular)>6 or pose_step>1. or rotation_step>1.:raise ValueError('Estimator discontinuity')
    output=Odometry();output.header.stamp=m.header.stamp;output.header.frame_id='odom';output.child_frame_id='chassis';output.pose.pose.position.x,output.pose.pose.position.y,output.pose.pose.position.z=map(float,position);output.pose.pose.orientation.x,output.pose.pose.orientation.y,output.pose.pose.orientation.z,output.pose.pose.orientation.w=map(float,orientation.as_quat());output.twist.twist.linear.x,output.twist.twist.linear.y,output.twist.twist.linear.z=map(float,linear);output.twist.twist.angular.x,output.twist.twist.angular.y,output.twist.twist.angular.z=map(float,angular)
    cov=np.array(m.pose.covariance).reshape(6,6);jac=np.zeros((6,6));jac[:3,:3]=jac[3:,3:]=self.alignment.as_matrix();output.pose.covariance=(jac@cov@jac.T).ravel().tolist()
    self.pub.publish(output);t=TransformStamped();t.header=output.header;t.child_frame_id='chassis';t.transform.translation.x,t.transform.translation.y,t.transform.translation.z=map(float,position);t.transform.rotation=output.pose.pose.orientation;self.tf.sendTransform(t)
-   self.previous=(ts,position,orientation);self.count+=1;self.stream.write(json.dumps(dict(stamp=ts,xyz=position.tolist(),xyzw=orientation.as_quat().tolist(),correction_age_s=ts-self.correction,pose_step_m=pose_step,rotation_step_rad=rotation_step,native_velocity_world=native_velocity.tolist(),angular_native_imu=angular.tolist()))+'\n');self.stream.flush()
+   self.previous=(ts,position,orientation);self.count+=1;self.stream.write(json.dumps(dict(stamp=ts,xyz=position.tolist(),xyzw=orientation.as_quat().tolist(),correction_age_s=ts-self.correction,pose_step_m=pose_step,rotation_step_rad=rotation_step,native_velocity_world=native_velocity.tolist(),raw_body_linear=raw_body_linear.tolist(),navigation_linear=linear.tolist(),twist_projection=self.twist_projection,angular_native_imu=angular.tolist()))+'\n');self.stream.flush()
   except Exception as e:
    self.fault=repr(e);(self.root/'ODOM_FAULT.json').write_text(json.dumps(dict(error=self.fault,output_stopped=True,last_stamp=locals().get('ts'),pose_step_m=locals().get('pose_step'),rotation_step_rad=locals().get('rotation_step')))+'\n')
 p=argparse.ArgumentParser();p.add_argument('--case',type=Path,required=True);a=p.parse_args();rclpy.init();node=EstimatedOdometry(a.case)

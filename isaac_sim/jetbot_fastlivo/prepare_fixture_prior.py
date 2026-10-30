@@ -10,14 +10,22 @@ from pxr import Usd
 from asset_fixture import place_event
 p=argparse.ArgumentParser();p.add_argument('--case',type=Path,required=True);a=p.parse_args();cfg=json.loads((a.case/'CASE.json').read_text());events=cfg.get('navigation',{}).get('static_fixtures',[])
 overrides=cfg.get('navigation',{}).get('parameter_overrides',{})
-if overrides:
+if cfg.get('nav2_enabled',False):
  target=a.case/'source/nav2.yaml';before=hashlib.sha256(target.read_bytes()).hexdigest();params=yaml.safe_load(target.read_text())
  for path,value in overrides.items():
   keys=path.split('/');node=params
   for key in keys[:-1]:node=node[key]
   assert (keys[-1]in node or (keys[-1]=='required_movement_angle'and node.get('plugin')=='nav2_controller::PoseProgressChecker'))and isinstance(value,(str,int,float,bool)),path
   node[keys[-1]]=value
- target.write_text(yaml.safe_dump(params,sort_keys=False));(a.case/'PARAMETER_OVERRIDES.json').write_text(json.dumps(dict(overrides=overrides,before_sha256=before,after_sha256=hashlib.sha256(target.read_bytes()).hexdigest()),indent=2))
+ if cfg.get('navigation',{}).get('localization_prior_dir'):
+  assert (a.case/'localization_map/map.yaml').is_file()
+  params['localization_map_server']={'ros__parameters':{'yaml_filename':str(a.case/'localization_map/map.yaml'),'topic_name':'localization_map','frame_id':'map'}}
+  params['amcl']['ros__parameters']['map_topic']='/localization_map'
+  names=params['jetbot_nav_lifecycle']['ros__parameters']['node_names']
+  assert 'localization_map_server'not in names
+  names.insert(names.index('amcl'),'localization_map_server')
+ params['map_server']['ros__parameters']['yaml_filename']=str(a.case/'map/map.yaml')
+ target.write_text(yaml.safe_dump(params,sort_keys=False));(a.case/'PARAMETER_OVERRIDES.json').write_text(json.dumps(dict(overrides=overrides,map_yaml_bound_to_case=str(a.case/'map/map.yaml'),before_sha256=before,after_sha256=hashlib.sha256(target.read_bytes()).hexdigest()),indent=2))
  old=a.case/'source_files.sha256';old.rename(a.case/'source_files_before_scenario.sha256');old.write_text(''.join(hashlib.sha256(f.read_bytes()).hexdigest()+'  '+str(f.relative_to(a.case))+'\n'for f in sorted((a.case/'source').glob('*'))if f.is_file()))
 if not events:raise SystemExit(0)
 assert not(a.case/'STATIC_FIXTURES.json').exists();scene=a.case/'jetbot_resolved.usda';s=Usd.Stage.Open(str(scene));parts=[]

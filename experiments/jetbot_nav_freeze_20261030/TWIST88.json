@@ -1,0 +1,9 @@
+{
+  "case": "diffnav_BA_20261030_88",
+  "samples": 4425,
+  "raw_all_finite": true,
+  "raw_max_norm_m_s": 0.8659507094152881,
+  "projected_yz_zero": true,
+  "forward_velocity_exactly_preserved": true,
+  "note": "Case88 source guard checked projected speed; subsequent source fix retains raw finite/norm guard before projection. All case88 raw values pass that original guard."
+}

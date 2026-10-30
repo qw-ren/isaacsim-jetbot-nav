@@ -1,3 +1,7 @@
+## 2026-10-30：3倍导航参数与精度口径
+
+当前3倍配置及验证见[参数说明](../../docs/JETBOT_NAV_PARAMETERS_20261030.md)，入口`warehouse_diffnav_20261030.json`，既有BA/C回归分别`warehouse_diffnav_BA_20261030.json`、`warehouse_diffnav_C_20261030.json`。保守规划图保持，独立表面定位图需先用`install_localization_prior.py`校验安装；不要将新定位图用于规划或原1倍模型。到达容差固定5cm/.05rad，精度按全程定位与真实停车分别评价，不代表每时刻3cm。新配置显式启用差速平面twist，pose/TF与原生gyro保持、完整原始速度仍受保护；接口补充见[3倍模块交接](../../docs/JETBOT_SCALED_MODULE_HANDOFF_20261029.md)。以下10-29/10-25及1倍记录保留作历史。
+
 ## 2026-10-29：真实资产ABC与到点改进
 
 结果与限制见[本轮报告](../../docs/JETBOT_ASSET_ABC_PRECISION_20261029.md)。当前3倍车精度候选为`warehouse_precision_amcl_safe_20261029.json`，组合B封路回归为`warehouse_asset_B_precision_20261029.json`。均有头/原生IMU/0.8m/s上限，PoseProgressChecker、0.65m规划包络、0.40m原保护阈值；真实车体未再放大。真实到点无新增障碍约7cm，封路约12.6cm，不承诺所有场景7cm；退出清理偶发后端-6仍保留。原1倍和历史配置不变。

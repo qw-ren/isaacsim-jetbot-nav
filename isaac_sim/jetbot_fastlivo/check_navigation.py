@@ -51,7 +51,12 @@ try:
  lifecycle=node.create_client(GetState,'/bt_navigator/get_state');end=time.monotonic()+50
  while True:
   if lifecycle.wait_for_service(timeout_sec=1):
-   state=wait(lifecycle.call_async(GetState.Request()),5)
+   pending=lifecycle.call_async(GetState.Request())
+   try:state=wait(pending,min(5.,max(.01,end-time.monotonic())))
+   except TimeoutError:
+    pending.cancel();result['lifecycle_query_retries']=result.get('lifecycle_query_retries',0)+1
+    if time.monotonic()>end:raise TimeoutError('Nav2 lifecycle not active within original 50s budget')
+    continue
    if state.current_state.id==3:break
   if time.monotonic()>end:raise TimeoutError('Nav2 lifecycle not active')
   rclpy.spin_once(node,timeout_sec=.1)

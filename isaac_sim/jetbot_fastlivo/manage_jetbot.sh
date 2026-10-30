@@ -35,7 +35,23 @@ if sys.argv[5]:
  assert 0<float(navigation.get('timeout_wall_s',120))<=1800
  c=json.loads((p/'CASE.json').read_text());c['navigation']=navigation;c['runtime_wall_s']=max(600.,float(navigation.get('timeout_wall_s',120))+100.);(p/'CASE.json').write_text(json.dumps(c,indent=2)+'\n')
 if sys.argv[3]in ('nav2','operator'):
- source=Path('/home/admin/jetbot-warehouse/map_prior_20261023_01');proof=json.loads((source/'MAP_PROVENANCE.json').read_text());assert proof['preflight_passed'];shutil.copytree(source,p/'map')
+ source=Path(json.loads((p/'CASE.json').read_text()).get('navigation',{}).get('prior_map_dir','/home/admin/jetbot-warehouse/map_prior_20261023_01')).resolve()
+ assert source==Path('/home/admin/jetbot-warehouse/map_prior_20261023_01')or source.parent==Path('/home/admin/jetbot-warehouse/map_candidates'), 'Only original or explicit isolated prior candidates'
+ proof=json.loads((source/'MAP_PROVENANCE.json').read_text());assert proof['preflight_passed'];shutil.copytree(source,p/'map')
+c=json.loads((p/'CASE.json').read_text())
+if c.get('navigation',{}).get('localization_prior_dir'):
+ assert float(c['navigation'].get('robot_scale',1.))==3., 'Packaged localization prior requires the 3x JetBot configuration'
+ localization=Path(c['navigation']['localization_prior_dir']).resolve()
+ assert localization.parent==Path('/home/admin/jetbot-warehouse/map_candidates'), 'Isolated localization candidates only'
+ proof=json.loads((localization/'MAP_PROVENANCE.json').read_text())
+ assert proof.get('source_geometry_unchanged')is True and proof.get('truth_or_trajectory_input')is False
+ assert proof.get('type')=='visible CAD mesh surface projection for localization only'
+ assert 0<proof['occupied_cells']<proof['grid_size'][0]*proof['grid_size'][1]<8_000_000
+ assert proof['height_band_chassis_m']==[.03,.40]
+ # Validate the base scene/prior before declared static fixtures are applied.
+ assert hashlib.sha256((p/'jetbot_resolved.usda').read_bytes()).hexdigest()==proof['source_scene_sha256'], 'Localization prior does not match the prepared base scene'
+ assert hashlib.sha256((p/'map/map.pgm').read_bytes()).hexdigest()==proof['reference_map_sha256'], 'Localization prior does not match the base planning map'
+ shutil.copytree(localization,p/'localization_map')
 c=json.loads((p/'CASE.json').read_text());joint=json.loads((p/'JOINT_LIMITS.json').read_text());variant=json.loads((p/'ROBOT_VARIANT.json').read_text());scale=variant['scale'];c['robot_variant']=variant;c['motion_limits']=dict(max_linear_m_s=min(float(c.get('navigation',{}).get('max_linear_m_s',.37)),joint['straight_limit_m_s']),max_angular_rad_s=.6,wheel_radius_m=joint['wheel_radius_m'],wheel_base_m=joint['wheel_base_m'],footprint_radius_m=(variant['footprint_bound_radius_m']if scale!=1 else .16),scan_clearance_m=(variant['footprint_bound_radius_m']+.06 if scale!=1 else .20),max_wheel_rad_s=min(v['max_rad_s']for v in joint['joints']),joint_limits_modified=False)
 if scale!=1:
  nav=p/'source/nav2.yaml';text=nav.read_text();radius=c['motion_limits']['scan_clearance_m'];speed=c['motion_limits']['max_linear_m_s']
