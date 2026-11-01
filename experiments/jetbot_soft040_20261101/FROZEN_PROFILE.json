@@ -252,7 +252,7 @@
     "isaac_sim/jetbot_fastlivo/validate_gate.py": "e60396825b92f183a18fddda8ddf57022ae38513529000590c71eb077004bef2",
     "isaac_sim/jetbot_fastlivo/validate_scaled_policy_contract.py": "61561b223c36c84a1209e49946cfce05cb4f6f98e39c1bad33dcf5dc788d0808",
     "isaac_sim/jetbot_fastlivo/validate_scan_geometry.py": "207e813207b66a2d3781f6b6513de57d33aee365f10d27c36b298bd9fd0774aa",
-    "isaac_sim/jetbot_fastlivo/velocity_gate.py": "c1e7d56fb5fbb2010f3194708172fa175941501c9b482e916f650cea6c5875de",
+    "isaac_sim/jetbot_fastlivo/velocity_gate.py": "ffd7854d0767fc560c17eecb8b836c573a556fb79a6f44fa52d0752b1a43b2e2",
     "isaac_sim/jetbot_fastlivo/viewport_video.py": "2a178bacda0956bfb28cf82513c2586d2fbfa2515982658f3901262755e832de",
     "isaac_sim/jetbot_fastlivo/warehouse_aisle_video41.json": "dcc63c01d3037ae59aec9ddbf161258db432d9664171797a92d4f3e7a6e20c51",
     "isaac_sim/jetbot_fastlivo/warehouse_aisle_video42.json": "c0b0f672d22f57022dc806e9874f0e218c3a3e282adaf094c29f06dfb862fd50",

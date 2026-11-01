@@ -13,9 +13,9 @@
   "rejected_snapshot_recomputes_clearance": true,
   "runtime_source_comparisons": {
     "velocity_gate.py": {
-      "result": "byte identical",
+      "result": "Only missing-CASE diagnostic default fallback; tested-case behavior unchanged",
       "runtime_sha256": "c1e7d56fb5fbb2010f3194708172fa175941501c9b482e916f650cea6c5875de",
-      "published_sha256": "c1e7d56fb5fbb2010f3194708172fa175941501c9b482e916f650cea6c5875de"
+      "published_sha256": "ffd7854d0767fc560c17eecb8b836c573a556fb79a6f44fa52d0752b1a43b2e2"
     },
     "supervise.py": {
       "result": "byte identical",
@@ -48,5 +48,7 @@
     11,
     15
   ],
-  "simulation_run_repeated_during_publication": false
+  "simulation_run_repeated_during_publication": false,
+  "missing_case_legacy_gate_default_fallback_passed": true,
+  "optional_case_diagnostic_configuration_scenarios_passed": 4
 }

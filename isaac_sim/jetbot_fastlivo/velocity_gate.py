@@ -18,7 +18,7 @@ class Gate(Node):
  def __init__(self):
   super().__init__('jetbot_velocity_gate',parameter_overrides=[Parameter('use_sim_time',value=True)]);self.sim=None;self.odom=None;self.points=None;self.times={};self.latest=[0.,0.];self.armed=False;self.fault=None;self.reason='DISARMED';self.stream=(a.case/'gate_states.jsonl').open('x');self.scan_log=(a.case/'scan_delivery.jsonl').open('x')
   self.motion_limits=json.loads((a.case/'CASE.json').read_text()).get('motion_limits',{})if(a.case/'CASE.json').exists()else {};self.max_linear=float(self.motion_limits.get('max_linear_m_s',.2));self.max_angular=float(self.motion_limits.get('max_angular_rad_s',.6));self.wheel_max=float(self.motion_limits.get('max_wheel_rad_s',1e20));self.wheel_radius=float(self.motion_limits.get('wheel_radius_m',.03));self.wheel_base=float(self.motion_limits.get('wheel_base_m',.1125))
-  self.diagnostics=json.loads((a.case/'CASE.json').read_text()).get('navigation',{}).get('extensions',{}).get('gate_diagnostics',False);assert type(self.diagnostics)is bool
+  self.diagnostics=(json.loads((a.case/'CASE.json').read_text()).get('navigation',{}).get('extensions',{}).get('gate_diagnostics',False)if(a.case/'CASE.json').exists()else False);assert type(self.diagnostics)is bool
   self.first_rejected_prediction=None
   self.pub=self.create_publisher(Twist,'/jetbot/cmd_vel',1)
   self.create_subscription(Clock,'/clock',self.clock,10);self.create_subscription(Odometry,'/jetbot/odom',self.pose,qos_profile_sensor_data);self.create_subscription(LaserScan,'/jetbot/scan',self.scan,qos_profile_sensor_data);self.create_subscription(Twist,'/jetbot/nav_cmd_vel',self.command,1)

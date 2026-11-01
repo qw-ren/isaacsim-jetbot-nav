@@ -45,6 +45,6 @@ bash "$CODE/manage_jetbot.sh" start UNIQUE_NEW_ID 140 nav2 stationary "$CODE/war
 # B→A用warehouse_soft040_BA_20261101.json；C用warehouse_soft040_C_20261101.json。
 ```
 
-本轮原始运行代码在`/home/admin/jetbot-warehouse/radius_20261101/diagnostic_code_01`，配置在同父目录`configs`；回归后发布的源码仅额外统一接口元数据、README及调试参数默认声明，功能参数以CASE和运行服务审计为准。原始case不可覆盖，源码前后差异及本地门控对照检查见实验目录。
+本轮原始运行代码在`/home/admin/jetbot-warehouse/radius_20261101/diagnostic_code_01`，配置在同父目录`configs`；回归后发布源码额外统一接口元数据、README、调试参数默认声明，并恢复无CASE文件的旧隔离门控验证入口默认回退；已测导航任务的功能参数和判据不变。原始case不可覆盖，源码前后差异及门控对照检查见实验目录。
 
 源码/小型证据走Git，四份完整原始精选归档走[本版预发布](https://github.com/qw-ren/isaacsim-jetbot-nav/releases/tag/jetbot-nav-r040-20261101)，下载后按SHA256SUMS及包内清单核验。旧0.65m使用[2026-10-30标签](https://github.com/qw-ren/isaacsim-jetbot-nav/releases/tag/jetbot-nav-baseline-20261030)复现，不用当前HEAD覆盖历史源码。PR #6待review，main不直接更新。
