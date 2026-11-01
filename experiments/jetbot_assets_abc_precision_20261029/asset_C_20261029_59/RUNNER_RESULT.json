@@ -1,0 +1,56 @@
+{
+  "exit_code": 0,
+  "error": null,
+  "elapsed_wall_s": 324.9943195240003,
+  "children": [
+    {
+      "pid": 14727,
+      "exit_code": 0
+    },
+    {
+      "pid": 15239,
+      "exit_code": 0
+    },
+    {
+      "pid": 15240,
+      "exit_code": 0
+    },
+    {
+      "pid": 15241,
+      "exit_code": 0
+    },
+    {
+      "pid": 15390,
+      "exit_code": 0
+    },
+    {
+      "pid": 15391,
+      "exit_code": 0
+    },
+    {
+      "pid": 15392,
+      "exit_code": 0
+    },
+    {
+      "pid": 15394,
+      "exit_code": 0
+    },
+    {
+      "pid": 15396,
+      "exit_code": 0
+    },
+    {
+      "pid": 15397,
+      "exit_code": 0
+    },
+    {
+      "pid": 15398,
+      "exit_code": 0
+    },
+    {
+      "pid": 15399,
+      "exit_code": 0
+    }
+  ],
+  "power_operation": false
+}

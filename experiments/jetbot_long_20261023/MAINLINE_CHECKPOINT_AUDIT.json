@@ -1,0 +1,28 @@
+{
+  "scope": "evidence checkpoint for completed GUI standalone and continuous long A/B; no C/real robot/training/GitHub publication",
+  "standalone_case": "nav2_20261023_27",
+  "continuous_case": "operator_20261023_28",
+  "checks": {
+    "native_long_route": true,
+    "continuous_native_missions": true,
+    "moving_A_and_B": true,
+    "input_interfaces_and_unique_publishers": true,
+    "native_imu_no_added_noise": true,
+    "no_truth_input": true,
+    "original_wheel_limit_unchanged": true,
+    "command_wheel_limits_respected": true,
+    "gui_and_separate_observer_camera": true,
+    "actual_endpoint_and_uniform_trajectory_evaluated": true,
+    "raw_backups_verified": true
+  },
+  "limitations": [
+    "point timing uses measured render packets; native per-ray time unqualified",
+    "known CAD initial pose, not global localization from arbitrary initial pose",
+    "footprint clearance uses a 0.16m circular approximation",
+    "simulator reference used offline only; no claim of real-world accuracy",
+    "operator normal stop has runner130 and signalled ROS exits; only case27 all child exits zero"
+  ],
+  "goal_status": "active",
+  "power_operation": false,
+  "github_published": false
+}

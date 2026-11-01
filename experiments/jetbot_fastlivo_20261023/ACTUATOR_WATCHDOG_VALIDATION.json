@@ -1,0 +1,63 @@
+{
+  "passed": true,
+  "source_sha256": "22eca4da9cf65ec15f07b94be366047b0a792e52b8e75dcdfe711252c79d7d29",
+  "scope": "actual command method; controlled source clocks; no ROS/robot connection; not a wheel dynamics test",
+  "facts": [
+    {
+      "case": "no publisher yet",
+      "output": [
+        0.0,
+        0.0
+      ],
+      "fault": null
+    },
+    {
+      "case": "zero-only startup gap",
+      "output": [
+        0.0,
+        0.0
+      ],
+      "fault": null
+    },
+    {
+      "case": "fresh motion",
+      "output": [
+        0.15,
+        0.2
+      ],
+      "fault": null
+    },
+    {
+      "case": "motion wall loss",
+      "output": [
+        0.0,
+        0.0
+      ],
+      "fault": "COMMAND_TIMEOUT"
+    },
+    {
+      "case": "new message does not clear motion-loss latch",
+      "output": [
+        0.0,
+        0.0
+      ],
+      "fault": "COMMAND_TIMEOUT"
+    },
+    {
+      "case": "motion simulation age loss",
+      "output": [
+        0.0,
+        0.0
+      ],
+      "fault": "COMMAND_TIMEOUT"
+    },
+    {
+      "case": "nonfinite message fault stays latched",
+      "output": [
+        0.0,
+        0.0
+      ],
+      "fault": "NONFINITE_COMMAND"
+    }
+  ]
+}

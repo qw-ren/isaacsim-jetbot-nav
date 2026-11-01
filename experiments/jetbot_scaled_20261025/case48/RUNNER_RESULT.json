@@ -1,0 +1,12 @@
+{
+  "exit_code": 130,
+  "error": null,
+  "elapsed_wall_s": 14.643292071999895,
+  "children": [
+    {
+      "pid": 31405,
+      "exit_code": 0
+    }
+  ],
+  "power_operation": false
+}

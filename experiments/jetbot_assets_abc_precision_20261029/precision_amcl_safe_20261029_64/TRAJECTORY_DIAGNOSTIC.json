@@ -1,0 +1,34 @@
+{
+  "scope": "offline simulator reference; declared start only, no fit; duplicates deduplicated before uniform resampling",
+  "begin_stamp": 3.804999828,
+  "end_stamp": 70.604995728,
+  "uniform_grid_dt_s": 0.05,
+  "grid_samples": 1336,
+  "odom_to_declared_world": {
+    "translation": [
+      0.0,
+      6.0
+    ],
+    "yaw": 0.0,
+    "fitted": false
+  },
+  "metrics": {
+    "navigation_feedback": {
+      "unique_source_samples": 3266,
+      "rmse_m": 0.08455621384320894,
+      "median_m": 0.05816911716792836,
+      "p95_m": 0.15921948537931607,
+      "max_m": 0.20720159903040566,
+      "max_stamp": 25.30499982799992
+    },
+    "livo_odom": {
+      "unique_source_samples": 3344,
+      "rmse_m": 0.028843143654956698,
+      "median_m": 0.028795266009300005,
+      "p95_m": 0.0402049765996527,
+      "max_m": 0.07259835888529735,
+      "max_stamp": 43.854999827999855
+    }
+  },
+  "source_sha256": "1d6760176402d7dca41516d90fc3c70034d324edb0c56c15b16bb6518af4e83d"
+}

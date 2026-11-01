@@ -1,0 +1,25 @@
+{
+  "scope": "offline simulator reference, never navigation input; circular footprint approximation",
+  "actual_xy_path_m": 43.660076343873385,
+  "initial_xyz": [
+    -0.0006180442869663239,
+    6.000000476837158,
+    0.10049880295991898
+  ],
+  "final_xyz": [
+    -12.957916259765625,
+    16.173070907592773,
+    0.10050157457590103
+  ],
+  "actual_goal_distance_m": 0.17811395298263602,
+  "source_samples": 3447,
+  "static_center_clearance_m": 1.4423516311273887,
+  "events": [],
+  "footprint_radius_m": 0.34,
+  "approximate_static_footprint_clearance_m": 1.1023516311273887,
+  "native_status": 4,
+  "navigation_passed": true,
+  "obstacles_requested": 0,
+  "obstacles_inserted": 0,
+  "source_sha256": "b362d259defc0a4f173e1a4bfb6ec0c0ed5dabb6b37522c5c3ee4c2f9658e668"
+}

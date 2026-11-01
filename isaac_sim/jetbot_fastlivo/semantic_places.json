@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "frame": "map",
+  "scope": "manual static warehouse place catalog; approach coordinates refer to free space, not shelf interior",
+  "places": [
+    {
+      "id": "entry",
+      "name": "仓储入场点",
+      "aliases": [
+        "入口"
+      ],
+      "approach_pose_map": [
+        0.0,
+        7.0,
+        1.5707963267948966
+      ],
+      "approved_approach": true
+    },
+    {
+      "id": "aisle_one",
+      "name": "一号通道中段",
+      "aliases": [
+        "一号通道"
+      ],
+      "approach_pose_map": [
+        -8.0,
+        15.0,
+        1.5707963267948966
+      ],
+      "approved_approach": true
+    },
+    {
+      "id": "aisle_two",
+      "name": "二号通道中段",
+      "aliases": [
+        "二号通道"
+      ],
+      "approach_pose_map": [
+        -13.0,
+        15.0,
+        -1.5707963267948966
+      ],
+      "approved_approach": true
+    },
+    {
+      "id": "east_start",
+      "name": "东侧入场点",
+      "aliases": [
+        "东侧入口"
+      ],
+      "approach_pose_map": [
+        2.0,
+        6.0,
+        0.0
+      ],
+      "approved_approach": true
+    },
+    {
+      "id": "east_aisle",
+      "name": "东侧通道中段",
+      "aliases": [
+        "东侧通道"
+      ],
+      "approach_pose_map": [
+        2.0,
+        12.0,
+        1.5707963267948966
+      ],
+      "approved_approach": true
+    },
+    {
+      "id": "east_handoff",
+      "name": "东侧交接点",
+      "aliases": [
+        "交接点"
+      ],
+      "approach_pose_map": [
+        3.5,
+        6.0,
+        0.0
+      ],
+      "approved_approach": true
+    }
+  ]
+}

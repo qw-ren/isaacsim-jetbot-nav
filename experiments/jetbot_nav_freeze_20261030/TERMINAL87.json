@@ -1,0 +1,27 @@
+{
+  "case": "mesh_beamskip_sigma005_BA_20261030_87",
+  "terminal_window_s": [
+    85.665000914,
+    90.644996641
+  ],
+  "samples": 246,
+  "native_world_mean_m_s": [
+    -0.10228967186485316,
+    -0.1433648141618236,
+    -0.02431942897939538
+  ],
+  "approximate_body_mean_m_s": [
+    -0.04349005986323905,
+    0.17176182066024479,
+    0.0028310294072962624
+  ],
+  "reference_xy_speed_median_m_s": 0.0002924579588748514,
+  "native_xy_speed_median_m_s": 0.17930288253044607,
+  "body_transform_limit": "Approximate: recorded aligned odom orientation applied to native world velocity; does not undo frozen gravity alignment or subtract IMU lever arm. Speed norm comparison does not require this approximate transform.",
+  "truth_usage": "Offline descriptive audit only; no fitting or correction.",
+  "inputs_sha256": {
+    "estimated_odom.jsonl": "84949c50311164425c7eab1be8e3c412d3367fd15b8381b158f63e255282704f",
+    "truth_trajectory.jsonl": "dd166d04265cfe8d1913a84ca297225a9abef1a652398d99a4619230c4052901"
+  },
+  "diagnostic_source_sha256": "0a1768e8ad716cce0b675c66ef6ad7fece7b7ec6f21bc78251998d33e0e121e0"
+}

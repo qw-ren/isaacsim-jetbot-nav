@@ -1,0 +1,100 @@
+{
+  "case": "localization_mesh_20261030_82",
+  "expected_native_status": 4,
+  "native_status": 4,
+  "navigation_succeeded": true,
+  "basic_checks": {
+    "status_matches_expectation": true,
+    "input_audit_passed": true,
+    "gate_no_fault": true,
+    "shutdown_zero_published": true
+  },
+  "process_clean": true,
+  "nonzero_children": [],
+  "arrival_tolerance": {
+    "controller_server/ros__parameters/general_goal_checker/xy_goal_tolerance": 0.05,
+    "controller_server/ros__parameters/general_goal_checker/yaw_goal_tolerance": 0.05,
+    "controller_server/ros__parameters/FollowPath/xy_goal_tolerance": 0.05
+  },
+  "note": "Basic checks only; no claim of A/B/C correctness or repeated-trial precision.",
+  "endpoint": {
+    "scope": "Completed-trial endpoint XY/yaw error at feedback time and after stopping.\nTruth is offline reference only. No fitting or online correction.\n",
+    "native_status": 4,
+    "feedback_stamp": 73.805000304,
+    "goal": [
+      -13.0,
+      16.0,
+      -1.5707963267948966
+    ],
+    "actual_xy_at_feedback_m": 0.026664364487782286,
+    "estimated_xy_at_feedback_m": 0.03216783394748385,
+    "global_xy_bias_at_feedback_m": 0.025996814703034315,
+    "actual_yaw_at_feedback_deg": 2.3526166700432363,
+    "estimated_yaw_at_feedback_deg": 2.846613350559317,
+    "global_yaw_bias_at_feedback_deg": 0.4939966805160678,
+    "stopped_reference_stamp": 73.86999834887683,
+    "final_actual_xy_m": 0.02665928538025795,
+    "final_actual_yaw_deg": 2.3436568566340044,
+    "inputs_sha256": {
+      "truth_trajectory.jsonl": "8539b611e62ab7b559ebb8203be7c269b8e6dfcfe01a77ee5f375698336c3a3a",
+      "navigation_feedback.jsonl": "c1daab2f139dc769e2da95737ba179728c2fa068710d1ae733e6897f223ab307",
+      "NAVIGATION_RESULT.json": "d114ece27eca5ca8f81d0506600177f78e3bf47e92720fe7186d4363995f2413",
+      "RUNNER_RESULT.json": "9d2219c716a937254e3ff367874370e46f4359291bd4761ed8a62a56059a31b5"
+    }
+  },
+  "localization": {
+    "scope": "Offline global pose accuracy, distinct from endpoint/arrival error.\nNo pose fitting. AMCL samples use their own scan timestamps, not receipt time.\nThe 5Hz probe can miss AMCL publications; sample metrics are not time-weighted.\n",
+    "case": "localization_mesh_20261030_82",
+    "mission_window_s": [
+      3.804999828,
+      73.805000304
+    ],
+    "continuous_navigation_global_pose": {
+      "grid_dt_s": 0.05,
+      "samples": 1401,
+      "xy_rmse_m": 0.032429508915740354,
+      "xy_median_m": 0.02576736728536048,
+      "xy_p95_m": 0.054794501105442685,
+      "xy_max_m": 0.10317224758823551,
+      "yaw_rmse_deg": 0.1802180127281435,
+      "yaw_p95_deg": 0.39592696533634536,
+      "mean_signed_xy_error_m": [
+        -0.009208343714645406,
+        -0.0017036403106383353
+      ],
+      "distance_weighted_xy_rmse_m": 0.03381376267289308,
+      "moving_xy_rmse_m": 0.033415726827168826,
+      "moving_threshold_m_s": 0.1
+    },
+    "amcl_published_pose_samples": {
+      "coverage_s": [
+        4.2099987070000005,
+        71.249997965
+      ],
+      "samples": 307,
+      "xy_rmse_m": 0.0330974874863988,
+      "xy_median_m": 0.025793249666815215,
+      "xy_p95_m": 0.055433474593425736,
+      "xy_max_m": 0.08984835103084521,
+      "yaw_rmse_deg": 0.15302706368550936,
+      "yaw_p95_deg": 0.302268919065198,
+      "mean_signed_xy_error_m": [
+        -0.009257344226993746,
+        -0.001720149919242981
+      ]
+    },
+    "inputs_sha256": {
+      "RUNNER_RESULT.json": "9d2219c716a937254e3ff367874370e46f4359291bd4761ed8a62a56059a31b5",
+      "truth_trajectory.jsonl": "8539b611e62ab7b559ebb8203be7c269b8e6dfcfe01a77ee5f375698336c3a3a",
+      "navigation_feedback.jsonl": "c1daab2f139dc769e2da95737ba179728c2fa068710d1ae733e6897f223ab307",
+      "localization_probe.jsonl": "661ab28ff103b45972a423cee85087706756177c0669f71c5e6381b182885419"
+    }
+  },
+  "inputs_sha256": {
+    "CASE.json": "e00dd38c44f672eed1be84cd128ee0da5a42d5000dc18bf4e723394d6595620a",
+    "NAVIGATION_RESULT.json": "d114ece27eca5ca8f81d0506600177f78e3bf47e92720fe7186d4363995f2413",
+    "RUNNER_RESULT.json": "9d2219c716a937254e3ff367874370e46f4359291bd4761ed8a62a56059a31b5",
+    "GATE_RESULT.json": "22af8e8277a55d0de72da0e86d14564d76ac28418e4cbf33a06d0e3813752d76",
+    "INPUT_AUDIT.json": "c7c698ed199dae2d4d5bdeb626236495c0e505b79f2082698aae854fe4bb8387"
+  }
+}

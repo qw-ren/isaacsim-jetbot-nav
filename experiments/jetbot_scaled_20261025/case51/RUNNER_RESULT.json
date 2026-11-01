@@ -1,0 +1,56 @@
+{
+  "exit_code": 1,
+  "error": null,
+  "elapsed_wall_s": 233.12951286199998,
+  "children": [
+    {
+      "pid": 4633,
+      "exit_code": 0
+    },
+    {
+      "pid": 5157,
+      "exit_code": -6
+    },
+    {
+      "pid": 5158,
+      "exit_code": 0
+    },
+    {
+      "pid": 5159,
+      "exit_code": 0
+    },
+    {
+      "pid": 5338,
+      "exit_code": 0
+    },
+    {
+      "pid": 5339,
+      "exit_code": 0
+    },
+    {
+      "pid": 5340,
+      "exit_code": 0
+    },
+    {
+      "pid": 5342,
+      "exit_code": 0
+    },
+    {
+      "pid": 5344,
+      "exit_code": 0
+    },
+    {
+      "pid": 5345,
+      "exit_code": 0
+    },
+    {
+      "pid": 5346,
+      "exit_code": 0
+    },
+    {
+      "pid": 5347,
+      "exit_code": 0
+    }
+  ],
+  "power_operation": false
+}

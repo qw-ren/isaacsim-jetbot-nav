@@ -1,0 +1,31 @@
+{
+  "scope": "offline reference only, no fitting; per-time and per-distance metrics kept separate; not a repeated-trial statistical claim",
+  "interval_sim_s": [
+    3.504999875,
+    107.024993894
+  ],
+  "grid_dt_s": 0.05,
+  "path_length_in_interval_m": 38.66934974591683,
+  "metrics": {
+    "navigation": {
+      "time_rmse_m": 0.09248313917993885,
+      "distance_weighted_rmse_m": 0.0944270618058694,
+      "moving_time_rmse_m": 0.09423736866066232,
+      "moving_threshold_reference_m_s": 0.1,
+      "p95_m": 0.13741874115844877
+    },
+    "livo": {
+      "time_rmse_m": 0.04192392478236595,
+      "distance_weighted_rmse_m": 0.041653214539653316,
+      "moving_time_rmse_m": 0.04188141982527916,
+      "moving_threshold_reference_m_s": 0.1,
+      "p95_m": 0.06850574085952041
+    }
+  },
+  "source_sha256": "282430ec8f8ac6e519c422c7d5336fcdbcb7adde5e3cc914ccc918ce77cf592d",
+  "inputs": {
+    "truth_trajectory.jsonl": "659610841c82ae0c484bd1d6ad0c89c3b85b206f34b74aeaf77a0fb1a08b6904",
+    "navigation_feedback.jsonl": "1272fb1f961d2ee2ef01346f2ff774521b7d2b292ad5209d48b99cd89b381e00",
+    "estimated_odom.jsonl": "552e33b427cd81ec6e555750f88454147bde99fa4514dfe27fc0e0d24850e221"
+  }
+}

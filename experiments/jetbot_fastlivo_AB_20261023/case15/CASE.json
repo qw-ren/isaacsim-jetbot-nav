@@ -1,0 +1,33 @@
+{
+  "duration_sim_s": 280.0,
+  "ros_domain_id": 51,
+  "simulation_only": true,
+  "backend": "FAST-LIVO2 migration",
+  "initial_mode": "native Nav2 single goal",
+  "backend_enabled": true,
+  "motion_enabled": false,
+  "nav2_enabled": true,
+  "navigation": {
+    "goals": [
+      [
+        -4,
+        6,
+        3.141592653589793
+      ],
+      [
+        -8,
+        6,
+        3.141592653589793
+      ],
+      [
+        -10,
+        2,
+        -1.5707963267948966
+      ]
+    ],
+    "timeout_wall_s": 500,
+    "nominal_route_length_m": 12.47213595499958,
+    "cad_center_clearance_m": 2.1999955841902197,
+    "scope": "static native ThroughPoses functional check; no obstacle acceptance"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "archives": [
+    {
+      "file": "radius040_selected_20261101_01.tar.gz",
+      "bytes": 35870464,
+      "sha256": "db05acd9a9caa7e9e7e06369534bca8e56320089a85ac1b47fa2054cd2c46a63",
+      "files_verified": 1083,
+      "manifest": "RADIUS040_BACKUP_MANIFEST.json"
+    },
+    {
+      "file": "radius040_diagnostic_selected_20261101_01.tar.gz",
+      "bytes": 14656919,
+      "sha256": "01abeb51ddf25010fb89cdc753e443da99620b4b9f5c0614fd74599c290c659e",
+      "files_verified": 696,
+      "manifest": "DIAGNOSTIC_BACKUP_MANIFEST.json"
+    },
+    {
+      "file": "cmdstep040_failed_selected_20261101_01.tar.gz",
+      "bytes": 4779433,
+      "sha256": "11b15f8c43a6998d9d7d0f5797541f882a892dd8b4f8787b3e02efaeb3226898",
+      "files_verified": 273,
+      "manifest": "CMDSTEP_BACKUP_MANIFEST.json"
+    },
+    {
+      "file": "soft040_selected_20261101_01.tar.gz",
+      "bytes": 65693508,
+      "sha256": "ef19c8c41b227e386b155e8cd48b3ab86068905b0db959f11e048875fc1d6b40",
+      "files_verified": 1397,
+      "manifest": "SOFT040_BACKUP_MANIFEST.json"
+    }
+  ],
+  "all_archive_and_member_hashes_verified": true,
+  "total_manifest_entries": 3449,
+  "scope": "16 cases across four stage archives; repeated metadata paths can occur in distinct archives; no aggregate navigation success rate"
+}

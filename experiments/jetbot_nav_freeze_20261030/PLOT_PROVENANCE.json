@@ -1,0 +1,21 @@
+{
+  "inputs_sha256": {
+    "VALIDATION81.json": "59cba50ce7c5b1c529db21ebbbf26a5b0d6e483c12fb5693303b2bb168a02c3d",
+    "VALIDATION82.json": "5bc62a077eddd59d366ef5b5a9a3e5887c289fe2a1609e56adfabbd8bd625ee2",
+    "VALIDATION92.json": "54cbf16a069229476446d8704b922669a611a3243a35ef46800bffe437dd37c3",
+    "VALIDATION91.json": "8eceaa35c9da9e18296d28ecf40597930e213902337516d3a80bafb09b007fd2",
+    "VALIDATION86.json": "b3f4e2e2215aa92c8c77ae3f776ae9fb42de7a7914c9c980d251d4b5e6b355ce",
+    "VALIDATION83.json": "0e083cc9da43f780254ae86f542a48b0f6271b5374491624d7498645a77d1413",
+    "VALIDATION90.json": "527e073243584f6abd7828ae9819f2a13588822b04ff742d52b0e093902b6501",
+    "VALIDATION80.json": "c2da26fb0e77fada88abc4dd0814729bbf99a6cdef01b8802620dcda0e15005f",
+    "VALIDATION87.json": "d372597e0a8252827d4b3c4635e2fad3133d17b04efa2b46906e32eb30f1f508",
+    "VALIDATION84.json": "00deef663f9be35fd29141a489ab38e48f19a537f8aa5eb52c8b839b35a97437",
+    "VALIDATION85.json": "e6f02e393f77dd5272fa7c9cb68880d2dc3dcf4f5c2aac02ab0731128b1f73c1",
+    "VALIDATION78.json": "2b85d0e877fdec753e4f149bc063e5ec2d758370ed3f3eccaafa4275055d3d2e",
+    "VALIDATION79.json": "26eb46d03aee2f8fa2d63286bbaf27ad520926e80412fdb88bcac6a057f47a80",
+    "VALIDATION89.json": "f0f13e91478bfad50148e7de54c7df8ef6d2641c4b5d32e47935ec1627f14ab3",
+    "VALIDATION88.json": "53849fbed9e1fd1c95df086d726f461e122b7ed5247cd9caa06127fa64180ec0"
+  },
+  "generator_sha256": "f7b40378ebe220a38ff2141e4d6828f7d39a085f7d90bfcaddb93454e84ab468",
+  "note": "Plot per-trial localization and arrival as distinct quantities.\nRun here with system Python (numpy/matplotlib); uses checked-in summaries only.\nDifferent configurations/routes and individual trials are not pooled statistics.\n"
+}

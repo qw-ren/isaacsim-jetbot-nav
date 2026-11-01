@@ -1,0 +1,80 @@
+{
+  "duration_sim_s": 450.0,
+  "ros_domain_id": 51,
+  "simulation_only": true,
+  "backend": "FAST-LIVO2 migration",
+  "initial_mode": "native Nav2 configured route",
+  "backend_enabled": true,
+  "motion_enabled": false,
+  "nav2_enabled": true,
+  "operator_enabled": false,
+  "navigation": {
+    "goals": [
+      [
+        -10.0,
+        6.0,
+        3.141592653589793
+      ],
+      [
+        -10.0,
+        -20.0,
+        -1.5707963267948966
+      ]
+    ],
+    "timeout_wall_s": 1400.0,
+    "nominal_route_length_m": 36.0,
+    "cad_center_clearance_m": 2.1999955841902197,
+    "scope": "long interior warehouse A/B appearing mid-route using estimated y triggers, real rotated USD props",
+    "obstacles": [
+      {
+        "kind": "A",
+        "center": [
+          -10.0,
+          -5.0
+        ],
+        "trigger_axis": "y",
+        "trigger_below": -3.0
+      },
+      {
+        "kind": "B",
+        "center": [
+          -10.0,
+          -12.0
+        ],
+        "trigger_axis": "y",
+        "trigger_below": -10.0,
+        "yaw_rad": 1.5707963267948966
+      }
+    ],
+    "visualization": {
+      "headless": false,
+      "follow": true,
+      "record_video": true
+    },
+    "point_time_mode": "native_frame_rays",
+    "timing_audit": false,
+    "scan_deskew_gyro": true
+  },
+  "runtime_wall_s": 1500.0,
+  "motion_limits": {
+    "max_linear_m_s": 0.37,
+    "max_angular_rad_s": 0.6,
+    "wheel_radius_m": 0.03,
+    "wheel_base_m": 0.1125,
+    "max_wheel_rad_s": 12.560000333031704,
+    "joint_limits_modified": false
+  },
+  "visualization": {
+    "headless": false,
+    "follow": true,
+    "record_video": true,
+    "observer_camera": "/World/JetbotObserverCamera",
+    "environment": {
+      "XDG_RUNTIME_DIR": "/run/user/1000",
+      "DISPLAY": ":1",
+      "XAUTHORITY": "/tmp/xauth_ncgIrr"
+    },
+    "source_pid": 2728,
+    "source": "existing desktop session; paths only, no credential contents"
+  }
+}

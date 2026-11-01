@@ -1,0 +1,52 @@
+{
+  "case": "radius040_BA_20261101_06",
+  "scope": "Offline center-to-AABB clearance audit for completed simulation cases.\nUses recorded reference poses only after completion; no ROS or control output.\nCAD projection and a circular body are conservative approximations, not contact\nforce measurements or swept-body collision certification.\n",
+  "truth_usage": "offline completed-case audit only",
+  "physical_circle_radius_m": 0.34,
+  "planning_radius_m": {
+    "local_costmap/local_costmap/ros__parameters/robot_radius": 0.4,
+    "global_costmap/global_costmap/ros__parameters/robot_radius": 0.4
+  },
+  "static": {
+    "boxes": 536,
+    "reference_samples": 2908,
+    "minimum_center_distance_m": 0.8105830606319682,
+    "minimum_approximate_body_margin_m": 0.47058306063196814,
+    "samples_with_approximate_margin_below_zero": 0,
+    "samples_with_approximate_margin_below_5cm": 0,
+    "closest": {
+      "stamp": 38.88999913074076,
+      "xy": [
+        -9.10974407196045,
+        10.990439414978027
+      ],
+      "asset": "/World/full_warehouse/SM_PaletteA_3039/SM_PaletteA_01"
+    }
+  },
+  "dynamic": [
+    {
+      "kind": "B",
+      "active_from_sim": 28.689999358728528,
+      "reference_samples": 1476,
+      "minimum_center_distance_m": 3.230561261996627,
+      "minimum_approximate_body_margin_m": 2.890561261996627,
+      "samples_with_approximate_margin_below_zero": 0,
+      "samples_with_approximate_margin_below_5cm": 0,
+      "closest": {
+        "stamp": 35.20999921299517,
+        "xy": [
+          -8.355688095092773,
+          12.519438743591309
+        ],
+        "asset": "/World/JetbotDynamicTrial/event_0/asset_2"
+      }
+    }
+  ],
+  "inputs_sha256": {
+    "CASE.json": "aea050f6ee8c4cf5d3656a9eef2e462398b3a1f2ec50e3dab316de8df836c2ec",
+    "RUNNER_RESULT.json": "7250042e258bcd9a3daf19a148352a7cd7869a474135c4adb52984767048774e",
+    "truth_trajectory.jsonl": "5fef5e1390f6868b247193e11c6632ddbb1359834cc6066d5b76667e76510d0c",
+    "map/collision_boxes.json": "fd937e0357802ebb3ca3a08586b0852dd67720c4bc0445354cf025a7d23d5f9e",
+    "obstacle_events.jsonl": "97cffe4f805d1f54bb576c3e0b57d8719bb78d85bfaeb59854e0e2249f9d09b4"
+  }
+}

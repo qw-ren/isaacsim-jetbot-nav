@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "gate_comparison_reference_commit": "dcb3ceb222e572de42bcd8f96f0624e96d01fa63",
+  "gate_scenarios": [
+    "safe",
+    "predicted_rejection",
+    "wheel_coupled_saturation",
+    "scan_timeout",
+    "nonfinite_command",
+    "latched_no_resume"
+  ],
+  "diagnostic_on_off_output_fault_armed_clearance_identical": true,
+  "rejected_snapshot_recomputes_clearance": true,
+  "runtime_source_comparisons": {
+    "velocity_gate.py": {
+      "result": "Only missing-CASE diagnostic default fallback; tested-case behavior unchanged",
+      "runtime_sha256": "c1e7d56fb5fbb2010f3194708172fa175941501c9b482e916f650cea6c5875de",
+      "published_sha256": "ffd7854d0767fc560c17eecb8b836c573a556fb79a6f44fa52d0752b1a43b2e2"
+    },
+    "supervise.py": {
+      "result": "byte identical",
+      "runtime_sha256": "1353a62c849433d77360f4e4515a235617382571598deb75659f827c5375e1a4",
+      "published_sha256": "1353a62c849433d77360f4e4515a235617382571598deb75659f827c5375e1a4"
+    },
+    "controller_probe.py": {
+      "result": "AST identical except module docstring",
+      "runtime_sha256": "0c07c6d9d2c99877efbae6d58af2b9e43cc8d9548376f633bff2556fb6c805e6",
+      "published_sha256": "128c9f49acdca18ffc89df53945a0bc164ace1f25356524c36112220f62cff40"
+    }
+  },
+  "metadata_only_changes": [
+    "extension_contract v2 planning reference/additive fields; wire topics and safety unchanged",
+    "nav2.yaml explicit limit_vel_cmd_in_traj=false, same actual runtime default",
+    "controller_probe module docstring only"
+  ],
+  "single_functional_parameter_diff_verified": true,
+  "all_source_syntax_passed": true,
+  "shell_syntax_passed": true,
+  "config_and_evidence_hashes_passed": true,
+  "fixed_suite_audits_passed": [
+    10,
+    12,
+    13,
+    14,
+    16
+  ],
+  "exceptions_retained": [
+    11,
+    15
+  ],
+  "simulation_run_repeated_during_publication": false,
+  "missing_case_legacy_gate_default_fallback_passed": true,
+  "optional_case_diagnostic_configuration_scenarios_passed": 4
+}

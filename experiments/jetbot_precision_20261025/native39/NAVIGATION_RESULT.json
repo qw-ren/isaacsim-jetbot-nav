@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "goal": [
+    -10.0,
+    -20.0,
+    -1.5707963267948966
+  ],
+  "goals": [
+    [
+      -10.0,
+      6.0,
+      3.141592653589793
+    ],
+    [
+      -10.0,
+      -20.0,
+      -1.5707963267948966
+    ]
+  ],
+  "action": "NavigateThroughPoses",
+  "truth_input": false,
+  "velocity_publisher": false,
+  "initial_pose_source": "declared CAD scene spawn, one initialization only",
+  "scope": "JetBot FAST-LIVO + AMCL + native Nav2 configured route",
+  "start_map_pose": [
+    -0.001060379750771286,
+    6.002630199920389
+  ],
+  "native_status": 4,
+  "final_map_pose": [
+    -9.948223712602214,
+    -19.926594907920485
+  ],
+  "estimated_goal_error_m": 0.08982812187672727,
+  "gate": {
+    "wall": 5138.271518429,
+    "sim": 108.009997586,
+    "armed": true,
+    "reason": "ENABLED",
+    "fault": null,
+    "output": [
+      0.0,
+      0.0
+    ],
+    "predicted_clearance_m": 3.4070336818695064,
+    "scan_stamp": 107.88999639,
+    "stream_wall_ages": {
+      "odom": 0.02912030099923868,
+      "clock": 0.018238785999528773,
+      "scan": 0.07932604899997386,
+      "input": 0.00876603599954251
+    }
+  }
+}

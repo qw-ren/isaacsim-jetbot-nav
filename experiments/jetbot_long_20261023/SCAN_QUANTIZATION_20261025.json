@@ -1,0 +1,65 @@
+{
+  "scope": "offline geometric angular bin representation only; not an AMCL improvement result; no fitted map offsets",
+  "cases": [
+    {
+      "file": "points_0001.npz",
+      "source_sha256": "910205510eca8420fbf6fdbf9dd2cfe8b2333951fd3c6dd54f631974ca8d277b",
+      "metrics": {
+        "existing_floor": {
+          "bins": 159,
+          "mean_signed_angle_deg": 0.6264335699708565,
+          "max_abs_angle_deg": 0.9991183348893299,
+          "mean_projected_endpoint_error_m": 0.08353966199680854,
+          "p95_projected_endpoint_error_m": 0.21409422615735632
+        },
+        "nearest_angle": {
+          "bins": 159,
+          "mean_signed_angle_deg": 0.12509802593571098,
+          "max_abs_angle_deg": 0.4991159970239654,
+          "mean_projected_endpoint_error_m": 0.04424120633018354,
+          "p95_projected_endpoint_error_m": 0.11043080963250484
+        }
+      }
+    },
+    {
+      "file": "points_0010.npz",
+      "source_sha256": "efc708dfdfccdfaa30fd9e3d17d95d9628efd90c2ea59ca67d02989f08eb5271",
+      "metrics": {
+        "existing_floor": {
+          "bins": 160,
+          "mean_signed_angle_deg": 0.6314894147077753,
+          "max_abs_angle_deg": 0.9953306550992128,
+          "mean_projected_endpoint_error_m": 0.08567371859323114,
+          "p95_projected_endpoint_error_m": 0.22226687362247155
+        },
+        "nearest_angle": {
+          "bins": 158,
+          "mean_signed_angle_deg": 0.12311045761339166,
+          "max_abs_angle_deg": 0.49656618675802705,
+          "mean_projected_endpoint_error_m": 0.046397697941657545,
+          "p95_projected_endpoint_error_m": 0.11349506503284461
+        }
+      }
+    },
+    {
+      "file": "points_0100.npz",
+      "source_sha256": "f939429470d10fcab03b59b7b646cce91f2551a7fae2054df4592e78722919b9",
+      "metrics": {
+        "existing_floor": {
+          "bins": 230,
+          "mean_signed_angle_deg": 0.572076939112212,
+          "max_abs_angle_deg": 0.9993424490317225,
+          "mean_projected_endpoint_error_m": 0.07782257049535554,
+          "p95_projected_endpoint_error_m": 0.2205801487232719
+        },
+        "nearest_angle": {
+          "bins": 227,
+          "mean_signed_angle_deg": 0.09597911130199933,
+          "max_abs_angle_deg": 0.49934762098245755,
+          "mean_projected_endpoint_error_m": 0.045987691431986666,
+          "p95_projected_endpoint_error_m": 0.09936907444380665
+        }
+      }
+    }
+  ]
+}

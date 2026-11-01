@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "known_stationary_world_point_under_rotating_sensor": true,
+  "zero_rotation_identity": true,
+  "missing_history_rejected": true,
+  "reference_t": 0.1,
+  "source_sha256": "05ed5a2e6f6e1eb5c85d89228842fda3c2767705d2088cfed638c36321744962",
+  "scope": "rotation only, no translation or absolute pose input"
+}

@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "native_usd_bounds": [
+    [
+      -13.099999904632568,
+      -12.25,
+      0.09999999925494193
+    ],
+    [
+      -6.900000095367432,
+      -11.75,
+      0.20000000074505805
+    ]
+  ],
+  "expected_bounds": [
+    [
+      -13.1,
+      -12.25,
+      0.1
+    ],
+    [
+      -6.9,
+      -11.75,
+      0.2
+    ]
+  ],
+  "physical_rack_width_axis": "x",
+  "trigger_axis": "estimated map y",
+  "simulation_started": false
+}

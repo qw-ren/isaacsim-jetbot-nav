@@ -1,0 +1,183 @@
+{
+  "profile_id": "jetbot_3x_r040_obstacle040_20261101",
+  "status": "validated_fixed_suite_candidate_not_published",
+  "simulation_only": true,
+  "robot_scale": 3.0,
+  "original_frozen_commit": "dcb3ceb222e572de42bcd8f96f0624e96d01fa63",
+  "functional_changes_relative_to_08": {
+    "FollowPath.BaseObstacle.scale": {
+      "before": 0.2,
+      "after": 0.4
+    }
+  },
+  "configuration_sha256": {
+    "isaac_sim/jetbot_fastlivo/warehouse_soft040_BA_20261101.json": "bc60c10c05ee94744e2bdfeb449f0306ad1753ffaf19fabbf19033067408290b",
+    "isaac_sim/jetbot_fastlivo/warehouse_soft040_precision_20261101.json": "5f88d33a74ff43eb6ec0694a6cd6ea9fd2c9eada16834fef1b159f0fad110b45",
+    "isaac_sim/jetbot_fastlivo/warehouse_soft040_C_20261101.json": "6c34fb7989b2da891a39b8de0a0f33c9b3bcac34f40e4bc168e4d06f02b64b0a"
+  },
+  "parameters": {
+    "global_and_local_robot_radius_m": 0.4,
+    "base_obstacle_scale": 0.4,
+    "base_obstacle_sum_scores": false,
+    "limit_vel_cmd_in_traj": false,
+    "inflation_radius_m": 1.0,
+    "cost_scaling_factor": 5.0,
+    "physical_conservative_radius_m": 0.34,
+    "nominal_center_safety_threshold_m": 0.4,
+    "safety_prediction_s": 1.5,
+    "footprint_padding_m": 0.01,
+    "max_linear_m_s": 0.8,
+    "max_angular_rad_s": 0.6,
+    "minimum_linear_and_angular_speed": 0.0,
+    "goal_xy_tolerance_m": 0.05,
+    "goal_yaw_tolerance_rad": 0.05
+  },
+  "validation_cases": [
+    {
+      "case": "soft040_BA_20261101_10",
+      "native_status": 4,
+      "process_clean": true,
+      "basic_checks": {
+        "status_matches_expectation": true,
+        "input_audit_passed": true,
+        "gate_no_fault": true,
+        "shutdown_zero_published": true
+      },
+      "actual_parking_xy_m": 0.05500729011847273,
+      "actual_parking_yaw_deg": 2.755902167760137,
+      "amcl_sample_xy_rmse_m": 0.01855008681883604,
+      "continuous_navigation_xy_rmse_m": 0.022511340863179186
+    },
+    {
+      "case": "soft040_precision_20261101_12",
+      "native_status": 4,
+      "process_clean": true,
+      "basic_checks": {
+        "status_matches_expectation": true,
+        "input_audit_passed": true,
+        "gate_no_fault": true,
+        "shutdown_zero_published": true
+      },
+      "actual_parking_xy_m": 0.03992779251888774,
+      "actual_parking_yaw_deg": 2.725359505353514,
+      "amcl_sample_xy_rmse_m": 0.0162964612200041,
+      "continuous_navigation_xy_rmse_m": 0.017665608860021876
+    },
+    {
+      "case": "soft040_C_20261101_13",
+      "native_status": 6,
+      "process_clean": true,
+      "basic_checks": {
+        "status_matches_expectation": true,
+        "input_audit_passed": true,
+        "gate_no_fault": true,
+        "shutdown_zero_published": true
+      },
+      "amcl_sample_xy_rmse_m": 0.018003130605175048,
+      "continuous_navigation_xy_rmse_m": 0.027645960706746193
+    },
+    {
+      "case": "soft040_BA_20261101_14",
+      "native_status": 4,
+      "process_clean": true,
+      "basic_checks": {
+        "status_matches_expectation": true,
+        "input_audit_passed": true,
+        "gate_no_fault": true,
+        "shutdown_zero_published": true
+      },
+      "actual_parking_xy_m": 0.04294975207274977,
+      "actual_parking_yaw_deg": 2.9580735166290197,
+      "amcl_sample_xy_rmse_m": 0.018959862407066798,
+      "continuous_navigation_xy_rmse_m": 0.02546774363714241
+    },
+    {
+      "case": "soft040_precision_20261101_15",
+      "native_status": 4,
+      "process_clean": false,
+      "basic_checks": {
+        "status_matches_expectation": true,
+        "input_audit_passed": true,
+        "gate_no_fault": true,
+        "shutdown_zero_published": true
+      },
+      "actual_parking_xy_m": 0.036116353602972655,
+      "actual_parking_yaw_deg": 2.89902056830996,
+      "amcl_sample_xy_rmse_m": 0.01491448403374908,
+      "continuous_navigation_xy_rmse_m": 0.016737046765650722
+    },
+    {
+      "case": "soft040_precision_20261101_16",
+      "native_status": 4,
+      "process_clean": true,
+      "basic_checks": {
+        "status_matches_expectation": true,
+        "input_audit_passed": true,
+        "gate_no_fault": true,
+        "shutdown_zero_published": true
+      },
+      "actual_parking_xy_m": 0.0371443153638918,
+      "actual_parking_yaw_deg": 2.8288760858829116,
+      "amcl_sample_xy_rmse_m": 0.014900176666871913,
+      "continuous_navigation_xy_rmse_m": 0.01694618763660366
+    }
+  ],
+  "full_process_regression_cases": [
+    10,
+    12,
+    13,
+    14,
+    16
+  ],
+  "exceptions": [
+    {
+      "case": "soft040_precision_20261101_11",
+      "phase": "Isaac viewport startup",
+      "navigation_started": false,
+      "retained": true
+    },
+    {
+      "case": "soft040_precision_20261101_15",
+      "phase": "FAST-LIVO shutdown after successful native4 navigation",
+      "backend_exit_code": -6,
+      "root_cause_fixed": false,
+      "retained": true
+    }
+  ],
+  "evidence_sha256": {
+    "C13_AUDIT.json": "6730c7f2f55f9a03b3c435bb593b20ca6b80ee4826cb94fd9777276448513027",
+    "GEOMETRY10.json": "1a4da8407fe3ae02bf835baf767b257728bc782c48bcd29be1ac7f1f0a94e7f7",
+    "GEOMETRY12.json": "ca3e0fd73cfd58485a0a18e55fcb351e598721e1dc242ce6b717edaaa0e091b9",
+    "GEOMETRY13.json": "14aecde60ceb7e82b2351401fe8f9131faa576b318f2641f92c2a93b5ce8d550",
+    "GEOMETRY14.json": "863f6374cd8b8135eea8d6f1e09007132ae42c98978e832d313cdb65bd8c7be4",
+    "GEOMETRY15.json": "202c5e79c8774af20fe211746350cad0e572b7cec69828d8f5e2105a1c5fee5e",
+    "GEOMETRY16.json": "9ccb31b04b9daf1af2a0711e0d201d1ea1833463ace05d1f739e604327a1ef75",
+    "LOCALIZATION13.json": "7c4cf0246b506203a415ca1aeb31f984688124b842080322f1366d4dc76f1f1c",
+    "SHOWCASE10_AUDIT.json": "5f620a4c1836b54031cc0107e4fd022d2b85569cd4f9314b77092ee1bc366ecf",
+    "SHOWCASE14_AUDIT.json": "64c9a9c1b8838e22a5f77ab89754efe668a80b6f89335073d990d751b8910328",
+    "SOFT040_RUNTIME_AUDIT.json": "e9dbbb5f1060f5cd8afd48c6b18c49b3b1cc7ca7cc0d459ecdb7df853610ef1c",
+    "VALIDATION10.json": "de23356a8e463aeaf58e945661aed7b2dd310232f0180b306cab7f2c39e1aa93",
+    "VALIDATION12.json": "c60648bd98c4898a3d530d2edd5bb1e2e718af5e08850a162b6ff71bd7901e6d",
+    "VALIDATION13.json": "3a56cc67eb909edb238c3eeb69780a83db0f16f2b4a441993db4cb6a90e8c7e0",
+    "VALIDATION14.json": "9acd5a412054924dbeda1aa6fd229e1b3be5f6f68a4328c4687d844d976e1100",
+    "VALIDATION15.json": "51f3cdacb49f8449012917ef3e49be968738253340c238b46a725f653522cc0b",
+    "VALIDATION16.json": "ffddddf9a9478bc73895c2840cb5f776acea2ba64ae0f0961e0882a3ace96444"
+  },
+  "raw_evidence": {
+    "archive": "soft040_selected_20261101_01.tar.gz",
+    "bytes": 65693508,
+    "files": 1397,
+    "sha256": "ef19c8c41b227e386b155e8cd48b3ab86068905b0db959f11e048875fc1d6b40",
+    "local_directory": "/home/liswnux/isaac-go2-ros2/data/cloud_warehouse/jetbot_radius040_20261101",
+    "source_snapshots": "archived per-case source/ and source_files.sha256"
+  },
+  "limitations": [
+    "Fixed layouts and few trials; no general success probability or arbitrary obstacle layout guarantee.",
+    "No proof that BaseObstacle weight caused historical failures or that weight alone explains the new successes.",
+    "True parking about 3.6-5.5cm and 2.7-3.0deg; 3cm and 1-2deg targets not met.",
+    "No guarantee of 3cm global pose error at every timestamp.",
+    "Historic startup and backend shutdown faults remain; old failures are retained.",
+    "Debug publishing adds load; no depth/video stress qualification.",
+    "No change to safety latch, timeouts, truth exclusion, IMU/LIVO source or original wheel limits."
+  ]
+}

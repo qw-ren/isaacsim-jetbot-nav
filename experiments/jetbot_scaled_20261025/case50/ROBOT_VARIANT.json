@@ -1,0 +1,29 @@
+{
+  "scale": 3.0,
+  "size_m": [
+    0.4907804698171059,
+    0.4002000212309973,
+    0.779753398419681
+  ],
+  "footprint_bound_radius_m": 0.34,
+  "physical_wheel_radius_m": 0.10086589826198145,
+  "physical_wheel_base_m": 0.28020000000000067,
+  "mass_changes": [
+    {
+      "path": "/World/jetbot/chassis",
+      "before_kg": 2.0,
+      "after_kg": 54.0
+    },
+    {
+      "path": "/World/jetbot/left_wheel",
+      "before_kg": 0.25,
+      "after_kg": 6.75
+    },
+    {
+      "path": "/World/jetbot/right_wheel",
+      "before_kg": 0.25,
+      "after_kg": 6.75
+    }
+  ],
+  "source_scene_unchanged": true
+}

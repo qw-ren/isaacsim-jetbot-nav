@@ -1,0 +1,44 @@
+{
+  "scope": "offline simulator reference, never navigation input; circular footprint approximation",
+  "actual_xy_path_m": 38.47092280646651,
+  "initial_xyz": [
+    -0.000187041237950325,
+    6.0,
+    0.0334995798766613
+  ],
+  "final_xyz": [
+    -9.945587158203125,
+    -19.962085723876953,
+    0.033501021564006805
+  ],
+  "actual_goal_distance_m": 0.06631930100918125,
+  "source_samples": 5402,
+  "static_center_clearance_m": 1.894891328513951,
+  "events": [
+    {
+      "kind": "A",
+      "sim": 54.3699987847358,
+      "trigger_estimated_xy": [
+        -9.743896940541054,
+        -3.0073321872459857
+      ],
+      "minimum_reference_center_clearance_m": 0.48650154055497086,
+      "approximate_radius_016_clearance_m": 0.3265015405549708
+    },
+    {
+      "kind": "B",
+      "sim": 72.30999838374555,
+      "trigger_estimated_xy": [
+        -9.213967563329398,
+        -10.011998890306202
+      ],
+      "minimum_reference_center_clearance_m": 0.48901675446708714,
+      "approximate_radius_016_clearance_m": 0.3290167544670871
+    }
+  ],
+  "native_status": 4,
+  "navigation_passed": true,
+  "obstacles_requested": 2,
+  "obstacles_inserted": 2,
+  "source_sha256": "49446a2f4cdc122cd6835782db7e30f7a8b46e7dd2222755f4f0c74c114155b4"
+}

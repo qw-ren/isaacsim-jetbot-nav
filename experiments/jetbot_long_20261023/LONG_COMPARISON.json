@@ -1,0 +1,38 @@
+{
+  "scope": "individual runs, different GUI/speed/obstacles; not a causal accuracy benchmark",
+  "cases": [
+    {
+      "case": "nav2_20261023_23",
+      "gui": false,
+      "command_cap_m_s": 0.2,
+      "actual_path_m": 35.89976384202554,
+      "actual_endpoint_error_m": 0.1150077945904862,
+      "feedback_stamp_s": 177.175003051,
+      "runner_wall_s": 698.7091626490001,
+      "native_status": 4,
+      "all_children_zero": true
+    },
+    {
+      "case": "nav2_20261023_24",
+      "gui": false,
+      "command_cap_m_s": 0.2,
+      "actual_path_m": 38.68687126059304,
+      "actual_endpoint_error_m": 0.08758889067036887,
+      "feedback_stamp_s": 193.104995728,
+      "runner_wall_s": 755.8154597609973,
+      "native_status": 4,
+      "all_children_zero": true
+    },
+    {
+      "case": "nav2_20261023_27",
+      "gui": true,
+      "command_cap_m_s": 0.37,
+      "actual_path_m": 38.47263183466741,
+      "actual_endpoint_error_m": 0.11903048593447531,
+      "feedback_stamp_s": 110.964996338,
+      "runner_wall_s": 471.99049283399654,
+      "native_status": 4,
+      "all_children_zero": true
+    }
+  ]
+}

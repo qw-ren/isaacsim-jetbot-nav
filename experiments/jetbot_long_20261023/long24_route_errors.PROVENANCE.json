@@ -1,0 +1,18 @@
+{
+  "case": "/home/liswnux/isaac-go2-ros2/data/cloud_warehouse/jetbot_20261023/long24/nav2_20261023_24",
+  "offline_only": true,
+  "truth_not_navigation_input": true,
+  "declared_translation": [
+    0,
+    6
+  ],
+  "fitted": false,
+  "source_sha256": "9c741efda2b4903be8af57a07a13b6a6033b8af1ea72de1303503b9a25576c08",
+  "inputs": {
+    "truth_trajectory.jsonl": "601fd54fb7f61b55f65b3dde20cb63f62aed083393e841a829c3aaca1b44f5ce",
+    "navigation_feedback.jsonl": "3deb1617b35c88f5b1dece93448a00b0369b1bdadbc8c02ebdefd7a475b25df6",
+    "estimated_odom.jsonl": "656b2d25b8ef1c13e8f947ba8eb359a51dc96174b48fd703a841bb4f89e440b8",
+    "obstacle_events.jsonl": "765d9cc6249c7f13c47c219c37b9e3717720db2370acfa943719efe04f65517d",
+    "CASE.json": "92479e7d3913e899578867ca580a1145eb498cf6560fc4d4262786ee50945337"
+  }
+}

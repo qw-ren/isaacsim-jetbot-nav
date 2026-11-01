@@ -1,0 +1,42 @@
+{
+  "id": "west1",
+  "goal": [
+    -3.0,
+    6.0,
+    3.141592653589793
+  ],
+  "passed": true,
+  "truth_input": false,
+  "velocity_publisher": false,
+  "request_sha256": "af0155ce158a4f405d9d50fd8119006c06e631352858a5d944fe9570c6ef36f1",
+  "start_map_pose": [
+    0.002816362901218627,
+    5.9975180611936025
+  ],
+  "native_status": 4,
+  "final_map_pose": [
+    -2.9038914312268513,
+    6.002388414231788
+  ],
+  "estimated_goal_error_m": 0.09613824168438725,
+  "gate_at_result": {
+    "wall": 26930.596162348,
+    "sim": 28.669999359,
+    "armed": true,
+    "reason": "ENABLED",
+    "fault": null,
+    "output": [
+      0.0,
+      0.0
+    ],
+    "predicted_clearance_m": 2.80025053024292,
+    "scan_stamp": 28.569999361,
+    "stream_wall_ages": {
+      "odom": 0.032975607999105705,
+      "clock": 0.02002719799929764,
+      "scan": 0.009334890000900486,
+      "input": 0.03170030999899609
+    }
+  },
+  "disarm_success": true
+}

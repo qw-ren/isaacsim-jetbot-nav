@@ -1,0 +1,56 @@
+{
+  "exit_code": 130,
+  "error": null,
+  "elapsed_wall_s": 670.0218975690004,
+  "children": [
+    {
+      "pid": 41607,
+      "exit_code": 0
+    },
+    {
+      "pid": 42116,
+      "exit_code": -2
+    },
+    {
+      "pid": 42117,
+      "exit_code": -2
+    },
+    {
+      "pid": 42118,
+      "exit_code": -2
+    },
+    {
+      "pid": 42290,
+      "exit_code": -2
+    },
+    {
+      "pid": 42291,
+      "exit_code": 254
+    },
+    {
+      "pid": 42293,
+      "exit_code": 254
+    },
+    {
+      "pid": 42295,
+      "exit_code": 0
+    },
+    {
+      "pid": 42297,
+      "exit_code": 254
+    },
+    {
+      "pid": 42298,
+      "exit_code": 254
+    },
+    {
+      "pid": 42300,
+      "exit_code": 254
+    },
+    {
+      "pid": 42301,
+      "exit_code": 0
+    }
+  ],
+  "power_operation": false
+}

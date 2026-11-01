@@ -1,0 +1,64 @@
+{
+  "exit_code": 130,
+  "error": null,
+  "elapsed_wall_s": 436.1646355130015,
+  "children": [
+    {
+      "pid": 29519,
+      "exit_code": 0
+    },
+    {
+      "pid": 30198,
+      "exit_code": -2
+    },
+    {
+      "pid": 30199,
+      "exit_code": -2
+    },
+    {
+      "pid": 30200,
+      "exit_code": -2
+    },
+    {
+      "pid": 30366,
+      "exit_code": -2
+    },
+    {
+      "pid": 30367,
+      "exit_code": -2
+    },
+    {
+      "pid": 30368,
+      "exit_code": -2
+    },
+    {
+      "pid": 30369,
+      "exit_code": 254
+    },
+    {
+      "pid": 30370,
+      "exit_code": 254
+    },
+    {
+      "pid": 30373,
+      "exit_code": 0
+    },
+    {
+      "pid": 30376,
+      "exit_code": 254
+    },
+    {
+      "pid": 30379,
+      "exit_code": 254
+    },
+    {
+      "pid": 30380,
+      "exit_code": 254
+    },
+    {
+      "pid": 30381,
+      "exit_code": 0
+    }
+  ],
+  "power_operation": false
+}

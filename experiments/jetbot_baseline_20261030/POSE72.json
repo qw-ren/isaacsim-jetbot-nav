@@ -1,0 +1,25 @@
+{
+  "scope": "Completed-trial endpoint XY/yaw error at feedback time and after stopping.\nTruth is offline reference only. No fitting or online correction.\n",
+  "native_status": 4,
+  "feedback_stamp": 68.084999084,
+  "goal": [
+    -13.0,
+    16.0,
+    -1.5707963267948966
+  ],
+  "actual_xy_at_feedback_m": 0.07342528642189394,
+  "estimated_xy_at_feedback_m": 0.029477510175222446,
+  "global_xy_bias_at_feedback_m": 0.05115601162220236,
+  "actual_yaw_at_feedback_deg": 0.23462748717009005,
+  "estimated_yaw_at_feedback_deg": 0.1308931015205435,
+  "global_yaw_bias_at_feedback_deg": 0.10373438564954651,
+  "stopped_reference_stamp": 68.1499984767288,
+  "final_actual_xy_m": 0.07319068242637856,
+  "final_actual_yaw_deg": 0.26037414411759996,
+  "inputs_sha256": {
+    "truth_trajectory.jsonl": "3e3919887c20c3c259f4837a3049a93be71208ab5fc16aabbd48d6271f322fc7",
+    "navigation_feedback.jsonl": "647a97d093c05d1eb421b611f259825b0652e008cecaa49213b293b06b076598",
+    "NAVIGATION_RESULT.json": "79f3d888c1663c7e32fc490a430a9cdc3f13f72215477e45439d55e23dff52ee",
+    "RUNNER_RESULT.json": "89601cd9f6b91beb6a7a6e2c2739864374e0bb9ea01821c4b2b25f4e4ba75f7c"
+  }
+}

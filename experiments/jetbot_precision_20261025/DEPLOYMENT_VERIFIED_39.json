@@ -1,0 +1,191 @@
+{
+  "files": [
+    {
+      "file": "submit_goal.py",
+      "same": true,
+      "sha256": "08f526a2c72f9c7278ecfd4de1be597adbab2ff124ba18f3fd77d40290658681"
+    },
+    {
+      "file": "evaluate_obstacle_layer.py",
+      "same": true,
+      "sha256": "c40969b50cb2a4867a7659fb34c16540b89efb93544e2ec4f8e89c0cbd5c2e77"
+    },
+    {
+      "file": "encode_observer_video.py",
+      "same": true,
+      "sha256": "9fbd8fc331c7e83a62ed20a8c91c5dcd1af6efe10b86c862578d866a44dce5ef"
+    },
+    {
+      "file": "velocity_gate.py",
+      "same": true,
+      "sha256": "c488951366fd6b651af8aa20365d43d65e75e7432615653819c2b98fc41e7ea3"
+    },
+    {
+      "file": "audit_inputs.py",
+      "same": true,
+      "sha256": "fa0c4318e728eba60159cfbbdf220616319e128e1445390c8a57a97d5674887f"
+    },
+    {
+      "file": "desktop_env.py",
+      "same": true,
+      "sha256": "ac7461faa48553b3e0a287f19129418cd894c839cc745e9030e915dca74eee03"
+    },
+    {
+      "file": "scan_yaw_deskew.py",
+      "same": true,
+      "sha256": "05ed5a2e6f6e1eb5c85d89228842fda3c2767705d2088cfed638c36321744962"
+    },
+    {
+      "file": "evaluate_motion_limits.py",
+      "same": true,
+      "sha256": "4b85f6b01be559a867068a4e951273ab5dd1db38d55f144e7518583a81976d26"
+    },
+    {
+      "file": "operator_session.py",
+      "same": true,
+      "sha256": "1225f45c303e3ae6dff5d0e1fa13afb0b8e0e196ec343a7b966a14f51c9d63e5"
+    },
+    {
+      "file": "validate_actuator.py",
+      "same": true,
+      "sha256": "bacec2961bcea11e040de5ce8c4447cacf82f5fb0e4c4528da652b8a80ac4cff"
+    },
+    {
+      "file": "native_lidar_timing.py",
+      "same": true,
+      "sha256": "f9813884656f5a6e2115351c089a807295c25c4f92ce51923a3aa725e3292cb6"
+    },
+    {
+      "file": "diagnose_endpoint.py",
+      "same": true,
+      "sha256": "c664af63b0b5b3533044a0e73d44af9a71ca6af12d5f78b50a2ccd44a5ca364b"
+    },
+    {
+      "file": "nav_odometry.py",
+      "same": true,
+      "sha256": "eca60b12b73e32c8f880eb7ac23c416cd8edfbdc1c4f183273e0e1687b2923dc"
+    },
+    {
+      "file": "README.md",
+      "same": true,
+      "sha256": "c9f778669a82c4993a9f245fe8ba67da1b2d69874c4c2a67eb4f31993d824947"
+    },
+    {
+      "file": "generate_params.py",
+      "same": true,
+      "sha256": "feeab4d859c911bbb7c5734f7c040307a13167c6aa09f10f0251483b4006228a"
+    },
+    {
+      "file": "prepare_scene.py",
+      "same": true,
+      "sha256": "904e26ae57ba9e2452d3dee59efde852be284ed37d1fd09fb3b2df17826131ad"
+    },
+    {
+      "file": "navigate.xml",
+      "same": true,
+      "sha256": "83259cbe8a4ad2ae07d20d7041d7b63f8380622132251fe4d21ddbbcde73e88f"
+    },
+    {
+      "file": "nav2.yaml",
+      "same": true,
+      "sha256": "b856a4c3df4f48a9f589cf36f78592cf4b3bc6f220b284f4e73256000c69efdb"
+    },
+    {
+      "file": "diagnose_trajectory.py",
+      "same": true,
+      "sha256": "1d6760176402d7dca41516d90fc3c70034d324edb0c56c15b16bb6518af4e83d"
+    },
+    {
+      "file": "check_motion.py",
+      "same": true,
+      "sha256": "0d82d84129f89ac61beb42adc977502415f3ff7fa8459fa1c62eec9cad7a2421"
+    },
+    {
+      "file": "manage_jetbot.sh",
+      "same": true,
+      "sha256": "9becb2322635bc9b3837f94e02ecddebb921e90c16156526c02a96ac0d579d44"
+    },
+    {
+      "file": "check_navigation.py",
+      "same": true,
+      "sha256": "58f6f5878354e34c9fb534c72a3caf6e766fc83c68e5e58bdfdeb263d3b1a863"
+    },
+    {
+      "file": "build_prior_map.py",
+      "same": true,
+      "sha256": "8c8b2ff550192bd5a66adce48203c07d8e23c9f0fbed5505ff3bba03ce60cc7f"
+    },
+    {
+      "file": "evaluate_precision_profile.py",
+      "same": true,
+      "sha256": "282430ec8f8ac6e519c422c7d5336fcdbcb7adde5e3cc914ccc918ce77cf592d"
+    },
+    {
+      "file": "livo_base.yaml",
+      "same": true,
+      "sha256": "29a44e8ac7972b6b97b23fca33a4354a6482c42b3e476a0b579bf45dd8990620"
+    },
+    {
+      "file": "viewport_video.py",
+      "same": true,
+      "sha256": "2a178bacda0956bfb28cf82513c2586d2fbfa2515982658f3901262755e832de"
+    },
+    {
+      "file": "collect_backup.py",
+      "same": true,
+      "sha256": "f977eb54b789a2d2836567f5d6edbe6806a5c62488e040ddc69330ed423bbc2d"
+    },
+    {
+      "file": "evaluate_case.py",
+      "same": true,
+      "sha256": "49446a2f4cdc122cd6835782db7e30f7a8b46e7dd2222755f4f0c74c114155b4"
+    },
+    {
+      "file": "audit_native_frame_times.py",
+      "same": true,
+      "sha256": "8e8256e308287c060e8d9166d82324ae14d7b522e507bfcb95c15896a58ccbc8"
+    },
+    {
+      "file": "TEMPLATE_PROVENANCE.json",
+      "same": true,
+      "sha256": "be7d942dab465568a1177efa75ffcb23d0be82d6dc0599defd1ef09976578e1e"
+    },
+    {
+      "file": "supervise.py",
+      "same": true,
+      "sha256": "746ee67340f122f6285c324f45a9ea6a22485e850e881926b1dd6a69bc1aadd8"
+    },
+    {
+      "file": "sensor_bridge.py",
+      "same": true,
+      "sha256": "4fafb62163a551a26f371df8a80ed5256b9b3ffeb8414530095bd77be64d4526"
+    },
+    {
+      "file": "run_sim.py",
+      "same": true,
+      "sha256": "48dbc519d4332eede4bc4d8944c51247cda88e809c482b8c8e91c1f522d8e85d"
+    },
+    {
+      "file": "navigate_through.xml",
+      "same": true,
+      "sha256": "5e16b4fb8502ad06a9ff0e195350e06374c2fec82be386e3cd3f5807fd505166"
+    },
+    {
+      "file": "dynamic_fixture.py",
+      "same": true,
+      "sha256": "8b9fbaa17be50a1df525c9c25aa24c463e1e1ca93a9b5c9c54548b2f3291e2de"
+    },
+    {
+      "file": "validate_scan_geometry.py",
+      "same": true,
+      "sha256": "207e813207b66a2d3781f6b6513de57d33aee365f10d27c36b298bd9fd0774aa"
+    },
+    {
+      "file": "validate_gate.py",
+      "same": true,
+      "sha256": "e60396825b92f183a18fddda8ddf57022ae38513529000590c71eb077004bef2"
+    }
+  ],
+  "all_same": true,
+  "scope": "local module vs archived deployed code, case40 source unchanged"
+}

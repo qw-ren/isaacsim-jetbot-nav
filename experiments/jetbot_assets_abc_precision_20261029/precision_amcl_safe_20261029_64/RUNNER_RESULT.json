@@ -1,0 +1,60 @@
+{
+  "exit_code": 0,
+  "error": null,
+  "elapsed_wall_s": 338.63246491000064,
+  "children": [
+    {
+      "pid": 23713,
+      "exit_code": 0
+    },
+    {
+      "pid": 24231,
+      "exit_code": 0
+    },
+    {
+      "pid": 24232,
+      "exit_code": 0
+    },
+    {
+      "pid": 24233,
+      "exit_code": 0
+    },
+    {
+      "pid": 24385,
+      "exit_code": 0
+    },
+    {
+      "pid": 24386,
+      "exit_code": 0
+    },
+    {
+      "pid": 24389,
+      "exit_code": 0
+    },
+    {
+      "pid": 24390,
+      "exit_code": 0
+    },
+    {
+      "pid": 24391,
+      "exit_code": 0
+    },
+    {
+      "pid": 24394,
+      "exit_code": 0
+    },
+    {
+      "pid": 24397,
+      "exit_code": 0
+    },
+    {
+      "pid": 24401,
+      "exit_code": 0
+    },
+    {
+      "pid": 24403,
+      "exit_code": 0
+    }
+  ],
+  "power_operation": false
+}

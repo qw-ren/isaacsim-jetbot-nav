@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "checks": {
+    "requested_normal_stop": true,
+    "no_bridge_fault": true,
+    "no_gate_fault": true,
+    "no_mux_fault": true,
+    "input_audit_passed": true,
+    "two_native_named_goals_passed": true,
+    "all_mission_results_preserved": true,
+    "rgb_depth_paired_and_valid": true,
+    "fresh_plan_during_control_observed": true,
+    "depth_output_exists": true
+  },
+  "scope": "navigation-owned integration interfaces only; no actual PPO/vision model executed",
+  "navigation_successes": 2,
+  "navigation_failures": 1,
+  "not_all_navigation_goals_passed": true,
+  "paired_samples": 481,
+  "missions": [
+    {
+      "id": "east_entry47",
+      "status": 4,
+      "passed": true
+    },
+    {
+      "id": "east_aisle47",
+      "status": null,
+      "passed": false
+    },
+    {
+      "id": "east_handoff47",
+      "status": 4,
+      "passed": true
+    }
+  ],
+  "child_exit_codes": [
+    0,
+    -2,
+    -2,
+    -2,
+    -2,
+    -2,
+    -2,
+    254,
+    254,
+    0,
+    254,
+    254,
+    254,
+    0
+  ],
+  "truth_input": false,
+  "source_sha256": "50ad88bc1bcf508981bfbe5cf7a67db7fc0a0fe32184d6896d4e96c8462a7eb2"
+}

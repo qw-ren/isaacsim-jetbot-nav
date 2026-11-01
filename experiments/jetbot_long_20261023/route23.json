@@ -1,0 +1,18 @@
+{
+  "goals": [
+    [
+      -10.0,
+      6.0,
+      3.141592653589793
+    ],
+    [
+      -10.0,
+      -20.0,
+      -1.5707963267948966
+    ]
+  ],
+  "timeout_wall_s": 1400.0,
+  "nominal_route_length_m": 36.0,
+  "cad_center_clearance_m": 2.1999955841902197,
+  "scope": "long interior warehouse baseline; no new obstacles; same native IMU/FAST-LIVO and precision settings as22"
+}

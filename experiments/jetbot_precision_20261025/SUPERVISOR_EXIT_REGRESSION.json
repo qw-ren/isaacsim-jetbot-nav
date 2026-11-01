@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "scope": "actual supervisor result-check block evaluated on actual failed36 and healthy30 SIM_RESULT artifacts; no simulator launched",
+  "source_sha256": "746ee67340f122f6285c324f45a9ea6a22485e850e881926b1dd6a69bc1aadd8",
+  "cases": [
+    {
+      "case": "actual_simulator_error",
+      "corrected_exit_code": 1,
+      "error": "Simulator reported: TypeError(\"'numpy.ndarray' object is not callable\")",
+      "input_sha256": "a8fb4d0ad16f3bb89bc9ec21d008b3d74ac64cb77b9b8f576065fece046fa1ce"
+    },
+    {
+      "case": "actual_healthy_completed_simulator",
+      "corrected_exit_code": 0,
+      "error": null,
+      "input_sha256": "e56eb3bcf6e9eee6204cf2dec3bf8011b9761e38c806936aa663443ccbdd4cd6"
+    }
+  ]
+}

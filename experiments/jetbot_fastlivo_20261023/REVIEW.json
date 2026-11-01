@@ -1,0 +1,422 @@
+{
+  "source_sha256": "5e5bccec677ce49396cca73d14152afb220dbccbee14337d6aa4762a0427ba66",
+  "references": [
+    {
+      "authored": "../../../isaacsim_assets/Assets/Isaac/4.5/Isaac/Robots/Jetbot/jetbot.usd",
+      "resolved": "/home/admin/isaacsim_assets/Assets/Isaac/4.5/Isaac/Robots/Jetbot/jetbot.usd",
+      "exists": true
+    },
+    {
+      "authored": "/home/admin/isaacsim_assets/Assets/Isaac/4.5/Isaac/Sensors/HESAI/XT-32.usd",
+      "resolved": "/home/admin/isaacsim_assets/Assets/Isaac/4.5/Isaac/Sensors/HESAI/XT-32.usd",
+      "exists": true
+    },
+    {
+      "authored": "../../../isaacsim_assets/Assets/Isaac/4.5/Isaac/Environments/Simple_Warehouse/full_warehouse.usd",
+      "resolved": "/home/admin/isaacsim_assets/Assets/Isaac/4.5/Isaac/Environments/Simple_Warehouse/full_warehouse.usd",
+      "exists": true
+    }
+  ],
+  "graphs": {
+    "/World/ROS2/differential_controller": true,
+    "/World/ROS2/ROS_Clock": true,
+    "/World/ROS2/ROS_Camera": true,
+    "/World/ROS2/ROS_IMU": true,
+    "/World/ROS2/ROS_Lidar": true,
+    "/World/ROS2/ROS_Odom": true,
+    "/World/ROS2/ROS_TF": true
+  },
+  "transforms": {
+    "/World/jetbot/chassis": {
+      "type": "Xform",
+      "to_chassis_row_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "/World/jetbot/chassis/rgb_camera": {
+      "type": "Xform",
+      "to_chassis_row_matrix": [
+        [
+          0.9396949834584902,
+          5.967535430018283e-07,
+          -0.3420204910500369,
+          0.0
+        ],
+        [
+          -1.1353641156019871e-07,
+          1.0000015028778482,
+          1.0956774778209516e-06,
+          0.0
+        ],
+        [
+          0.34202099007679343,
+          -1.3076089436070896e-06,
+          0.9396935732373798,
+          0.0
+        ],
+        [
+          0.046500139001482164,
+          -3.38600045779458e-08,
+          0.06720042363232535,
+          1.0
+        ]
+      ]
+    },
+    "/World/jetbot/chassis/rgb_camera/jetbot_camera": {
+      "type": "Camera",
+      "to_chassis_row_matrix": [
+        [
+          1.1353641184479683e-07,
+          -1.0000015028778482,
+          -1.0956774776882415e-06,
+          0.0
+        ],
+        [
+          0.3420206231280803,
+          -1.3076075404728464e-06,
+          0.9396925650555504,
+          0.0
+        ],
+        [
+          -0.9396958796214612,
+          -5.967541123324006e-07,
+          0.3420208172261949,
+          0.0
+        ],
+        [
+          0.046500139001482164,
+          -3.38600045779458e-08,
+          0.06720042363232535,
+          1.0
+        ]
+      ]
+    },
+    "/World/jetbot/chassis/imu": {
+      "type": "Xform",
+      "to_chassis_row_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.06,
+          1.0
+        ]
+      ]
+    },
+    "/World/jetbot/chassis/imu/Imu_Sensor": {
+      "type": "IsaacImuSensor",
+      "to_chassis_row_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.06,
+          1.0
+        ]
+      ]
+    },
+    "/World/jetbot/chassis/lidar": {
+      "type": "Xform",
+      "to_chassis_row_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.1,
+          1.0
+        ]
+      ]
+    },
+    "/World/jetbot/chassis/lidar/XT_32_10hz": {
+      "type": "Xform",
+      "to_chassis_row_matrix": [
+        [
+          0.2,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.2,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.2,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.1,
+          1.0
+        ]
+      ]
+    },
+    "/World/jetbot/chassis/lidar/XT_32_10hz/PandarXT_32_10hz": {
+      "type": "Camera",
+      "to_chassis_row_matrix": [
+        [
+          0.2,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.2,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.2,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.1,
+          1.0
+        ]
+      ]
+    }
+  },
+  "cameras": {
+    "/World/jetbot/chassis/rgb_camera/jetbot_camera": {
+      "focalLength": "0.75",
+      "horizontalAperture": "2.3499999046325684",
+      "verticalAperture": "2.3499999046325684",
+      "clippingRange": "(0.1, 1000000)",
+      "cameraSensorType": "None",
+      "sensorModelPluginName": "None",
+      "sensorModelConfig": "None"
+    },
+    "/World/jetbot/chassis/lidar/XT_32_10hz/PandarXT_32_10hz": {
+      "focalLength": "0.5",
+      "horizontalAperture": "0.20954999327659607",
+      "verticalAperture": "0.15290799736976624",
+      "clippingRange": "(0.01, 10000)",
+      "cameraSensorType": "lidar",
+      "sensorModelPluginName": "omni.sensors.nv.lidar.lidar_core.plugin",
+      "sensorModelConfig": "Hesai_XT32_SD10"
+    }
+  },
+  "authored_nodes": {
+    "/World/ROS2/differential_controller/OnPlaybackTick": {
+      "node:type": "omni.graph.action.OnPlaybackTick"
+    },
+    "/World/ROS2/differential_controller/DifferentialController": {
+      "inputs:wheelDistance": "0.11249999701976776",
+      "inputs:wheelRadius": "0.029999999329447746",
+      "node:type": "isaacsim.robot.wheeled_robots.DifferentialController"
+    },
+    "/World/ROS2/differential_controller/ArticulationController": {
+      "node:type": "isaacsim.core.nodes.IsaacArticulationController"
+    },
+    "/World/ROS2/differential_controller/ArrayNames": {
+      "inputs:arraySize": "2",
+      "inputs:arrayType": "token[]",
+      "inputs:input0": "left_wheel_joint",
+      "inputs:input1": "right_wheel_joint",
+      "node:type": "omni.graph.nodes.ConstructArray"
+    },
+    "/World/ROS2/differential_controller/ros2_subscribe_twist": {
+      "node:type": "isaacsim.ros2.bridge.ROS2SubscribeTwist"
+    },
+    "/World/ROS2/differential_controller/ros2_context": {
+      "node:type": "isaacsim.ros2.bridge.ROS2Context"
+    },
+    "/World/ROS2/differential_controller/break_3_vector": {
+      "node:type": "omni.graph.nodes.BreakVector3"
+    },
+    "/World/ROS2/differential_controller/break_3_vector_01": {
+      "node:type": "omni.graph.nodes.BreakVector3"
+    },
+    "/World/ROS2/differential_controller/scale_to_from_stage_units": {
+      "node:type": "isaacsim.core.nodes.OgnIsaacScaleToFromStageUnit"
+    },
+    "/World/ROS2/ROS_Clock/OnPlaybackTick": {
+      "node:type": "omni.graph.action.OnPlaybackTick"
+    },
+    "/World/ROS2/ROS_Clock/ReadSimTime": {
+      "inputs:resetOnStop": "False",
+      "node:type": "isaacsim.core.nodes.IsaacReadSimulationTime"
+    },
+    "/World/ROS2/ROS_Clock/PublishClock": {
+      "node:type": "isaacsim.ros2.bridge.ROS2PublishClock"
+    },
+    "/World/ROS2/ROS_Clock/Context": {
+      "node:type": "isaacsim.ros2.bridge.ROS2Context"
+    },
+    "/World/ROS2/ROS_Camera/on_playback_tick": {
+      "node:type": "omni.graph.action.OnPlaybackTick"
+    },
+    "/World/ROS2/ROS_Camera/isaac_create_render_product": {
+      "node:type": "isaacsim.core.nodes.IsaacCreateRenderProduct"
+    },
+    "/World/ROS2/ROS_Camera/isaac_run_one_simulation_frame": {
+      "node:type": "isaacsim.core.nodes.OgnIsaacRunOneSimulationFrame"
+    },
+    "/World/ROS2/ROS_Camera/ros2_camera_helper": {
+      "inputs:frameId": "jetbot_camera",
+      "node:type": "isaacsim.ros2.bridge.ROS2CameraHelper"
+    },
+    "/World/ROS2/ROS_Camera/ros2_context": {
+      "node:type": "isaacsim.ros2.bridge.ROS2Context"
+    },
+    "/World/ROS2/ROS_IMU/on_playback_tick": {
+      "node:type": "omni.graph.action.OnPlaybackTick"
+    },
+    "/World/ROS2/ROS_IMU/ros2_context": {
+      "node:type": "isaacsim.ros2.bridge.ROS2Context"
+    },
+    "/World/ROS2/ROS_IMU/isaac_read_imu_node": {
+      "inputs:useLatestData": "False",
+      "node:type": "isaacsim.sensors.physics.IsaacReadIMU"
+    },
+    "/World/ROS2/ROS_IMU/isaac_read_simulation_time": {
+      "node:type": "isaacsim.core.nodes.IsaacReadSimulationTime"
+    },
+    "/World/ROS2/ROS_IMU/ros2_publish_imu": {
+      "inputs:frameId": "imu",
+      "node:type": "isaacsim.ros2.bridge.ROS2PublishImu"
+    },
+    "/World/ROS2/ROS_Lidar/on_playback_tick": {
+      "node:type": "omni.graph.action.OnPlaybackTick"
+    },
+    "/World/ROS2/ROS_Lidar/isaac_run_one_simulation_frame": {
+      "node:type": "isaacsim.core.nodes.OgnIsaacRunOneSimulationFrame"
+    },
+    "/World/ROS2/ROS_Lidar/isaac_create_render_product": {
+      "node:type": "isaacsim.core.nodes.IsaacCreateRenderProduct"
+    },
+    "/World/ROS2/ROS_Lidar/ros2_context": {
+      "node:type": "isaacsim.ros2.bridge.ROS2Context"
+    },
+    "/World/ROS2/ROS_Lidar/ros2_rtx_lidar_helper_pointcloud": {
+      "inputs:frameId": "lidar",
+      "inputs:showDebugView": "False",
+      "inputs:topicName": "point_cloud",
+      "inputs:type": "point_cloud",
+      "node:type": "isaacsim.ros2.bridge.ROS2RtxLidarHelper"
+    },
+    "/World/ROS2/ROS_Lidar/ros2_rtx_lidar_helper_scan": {
+      "inputs:frameId": "lidar",
+      "inputs:showDebugView": "False",
+      "node:type": "isaacsim.ros2.bridge.ROS2RtxLidarHelper"
+    },
+    "/World/ROS2/ROS_Odom/ros2_context": {
+      "node:type": "isaacsim.ros2.bridge.ROS2Context"
+    },
+    "/World/ROS2/ROS_Odom/on_playback_tick": {
+      "node:type": "omni.graph.action.OnPlaybackTick"
+    },
+    "/World/ROS2/ROS_Odom/isaac_compute_odometry_node": {
+      "node:type": "isaacsim.core.nodes.IsaacComputeOdometry"
+    },
+    "/World/ROS2/ROS_Odom/ros2_publish_odometry": {
+      "inputs:chassisFrameId": "chassis",
+      "node:type": "isaacsim.ros2.bridge.ROS2PublishOdometry"
+    },
+    "/World/ROS2/ROS_Odom/ros2_publish_raw_transform_tree": {
+      "inputs:childFrameId": "chassis",
+      "node:type": "isaacsim.ros2.bridge.ROS2PublishRawTransformTree"
+    },
+    "/World/ROS2/ROS_Odom/isaac_read_simulation_time": {
+      "node:type": "isaacsim.core.nodes.IsaacReadSimulationTime"
+    },
+    "/World/ROS2/ROS_TF/on_playback_tick": {
+      "node:type": "omni.graph.action.OnPlaybackTick"
+    },
+    "/World/ROS2/ROS_TF/ros2_publish_transform_tree": {
+      "inputs:staticPublisher": "True",
+      "inputs:topicName": "tf_static",
+      "node:type": "isaacsim.ros2.bridge.ROS2PublishTransformTree"
+    },
+    "/World/ROS2/ROS_TF/isaac_read_simulation_time": {
+      "node:type": "isaacsim.core.nodes.IsaacReadSimulationTime"
+    },
+    "/World/ROS2/ROS_TF/ros2_context": {
+      "node:type": "isaacsim.ros2.bridge.ROS2Context"
+    }
+  }
+}

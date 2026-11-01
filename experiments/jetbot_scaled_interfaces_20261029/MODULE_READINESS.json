@@ -1,0 +1,44 @@
+{
+  "samples": 249,
+  "counts": {
+    "odometry": 1771,
+    "rgb": 299,
+    "intrinsics": 299,
+    "depth": 299,
+    "scan": 298,
+    "global_plan": 147
+  },
+  "last": {
+    "rgb_stamp": 38.889999131,
+    "rgb_frame": "jetbot/camera_optical",
+    "rgb_shape": [
+      240,
+      320,
+      3
+    ],
+    "scan_frame": "chassis",
+    "scan_bins": 1440,
+    "odometry_frame": "odom",
+    "body_frame": "chassis",
+    "plan_frame": "map",
+    "plan_points": 2,
+    "image_intrinsics_same_header": true,
+    "rgb_valid": true,
+    "depth_valid": true,
+    "depth_encoding": "32FC1",
+    "depth_units": "m optical Z",
+    "depth_finite_pixels": 76800,
+    "wall_ages_s": {
+      "odometry": 0.01609687599921017,
+      "rgb": 0.24878329100101837,
+      "intrinsics": 0.24845362099949853,
+      "depth": 0.18594898199989984,
+      "scan": 0.4968457139984821,
+      "global_plan": 0.9784153379987401
+    },
+    "truth_input": false,
+    "velocity_publisher": false
+  },
+  "fresh_for_control": true,
+  "format_checks_passed": true
+}

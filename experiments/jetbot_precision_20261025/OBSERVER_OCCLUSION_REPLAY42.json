@@ -1,0 +1,8 @@
+{
+  "scope": "offline geometric replay of measured42 trajectory against CAD/actual props, not a rendered run",
+  "frames": 6097,
+  "blocked_sightlines": 0,
+  "minimum_observer_distance_m": 2.3000000000000003,
+  "distance_contracting_samples": 167,
+  "passed": true
+}

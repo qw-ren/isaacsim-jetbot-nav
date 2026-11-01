@@ -1,0 +1,1 @@
+{"wall": 15603.39032508, "sim": 15.08, "armed": false, "reason": "INPUT_TIMEOUT", "fault": "INPUT_TIMEOUT", "output": [0.0, 0.0], "predicted_clearance_m": null, "scan_stamp": 15.08, "stream_wall_ages": {"clock": 0.26361747100054345, "odom": 0.2630636100002448, "scan": 0.2627558690001024, "input": 0.2003600780008128}}

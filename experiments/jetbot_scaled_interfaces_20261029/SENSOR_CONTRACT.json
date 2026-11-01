@@ -1,0 +1,112 @@
+{
+  "mounts": {
+    "jetbot/imu": {
+      "R": [
+        [
+          1.0,
+          -1.5021599923962983e-21,
+          0.0
+        ],
+        [
+          1.5021599923962983e-21,
+          1.0,
+          -3.76158192263132e-37
+        ],
+        [
+          0.0,
+          3.76158192263132e-37,
+          1.0
+        ]
+      ],
+      "T": [
+        9.147955830346444e-20,
+        0.0,
+        0.18
+      ],
+      "authored_scale": [
+        1.0000000000000002,
+        1.0,
+        1.0
+      ]
+    },
+    "jetbot/lidar": {
+      "R": [
+        [
+          1.0,
+          -2.7710550520526427e-21,
+          2.5489470578119236e-57
+        ],
+        [
+          2.7710550520526427e-21,
+          1.0,
+          -7.52316384526264e-37
+        ],
+        [
+          0.0,
+          7.52316384526264e-37,
+          1.0
+        ]
+      ],
+      "T": [
+        1.0164395367051604e-20,
+        0.0,
+        0.30000000000000004
+      ],
+      "authored_scale": [
+        0.20000000000000004,
+        0.2,
+        0.2
+      ]
+    },
+    "jetbot/camera_optical": {
+      "R": [
+        [
+          1.3900152873331096e-07,
+          -0.342020100629283,
+          0.9396926363261101
+        ],
+        [
+          -0.9999999999992061,
+          1.1293189292928486e-06,
+          5.589607520153134e-07
+        ],
+        [
+          -1.2523884945814134e-06,
+          -0.9396926363254421,
+          -0.3420201006288542
+        ]
+      ],
+      "T": [
+        0.13950040673416358,
+        2.560484211322489e-07,
+        0.20160125084917402
+      ],
+      "authored_scale": [
+        1.0000033630126908,
+        1.0000015206820232,
+        1.0000000237087046
+      ]
+    }
+  },
+  "imu_orientation_valid": false,
+  "native_imu_no_added_noise": true,
+  "depth_enabled": false,
+  "depth_contract": "32FC1 meters along optical Z, same RGB render product/header/intrinsics, NaN invalid",
+  "truth_topics": [
+    "/truth/jetbot_odom"
+  ],
+  "navigation_truth_input": false,
+  "tf_parent": "chassis",
+  "dynamic_tf_owner": "external FAST-LIVO adapter only",
+  "point_timing": "same-render-product frame clock plus native per-ray deltaTimes; moving validation case37",
+  "scan_timing": "native acquisition midpoint, raw IMU gyro yaw deskew only; translation uncompensated",
+  "command_topic": "/jetbot/cmd_vel",
+  "command_caps": [
+    0.8,
+    0.6
+  ],
+  "joint_limits_modified": false,
+  "command_timeout_wall_s": 0.35,
+  "command_timeout_sim_s": 0.35,
+  "simulation_only": true
+}

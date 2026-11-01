@@ -1,0 +1,12 @@
+{
+  "exit_code": 0,
+  "error": null,
+  "elapsed_wall_s": 57.29825055099991,
+  "children": [
+    {
+      "pid": 12622,
+      "exit_code": 0
+    }
+  ],
+  "power_operation": false
+}

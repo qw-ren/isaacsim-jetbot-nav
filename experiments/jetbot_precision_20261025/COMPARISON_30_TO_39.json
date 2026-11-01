@@ -1,0 +1,114 @@
+{
+  "scope": "offline no-fit comparison; independent runs, different avoidance trajectories, not statistical causal proof",
+  "rows": [
+    {
+      "case": "video_20261025_30",
+      "metrics": {
+        "navigation": {
+          "time_rmse_m": 0.09229551613758694,
+          "distance_weighted_rmse_m": 0.09153228245587436,
+          "moving_time_rmse_m": 0.09194750752852059,
+          "moving_threshold_reference_m_s": 0.1,
+          "p95_m": 0.1658066050853228
+        },
+        "livo": {
+          "time_rmse_m": 0.06582245921795758,
+          "distance_weighted_rmse_m": 0.06257689083361181,
+          "moving_time_rmse_m": 0.0631953830303684,
+          "moving_threshold_reference_m_s": 0.1,
+          "p95_m": 0.1275005275505894
+        }
+      },
+      "actual_goal_distance_m": 0.014436512014563474,
+      "actual_path_m": 38.952653641681025
+    },
+    {
+      "case": "precision_20261025_31",
+      "metrics": {
+        "navigation": {
+          "time_rmse_m": 0.09863367198986564,
+          "distance_weighted_rmse_m": 0.10051218792015432,
+          "moving_time_rmse_m": 0.100962476378591,
+          "moving_threshold_reference_m_s": 0.1,
+          "p95_m": 0.16133363933039963
+        },
+        "livo": {
+          "time_rmse_m": 0.06998880273902004,
+          "distance_weighted_rmse_m": 0.06842915444840977,
+          "moving_time_rmse_m": 0.06892930429620012,
+          "moving_threshold_reference_m_s": 0.1,
+          "p95_m": 0.1295585789413407
+        }
+      },
+      "actual_goal_distance_m": 0.09252975594462834,
+      "actual_path_m": 38.370736956907606
+    },
+    {
+      "case": "precision_20261025_32",
+      "metrics": {
+        "navigation": {
+          "time_rmse_m": 0.09315319067566179,
+          "distance_weighted_rmse_m": 0.09589536617917327,
+          "moving_time_rmse_m": 0.09566727944556251,
+          "moving_threshold_reference_m_s": 0.1,
+          "p95_m": 0.1656508169450116
+        },
+        "livo": {
+          "time_rmse_m": 0.07400432592999345,
+          "distance_weighted_rmse_m": 0.07350209811770998,
+          "moving_time_rmse_m": 0.0739829247133835,
+          "moving_threshold_reference_m_s": 0.1,
+          "p95_m": 0.13105185319507795
+        }
+      },
+      "actual_goal_distance_m": 0.036980934556455486,
+      "actual_path_m": 38.84096005745633
+    },
+    {
+      "case": "precision_20261025_38",
+      "metrics": {
+        "navigation": {
+          "time_rmse_m": 0.1150042582179622,
+          "distance_weighted_rmse_m": 0.11776326708159184,
+          "moving_time_rmse_m": 0.1175999572066438,
+          "moving_threshold_reference_m_s": 0.1,
+          "p95_m": 0.16817284378762182
+        },
+        "livo": {
+          "time_rmse_m": 0.048697940633834196,
+          "distance_weighted_rmse_m": 0.04876166387759913,
+          "moving_time_rmse_m": 0.0489185567516989,
+          "moving_threshold_reference_m_s": 0.1,
+          "p95_m": 0.07221254570089677
+        }
+      },
+      "actual_goal_distance_m": 0.03653803178606659,
+      "actual_path_m": 38.49559036217145
+    },
+    {
+      "case": "precision_20261025_39",
+      "metrics": {
+        "navigation": {
+          "time_rmse_m": 0.06464201066718211,
+          "distance_weighted_rmse_m": 0.06606445484758594,
+          "moving_time_rmse_m": 0.06584626315565494,
+          "moving_threshold_reference_m_s": 0.1,
+          "p95_m": 0.09356962235531638
+        },
+        "livo": {
+          "time_rmse_m": 0.011800015100182115,
+          "distance_weighted_rmse_m": 0.010658013610846005,
+          "moving_time_rmse_m": 0.010681721416443055,
+          "moving_threshold_reference_m_s": 0.1,
+          "p95_m": 0.021952961048527533
+        }
+      },
+      "actual_goal_distance_m": 0.06631930100918125,
+      "actual_path_m": 38.47092280646651
+    }
+  ],
+  "native_imu": true,
+  "truth_online": false,
+  "defaults_changed": false,
+  "repeat_case": "precision_20261025_40 currently running"
+}

@@ -1,0 +1,7 @@
+{
+  "source": "ppo",
+  "fault": "SELECTED_SOURCE_TIMEOUT",
+  "published": 184,
+  "shutdown_zero": true,
+  "automatic_fallback": false
+}

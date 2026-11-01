@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "domain": 52,
+  "real_robot_or_simulator_connected": false,
+  "model_implemented": false,
+  "results": [
+    {
+      "mode": "nav2",
+      "selected_forwarded": true,
+      "unselected_ignored": true,
+      "stale_zero_and_latched": true,
+      "automatic_resume": false
+    },
+    {
+      "mode": "ppo",
+      "selected_forwarded": true,
+      "unselected_ignored": true,
+      "stale_zero_and_latched": true,
+      "automatic_resume": false
+    }
+  ]
+}

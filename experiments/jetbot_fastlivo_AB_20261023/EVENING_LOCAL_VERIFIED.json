@@ -1,0 +1,12 @@
+{
+  "archive": "jetbot_evening_20261023_01.tar.gz",
+  "bytes": 43149842,
+  "sha256": "8903190d3d9e63eefed5dd15df610f91b81a1f0f44957e1c5c6ee6d9412cd6f8",
+  "manifest_files_verified": 574,
+  "archive_members_safe": true,
+  "active_workers_at_archive": [],
+  "native_navigation_status": 4,
+  "auditor_exit_exception_preserved": true,
+  "auditor_shutdown_fix_isolated_test_passed": true,
+  "packaged_navigation_sensor_semantics_equal_frozen20": true
+}

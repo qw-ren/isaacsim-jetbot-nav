@@ -1,0 +1,37 @@
+{
+  "scope": "incremental chain; full Isaac/ROS/assets installation still required; prior archives preserved",
+  "archives": {
+    "jetbot_migration_20261023_01.tar.gz": {
+      "bytes": 85636883,
+      "sha256": "6a6db65a147b95e508364f599fccc520dcd116c7f6e0ee2a32763fe58b71dfbd"
+    },
+    "jetbot_evening_20261023_01.tar.gz": {
+      "bytes": 43149842,
+      "sha256": "8903190d3d9e63eefed5dd15df610f91b81a1f0f44957e1c5c6ee6d9412cd6f8"
+    },
+    "jetbot_endpoint_20261023_01.tar.gz": {
+      "bytes": 15043866,
+      "sha256": "c2a8e1b7d4a6e430a8b46b97b3701fe27e3e2c06a9330ecbf1e3db6cf23f24bb"
+    },
+    "long23_20261023.tar.gz": {
+      "bytes": 16680340,
+      "sha256": "bbfadaa512c88379f2a9b299c47924371285652ca3caa45f595d746233ab1f23"
+    },
+    "long24_20261023.tar.gz": {
+      "bytes": 18099930,
+      "sha256": "59545ed8f4feadabec40e5e11c1d43b716f90b6ddbdd37cdf1a74985eec07d4d"
+    },
+    "operator26_20261023.tar.gz": {
+      "bytes": 5147493,
+      "sha256": "d83670cf2e58be73909f6f9cf74f28d9ec2bfd786b8c958dcca3199f9ebacfe2"
+    },
+    "jetbot_gui_20261023_01.tar.gz": {
+      "bytes": 14985623,
+      "sha256": "db939c0f2ed7bf8e7b9f5f3a50d69a30510826d7b130c33ba16751b984875a27"
+    },
+    "jetbot_operator_ab_20261023_01.tar.gz": {
+      "bytes": 10794673,
+      "sha256": "d9befb95c95b73c87c040be4aed3b9fa46135a7a949741fd5513a5eb4ce5176c"
+    }
+  }
+}

@@ -1,0 +1,298 @@
+{
+  "scope": "single recorded JetBot run; raw IMU-origin estimator outputs converted to chassis; offline reference only",
+  "calibration_window_s": [
+    1,
+    3
+  ],
+  "evaluation_begin_s": 7.0,
+  "alignment": "stationary IMU mean (1..3s) rotated by first estimator pose for gravity tilt, first chassis origin -> declared (0,6); declared yaw primary, initial estimated heading normalization secondary; no full trajectory fitting",
+  "imu_lever_m": [
+    9.147955830346444e-20,
+    0.0,
+    0.18
+  ],
+  "methods": {
+    "lio": {
+      "output_samples": 545,
+      "first_stamp_s": 3.549992621,
+      "last_stamp_s": 68.849992672,
+      "maximum_output_gap_s": 0.14000000500000453,
+      "initial_heading_deg": -0.03611920391178992,
+      "input": {
+        "imu_topic": "/lio/imu",
+        "rate": 0.5,
+        "domain": "57",
+        "truth_replayed": false,
+        "counts": {
+          "/lio/imu": 13198,
+          "/livo/image_raw": 550,
+          "/lio/points_frame20ms": 548
+        },
+        "source_database": "/home/admin/jetbot-warehouse/comparison_20261029_56_slow/capture/sensors.sqlite3",
+        "requested_begin_s": 3.0,
+        "transport": "reliable ROS2 default subscriptions, confirmed by source and graph",
+        "common_sensor_end_s": 68.98500061,
+        "last_input_stamp_s": 68.98500061,
+        "wall_seconds": 156.3062152770001,
+        "point_input_sha256": "84c52facb0008278286e0a64dc1313f2f942f30564c56a565d3a84462417b72f",
+        "imu_timestamps_sha256": "85d8a5f952e66d239f64245a5a1d8b783b9d0bfd34229992488aaa81566841ee",
+        "imu_input_sha256": "676abf3cf5ac6b44ec8ff4a14510ed0385f779fd340208b9d916de3d47dc8052",
+        "image_input_sha256": "5c90d43b97e8ab9dc20064dee12e46d384576366b46d02aa7cecd7249e3a625c",
+        "error": null,
+        "output_poses": 545,
+        "last_output_stamp_s": 68.849992672
+      },
+      "declared_yaw": {
+        "position_xy_m": {
+          "rmse": 0.11232746622039007,
+          "median": 0.11911364395687651,
+          "p95": 0.1336769717110412,
+          "maximum": 0.14282378101955423,
+          "final": 0.13404001218038303
+        },
+        "yaw_deg": {
+          "rmse": 0.11192324539298791,
+          "median": 0.08106300937077901,
+          "p95": 0.1979129652876094,
+          "maximum": 0.46783818040701264,
+          "final": 0.04747849932688121
+        },
+        "coverage_grid_fraction": 1.0,
+        "position_xy_valid_only_m": {
+          "rmse": 0.11232746622039007,
+          "median": 0.11911364395687651,
+          "p95": 0.1336769717110412,
+          "maximum": 0.14282378101955423,
+          "final": 0.13404001218038303
+        }
+      },
+      "initial_heading": {
+        "position_xy_m": {
+          "rmse": 0.10335295324640263,
+          "median": 0.10939312816389614,
+          "p95": 0.12104445171299473,
+          "maximum": 0.13061941300593455,
+          "final": 0.12397591134606618
+        },
+        "yaw_deg": {
+          "rmse": 0.08949870993550879,
+          "median": 0.054206673915454,
+          "p95": 0.17086792880974813,
+          "maximum": 0.4317189764952194,
+          "final": 0.08359770323864886
+        },
+        "coverage_grid_fraction": 1.0,
+        "position_xy_valid_only_m": {
+          "rmse": 0.10335295324640263,
+          "median": 0.10939312816389614,
+          "p95": 0.12104445171299473,
+          "maximum": 0.13061941300593455,
+          "final": 0.12397591134606618
+        }
+      },
+      "relative_translation_1s_m": {
+        "rmse": 0.009940690989036409,
+        "median": 0.005709223112591211,
+        "p95": 0.018243135198490395,
+        "maximum": 0.04821823726201701,
+        "final": 0.0056387445179333735
+      },
+      "evaluation_coverage_until_s": 68.849992672,
+      "reference_end_gap_s": 0.12000578640036963,
+      "reference_interval_coverage_fraction": 0.9980634857288091
+    },
+    "livo": {
+      "output_samples": 546,
+      "first_stamp_s": 3.409999924,
+      "last_stamp_s": 68.829998462,
+      "maximum_output_gap_s": 0.13999999600000024,
+      "initial_heading_deg": 0.06539988918535694,
+      "input": {
+        "imu_topic": "/lio/imu",
+        "rate": 0.5,
+        "domain": "57",
+        "truth_replayed": false,
+        "counts": {
+          "/lio/imu": 13198,
+          "/livo/image_raw": 550,
+          "/lio/points_frame20ms": 548
+        },
+        "source_database": "/home/admin/jetbot-warehouse/comparison_20261029_56_slow/capture/sensors.sqlite3",
+        "requested_begin_s": 3.0,
+        "transport": "reliable ROS2 default subscriptions, confirmed by source and graph",
+        "common_sensor_end_s": 68.98500061,
+        "last_input_stamp_s": 68.98500061,
+        "wall_seconds": 156.1780643300001,
+        "point_input_sha256": "84c52facb0008278286e0a64dc1313f2f942f30564c56a565d3a84462417b72f",
+        "imu_timestamps_sha256": "85d8a5f952e66d239f64245a5a1d8b783b9d0bfd34229992488aaa81566841ee",
+        "imu_input_sha256": "676abf3cf5ac6b44ec8ff4a14510ed0385f779fd340208b9d916de3d47dc8052",
+        "image_input_sha256": "5c90d43b97e8ab9dc20064dee12e46d384576366b46d02aa7cecd7249e3a625c",
+        "error": null,
+        "output_poses": 1091,
+        "last_output_stamp_s": 68.829998462
+      },
+      "declared_yaw": {
+        "position_xy_m": {
+          "rmse": 0.01491511496226629,
+          "median": 0.012387935351999836,
+          "p95": 0.025072395177891775,
+          "maximum": 0.037377431127830825,
+          "final": 0.01644008007625939
+        },
+        "yaw_deg": {
+          "rmse": 0.09135498786939598,
+          "median": 0.026653884203789193,
+          "p95": 0.19018560400795634,
+          "maximum": 0.7859430029663793,
+          "final": 0.3198950928950433
+        },
+        "coverage_grid_fraction": 1.0,
+        "position_xy_valid_only_m": {
+          "rmse": 0.01491511496226629,
+          "median": 0.012387935351999836,
+          "p95": 0.025072395177891775,
+          "maximum": 0.037377431127830825,
+          "final": 0.01644008007625939
+        }
+      },
+      "initial_heading": {
+        "position_xy_m": {
+          "rmse": 0.01886644075406273,
+          "median": 0.018913024275185035,
+          "p95": 0.02789483861735915,
+          "maximum": 0.037950919597096996,
+          "final": 0.01992846654330855
+        },
+        "yaw_deg": {
+          "rmse": 0.09695134427354002,
+          "median": 0.06278578715571055,
+          "p95": 0.18109179828586494,
+          "maximum": 0.8513428921517321,
+          "final": 0.2544952037096649
+        },
+        "coverage_grid_fraction": 1.0,
+        "position_xy_valid_only_m": {
+          "rmse": 0.01886644075406273,
+          "median": 0.018913024275185035,
+          "p95": 0.02789483861735915,
+          "maximum": 0.037950919597096996,
+          "final": 0.01992846654330855
+        }
+      },
+      "relative_translation_1s_m": {
+        "rmse": 0.008367023003002568,
+        "median": 0.005527718414221113,
+        "p95": 0.017635857056206312,
+        "maximum": 0.026559077970110548,
+        "final": 0.00626955857624454
+      },
+      "evaluation_coverage_until_s": 68.829998462,
+      "reference_end_gap_s": 0.13999999640036265,
+      "reference_interval_coverage_fraction": 0.997740842344956
+    },
+    "livo_no_image": {
+      "output_samples": 546,
+      "first_stamp_s": 3.429992624,
+      "last_stamp_s": 68.849992672,
+      "maximum_output_gap_s": 0.14000000500000453,
+      "initial_heading_deg": -0.0371032509236336,
+      "input": {
+        "imu_topic": "/lio/imu",
+        "rate": 0.5,
+        "domain": "57",
+        "truth_replayed": false,
+        "counts": {
+          "/lio/imu": 13198,
+          "/livo/image_raw": 550,
+          "/lio/points_frame20ms": 548
+        },
+        "source_database": "/home/admin/jetbot-warehouse/comparison_20261029_56_slow/capture/sensors.sqlite3",
+        "requested_begin_s": 3.0,
+        "transport": "reliable ROS2 default subscriptions, confirmed by source and graph",
+        "common_sensor_end_s": 68.98500061,
+        "last_input_stamp_s": 68.98500061,
+        "wall_seconds": 156.481828339,
+        "point_input_sha256": "84c52facb0008278286e0a64dc1313f2f942f30564c56a565d3a84462417b72f",
+        "imu_timestamps_sha256": "85d8a5f952e66d239f64245a5a1d8b783b9d0bfd34229992488aaa81566841ee",
+        "imu_input_sha256": "676abf3cf5ac6b44ec8ff4a14510ed0385f779fd340208b9d916de3d47dc8052",
+        "image_input_sha256": "5c90d43b97e8ab9dc20064dee12e46d384576366b46d02aa7cecd7249e3a625c",
+        "error": null,
+        "output_poses": 546,
+        "last_output_stamp_s": 68.849992672
+      },
+      "declared_yaw": {
+        "position_xy_m": {
+          "rmse": 0.03980845017507785,
+          "median": 0.042218567123489634,
+          "p95": 0.054308477728461875,
+          "maximum": 0.060466011837774634,
+          "final": 0.04364577763923123
+        },
+        "yaw_deg": {
+          "rmse": 0.08795984555995931,
+          "median": 0.05820184898097764,
+          "p95": 0.179768035785253,
+          "maximum": 0.46444342432801106,
+          "final": 0.04430241001971629
+        },
+        "coverage_grid_fraction": 1.0,
+        "position_xy_valid_only_m": {
+          "rmse": 0.03980845017507785,
+          "median": 0.042218567123489634,
+          "p95": 0.054308477728461875,
+          "maximum": 0.060466011837774634,
+          "final": 0.04364577763923123
+        }
+      },
+      "initial_heading": {
+        "position_xy_m": {
+          "rmse": 0.031348154126110354,
+          "median": 0.030916514866464614,
+          "p95": 0.04754758595329186,
+          "maximum": 0.054231369299057315,
+          "final": 0.03315142557248991
+        },
+        "yaw_deg": {
+          "rmse": 0.07962751331063715,
+          "median": 0.03317565678825188,
+          "p95": 0.1822265879459718,
+          "maximum": 0.5015466752516571,
+          "final": 0.0814056609433622
+        },
+        "coverage_grid_fraction": 1.0,
+        "position_xy_valid_only_m": {
+          "rmse": 0.031348154126110354,
+          "median": 0.030916514866464614,
+          "p95": 0.04754758595329186,
+          "maximum": 0.054231369299057315,
+          "final": 0.03315142557248991
+        }
+      },
+      "relative_translation_1s_m": {
+        "rmse": 0.00918204295699719,
+        "median": 0.00538060053934297,
+        "p95": 0.020092865941244504,
+        "maximum": 0.03141167449908558,
+        "final": 0.005323641342003368
+      },
+      "evaluation_coverage_until_s": 68.849992672,
+      "reference_end_gap_s": 0.12000578640036963,
+      "reference_interval_coverage_fraction": 0.9980634857288091
+    }
+  },
+  "first_motion_stamp_s": 3.6699999179691076,
+  "reference_end_s": 68.96999845840037,
+  "common_interval_s": [
+    7.0,
+    68.829998462
+  ],
+  "common_grid_samples": 1237,
+  "grid_dt_s": 0.05,
+  "identical_replayed_inputs": {
+    "point_input_sha256": true,
+    "imu_input_sha256": true,
+    "imu_timestamps_sha256": true,
+    "image_input_sha256": true
+  },
+  "truth_xy_path_m": 43.660076343873385
+}

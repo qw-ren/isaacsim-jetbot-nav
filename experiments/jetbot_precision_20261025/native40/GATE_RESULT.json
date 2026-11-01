@@ -1,0 +1,8 @@
+{
+  "fault": null,
+  "last_reason": "DISARMED",
+  "runtime_error": null,
+  "shutdown_zero_published": true,
+  "automatic_rearm": false,
+  "simulation_only": true
+}

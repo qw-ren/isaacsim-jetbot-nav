@@ -1,0 +1,27 @@
+{
+  "checks": {
+    "published_python_syntax": true,
+    "shell_and_embedded_python_syntax": true,
+    "actual_raw_guard_rejects_nan_lateral_after_projection": true,
+    "actual_raw_guard_rejects_excess_raw_lateral_speed_after_projection": true,
+    "valid_projected_sample_accepted": true,
+    "profile_overrides_identical_across_three_regression_configs": true,
+    "prior_installer_install_verify_nooverwrite_corruption_rejection": true
+  },
+  "source_sha256": {
+    "check_navigation.py": "2d6635f316391adb4165065103886dcab5363d92c526e8e61939352f1e19f453",
+    "manage_jetbot.sh": "d5f4ebf76a46a48b3d40ce64b13d378fd79b58033e95ca1da36186a2e10108dc",
+    "nav2.yaml": "556d565f55e791e93686b8494d76d1ada5e8dbb95c1e250d4bb00e5d109a60d4",
+    "nav_odometry.py": "385a277e601f568a2e76f9a1dadb5cb3472e787940bc072c4ae38b2b153bcf5c",
+    "prepare_fixture_prior.py": "27bd9a5f00de97f72fc49e8f3faf8a2a578d13ef9e510c1a073aecd55c22f20b",
+    "supervise.py": "5059242a998ad07a25218e265b4293cb06f85730010b9b36a558a5578fe0424f",
+    "evaluate_endpoint_pose.py": "65e00b2df1485266c480a6f4abe7157e286f1a1e7d6bd414aa241382fd38b34b",
+    "evaluate_localization_accuracy.py": "95df0b689595c4d0473915107dbf593180dc17d2b94811f1d19e97a2e8687e6f",
+    "summarize_freeze_trial.py": "de6f6ac82b9fc3fd4d4f51ee825ef04d007295c32d7f24523bee856b6866bcd5",
+    "build_localization_mesh_prior.py": "a18e63fabc72f3b19bad2262c6650f169dcf5f74db9b91a828ad95a3a062a774",
+    "install_localization_prior.py": "dd0d72368c5e8e7bcd6ea0bfc311887526aa2a2dde68aa462024b48249685168",
+    "compare_scan_likelihood.py": "c35333b99a2ef8bbaafe8f8d22d4f2cbf897b9ef037dc432191b6c28d4a37d1d",
+    "analyze_localization_residuals.py": "9630255123cf990574344fb5c7923e15cb8e03023c1a9bd33c59993c2f72e770"
+  },
+  "note": "Local syntax and edge checks; cloud case summaries separately record actual navigation. No ROS or Isaac simulation mocked as functional validation."
+}

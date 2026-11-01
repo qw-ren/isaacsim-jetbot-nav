@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "facts": {
+    "nearest_one_degree_bin": true,
+    "wraparound_minimum": true,
+    "nearest_return_preserved": true,
+    "unobserved_is_unknown": true,
+    "frame_is_chassis": true
+  },
+  "source_sha256": "7fd79b0007d04a733b6f6e167d996105d25bc0a78850d5f6b0315bfdf5768b37",
+  "scope": "actual publish_scan method, known geometric rays; does not prove navigation accuracy"
+}

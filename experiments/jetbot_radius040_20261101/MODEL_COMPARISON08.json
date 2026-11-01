@@ -1,0 +1,316 @@
+{
+  "case": "radius040_BA_diag_20261101_08",
+  "scope": "Offline model comparison only; not attribution of historical case06 fault. DWB path transformed relative to its first pose; constant model endpoint uses same selected velocity and 1.5s. No scan points or rejected path in successful case08.",
+  "selected_samples": 2461,
+  "endpoint_difference_m": {
+    "median": 0.0017748217680255102,
+    "p95": 0.01918610005369404,
+    "maximum": 0.3145964819697375
+  },
+  "largest_examples": [
+    {
+      "stamp": 25.089999439,
+      "candidate": [
+        0.7666666666666666,
+        -0.6
+      ],
+      "endpoint_difference_m": 0.3145964819697375,
+      "dwb_endpoint_local": [
+        0.6938819530920284,
+        -0.41494193272956464
+      ],
+      "constant_endpoint_local": [
+        1.0009177178573396,
+        -0.4834983738763731
+      ],
+      "selected_scores": [
+        [
+          "RotateToGoal",
+          32.0,
+          0.0
+        ],
+        [
+          "Oscillation",
+          1.0,
+          0.0
+        ],
+        [
+          "BaseObstacle",
+          0.20000000298023224,
+          0.0
+        ],
+        [
+          "GoalAlign",
+          0.6000000238418579,
+          31.0
+        ],
+        [
+          "PathAlign",
+          0.6000000238418579,
+          7.0
+        ],
+        [
+          "PathDist",
+          0.800000011920929,
+          7.0
+        ],
+        [
+          "GoalDist",
+          0.6000000238418579,
+          31.0
+        ]
+      ]
+    },
+    {
+      "stamp": 25.109999439,
+      "candidate": [
+        0.7666666666666666,
+        -0.6
+      ],
+      "endpoint_difference_m": 0.31357113581551177,
+      "dwb_endpoint_local": [
+        0.6948786216420453,
+        -0.4151834501454932
+      ],
+      "constant_endpoint_local": [
+        1.0009177178573396,
+        -0.4834983738763731
+      ],
+      "selected_scores": [
+        [
+          "RotateToGoal",
+          32.0,
+          0.0
+        ],
+        [
+          "Oscillation",
+          1.0,
+          0.0
+        ],
+        [
+          "BaseObstacle",
+          0.20000000298023224,
+          0.0
+        ],
+        [
+          "GoalAlign",
+          0.6000000238418579,
+          31.0
+        ],
+        [
+          "PathAlign",
+          0.6000000238418579,
+          7.0
+        ],
+        [
+          "PathDist",
+          0.800000011920929,
+          7.0
+        ],
+        [
+          "GoalDist",
+          0.6000000238418579,
+          31.0
+        ]
+      ]
+    },
+    {
+      "stamp": 25.229999436,
+      "candidate": [
+        0.7999999999999999,
+        -0.6
+      ],
+      "endpoint_difference_m": 0.22350629939801003,
+      "dwb_endpoint_local": [
+        0.8262966956214849,
+        -0.45583367536426683
+      ],
+      "constant_endpoint_local": [
+        1.044435879503311,
+        -0.5045200423057806
+      ],
+      "selected_scores": [
+        [
+          "RotateToGoal",
+          32.0,
+          0.0
+        ],
+        [
+          "Oscillation",
+          1.0,
+          0.0
+        ],
+        [
+          "BaseObstacle",
+          0.20000000298023224,
+          0.0
+        ],
+        [
+          "GoalAlign",
+          0.6000000238418579,
+          30.0
+        ],
+        [
+          "PathAlign",
+          0.6000000238418579,
+          8.0
+        ],
+        [
+          "PathDist",
+          0.800000011920929,
+          8.0
+        ],
+        [
+          "GoalDist",
+          0.6000000238418579,
+          30.0
+        ]
+      ]
+    },
+    {
+      "stamp": 25.149999438,
+      "candidate": [
+        0.7333333333333333,
+        -0.6
+      ],
+      "endpoint_difference_m": 0.16069900630082318,
+      "dwb_endpoint_local": [
+        0.7994297433937814,
+        -0.43298587866220883
+      ],
+      "constant_endpoint_local": [
+        0.9573995562113684,
+        -0.46247670544696556
+      ],
+      "selected_scores": [
+        [
+          "RotateToGoal",
+          32.0,
+          0.0
+        ],
+        [
+          "Oscillation",
+          1.0,
+          0.0
+        ],
+        [
+          "BaseObstacle",
+          0.20000000298023224,
+          0.0
+        ],
+        [
+          "GoalAlign",
+          0.6000000238418579,
+          30.0
+        ],
+        [
+          "PathAlign",
+          0.6000000238418579,
+          8.0
+        ],
+        [
+          "PathDist",
+          0.800000011920929,
+          8.0
+        ],
+        [
+          "GoalDist",
+          0.6000000238418579,
+          30.0
+        ]
+      ]
+    },
+    {
+      "stamp": 25.169999437,
+      "candidate": [
+        0.7999999999999999,
+        -0.6
+      ],
+      "endpoint_difference_m": 0.14241293609724032,
+      "dwb_endpoint_local": [
+        0.9045443864223446,
+        -0.4778401897684341
+      ],
+      "constant_endpoint_local": [
+        1.044435879503311,
+        -0.5045200423057806
+      ],
+      "selected_scores": [
+        [
+          "RotateToGoal",
+          32.0,
+          0.0
+        ],
+        [
+          "Oscillation",
+          1.0,
+          0.0
+        ],
+        [
+          "BaseObstacle",
+          0.20000000298023224,
+          0.0
+        ],
+        [
+          "GoalAlign",
+          0.6000000238418579,
+          30.0
+        ],
+        [
+          "PathAlign",
+          0.6000000238418579,
+          9.0
+        ],
+        [
+          "PathDist",
+          0.800000011920929,
+          9.0
+        ],
+        [
+          "GoalDist",
+          0.6000000238418579,
+          30.0
+        ]
+      ]
+    }
+  ],
+  "minimum_gate_prediction": {
+    "wall": 96650.294230028,
+    "sim": 61.389998628,
+    "armed": true,
+    "reason": "ENABLED",
+    "fault": null,
+    "output": [
+      0.7999999999999999,
+      -0.4736842105263158
+    ],
+    "predicted_clearance_m": 0.7303099703583621,
+    "scan_stamp": 61.209997433,
+    "stream_wall_ages": {
+      "odom": 0.08705498700146563,
+      "clock": 0.07563058799132705,
+      "scan": 0.4218780209921533,
+      "input": 0.023628828013897873
+    },
+    "raw_candidate": [
+      0.7999999999999999,
+      -0.4736842105263158
+    ],
+    "clipped_candidate": [
+      0.7999999999999999,
+      -0.4736842105263158
+    ]
+  },
+  "historical06_rejected_candidate_known": false,
+  "historical06_fault_reproduced": false,
+  "limitations": [
+    "A different simulated run does not establish the cause of case06.",
+    "Different path geometry alone does not prove either collision check incorrect.",
+    "5Hz full-candidate sampling and DDS delivery can miss evaluations; selected log records each received evaluation, not guaranteed every controller cycle."
+  ],
+  "input_sha256": {
+    "controller_selected.jsonl": "9839ccdb863f7b36a79355e8e989eba3d28fb654a3fa9e729e7e2a97708ba9eb",
+    "gate_states.jsonl": "ec5cedc827930830289da49456852f30a5e1835da74512494e75337ec9bd1504",
+    "CONTROLLER_RUNTIME_PARAMETERS.json": "1c1233d2932c450386db327b80ca4c3e58556427863e7b7b1843cb261b6581a9"
+  }
+}

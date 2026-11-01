@@ -1,0 +1,6 @@
+{
+  "fault": null,
+  "last_reason": "DISARMED",
+  "automatic_rearm": false,
+  "simulation_only": true
+}

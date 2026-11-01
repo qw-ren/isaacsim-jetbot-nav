@@ -1,0 +1,23 @@
+{
+  "goals": [
+    [
+      0.0,
+      6.0,
+      0.0
+    ]
+  ],
+  "timeout_wall_s": 900.0,
+  "point_time_mode": "native_frame_rays",
+  "scan_deskew_gyro": true,
+  "visualization": {
+    "headless": false,
+    "follow": true,
+    "record_video": false
+  },
+  "extensions": {
+    "command_mux": true,
+    "control_source": "nav2",
+    "probe": true,
+    "depth": true
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "scope": "declared fixed scenario geometry before startup; dynamic closure excluded from prior",
+  "parts": [
+    {
+      "path": "/World/DeclaredStaticFixtures/event_0/asset_0",
+      "asset": "/home/admin/isaacsim_assets/Assets/Isaac/4.5/Isaac/Environments/Simple_Warehouse/Props/SM_CardBoxA_01_467.usd",
+      "asset_sha256": "bb0990532d404294b05880d7b048b0b5bb15f0f78d5663a00eb44d540424d541",
+      "min": [
+        -9.84999999217689,
+        23.750000005587935,
+        0.0
+      ],
+      "max": [
+        -9.15000000782311,
+        24.249999994412065,
+        0.4999999888241291
+      ],
+      "center": [
+        -9.5,
+        24.0,
+        0.24999999441206455
+      ],
+      "size": [
+        0.6999999843537807,
+        0.4999999888241291,
+        0.4999999888241291
+      ],
+      "yaw_rad": 0.0,
+      "collision": true,
+      "authored_colliders": [
+        "/World/DeclaredStaticFixtures/event_0/asset_0/content/SM_CardBoxA_01/SM_CardBoxA_01"
+      ],
+      "procedural_geometry": false
+    },
+    {
+      "path": "/World/DeclaredStaticFixtures/event_0/asset_1",
+      "asset": "/home/admin/isaacsim_assets/Assets/Isaac/4.5/Isaac/Environments/Simple_Warehouse/Props/SM_CardBoxA_01_467.usd",
+      "asset_sha256": "bb0990532d404294b05880d7b048b0b5bb15f0f78d5663a00eb44d540424d541",
+      "min": [
+        -9.14999999217689,
+        23.750000005587935,
+        0.0
+      ],
+      "max": [
+        -8.450000007823109,
+        24.249999994412065,
+        0.4999999888241291
+      ],
+      "center": [
+        -8.799999999999999,
+        24.0,
+        0.24999999441206455
+      ],
+      "size": [
+        0.6999999843537807,
+        0.4999999888241291,
+        0.4999999888241291
+      ],
+      "yaw_rad": 0.0,
+      "collision": true,
+      "authored_colliders": [
+        "/World/DeclaredStaticFixtures/event_0/asset_1/content/SM_CardBoxA_01/SM_CardBoxA_01"
+      ],
+      "procedural_geometry": false
+    },
+    {
+      "path": "/World/DeclaredStaticFixtures/event_0/asset_2",
+      "asset": "/home/admin/isaacsim_assets/Assets/Isaac/4.5/Isaac/Environments/Simple_Warehouse/Props/SM_CardBoxA_01_467.usd",
+      "asset_sha256": "bb0990532d404294b05880d7b048b0b5bb15f0f78d5663a00eb44d540424d541",
+      "min": [
+        -8.44999999217689,
+        23.750000005587935,
+        0.0
+      ],
+      "max": [
+        -7.750000007823109,
+        24.249999994412065,
+        0.4999999888241291
+      ],
+      "center": [
+        -8.1,
+        24.0,
+        0.24999999441206455
+      ],
+      "size": [
+        0.6999999843537807,
+        0.4999999888241291,
+        0.4999999888241291
+      ],
+      "yaw_rad": 0.0,
+      "collision": true,
+      "authored_colliders": [
+        "/World/DeclaredStaticFixtures/event_0/asset_2/content/SM_CardBoxA_01/SM_CardBoxA_01"
+      ],
+      "procedural_geometry": false
+    },
+    {
+      "path": "/World/DeclaredStaticFixtures/event_0/asset_3",
+      "asset": "/home/admin/isaacsim_assets/Assets/Isaac/4.5/Isaac/Environments/Simple_Warehouse/Props/SM_CardBoxA_01_467.usd",
+      "asset_sha256": "bb0990532d404294b05880d7b048b0b5bb15f0f78d5663a00eb44d540424d541",
+      "min": [
+        -7.74999999217689,
+        23.750000005587935,
+        0.0
+      ],
+      "max": [
+        -7.050000007823109,
+        24.249999994412065,
+        0.4999999888241291
+      ],
+      "center": [
+        -7.3999999999999995,
+        24.0,
+        0.24999999441206455
+      ],
+      "size": [
+        0.6999999843537807,
+        0.4999999888241291,
+        0.4999999888241291
+      ],
+      "yaw_rad": 0.0,
+      "collision": true,
+      "authored_colliders": [
+        "/World/DeclaredStaticFixtures/event_0/asset_3/content/SM_CardBoxA_01/SM_CardBoxA_01"
+      ],
+      "procedural_geometry": false
+    },
+    {
+      "path": "/World/DeclaredStaticFixtures/event_0/asset_4",
+      "asset": "/home/admin/isaacsim_assets/Assets/Isaac/4.5/Isaac/Environments/Simple_Warehouse/Props/SM_CardBoxA_01_467.usd",
+      "asset_sha256": "bb0990532d404294b05880d7b048b0b5bb15f0f78d5663a00eb44d540424d541",
+      "min": [
+        -7.04999999217689,
+        23.750000005587935,
+        0.0
+      ],
+      "max": [
+        -6.350000007823109,
+        24.249999994412065,
+        0.4999999888241291
+      ],
+      "center": [
+        -6.699999999999999,
+        24.0,
+        0.24999999441206455
+      ],
+      "size": [
+        0.6999999843537807,
+        0.4999999888241291,
+        0.4999999888241291
+      ],
+      "yaw_rad": 0.0,
+      "collision": true,
+      "authored_colliders": [
+        "/World/DeclaredStaticFixtures/event_0/asset_4/content/SM_CardBoxA_01/SM_CardBoxA_01"
+      ],
+      "procedural_geometry": false
+    }
+  ],
+  "map_sha256": "5759a39a9214843281f6c280006d74784e07b96c89bb2690bf6f403799d407a7"
+}

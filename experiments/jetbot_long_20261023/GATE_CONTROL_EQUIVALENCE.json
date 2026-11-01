@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "old_source_sha256": "3c5bf740a48b368c35fa56209895b3d4bd13d71972bbd72ce01bbb320cf8e7bb",
+  "new_source_sha256": "d8a4fa8c089504c08146ef6cd976b0eecd0c5393c2797fe356c6476495dd7053",
+  "scope": "AST-equivalent control methods and tick through command publish; later changes only add fault metadata and atomic progress file"
+}

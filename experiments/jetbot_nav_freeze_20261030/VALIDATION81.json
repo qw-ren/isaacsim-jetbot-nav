@@ -1,0 +1,27 @@
+{
+  "case": "localization_mesh_20261030_81",
+  "expected_native_status": 4,
+  "native_status": 6,
+  "navigation_succeeded": false,
+  "basic_checks": {
+    "status_matches_expectation": false,
+    "input_audit_passed": true,
+    "gate_no_fault": false,
+    "shutdown_zero_published": true
+  },
+  "process_clean": false,
+  "nonzero_children": [],
+  "arrival_tolerance": {
+    "controller_server/ros__parameters/general_goal_checker/xy_goal_tolerance": 0.05,
+    "controller_server/ros__parameters/general_goal_checker/yaw_goal_tolerance": 0.05,
+    "controller_server/ros__parameters/FollowPath/xy_goal_tolerance": 0.05
+  },
+  "note": "Basic checks only; no claim of A/B/C correctness or repeated-trial precision.",
+  "inputs_sha256": {
+    "CASE.json": "e00dd38c44f672eed1be84cd128ee0da5a42d5000dc18bf4e723394d6595620a",
+    "NAVIGATION_RESULT.json": "279633c126f5518184c2dc93aa4ccff9679829b7f5bf271edc78deaeb72df262",
+    "RUNNER_RESULT.json": "16f177c866f4d28204397ad90c650dbf21a61d6d562d316d28491771760f1d55",
+    "GATE_RESULT.json": "68254b02687adc75ef085030abf3d2003683d4f4373ea3cc52472e75f1972a3e",
+    "INPUT_AUDIT.json": "24fa9aa5a61835bfbd17166011ece188190d87df000853617c3b0b0f44e2414a"
+  }
+}
