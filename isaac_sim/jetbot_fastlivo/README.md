@@ -1,4 +1,8 @@
-## 2026-10-30：3倍导航参数与精度口径
+## 2026-11-01：3倍研发基线v2，0.40m规划半径
+
+当前入口`warehouse_soft040_precision_20261101.json`，B→A和C分别`warehouse_soft040_BA_20261101.json`、`warehouse_soft040_C_20261101.json`。仅在原0.40候选上将BaseObstacle.scale .20→.40；全局/局部半径.40、膨胀影响1m/衰减5，原速度/传感器/定位/门控/5cm及.05rad容差保持。`limit_vel_cmd_in_traj`仍false。五例完整回归通过，启动11和收尾15异常保留；真实3cm/1–2°目标未全部达到。见[本版参数与运行](../../docs/JETBOT_NAV_PARAMETERS_20261101.md)、[冻结清单](../../experiments/jetbot_soft040_20261101/FROZEN_PROFILE.json)、[验收报告](../../docs/JETBOT_SOFT040_VALIDATION_20261101.md)。调试开关影响负载，当前回归入口保留原调试设置；长时间无人值守训练稳定性未验收。
+
+## 2026-10-30历史：3倍导航参数与精度口径
 
 当前3倍配置及验证见[参数说明](../../docs/JETBOT_NAV_PARAMETERS_20261030.md)，入口`warehouse_diffnav_20261030.json`，既有BA/C回归分别`warehouse_diffnav_BA_20261030.json`、`warehouse_diffnav_C_20261030.json`。保守规划图保持，独立表面定位图需先用`install_localization_prior.py`校验安装；不要将新定位图用于规划或原1倍模型。到达容差固定5cm/.05rad，精度按全程定位与真实停车分别评价，不代表每时刻3cm。新配置显式启用差速平面twist，pose/TF与原生gyro保持、完整原始速度仍受保护；接口补充见[3倍模块交接](../../docs/JETBOT_SCALED_MODULE_HANDOFF_20261029.md)。以下10-29/10-25及1倍记录保留作历史。
 
