@@ -1,0 +1,52 @@
+{
+  "case": "soft040_C_20261101_13",
+  "scope": "Offline center-to-AABB clearance audit for completed simulation cases.\nUses recorded reference poses only after completion; no ROS or control output.\nCAD projection and a circular body are conservative approximations, not contact\nforce measurements or swept-body collision certification.\n",
+  "truth_usage": "offline completed-case audit only",
+  "physical_circle_radius_m": 0.34,
+  "planning_radius_m": {
+    "local_costmap/local_costmap/ros__parameters/robot_radius": 0.4,
+    "global_costmap/global_costmap/ros__parameters/robot_radius": 0.4
+  },
+  "static": {
+    "boxes": 541,
+    "reference_samples": 1401,
+    "minimum_center_distance_m": 1.4727178819664242,
+    "minimum_approximate_body_margin_m": 1.132717881966424,
+    "samples_with_approximate_margin_below_zero": 0,
+    "samples_with_approximate_margin_below_5cm": 0,
+    "closest": {
+      "stamp": 19.529999563470483,
+      "xy": [
+        -6.09859561920166,
+        7.128050804138184
+      ],
+      "asset": "/World/full_warehouse/SM_Rackshield_4489/SM_Rackshield_02"
+    }
+  },
+  "dynamic": [
+    {
+      "kind": "C",
+      "active_from_sim": 27.489999385550618,
+      "reference_samples": 29,
+      "minimum_center_distance_m": 3.8226385172456503,
+      "minimum_approximate_body_margin_m": 3.4826385172456504,
+      "samples_with_approximate_margin_below_zero": 0,
+      "samples_with_approximate_margin_below_5cm": 0,
+      "closest": {
+        "stamp": 28.049999373033643,
+        "xy": [
+          -8.15329360961914,
+          11.927361488342285
+        ],
+        "asset": "/World/JetbotDynamicTrial/event_0/asset_2"
+      }
+    }
+  ],
+  "inputs_sha256": {
+    "CASE.json": "2f9ff163292843248e265435fc371af0099552f0a70021c47b11786221e2ecb8",
+    "RUNNER_RESULT.json": "157660427133ee27f9514a3f8192dcbf6f1c584a7b07d85bcfc689b8c560f860",
+    "truth_trajectory.jsonl": "50d452832267de521b32a298873b6ad656c50e97942cc178804e6164cc827b61",
+    "map/collision_boxes.json": "97d4c78a78fffed4683c603cdd7a6d162727ae981b6b4f1c70340de82432a165",
+    "obstacle_events.jsonl": "860caec4da0349b8df0cc8be91152db1e59b58744e7019b60214cbbb38417f1d"
+  }
+}

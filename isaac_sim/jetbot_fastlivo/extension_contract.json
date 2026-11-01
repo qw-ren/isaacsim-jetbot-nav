@@ -69,8 +69,13 @@
     "physical_radius_m": 0.34,
     "gate_clearance_m": 0.4,
     "gate_clearance_definition": "Minimum scan-point distance to predicted chassis-center path, not body-surface clearance. With physical_radius_m=.34, nominal extra margin is about .06m. Read runtime CASE.json for exact value.",
-    "planning_radius_m": 0.65,
+    "planning_radius_m": 0.4,
     "inflation_radius_m": 1.0,
+    "navigation_baseline_id": "jetbot_3x_nav_v2_r040_20261101",
+    "navigation_profile": "experiments/jetbot_soft040_20261101/FROZEN_PROFILE.json",
+    "nav2_base_obstacle_scale": 0.4,
+    "inflation_cost_scaling_factor": 5.0,
+    "baseline_scope": "Fixed-suite simulation research baseline; not final precision or unattended-training acceptance. Read active CASE.json; v1 retains planning_radius_m=.65 at its release tag. Nav2 critic weights are not PPO reward weights.",
     "geometry_and_extrinsics": "experiments/jetbot_scaled_interfaces_20261029; runtime CASE.json remains authoritative"
   }
 }

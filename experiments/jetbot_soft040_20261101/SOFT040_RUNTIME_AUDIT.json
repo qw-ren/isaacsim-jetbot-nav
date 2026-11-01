@@ -1,0 +1,126 @@
+{
+  "scope": "Actual controller service parameters and per-case YAML/CASE audit; no fitting or control changes",
+  "cases": [
+    {
+      "case": "soft040_BA_20261101_10",
+      "checks_passed": true,
+      "costmaps": {
+        "local_costmap": {
+          "robot_radius": 0.4,
+          "inflation_radius": 1.0,
+          "cost_scaling_factor": 5.0
+        },
+        "global_costmap": {
+          "robot_radius": 0.4,
+          "inflation_radius": 1.0,
+          "cost_scaling_factor": 5.0
+        }
+      },
+      "minimum_gate_prediction_m": 0.6804040465746258,
+      "runner_process_clean": true,
+      "controller_parameters_sha256": "2b0843542b78cae074cbbb0a37543a03f57f78bae4bcb16f37052ad875a34d73",
+      "case_sha256": "3c88bdedc773fc950c7fbc4e869deefb6c598312bac8a993a89684a3345f00ae"
+    },
+    {
+      "case": "soft040_precision_20261101_12",
+      "checks_passed": true,
+      "costmaps": {
+        "local_costmap": {
+          "robot_radius": 0.4,
+          "inflation_radius": 1.0,
+          "cost_scaling_factor": 5.0
+        },
+        "global_costmap": {
+          "robot_radius": 0.4,
+          "inflation_radius": 1.0,
+          "cost_scaling_factor": 5.0
+        }
+      },
+      "minimum_gate_prediction_m": 1.338545872160403,
+      "runner_process_clean": true,
+      "controller_parameters_sha256": "2cd6e8d3de6a477d626e82b3b035bc267aeb19dedd90671a669f93ddc4c3c13a",
+      "case_sha256": "6683b9269f650a3f47a5e06c03c8d9464fbedd1a395d27c415900ebe2b92bc39"
+    },
+    {
+      "case": "soft040_C_20261101_13",
+      "checks_passed": true,
+      "costmaps": {
+        "local_costmap": {
+          "robot_radius": 0.4,
+          "inflation_radius": 1.0,
+          "cost_scaling_factor": 5.0
+        },
+        "global_costmap": {
+          "robot_radius": 0.4,
+          "inflation_radius": 1.0,
+          "cost_scaling_factor": 5.0
+        }
+      },
+      "minimum_gate_prediction_m": 1.4621495760346033,
+      "runner_process_clean": true,
+      "controller_parameters_sha256": "f2d030e5316d620edd58f072be5942f7cd06d13e457910d7b5e4b541de5e7f80",
+      "case_sha256": "2f9ff163292843248e265435fc371af0099552f0a70021c47b11786221e2ecb8"
+    },
+    {
+      "case": "soft040_BA_20261101_14",
+      "checks_passed": true,
+      "costmaps": {
+        "local_costmap": {
+          "robot_radius": 0.4,
+          "inflation_radius": 1.0,
+          "cost_scaling_factor": 5.0
+        },
+        "global_costmap": {
+          "robot_radius": 0.4,
+          "inflation_radius": 1.0,
+          "cost_scaling_factor": 5.0
+        }
+      },
+      "minimum_gate_prediction_m": 0.5448292138652071,
+      "runner_process_clean": true,
+      "controller_parameters_sha256": "024221fa5a9899846e0a3203913f19eb3b3f17c61ab3840e3144c71557a0f843",
+      "case_sha256": "3c88bdedc773fc950c7fbc4e869deefb6c598312bac8a993a89684a3345f00ae"
+    },
+    {
+      "case": "soft040_precision_20261101_15",
+      "checks_passed": true,
+      "costmaps": {
+        "local_costmap": {
+          "robot_radius": 0.4,
+          "inflation_radius": 1.0,
+          "cost_scaling_factor": 5.0
+        },
+        "global_costmap": {
+          "robot_radius": 0.4,
+          "inflation_radius": 1.0,
+          "cost_scaling_factor": 5.0
+        }
+      },
+      "minimum_gate_prediction_m": 1.3099098326602818,
+      "runner_process_clean": false,
+      "controller_parameters_sha256": "012c7c8dc8532464d14ed1967aa42cf2c7177a524ad790e4512c459da6586839",
+      "case_sha256": "6683b9269f650a3f47a5e06c03c8d9464fbedd1a395d27c415900ebe2b92bc39"
+    },
+    {
+      "case": "soft040_precision_20261101_16",
+      "checks_passed": true,
+      "costmaps": {
+        "local_costmap": {
+          "robot_radius": 0.4,
+          "inflation_radius": 1.0,
+          "cost_scaling_factor": 5.0
+        },
+        "global_costmap": {
+          "robot_radius": 0.4,
+          "inflation_radius": 1.0,
+          "cost_scaling_factor": 5.0
+        }
+      },
+      "minimum_gate_prediction_m": 1.2963413989642598,
+      "runner_process_clean": true,
+      "controller_parameters_sha256": "2cd6e8d3de6a477d626e82b3b035bc267aeb19dedd90671a669f93ddc4c3c13a",
+      "case_sha256": "6683b9269f650a3f47a5e06c03c8d9464fbedd1a395d27c415900ebe2b92bc39"
+    }
+  ],
+  "frozen_baseline_source_hashes_verified": 97
+}

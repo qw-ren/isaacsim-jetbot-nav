@@ -1,0 +1,36 @@
+{
+  "baseline_commit": "dcb3ceb222e572de42bcd8f96f0624e96d01fa63",
+  "configurations": [
+    {
+      "baseline": "warehouse_diffnav_BA_20261030.json",
+      "candidate": "warehouse_radius040_BA_20261101.json",
+      "baseline_sha256": "c1bc0023edfdc18acda2440f919aefba7181afce7de4de518239a9606070a6e2",
+      "candidate_sha256": "b69aa2c5667858de9e79a33dd0c4a7f789a687c156fbffbc59c9e5f971391922",
+      "only_two_radius_tokens_changed": true,
+      "other_bytes_and_number_types_preserved": true
+    },
+    {
+      "baseline": "warehouse_diffnav_C_20261030.json",
+      "candidate": "warehouse_radius040_C_20261101.json",
+      "baseline_sha256": "500e028ed888dd5f4217360a0d8652a2bec5a22808d00ab74a59f1998261df98",
+      "candidate_sha256": "fbf3950ee3b4ef7d7f6517a8e218fabdf4b5f26e711332eb886725a12ce1382a",
+      "only_two_radius_tokens_changed": true,
+      "other_bytes_and_number_types_preserved": true
+    },
+    {
+      "baseline": "warehouse_diffnav_20261030.json",
+      "candidate": "warehouse_radius040_precision_20261101.json",
+      "baseline_sha256": "dc605a446fbe59f48c0dbdbf037eb1b0a16a23c5ecb305e44cccabcbe06ce90f",
+      "candidate_sha256": "ffb20a014cd5d28323b24224d6518b2640ae9302e26a91886792e2de1721456a",
+      "only_two_radius_tokens_changed": true,
+      "other_bytes_and_number_types_preserved": true
+    }
+  ],
+  "initial_invalid_integer_trial_preserved": "radius040_BA_20261101_01",
+  "physical_radius_m": 0.34,
+  "gate_center_threshold_approx_m": 0.4,
+  "inflation_radius_m": 1,
+  "footprint_padding_m": 0.01,
+  "goal_xy_m": 0.05,
+  "goal_yaw_rad": 0.05
+}

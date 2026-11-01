@@ -34,6 +34,7 @@ try:
     extension_children.append(spawn([python,str(source/'command_mux.py'),'--case',str(a.case)],'command_mux.log'))
    if extensions.get('localization_probe',False):extension_children.append(spawn([python,str(source/'localization_probe.py'),'--case',str(a.case)],'localization_probe.log'))
    if extensions.get('probe',False):extension_children.append(spawn([python,str(source/'module_probe.py'),'--case',str(a.case)],'module_probe.log'))
+   if extensions.get('controller_probe',False):extension_children.append(spawn([python,str(source/'controller_probe.py'),'--case',str(a.case)],'controller_probe.log'))
    # The native bridge projects the same timed point packet into chassis scan.
    spawn([python,str(source/'velocity_gate.py'),'--case',str(a.case)],'velocity_gate.log')
    ros('nav2_map_server','map_server','map_server',['-p','yaml_filename:='+str(a.case/'map/map.yaml')])

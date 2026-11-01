@@ -2,7 +2,9 @@
 
 阿童木机器人课题：JetBot仓储导航、视觉与激光融合、学习型局部避障。导航/系统集成负责人任权伟。
 
-2026-10-30导航更新：[3倍模型参数与复现](docs/JETBOT_NAV_PARAMETERS_20261030.md) · [全程定位和真实停车的精度定义](docs/JETBOT_ACCURACY_DEFINITIONS_20261030.md) · [逐次回归证据](experiments/jetbot_nav_freeze_20261030/README.md)。视觉/PPO模型及场景生成由同学负责，导航只提供接口。
+2026-11-01研发基线v2：[0.40m规划半径、参数与复现](docs/JETBOT_NAV_PARAMETERS_20261101.md) · [冻结清单](experiments/jetbot_soft040_20261101/FROZEN_PROFILE.json) · [全部验收与异常](docs/JETBOT_SOFT040_VALIDATION_20261101.md) · [视觉/PPO接口](docs/JETBOT_SCALED_MODULE_HANDOFF_20261029.md)。固定用例回归通过，真实停车约3.6–5.5cm、角度约2.7–3.0°，尚未达到3cm/1–2°；启动与后端收尾异常保留。仅用于仿真研发对接。
+
+2026-10-30旧0.65m基线保留：[v1参数与复现](docs/JETBOT_NAV_PARAMETERS_20261030.md) · [精度定义](docs/JETBOT_ACCURACY_DEFINITIONS_20261030.md) · [v1回归记录](experiments/jetbot_nav_freeze_20261030/README.md)。复现历史版本请使用对应Release标签。视觉/PPO模型及场景生成由同学负责，导航只提供接口。
 
 ## 当前可复现成果（2026-10-25）
 

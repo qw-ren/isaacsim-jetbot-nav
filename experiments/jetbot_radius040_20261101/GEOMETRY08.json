@@ -1,0 +1,69 @@
+{
+  "case": "radius040_BA_diag_20261101_08",
+  "scope": "Offline center-to-AABB clearance audit for completed simulation cases.\nUses recorded reference poses only after completion; no ROS or control output.\nCAD projection and a circular body are conservative approximations, not contact\nforce measurements or swept-body collision certification.\n",
+  "truth_usage": "offline completed-case audit only",
+  "physical_circle_radius_m": 0.34,
+  "planning_radius_m": {
+    "local_costmap/local_costmap/ros__parameters/robot_radius": 0.4,
+    "global_costmap/global_costmap/ros__parameters/robot_radius": 0.4
+  },
+  "static": {
+    "boxes": 536,
+    "reference_samples": 4310,
+    "minimum_center_distance_m": 0.8175038751461283,
+    "minimum_approximate_body_margin_m": 0.4775038751461283,
+    "samples_with_approximate_margin_below_zero": 0,
+    "samples_with_approximate_margin_below_5cm": 0,
+    "closest": {
+      "stamp": 44.02999901585281,
+      "xy": [
+        -9.102823257446289,
+        10.471782684326172
+      ],
+      "asset": "/World/full_warehouse/SM_PaletteA_3039/SM_PaletteA_01"
+    }
+  },
+  "dynamic": [
+    {
+      "kind": "B",
+      "active_from_sim": 30.769999312236905,
+      "reference_samples": 2774,
+      "minimum_center_distance_m": 2.7338335784839747,
+      "minimum_approximate_body_margin_m": 2.393833578483975,
+      "samples_with_approximate_margin_below_zero": 0,
+      "samples_with_approximate_margin_below_5cm": 0,
+      "closest": {
+        "stamp": 59.849998662248254,
+        "xy": [
+          -12.369026184082031,
+          14.687760353088379
+        ],
+        "asset": "/World/JetbotDynamicTrial/event_0/asset_0"
+      }
+    },
+    {
+      "kind": "A",
+      "active_from_sim": 57.729998709633946,
+      "reference_samples": 1426,
+      "minimum_center_distance_m": 0.7598077530256404,
+      "minimum_approximate_body_margin_m": 0.4198077530256404,
+      "samples_with_approximate_margin_below_zero": 0,
+      "samples_with_approximate_margin_below_5cm": 0,
+      "closest": {
+        "stamp": 61.669998621568084,
+        "xy": [
+          -13.126068115234375,
+          15.903244018554688
+        ],
+        "asset": "/World/JetbotDynamicTrial/event_1/asset_0"
+      }
+    }
+  ],
+  "inputs_sha256": {
+    "CASE.json": "fb0ce20604372ddca1f9f4328704d4298b113f1dd69c5d862810fb48682cd640",
+    "RUNNER_RESULT.json": "df8353e42520b857680e60645e81d98642469b4daaddd1c23dd31ed40aeac126",
+    "truth_trajectory.jsonl": "8257abd547da13f6e3f0c28253a660618c7e0b6e939486d7ec457b829a0b78ba",
+    "map/collision_boxes.json": "fd937e0357802ebb3ca3a08586b0852dd67720c4bc0445354cf025a7d23d5f9e",
+    "obstacle_events.jsonl": "a2d0acdb12aa87c136b566201ab466141867212e2cd7b37b95911b0e01c553ef"
+  }
+}

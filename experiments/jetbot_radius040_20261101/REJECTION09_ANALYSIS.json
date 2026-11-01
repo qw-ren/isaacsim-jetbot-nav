@@ -1,0 +1,100 @@
+{
+  "case": "cmdstep040_BA_20261101_09",
+  "fault": {
+    "wall": 97361.487213354,
+    "sim": 26.049999418,
+    "armed": false,
+    "reason": "PREDICTED_SCAN_CLEARANCE",
+    "fault": "PREDICTED_SCAN_CLEARANCE",
+    "output": [
+      0.0,
+      0.0
+    ],
+    "predicted_clearance_m": 0.3972249444444253,
+    "scan_stamp": 25.849998224,
+    "stream_wall_ages": {
+      "clock": 0.005544875995838083,
+      "odom": 0.016876802998012863,
+      "scan": 0.3520565519866068,
+      "input": 0.02208350200089626
+    },
+    "raw_candidate": [
+      0.7359718847982287,
+      0.1440548300743103
+    ],
+    "clipped_candidate": [
+      0.7359718847982287,
+      0.1440548300743103
+    ]
+  },
+  "raw_candidate": [
+    0.7359718847982287,
+    0.1440548300743103
+  ],
+  "minimum_m": 0.3972249444444253,
+  "threshold_m": 0.4,
+  "shortfall_m": 0.0027750555555747236,
+  "nearest_scan_point": [
+    1.3125937630576707,
+    -0.21376961778299916
+  ],
+  "closest_prediction": [
+    1.095386946506858,
+    0.11880947857264727
+  ],
+  "prediction_time_s": 1.5,
+  "current_minimum_scan_distance_m": 0.8229942917823793,
+  "nearest_received_dwb_candidate": {
+    "stamp": 26.049999418,
+    "wall": 97361.850532835,
+    "velocity": {
+      "x": 0.736497711513821,
+      "y": 0.0,
+      "theta": 0.14419320225715637
+    },
+    "scores": [
+      [
+        "RotateToGoal",
+        32.0,
+        0.0
+      ],
+      [
+        "Oscillation",
+        1.0,
+        0.0
+      ],
+      [
+        "BaseObstacle",
+        0.20000000298023224,
+        72.0
+      ],
+      [
+        "GoalAlign",
+        0.6000000238418579,
+        21.0
+      ],
+      [
+        "PathAlign",
+        0.6000000238418579,
+        9.0
+      ],
+      [
+        "PathDist",
+        0.800000011920929,
+        10.0
+      ],
+      [
+        "GoalDist",
+        0.6000000238418579,
+        25.0
+      ]
+    ]
+  },
+  "exact_matching_selected_evaluation": false,
+  "interpretation": "Gate calculation reproduced exactly from snapshot; protective rejection before motion on this command. First-step publication candidate failed before any dynamic event. Near DWB record is not an exact command match; do not attribute a critic or historical06 cause.",
+  "inputs_sha256": {
+    "GATE_REJECTED_PREDICTION.npz": "429092206a733bd27ea5ff30ac04fad3d3adb09ae5b3da842f4f7ca70831be74",
+    "controller_selected.jsonl": "6c5f882e9fa73e70acbae15555c8a7231e2994f4d7691d30ae09b6e3eed649a9",
+    "gate_states.jsonl": "8301bdb62b4690854244679e752ee7ea8b8c7d6498f4b0ab220a7857d965cfdf"
+  }
+}

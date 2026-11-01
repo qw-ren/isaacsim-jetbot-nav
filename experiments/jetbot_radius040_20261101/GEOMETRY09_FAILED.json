@@ -1,0 +1,33 @@
+{
+  "case": "cmdstep040_BA_20261101_09",
+  "scope": "Offline center-to-AABB clearance audit for completed simulation cases.\nUses recorded reference poses only after completion; no ROS or control output.\nCAD projection and a circular body are conservative approximations, not contact\nforce measurements or swept-body collision certification.\n",
+  "truth_usage": "offline completed-case audit only",
+  "physical_circle_radius_m": 0.34,
+  "planning_radius_m": {
+    "local_costmap/local_costmap/ros__parameters/robot_radius": 0.4,
+    "global_costmap/global_costmap/ros__parameters/robot_radius": 0.4
+  },
+  "static": {
+    "boxes": 536,
+    "reference_samples": 1805,
+    "minimum_center_distance_m": 0.6652378169692932,
+    "minimum_approximate_body_margin_m": 0.32523781696929316,
+    "samples_with_approximate_margin_below_zero": 0,
+    "samples_with_approximate_margin_below_5cm": 0,
+    "closest": {
+      "stamp": 25.229999436065555,
+      "xy": [
+        -2.052915096282959,
+        7.946201801300049
+      ],
+      "asset": "/World/full_warehouse/S_WetFloorSign2/S_WetFloorSign"
+    }
+  },
+  "dynamic": [],
+  "inputs_sha256": {
+    "CASE.json": "3ded37cd95f04d3298d6f9908cbf31944d604663478557b0ded8cc59e07006a9",
+    "RUNNER_RESULT.json": "4a1c7efa2e92d129c7691c8c0bdc0b4c77da97863637b083168f54e922b4e75a",
+    "truth_trajectory.jsonl": "895441ee8f7f85b5abb4120cc8a870166fe05ed569fb6a354be8da94b67aa5ca",
+    "map/collision_boxes.json": "fd937e0357802ebb3ca3a08586b0852dd67720c4bc0445354cf025a7d23d5f9e"
+  }
+}

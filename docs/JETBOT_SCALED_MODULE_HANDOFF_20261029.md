@@ -2,6 +2,8 @@
 
 任权伟负责导航、定位、全局规划及集成；本交付只提供接口，不实现视觉模型、PPO训练或推理。旧版 MODULE_INTERFACES.md 的 0.37m/s 属于1倍模型；当前采用独立3倍配置，本文件与运行 CASE.json 优先。
 
+2026-11-01更新：当前对接研发基线为[0.40m版v2](JETBOT_NAV_PARAMETERS_20261101.md)，冻结清单[jetbot_3x_nav_v2_r040_20261101](../experiments/jetbot_soft040_20261101/FROZEN_PROFILE.json)。规划半径从旧.65改为.40，Nav2 BaseObstacle.scale从.20改为.40；观测/动作话题及单位、实体尺寸、速度、门控与定位来源保持。该权重属于Nav2评分，不等于PPO奖励权重。PPO训练需记录所用基线ID并与运行CASE一致；当前没有实际PPO模型联调或长时间训练验收，启动/收尾异常及精度缺口见本版报告。
+
 2026-10-30补充：[导航参数与精度口径](JETBOT_NAV_PARAMETERS_20261030.md)。显式启用`odom_twist_projection=differential_planar`时，`/jetbot/odom`的twist中vy/vz为差速平面约束值0；位姿/TF、前向速度和原生IMU角速度保留，完整原始速度仍记录并检查。PPO观测应与训练时配置一致，不把该0当作滤波器独立测得的侧向速度。默认native模式仍保留。
 
 ## 几何和控制
@@ -14,7 +16,8 @@
 | 车体速度上限 | 0.8 m/s；角速度0.6 rad/s |
 | 物理保守圆半径 | 0.34 m |
 | 安全门扫描点到预测中心轨迹阈值 / 预测时域 | 约0.40 m / 1.5 s；按0.34m实体圆，额外间距约0.06m |
-| Nav2规划半径 / 膨胀半径 | 0.65 / 1.0 m；规划裕量不等于实体尺寸 |
+| Nav2规划半径 / 膨胀影响半径 | v2为0.40 / 1.0 m；旧v1为0.65 / 1.0 m，按基线ID区分 |
+| Nav2障碍软代价权重 / 衰减系数 | BaseObstacle.scale=0.40 / cost_scaling_factor=5.0；不是PPO奖励权重 |
 | 显式配置质量 | 底盘54 kg，左右轮各6.75 kg；67.5 kg不是含全部传感器/支承的总质量声明 |
 
 放大质量按立方、显式惯量按五次方缩放/由物理引擎重算；动力学已经改变。不能把1倍模型的归一化、轮径、checkpoint或奖励尺度直接复用。正向轴 chassis：+X前、+Y左、+Z上。最终门限还受轮速耦合：v_cap=min(0.8,max(0,ω轮上限×轮半径−|车体ω|×轮距/2))。读取当次 CASE.json.motion_limits、ROBOT_VARIANT.json 和 JOINT_LIMITS.json；不要绕过门限。
@@ -43,4 +46,4 @@ PPO只发布 `/jetbot/policy_proposal`，geometry_msgs/TwistStamped，frame_id=c
 
 现有语义目录只是人工名称→批准接近位姿。视觉空间目标经实例关联、歧义/置信度校验和可达接近点选择后才交给Nav2。语言理解、识别模型、策略训练由同学提供；不让模型绕过控制仲裁、修改TF或读取truth。truth仅用于离线评分与展示相机投影。
 
-机器可读入口：isaac_sim/jetbot_fastlivo/extension_contract.json；参数快照 experiments/jetbot_scaled_interfaces_20261029/。运行配置 warehouse_scaled_interface_20261029.json。
+机器可读接口：isaac_sim/jetbot_fastlivo/extension_contract.json；当前导航参数清单 experiments/jetbot_soft040_20261101/FROZEN_PROFILE.json。当前导航入口warehouse_soft040_{BA,precision,C}_20261101.json；2026-10-29的warehouse_scaled_interface_20261029.json和参数快照保留作历史接口实测，不能当作v2已完成RGB-D/PPO全链路验收。
