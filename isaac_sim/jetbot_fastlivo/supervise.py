@@ -44,7 +44,14 @@ try:
    ros('nav2_controller','controller_server','controller_server',['-r','/cmd_vel:='+('/jetbot/nav2_proposal'if mux_enabled else'/jetbot/nav_cmd_vel')])
    ros('nav2_bt_navigator','bt_navigator','bt_navigator',['-p','default_nav_to_pose_bt_xml:='+str(source/'navigate.xml'),'-p','default_nav_through_poses_bt_xml:='+str(source/'navigate_through.xml')])
    ros('nav2_lifecycle_manager','lifecycle_manager','jetbot_nav_lifecycle')
-   navigation_check=spawn([python,str(source/('operator_session.py'if cfg.get('operator_enabled')else'check_navigation.py')),'--case',str(a.case)],'operator_session.log'if cfg.get('operator_enabled')else'navigation_check.log');navigation_started=True
+   if cfg.get('navigation',{}).get('semantic'):
+    assert cfg.get('operator_enabled'), 'Semantic manager must be the only mission owner'
+    environment=os.environ.copy();environment['PYTHONPATH']=str(source)+':'+environment.get('PYTHONPATH','')
+    extension_children.append(spawn([python,'-m','jetbot_semantic_nav.mapper','--case',str(a.case)],'semantic_mapper.log',environment))
+    navigation_check=spawn([python,'-m','jetbot_semantic_nav.manager','--case',str(a.case)],'semantic_manager.log',environment)
+   else:
+    navigation_check=spawn([python,str(source/('operator_session.py'if cfg.get('operator_enabled')else'check_navigation.py')),'--case',str(a.case)],'operator_session.log'if cfg.get('operator_enabled')else'navigation_check.log')
+   navigation_started=True
   if cfg.get('nav2_enabled') and not cfg.get('operator_enabled') and (a.case/'NAVIGATION_RESULT.json').exists():
    result=json.loads((a.case/'NAVIGATION_RESULT.json').read_text());code=0 if result['passed'] else 1
    if navigation_check is not None:

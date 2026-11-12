@@ -1,0 +1,449 @@
+{
+  "case": "semantic_rel_20261112_03",
+  "simulation_only": true,
+  "tasks": [
+    {
+      "task_id": "ambiguous_row",
+      "state": "AMBIGUOUS",
+      "native_status": null,
+      "disarmed": true,
+      "goal": null,
+      "result_sha256": "de1f8eee3eddedb1e78ed10fed3249c8faeeb795d6f377673905cfb91bfe91cc",
+      "finished_sim_s": 11.909999734000001,
+      "truth_sample_delta_s": -2.092459538971525e-10
+    },
+    {
+      "task_id": "farthest_nav",
+      "state": "NAVIGATION_FAILED",
+      "native_status": 6,
+      "disarmed": true,
+      "goal": [
+        -13.0,
+        22.740000005587934,
+        1.5707963267948966
+      ],
+      "result_sha256": "7c2949f8e61727607af7b7696d31546a917f7abcfda040f61c67f0c1f73247a2",
+      "finished_sim_s": 73.949998347,
+      "truth_sample_delta_s": 8.86899442775757e-11
+    },
+    {
+      "task_id": "farthest_preview",
+      "state": "DRY_RUN_COMPLETE",
+      "native_status": null,
+      "disarmed": true,
+      "goal": [
+        -13.0,
+        22.740000005587934,
+        1.5707963267948966
+      ],
+      "result_sha256": "6fcd69eec8e7395186b75ea7dc3148704a0c43033a54d7c6270ed890177e6408",
+      "finished_sim_s": 11.109999752,
+      "truth_sample_delta_s": -3.2785152370706783e-10
+    },
+    {
+      "task_id": "missing_row",
+      "state": "REFERENCE_NOT_FOUND",
+      "native_status": null,
+      "disarmed": true,
+      "goal": null,
+      "result_sha256": "3fdb80e7aba5bf93fdb3f58061523f80494496681578a31d157cbea7466689b8",
+      "finished_sim_s": 11.62999974,
+      "truth_sample_delta_s": 4.924238794501434e-11
+    },
+    {
+      "task_id": "relational_nav",
+      "state": "FAILED",
+      "native_status": null,
+      "disarmed": true,
+      "goal": [
+        -8.4,
+        13.259999994412064,
+        -1.5707963267948966
+      ],
+      "result_sha256": "bcc958156f86ef04f70023c3b7411d4fe6b71c0595323e2b898ea8de5eca4b42",
+      "finished_sim_s": 92.709997928,
+      "truth_sample_delta_s": -2.2998847271082923e-10
+    },
+    {
+      "task_id": "relational_preview",
+      "state": "DRY_RUN_COMPLETE",
+      "native_status": null,
+      "disarmed": true,
+      "goal": [
+        -8.4,
+        10.740000005587936,
+        1.5707963267948966
+      ],
+      "result_sha256": "ca79845514df5c07baec315a951484ac77590b6e488f7a55e55fc9a6a9cee8d0",
+      "finished_sim_s": 12.949999711,
+      "truth_sample_delta_s": -4.5505643697651976e-10
+    },
+    {
+      "task_id": "row_farthest",
+      "state": "DRY_RUN_COMPLETE",
+      "native_status": null,
+      "disarmed": true,
+      "goal": [
+        -13.0,
+        22.740000005587934,
+        1.5707963267948966
+      ],
+      "result_sha256": "582193b76ea315a866d02ab88299eeeab00c047d7edae187a7223e832f702333",
+      "finished_sim_s": 13.749999693000001,
+      "truth_sample_delta_s": -3.3645086716660444e-10
+    },
+    {
+      "task_id": "row_nearest",
+      "state": "DRY_RUN_COMPLETE",
+      "native_status": null,
+      "disarmed": true,
+      "goal": [
+        -12.54000000782311,
+        12.0,
+        3.141592653589793
+      ],
+      "result_sha256": "e0209e696364aa22a357dc868a1b06537b0c5b2be0a8ed0c9b820759f68b1272",
+      "finished_sim_s": 13.429999700000002,
+      "truth_sample_delta_s": -1.8389378908523213e-10
+    }
+  ],
+  "source_sha256": {
+    "velocity_gate.py": "ffd7854d0767fc560c17eecb8b836c573a556fb79a6f44fa52d0752b1a43b2e2",
+    "run_sim.py": "9f0a9e0cba26838cab4126b07110ce637b69232713f9a114a357948ba8104ff8",
+    "collect_backup.py": "f977eb54b789a2d2836567f5d6edbe6806a5c62488e040ddc69330ed423bbc2d",
+    "check_navigation.py": "2d6635f316391adb4165065103886dcab5363d92c526e8e61939352f1e19f453",
+    "generate_params.py": "feeab4d859c911bbb7c5734f7c040307a13167c6aa09f10f0251483b4006228a",
+    "dynamic_fixture.py": "73d2993e844ee209daade0c070419348d83e5cc53374e1e2aeef17df8e72e89c",
+    "compare_scan_likelihood.py": "c35333b99a2ef8bbaafe8f8d22d4f2cbf897b9ef037dc432191b6c28d4a37d1d",
+    "evaluate_precision_profile.py": "282430ec8f8ac6e519c422c7d5336fcdbcb7adde5e3cc914ccc918ce77cf592d",
+    "extension_core.py": "10f4d48c6eb56734c505bb26285b0165d6c5e77a8cf885df482992ffa18e448d",
+    "audit_inputs.py": "fa0c4318e728eba60159cfbbdf220616319e128e1445390c8a57a97d5674887f",
+    "audit_geometry_clearance.py": "0b2ad913061a3a07bb362b380aabedfbee84eb3cdfafee535b8d73044568f587",
+    "evaluate_localization_accuracy.py": "95df0b689595c4d0473915107dbf593180dc17d2b94811f1d19e97a2e8687e6f",
+    "evaluate_motion_limits.py": "f65393b884b22cacae6d9ac315c72e3b04208890a3a6a181300286a1e63b6441",
+    "audit_showcase.py": "c526803b8edda81866a121cfcaa8efd7811553f47880e797f63474afdb38cf28",
+    "native_lidar_timing.py": "f9813884656f5a6e2115351c089a807295c25c4f92ce51923a3aa725e3292cb6",
+    "asset_fixture.py": "54b3a7872059031e79a600e50f1a4cbf9393a57cc6e0e972f8d1293b61e79a17",
+    "semantic_places.json": "825aa7727e49a7d9a44bad620f8c36c290a88a23db957653f6e5fa1734c9cb06",
+    "evaluate_case.py": "b362d259defc0a4f173e1a4bfb6ec0c0ed5dabb6b37522c5c3ee4c2f9658e668",
+    "local_costmap_probe.py": "8d2103b937055cf5d9bab1e0d0d1e9b819a100d9a3632350652a598093cecf4d",
+    "check_motion.py": "0d82d84129f89ac61beb42adc977502415f3ff7fa8459fa1c62eec9cad7a2421",
+    "supervise.py": "5c9e0c036aececa8faa8c29f4c379cf7ae26542e00d59dbab2bf44a36b2e3f9a",
+    "summarize_freeze_trial.py": "de6f6ac82b9fc3fd4d4f51ee825ef04d007295c32d7f24523bee856b6866bcd5",
+    "nav_odometry.py": "385a277e601f568a2e76f9a1dadb5cb3472e787940bc072c4ae38b2b153bcf5c",
+    "module_probe.py": "4478a15fa208bc1bdb3c573d15723aae639c98761eb3ec848bbde34433225e4c",
+    "livo_base.yaml": "29a44e8ac7972b6b97b23fca33a4354a6482c42b3e476a0b579bf45dd8990620",
+    "validate_actuator.py": "bacec2961bcea11e040de5ce8c4447cacf82f5fb0e4c4528da652b8a80ac4cff",
+    "extension_contract.json": "00ba3b7cd6bffac8e698978cc291c08f43395047aad3a4762ba694aa3a3ce694",
+    "analyze_controller_scores.py": "a62056403953122c02bef7b7af5a3314346ba376a89cd69039736a4e0ee3f9d4",
+    "desktop_env.py": "ac7461faa48553b3e0a287f19129418cd894c839cc745e9030e915dca74eee03",
+    "evaluate_aisle_observer.py": "3acbca57a106b6b77a16feb93f87d61f85ca247f3a478f0ca5f9e44b5d2d9e5b",
+    "install_localization_prior.py": "dd0d72368c5e8e7bcd6ea0bfc311887526aa2a2dde68aa462024b48249685168",
+    "command_mux.py": "a5d10ffa09ee25890eaa04ee9911617b09bcc8a698d0f1d5eca25ba2027e280d",
+    "semantic_goal.py": "740156fbe9e7542805fba2d73cf6f09408705d9f0953cdae6f9ec3e4ba4df97a",
+    "audit_asset_trial.py": "2a349a9c191454fac6266bc1d36f55c40d3ce2f7cbe46592a6ff6c348bf8ddca",
+    "encode_observer_video.py": "9fbd8fc331c7e83a62ed20a8c91c5dcd1af6efe10b86c862578d866a44dce5ef",
+    "viewport_video.py": "2a178bacda0956bfb28cf82513c2586d2fbfa2515982658f3901262755e832de",
+    "encode_presentation_video.py": "0d8435b7ebfb4cb20c0d632b34d6c588c066050d142ae4542502e3cbd93c2e5c",
+    "audit_module_session.py": "50ad88bc1bcf508981bfbe5cf7a67db7fc0a0fe32184d6896d4e96c8462a7eb2",
+    "validate_scaled_policy_contract.py": "61561b223c36c84a1209e49946cfce05cb4f6f98e39c1bad33dcf5dc788d0808",
+    "audit_native_frame_times.py": "8e8256e308287c060e8d9166d82324ae14d7b522e507bfcb95c15896a58ccbc8",
+    "navigate.xml": "83259cbe8a4ad2ae07d20d7041d7b63f8380622132251fe4d21ddbbcde73e88f",
+    "evaluate_endpoint_pose.py": "65e00b2df1485266c480a6f4abe7157e286f1a1e7d6bd414aa241382fd38b34b",
+    "manage_jetbot.sh": "735e75f6f68d7ab95ba46c4e317d5e0ec7fc86a0f1081dc17b1ba5b5dfd0da14",
+    "validate_gate.py": "e60396825b92f183a18fddda8ddf57022ae38513529000590c71eb077004bef2",
+    "validate_command_mux.py": "7fad475b00043238286311f349cae4d67f0f212a202ac38c87b295b52c7f329e",
+    "nav2.yaml": "041d793909c5b918420ad8016fd23a14c48eb07907d60139b707e53d9437740c",
+    "diagnose_trajectory.py": "1d6760176402d7dca41516d90fc3c70034d324edb0c56c15b16bb6518af4e83d",
+    "scan_yaw_deskew.py": "05ed5a2e6f6e1eb5c85d89228842fda3c2767705d2088cfed638c36321744962",
+    "evaluate_obstacle_layer.py": "c40969b50cb2a4867a7659fb34c16540b89efb93544e2ec4f8e89c0cbd5c2e77",
+    "localization_probe.py": "307c98c8dbe7f32b911cbead9ba5153b32846f14d5d4158b9394e5c6858502cc",
+    "validate_scan_geometry.py": "207e813207b66a2d3781f6b6513de57d33aee365f10d27c36b298bd9fd0774aa",
+    "build_prior_map.py": "8c8b2ff550192bd5a66adce48203c07d8e23c9f0fbed5505ff3bba03ce60cc7f",
+    "observer_follow.py": "774209257ef39f7155c694bbdb3626c703e234b216cf88e42bdced27909e280f",
+    "operator_session.py": "1225f45c303e3ae6dff5d0e1fa13afb0b8e0e196ec343a7b966a14f51c9d63e5",
+    "submit_goal.py": "08f526a2c72f9c7278ecfd4de1be597adbab2ff124ba18f3fd77d40290658681",
+    "diagnose_endpoint.py": "c664af63b0b5b3533044a0e73d44af9a71ca6af12d5f78b50a2ccd44a5ca364b",
+    "prepare_scene.py": "6b136ece031310f7c7d45c3791559b996e4646c61148d7040e893f7aa851535b",
+    "compose_presentation.py": "cf4e0190633e07739e7f72b25491d4ec0d7b9d98e11cce383d1e371d835e0ddb",
+    "controller_probe.py": "128c9f49acdca18ffc89df53945a0bc164ace1f25356524c36112220f62cff40",
+    "analyze_localization_residuals.py": "9630255123cf990574344fb5c7923e15cb8e03023c1a9bd33c59993c2f72e770",
+    "sensor_bridge.py": "b803cf76d6fdef43e9c12c90bf7ecb7f2a174c441a7c8d143c03348d0ef7b636",
+    "prepare_fixture_prior.py": "1a8eafcec11662c4349794945a3ca1ce04ca23e2ad7da115697d85008b135c7f",
+    "navigate_through.xml": "f9b5c1bd78f3854eb14c377a2a242a19a3ac20f158e31bd2e4a78186bc8ec32b",
+    "build_localization_mesh_prior.py": "a18e63fabc72f3b19bad2262c6650f169dcf5f74db9b91a828ad95a3a062a774",
+    "jetbot_semantic_nav/config.py": "d0243a92f173d4430e4154def747390d98c73ad0ef1cb0dc540d24854a16743c",
+    "jetbot_semantic_nav/__init__.py": "d84c1967f3dcf9ff90c93a9807bb9816429cc40220337027a0c83f075b75dd56",
+    "jetbot_semantic_nav/cli.py": "b2c014a0a0ff04ed1f80f36e300a64a9053fde28522ac3c1e2586a0413120a63",
+    "jetbot_semantic_nav/core.py": "72b2a8517302833e32a576b1d817f311435c4fd38fdef81ffdf7037ea33c04e5",
+    "jetbot_semantic_nav/mapper.py": "272173ba81a5b77de01b1660ad8151dadcc2abd95ac7a0ebaabb16b80dba8200",
+    "jetbot_semantic_nav/oracle.py": "f5e9bb0908e3b03759a0efd11bd47678d00b5a846d28257e40663b7067848580",
+    "jetbot_semantic_nav/manager.py": "c0a738569a5b618dc68fe3741c27c1da0add399d19e8a9ef5a25fe26e4efbb6b"
+  },
+  "mode": "ground_truth_oracle",
+  "semantic_parameters": {
+    "version": 1,
+    "mode": "ground_truth_oracle",
+    "world_frame": "usd_world",
+    "world_to_map": {
+      "method": "same_usd_world_as_map_raster",
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source_scene_sha256": "3d2fbe4238e2652572c5a5ee68749caf165adf47648c2b140b65cc9dfd20eec0",
+      "planning_map_sha256": "d42be37e98acac1017e473188ad1f69bd8f202818d985ed9976450a9e8aed4d0"
+    },
+    "declared_spawn_map": [
+      0.0,
+      6.0,
+      0.0
+    ],
+    "observation_hz": 2.0,
+    "object_ttl_s": 5.0,
+    "planning_radius_m": 0.4,
+    "footprint_padding_m": 0.01,
+    "approach_margin_m": 0.6,
+    "approach_samples": 8,
+    "target_move_m": 0.15,
+    "target_rotate_rad": 0.2,
+    "plan_timeout_wall_s": 10.0,
+    "query_timeout_wall_s": 180.0,
+    "navigation_timeout_wall_s": 600.0,
+    "max_goal_cost": 20,
+    "ready_after_sim_s": 10.0,
+    "healthy_ready_wall_s": 2.0,
+    "topics": {
+      "observations": "/semantic/objects/observations",
+      "objects": "/semantic/objects/map",
+      "command": "/semantic/command",
+      "cancel": "/semantic/cancel",
+      "status": "/semantic/status",
+      "markers": "/semantic/objects/markers",
+      "selected_goal": "/semantic/selected_goal"
+    },
+    "actions": {
+      "plan": "/compute_path_to_pose",
+      "navigate": "/navigate_to_pose"
+    },
+    "services": {
+      "arm": "/jetbot/arm",
+      "global_costmap": "/global_costmap/get_costmap"
+    },
+    "fixtures": [
+      {
+        "id": "cart_near",
+        "class_name": "cart",
+        "asset_kind": "pushcart",
+        "center": [
+          -3.0,
+          7.0,
+          0.0
+        ]
+      },
+      {
+        "id": "box_near",
+        "class_name": "box",
+        "asset_kind": "box",
+        "center": [
+          -13.9,
+          12.0,
+          0.0
+        ]
+      },
+      {
+        "id": "box_far",
+        "class_name": "box",
+        "asset_kind": "box",
+        "center": [
+          -13.0,
+          24.0,
+          0.0
+        ]
+      },
+      {
+        "id": "box_relation",
+        "class_name": "box",
+        "asset_kind": "box",
+        "center": [
+          -8.4,
+          12.0,
+          0.0
+        ]
+      }
+    ],
+    "registered_groups": [
+      {
+        "object_id": "/SemanticCatalog/shelf_row_1",
+        "class_name": "shelf",
+        "row_index": 1,
+        "label": "第1排货架",
+        "prim_paths": [
+          "/World/full_warehouse/SM_RackFrame_139",
+          "/World/full_warehouse/SM_RackFrame_141",
+          "/World/full_warehouse/SM_RackFrame_143",
+          "/World/full_warehouse/SM_RackFrame_145",
+          "/World/full_warehouse/SM_RackFrame_147",
+          "/World/full_warehouse/SM_Rackshield_27",
+          "/World/full_warehouse/SM_Rackshield_29"
+        ]
+      },
+      {
+        "object_id": "/SemanticCatalog/shelf_row_2",
+        "class_name": "shelf",
+        "row_index": 2,
+        "label": "第2排货架",
+        "prim_paths": [
+          "/World/full_warehouse/SM_RackFrame_169",
+          "/World/full_warehouse/SM_RackFrame_2973",
+          "/World/full_warehouse/SM_RackFrame_2978",
+          "/World/full_warehouse/SM_RackFrame_2983",
+          "/World/full_warehouse/SM_RackFrame_2986",
+          "/World/full_warehouse/SM_Rackshield_2984",
+          "/World/full_warehouse/SM_Rackshield_2987"
+        ]
+      },
+      {
+        "object_id": "/SemanticCatalog/shelf_row_3",
+        "class_name": "shelf",
+        "row_index": 3,
+        "label": "第3排货架",
+        "prim_paths": [
+          "/World/full_warehouse/SM_RackFrame_4473",
+          "/World/full_warehouse/SM_RackFrame_4478",
+          "/World/full_warehouse/SM_RackFrame_4483",
+          "/World/full_warehouse/SM_RackFrame_4488",
+          "/World/full_warehouse/SM_RackFrame_4491",
+          "/World/full_warehouse/SM_Rackshield_4489",
+          "/World/full_warehouse/SM_Rackshield_4492"
+        ]
+      },
+      {
+        "object_id": "/SemanticCatalog/shelf_row_4",
+        "class_name": "shelf",
+        "row_index": 4,
+        "label": "第4排货架",
+        "prim_paths": [
+          "/World/full_warehouse/SM_RackFrame_3825",
+          "/World/full_warehouse/SM_RackFrame_3830",
+          "/World/full_warehouse/SM_RackFrame_3835",
+          "/World/full_warehouse/SM_RackFrame_3840",
+          "/World/full_warehouse/SM_RackFrame_3843",
+          "/World/full_warehouse/SM_Rackshield_3841",
+          "/World/full_warehouse/SM_Rackshield_3844"
+        ]
+      }
+    ],
+    "near_shelf_distance_m": 1.5,
+    "row_numbering": "Explicit site catalog: these four aisle rows numbered west-to-east, increasing map X; not robot-relative"
+  },
+  "object_count": 8,
+  "observation_batches": 212,
+  "rejected_observation_batches": 0,
+  "gate": {
+    "fault": "PREDICTED_SCAN_CLEARANCE",
+    "last_reason": "DISARMED",
+    "runtime_error": null,
+    "shutdown_zero_published": true,
+    "automatic_rearm": false,
+    "simulation_only": true
+  },
+  "observed_gate_faults": [
+    "PREDICTED_SCAN_CLEARANCE"
+  ],
+  "runner": {
+    "exit_code": 130,
+    "error": null,
+    "elapsed_wall_s": 461.3706506569997,
+    "children": [
+      {
+        "pid": 23623,
+        "exit_code": 0
+      },
+      {
+        "pid": 24158,
+        "exit_code": -2
+      },
+      {
+        "pid": 24159,
+        "exit_code": -2
+      },
+      {
+        "pid": 24160,
+        "exit_code": -2
+      },
+      {
+        "pid": 24333,
+        "exit_code": -2
+      },
+      {
+        "pid": 24334,
+        "exit_code": -2
+      },
+      {
+        "pid": 24335,
+        "exit_code": 254
+      },
+      {
+        "pid": 24336,
+        "exit_code": 254
+      },
+      {
+        "pid": 24339,
+        "exit_code": 254
+      },
+      {
+        "pid": 24344,
+        "exit_code": 0
+      },
+      {
+        "pid": 24349,
+        "exit_code": 254
+      },
+      {
+        "pid": 24350,
+        "exit_code": 254
+      },
+      {
+        "pid": 24351,
+        "exit_code": 0
+      },
+      {
+        "pid": 24352,
+        "exit_code": -2
+      },
+      {
+        "pid": 24353,
+        "exit_code": -2
+      }
+    ],
+    "power_operation": false
+  },
+  "planning_map_unchanged": true,
+  "prepared_scene_unchanged": true,
+  "registration": {
+    "method": "same_usd_world_as_map_raster",
+    "translation": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "rotation_xyzw": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "source_scene_sha256": "3d2fbe4238e2652572c5a5ee68749caf165adf47648c2b140b65cc9dfd20eec0",
+    "planning_map_sha256": "d42be37e98acac1017e473188ad1f69bd8f202818d985ed9976450a9e8aed4d0"
+  },
+  "offline_truth_scoring_only": true,
+  "truth_metric_definition": "True robot chassis XY/yaw vs requested free-space approach goal at recorded completion time; not distance to object center or full-trajectory AMCL accuracy"
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "task": "farthest_preview",
+    "state": "DRY_RUN_COMPLETE",
+    "cli_exit_code": 0,
+    "passed": true,
+    "selected_object": "/World/SemanticOracle/box_far",
+    "ranking_verified": true
+  },
+  {
+    "task": "missing_row",
+    "state": "REFERENCE_NOT_FOUND",
+    "cli_exit_code": 1,
+    "passed": true,
+    "selected_object": null
+  },
+  {
+    "task": "ambiguous_row",
+    "state": "AMBIGUOUS",
+    "cli_exit_code": 1,
+    "passed": true,
+    "selected_object": null
+  },
+  {
+    "task": "relational_preview",
+    "state": "DRY_RUN_COMPLETE",
+    "cli_exit_code": 0,
+    "passed": true,
+    "selected_object": "/World/SemanticOracle/box_relation",
+    "ranking_verified": true
+  },
+  {
+    "task": "row_nearest",
+    "state": "DRY_RUN_COMPLETE",
+    "cli_exit_code": 0,
+    "passed": true,
+    "selected_object": "/World/SemanticOracle/box_near",
+    "ranking_verified": true
+  },
+  {
+    "task": "row_farthest",
+    "state": "DRY_RUN_COMPLETE",
+    "cli_exit_code": 0,
+    "passed": true,
+    "selected_object": "/World/SemanticOracle/box_far",
+    "ranking_verified": true
+  },
+  {
+    "task": "unsupported_relation",
+    "state": "INVALID_COMMAND",
+    "cli_exit_code": 1,
+    "passed": true
+  },
+  {
+    "task": "farthest_nav",
+    "state": "NAVIGATION_FAILED",
+    "cli_exit_code": 1,
+    "passed": false,
+    "selected_object": "/World/SemanticOracle/box_far",
+    "ranking_verified": true
+  }
+]

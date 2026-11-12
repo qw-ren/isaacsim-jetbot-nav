@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "archives": [
+    {
+      "archive": "semantic_20261112_01_selected.tar.gz",
+      "verified_members": 155,
+      "sha256": "c938db40aacf097961da3aeafaa29a03e8d626fe23fbb044f35d1c5f7d3c1dbb"
+    },
+    {
+      "archive": "semantic_20261112_02_selected.tar.gz",
+      "verified_members": 146,
+      "sha256": "95bffceb7f90eb6ba0d18384341d67dc5278ff10df48e17609415b7d40938930"
+    },
+    {
+      "archive": "semantic_20261112_03_selected.tar.gz",
+      "verified_members": 147,
+      "sha256": "1cec986604cb10076cf65687226778e08d5f21148f26e19f507aa2707dab21f7"
+    },
+    {
+      "archive": "semantic_20261112_04_selected.tar.gz",
+      "verified_members": 156,
+      "sha256": "98ba2bb60dce7b7d70da2c75f58e9ece220031aa31dfdaa536a338d1740b0125"
+    },
+    {
+      "archive": "semantic_20261112_05_selected.tar.gz",
+      "verified_members": 150,
+      "sha256": "70d6ff3cf0de7a7b621e99f10bb06781cdf2e7f3a9da04c866621a70a6c38b46"
+    }
+  ],
+  "video_sha256": "fde330e1580e674dc7891c888d39e08319271ad004561643a20e0c460f42c237"
+}

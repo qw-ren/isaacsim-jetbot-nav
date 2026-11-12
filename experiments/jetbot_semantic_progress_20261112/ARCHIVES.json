@@ -1,0 +1,42 @@
+[
+  {
+    "file": "semantic_rel_diag_20261112_05_selected.tar.gz",
+    "sha256": "bc1c3fcd026c20b9d714b267b6fa1f656d593dd224de19d42ce424e2bd61ec2c",
+    "bytes": 13292843,
+    "files": 1046,
+    "runner_result_present": true,
+    "scope": "Selected metadata/logs/source/map/tasks/local diagnostics; no raw sensor or observer frame sequence"
+  },
+  {
+    "file": "semantic_maneuver_20261112_06_selected.tar.gz",
+    "sha256": "4df979451d80389df11ba0e129ef039bab964265ab025a2819e0413d0e41c1ad",
+    "bytes": 10261591,
+    "files": 875,
+    "runner_result_present": true,
+    "scope": "Selected metadata/logs/source/map/tasks/local diagnostics; no raw sensor or observer frame sequence"
+  },
+  {
+    "file": "semantic_maneuver_20261112_07_selected.tar.gz",
+    "sha256": "7b95f86aa182fbe4f99d132cb2f1ad5a27bd74489e980cdb374ef577b137162b",
+    "bytes": 2166290,
+    "files": 145,
+    "runner_result_present": true,
+    "scope": "Selected metadata/logs/source/map/tasks/local diagnostics; no raw sensor or observer frame sequence"
+  },
+  {
+    "file": "semantic_maneuver_20261112_08_selected.tar.gz",
+    "sha256": "681786f0f6afca2284aacc3753002f1a83f3be30ff939618c8bc27498cba213c",
+    "bytes": 4007757,
+    "files": 1242,
+    "runner_result_present": true,
+    "scope": "Selected metadata/logs/source/map/tasks/local diagnostics; no raw sensor or observer frame sequence"
+  },
+  {
+    "file": "semantic_maneuver_20261112_09_selected.tar.gz",
+    "sha256": "a6f2736ccc50d7e30e4d6a1c21bfe473e8fb87a2da2d46740ea4d316cc681ca9",
+    "bytes": 8236866,
+    "files": 635,
+    "runner_result_present": false,
+    "scope": "Selected metadata/logs/source/map/tasks/local diagnostics; no raw sensor or observer frame sequence"
+  }
+]

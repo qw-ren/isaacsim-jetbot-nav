@@ -26,7 +26,7 @@ if cfg.get('nav2_enabled',False):
   names.insert(names.index('amcl'),'localization_map_server')
  params['map_server']['ros__parameters']['yaml_filename']=str(a.case/'map/map.yaml')
  target.write_text(yaml.safe_dump(params,sort_keys=False));(a.case/'PARAMETER_OVERRIDES.json').write_text(json.dumps(dict(overrides=overrides,map_yaml_bound_to_case=str(a.case/'map/map.yaml'),before_sha256=before,after_sha256=hashlib.sha256(target.read_bytes()).hexdigest()),indent=2))
- old=a.case/'source_files.sha256';old.rename(a.case/'source_files_before_scenario.sha256');old.write_text(''.join(hashlib.sha256(f.read_bytes()).hexdigest()+'  '+str(f.relative_to(a.case))+'\n'for f in sorted((a.case/'source').glob('*'))if f.is_file()))
+ old=a.case/'source_files.sha256';old.rename(a.case/'source_files_before_scenario.sha256');old.write_text(''.join(hashlib.sha256(f.read_bytes()).hexdigest()+'  '+str(f.relative_to(a.case))+'\n'for f in sorted((a.case/'source').rglob('*'))if f.is_file()and '__pycache__'not in f.parts))
 if not events:raise SystemExit(0)
 assert not(a.case/'STATIC_FIXTURES.json').exists();scene=a.case/'jetbot_resolved.usda';s=Usd.Stage.Open(str(scene));parts=[]
 for i,e in enumerate(events):parts+=place_event(s,'/World/DeclaredStaticFixtures/event_'+str(i),e)

@@ -1,0 +1,231 @@
+{
+  "goals": [
+    [
+      0.0,
+      7.0,
+      1.5707963267948966
+    ]
+  ],
+  "timeout_wall_s": 1750.0,
+  "nominal_route_length_m": 45.0,
+  "scope": "Semantic maneuver candidate: 20cm farther goal + native proximity speed limit; frozen Nav2 override dictionary unchanged",
+  "obstacles": [],
+  "visualization": {
+    "headless": false,
+    "follow": true,
+    "record_video": true
+  },
+  "point_time_mode": "native_frame_rays",
+  "timing_audit": false,
+  "scan_deskew_gyro": true,
+  "robot_scale": 3.0,
+  "max_linear_m_s": 0.8,
+  "parameter_overrides": {
+    "local_costmap/local_costmap/ros__parameters/width": 5,
+    "local_costmap/local_costmap/ros__parameters/height": 5,
+    "controller_server/ros__parameters/general_goal_checker/xy_goal_tolerance": 0.05,
+    "controller_server/ros__parameters/general_goal_checker/yaw_goal_tolerance": 0.05,
+    "controller_server/ros__parameters/general_goal_checker/stateful": false,
+    "controller_server/ros__parameters/FollowPath/xy_goal_tolerance": 0.05,
+    "controller_server/ros__parameters/FollowPath/vx_samples": 25,
+    "controller_server/ros__parameters/FollowPath/RotateToGoal.slowing_factor": 10.0,
+    "amcl/ros__parameters/robot_model_type": "nav2_amcl::DifferentialMotionModel",
+    "amcl/ros__parameters/alpha1": 0.001,
+    "amcl/ros__parameters/alpha2": 0.001,
+    "amcl/ros__parameters/alpha3": 0.001,
+    "amcl/ros__parameters/alpha4": 0.001,
+    "amcl/ros__parameters/alpha5": 0.001,
+    "controller_server/ros__parameters/progress_checker/plugin": "nav2_controller::PoseProgressChecker",
+    "controller_server/ros__parameters/progress_checker/required_movement_angle": 0.1,
+    "local_costmap/local_costmap/ros__parameters/robot_radius": 0.4,
+    "local_costmap/local_costmap/ros__parameters/inflation_layer/inflation_radius": 1.0,
+    "global_costmap/global_costmap/ros__parameters/robot_radius": 0.4,
+    "global_costmap/global_costmap/ros__parameters/inflation_layer/inflation_radius": 1.0,
+    "amcl/ros__parameters/laser_model_type": "likelihood_field_prob",
+    "amcl/ros__parameters/do_beamskip": true,
+    "amcl/ros__parameters/beam_skip_distance": 0.5,
+    "amcl/ros__parameters/beam_skip_threshold": 0.3,
+    "amcl/ros__parameters/beam_skip_error_threshold": 0.9,
+    "amcl/ros__parameters/sigma_hit": 0.05,
+    "controller_server/ros__parameters/FollowPath/trans_stopped_velocity": 0.1,
+    "controller_server/ros__parameters/FollowPath/BaseObstacle.scale": 0.4,
+    "controller_server/ros__parameters/FollowPath/debug_trajectory_details": true,
+    "controller_server/ros__parameters/FollowPath/publish_evaluation": true
+  },
+  "extensions": {
+    "localization_probe": true,
+    "controller_probe": false,
+    "gate_diagnostics": true
+  },
+  "localization_prior_dir": "/home/admin/jetbot-warehouse/map_candidates/localization_mesh_002_20261030",
+  "odom_twist_projection": "differential_planar",
+  "semantic": {
+    "version": 1,
+    "mode": "ground_truth_oracle",
+    "world_frame": "usd_world",
+    "world_to_map": {
+      "method": "same_usd_world_as_map_raster",
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source_scene_sha256": "3d2fbe4238e2652572c5a5ee68749caf165adf47648c2b140b65cc9dfd20eec0",
+      "planning_map_sha256": "d42be37e98acac1017e473188ad1f69bd8f202818d985ed9976450a9e8aed4d0"
+    },
+    "declared_spawn_map": [
+      0.0,
+      6.0,
+      0.0
+    ],
+    "observation_hz": 2.0,
+    "object_ttl_s": 5.0,
+    "planning_radius_m": 0.4,
+    "footprint_padding_m": 0.01,
+    "approach_margin_m": 0.8,
+    "approach_samples": 8,
+    "target_move_m": 0.15,
+    "target_rotate_rad": 0.2,
+    "plan_timeout_wall_s": 10.0,
+    "query_timeout_wall_s": 180.0,
+    "navigation_timeout_wall_s": 600.0,
+    "max_goal_cost": 20,
+    "ready_after_sim_s": 10.0,
+    "healthy_ready_wall_s": 2.0,
+    "topics": {
+      "observations": "/semantic/objects/observations",
+      "objects": "/semantic/objects/map",
+      "command": "/semantic/command",
+      "cancel": "/semantic/cancel",
+      "status": "/semantic/status",
+      "markers": "/semantic/objects/markers",
+      "selected_goal": "/semantic/selected_goal"
+    },
+    "actions": {
+      "plan": "/compute_path_to_pose",
+      "navigate": "/navigate_to_pose"
+    },
+    "services": {
+      "arm": "/jetbot/arm",
+      "global_costmap": "/global_costmap/get_costmap"
+    },
+    "fixtures": [
+      {
+        "id": "cart_near",
+        "class_name": "cart",
+        "asset_kind": "pushcart",
+        "center": [
+          -3.0,
+          7.0,
+          0.0
+        ]
+      },
+      {
+        "id": "box_near",
+        "class_name": "box",
+        "asset_kind": "box",
+        "center": [
+          -13.9,
+          12.0,
+          0.0
+        ]
+      },
+      {
+        "id": "box_far",
+        "class_name": "box",
+        "asset_kind": "box",
+        "center": [
+          -13.0,
+          24.0,
+          0.0
+        ]
+      },
+      {
+        "id": "box_relation",
+        "class_name": "box",
+        "asset_kind": "box",
+        "center": [
+          -8.4,
+          12.0,
+          0.0
+        ]
+      }
+    ],
+    "registered_groups": [
+      {
+        "object_id": "/SemanticCatalog/shelf_row_1",
+        "class_name": "shelf",
+        "row_index": 1,
+        "label": "第1排货架",
+        "prim_paths": [
+          "/World/full_warehouse/SM_RackFrame_139",
+          "/World/full_warehouse/SM_RackFrame_141",
+          "/World/full_warehouse/SM_RackFrame_143",
+          "/World/full_warehouse/SM_RackFrame_145",
+          "/World/full_warehouse/SM_RackFrame_147",
+          "/World/full_warehouse/SM_Rackshield_27",
+          "/World/full_warehouse/SM_Rackshield_29"
+        ]
+      },
+      {
+        "object_id": "/SemanticCatalog/shelf_row_2",
+        "class_name": "shelf",
+        "row_index": 2,
+        "label": "第2排货架",
+        "prim_paths": [
+          "/World/full_warehouse/SM_RackFrame_169",
+          "/World/full_warehouse/SM_RackFrame_2973",
+          "/World/full_warehouse/SM_RackFrame_2978",
+          "/World/full_warehouse/SM_RackFrame_2983",
+          "/World/full_warehouse/SM_RackFrame_2986",
+          "/World/full_warehouse/SM_Rackshield_2984",
+          "/World/full_warehouse/SM_Rackshield_2987"
+        ]
+      },
+      {
+        "object_id": "/SemanticCatalog/shelf_row_3",
+        "class_name": "shelf",
+        "row_index": 3,
+        "label": "第3排货架",
+        "prim_paths": [
+          "/World/full_warehouse/SM_RackFrame_4473",
+          "/World/full_warehouse/SM_RackFrame_4478",
+          "/World/full_warehouse/SM_RackFrame_4483",
+          "/World/full_warehouse/SM_RackFrame_4488",
+          "/World/full_warehouse/SM_RackFrame_4491",
+          "/World/full_warehouse/SM_Rackshield_4489",
+          "/World/full_warehouse/SM_Rackshield_4492"
+        ]
+      },
+      {
+        "object_id": "/SemanticCatalog/shelf_row_4",
+        "class_name": "shelf",
+        "row_index": 4,
+        "label": "第4排货架",
+        "prim_paths": [
+          "/World/full_warehouse/SM_RackFrame_3825",
+          "/World/full_warehouse/SM_RackFrame_3830",
+          "/World/full_warehouse/SM_RackFrame_3835",
+          "/World/full_warehouse/SM_RackFrame_3840",
+          "/World/full_warehouse/SM_RackFrame_3843",
+          "/World/full_warehouse/SM_Rackshield_3841",
+          "/World/full_warehouse/SM_Rackshield_3844"
+        ]
+      }
+    ],
+    "near_shelf_distance_m": 1.5,
+    "row_numbering": "Explicit site catalog: these four aisle rows numbered west-to-east, increasing map X; not robot-relative",
+    "speed_policy": {
+      "topic": "/speed_limit",
+      "near_speed_m_s": 0.4,
+      "near_distance_m": 2.0,
+      "release_distance_m": 2.5
+    }
+  }
+}

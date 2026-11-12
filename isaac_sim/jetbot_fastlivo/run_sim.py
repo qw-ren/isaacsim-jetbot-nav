@@ -24,6 +24,10 @@ from sensor_bridge import SensorBridge
 bridge=SensorBridge(world,robot,a.case)
 from dynamic_fixture import DynamicFixture
 fixture=DynamicFixture(a.case,world)
+semantic_oracle=None
+if config.get('navigation',{}).get('semantic',{}).get('mode')=='ground_truth_oracle':
+ from jetbot_semantic_nav.oracle import GroundTruthObjectPublisher
+ semantic_oracle=GroundTruthObjectPublisher(a.case,bridge.node)
 limits=config.get('motion_limits',{});wheel_max=float(limits.get('max_wheel_rad_s',1e20))
 controller=DifferentialController(name='migration_controller',wheel_radius=float(limits.get('wheel_radius_m',.03)),wheel_base=float(limits.get('wheel_base_m',.1125)),max_wheel_speed=wheel_max)
 (a.case/'RUNTIME_JOINT_LIMITS.json').write_text(json.dumps(dict(dof_max_velocity_rad_s=robot.dof_properties['maxVelocity'].tolist(),controller_max_wheel_rad_s=wheel_max,joint_limits_modified=False),indent=2)+'\n')
@@ -50,6 +54,7 @@ try:
  while app.is_running() and not stop and world.current_time<a.duration and time.monotonic()-started<runtime_wall_s:
   bridge.spin();robot.apply_wheel_actions(controller.forward(command=bridge.command()))
   world.step(render=True);bridge.tick();fixture.tick()
+  if semantic_oracle is not None:semantic_oracle.tick(float(world.current_time))
   if viewport is not None and view.get('follow',True):
    position,q=robot.get_world_pose();yaw=math.atan2(2*(q[0]*q[3]+q[1]*q[2]),1-2*(q[2]*q[2]+q[3]*q[3]));eye,target=observer_follow.update(position,yaw,float(world.current_time),observer_boxes+fixture.display_boxes);set_camera_view(np.asarray(eye),np.asarray(target),camera_prim_path=observer,viewport_api=viewport);observer_log.write(json.dumps(dict(sim=float(world.current_time),eye=eye,target=target,observer_yaw=observer_follow.yaw,observer_distance=observer_follow.distance))+'\n')
    if video is None and capture_times and world.current_time>=capture_times[0]:
@@ -64,6 +69,7 @@ finally:
  if video is not None:
   for _ in range(5):app.update()
   video.close(final_sim)
+ if semantic_oracle is not None:semantic_oracle.close()
  observer_log.close();bridge.close();world.stop()
  (a.case/'SIM_RESULT.json').write_text(json.dumps(dict(error=error,sim_s=final_sim,wall_s=time.monotonic()-started,requested_stop=stop,power_operation=False),indent=2)+'\n')
  app.close()

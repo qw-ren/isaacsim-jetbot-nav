@@ -19,6 +19,7 @@ PY_SCALE
  /home/admin/isaacsim/kit/python/bin/python3 "$jetbot_dir/prepare_scene.py" --source "$jetbot_root/source_scene/jetbot_sim.usd" --case "$jetbot_case" --assets /home/admin/isaacsim_assets/Assets/Isaac/4.5/Isaac --robot-scale "$jetbot_scale"
  mkdir "$jetbot_case/source"
  cp "$jetbot_dir/"*.py "$jetbot_case/source/"
+ if [[ -d "$jetbot_dir/jetbot_semantic_nav" ]];then cp -r "$jetbot_dir/jetbot_semantic_nav" "$jetbot_case/source/";fi
  python3 "$jetbot_dir/validate_actuator.py" --source "$jetbot_case/source/sensor_bridge.py" --output "$jetbot_case/ACTUATOR_WATCHDOG_VALIDATION.json" > "$jetbot_case/actuator_validation.log"
  cp "$jetbot_dir/extension_contract.json" "$jetbot_dir/semantic_places.json" "$jetbot_case/source/"
  cp "$jetbot_dir/manage_jetbot.sh" "$jetbot_dir/nav2.yaml" "$jetbot_dir/livo_base.yaml" "$jetbot_dir/navigate.xml" "$jetbot_dir/navigate_through.xml" "$jetbot_case/source/"
@@ -34,6 +35,9 @@ if sys.argv[5]:
  assert all(len(g)==3 and all(isinstance(v,(float,int)) and __import__('math').isfinite(v) for v in g) for g in navigation['goals'])
  assert 0<float(navigation.get('timeout_wall_s',120))<=1800
  c=json.loads((p/'CASE.json').read_text());c['navigation']=navigation;c['runtime_wall_s']=max(600.,float(navigation.get('timeout_wall_s',120))+100.);(p/'CASE.json').write_text(json.dumps(c,indent=2)+'\n')
+ if navigation.get('semantic'):
+  assert sys.argv[3]=='operator', 'Semantic manager requires operator mode; no competing mission owner'
+  assert (p/'source/jetbot_semantic_nav/manager.py').is_file(), 'Deploy semantic package alongside runtime'
 if sys.argv[3]in ('nav2','operator'):
  source=Path(json.loads((p/'CASE.json').read_text()).get('navigation',{}).get('prior_map_dir','/home/admin/jetbot-warehouse/map_prior_20261023_01')).resolve()
  assert source==Path('/home/admin/jetbot-warehouse/map_prior_20261023_01')or source.parent==Path('/home/admin/jetbot-warehouse/map_candidates'), 'Only original or explicit isolated prior candidates'
@@ -65,7 +69,7 @@ if not headless:
  sys.path.insert(0,str(p/'source'));from desktop_env import discover_desktop
  c['visualization'].update(discover_desktop())
 (p/'CASE.json').write_text(json.dumps(c,indent=2)+'\n')
-(p/'source_files.sha256').write_text(''.join(hashlib.sha256(f.read_bytes()).hexdigest()+'  '+str(f.relative_to(p))+'\n'for f in sorted((p/'source').glob('*'))if f.is_file()))
+(p/'source_files.sha256').write_text(''.join(hashlib.sha256(f.read_bytes()).hexdigest()+'  '+str(f.relative_to(p))+'\n'for f in sorted((p/'source').rglob('*'))if f.is_file()and '__pycache__'not in f.parts))
 PY
  printf -v jetbot_cmd '%q ' bash "$jetbot_case/source/manage_jetbot.sh" __run "$jetbot_case"
  printf -v jetbot_log '%q' "$jetbot_case/runner.log"

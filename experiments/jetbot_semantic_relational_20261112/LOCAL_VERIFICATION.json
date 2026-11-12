@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "verified_archives": 4,
+  "verified_inner_files": 579,
+  "archive_hashes": [
+    {
+      "file": "semantic_rel_20261112_01_selected.tar.gz",
+      "bytes": 3349611,
+      "sha256": "0f4cc1b16968e78f66d365e7731a7a3a216281b78cd49bae286e9bb514363110",
+      "members": 142
+    },
+    {
+      "file": "semantic_rel_20261112_02_selected.tar.gz",
+      "bytes": 1437854,
+      "sha256": "d82372439ee71604b666f739aa859771147c394a204287252b9ee8491691f92c",
+      "members": 141
+    },
+    {
+      "file": "semantic_rel_20261112_03_selected.tar.gz",
+      "bytes": 4737053,
+      "sha256": "d64b9a5f49774772606e0d6b28f8014baf3ac0d2676020fe04f1b8fb8830982f",
+      "members": 156
+    },
+    {
+      "file": "semantic_rel_20261112_04_selected.tar.gz",
+      "bytes": 2431494,
+      "sha256": "6e206856376f20e0fa4d52e9ce7156655bc66e6a5d4cc8b74e11b8fdcfd73871",
+      "members": 140
+    }
+  ],
+  "video_sha256": "f29369ccc7946893c0ae5502fc00c83d46101d3c996015f2e7ca8cdd4c7f637a",
+  "video_full_decode_passed": true,
+  "video_frame_inspected": true
+}

@@ -1,0 +1,30 @@
+{
+  "sim_s": 92.689997928,
+  "min_predicted_clearance_m": 0.3767962776644968,
+  "minimum_at_future_s": 0.8,
+  "closest_scan_xy": [
+    0.5639917243643108,
+    0.4097638726969118
+  ],
+  "predicted_center_xy": [
+    0.6382994182057623,
+    0.04036733576432806
+  ],
+  "raw_command": [
+    0.7999999999999999,
+    0.15789473684210517
+  ],
+  "estimated_map_pose_sample_time_s": 92.60999793,
+  "estimated_xy": [
+    -12.709993442327285,
+    23.094629134338952
+  ],
+  "estimated_yaw_rad": 0.8589323749521893,
+  "approximate_closest_point_map_xy": [
+    -12.651818900389602,
+    23.789329659161943
+  ],
+  "offline_projection_only": true,
+  "tf_sample_delta_s": -0.07999999799999102,
+  "threshold_m": 0.4
+}

@@ -1,0 +1,1880 @@
+{
+  "passed": true,
+  "test_type": "isolated_ROS_fixtures_not_Isaac_or_physical_navigation",
+  "ros_domain_id": 52,
+  "checks": [
+    "all_approaches_blocked_no_navigation_or_enable",
+    "moving_target_disarm_and_native_cancel",
+    "expired_target_disarm_and_native_cancel",
+    "user_cancel_during_native_navigation",
+    "duplicate_task_not_replayed",
+    "missing_reference_no_navigation",
+    "ambiguous_relation_no_navigation",
+    "reference_movement_disarm_and_native_cancel",
+    "vision_timestamped_nonidentity_tf"
+  ],
+  "nav_goals": 4,
+  "cancellations": 4,
+  "temporary_case": "/home/admin/go2-warehouse/cache/tmp/semantic_ros_fixture_xw0i30b1",
+  "twist_publishers": 0,
+  "states": [
+    {
+      "version": 1,
+      "task_id": null,
+      "state": "STARTING",
+      "wall": 8287.101761299,
+      "stamp": 0.0,
+      "mode": "ground_truth_oracle",
+      "robot_truth_input": false,
+      "velocity_publisher": false
+    },
+    {
+      "version": 1,
+      "task_id": null,
+      "state": "READY",
+      "wall": 8298.16005731,
+      "stamp": 12.05,
+      "mode": "ground_truth_oracle",
+      "robot_truth_input": false,
+      "velocity_publisher": false,
+      "initial_pose_source": "declared_CAD_spawn_once"
+    },
+    {
+      "version": 1,
+      "task_id": "unreachable",
+      "state": "QUERYING",
+      "wall": 8298.191341983,
+      "stamp": 12.05,
+      "mode": "ground_truth_oracle",
+      "robot_truth_input": false,
+      "velocity_publisher": false,
+      "parsed": {
+        "intent": "navigate_to_object",
+        "object_class": "box",
+        "relation": "approach",
+        "selection": "nearest_reachable"
+      }
+    },
+    {
+      "version": 1,
+      "task_id": "unreachable",
+      "state": "PLANNING",
+      "wall": 8298.237195209,
+      "stamp": 12.100000000000001,
+      "mode": "ground_truth_oracle",
+      "robot_truth_input": false,
+      "velocity_publisher": false,
+      "candidates": [
+        {
+          "object_id": "fixture/box",
+          "class_name": "box",
+          "confidence": 1.0,
+          "position": [
+            5.0,
+            6.0,
+            0.3
+          ],
+          "dimensions": [
+            0.7,
+            0.5,
+            0.6
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "source": "ground_truth",
+          "last_seen": 12.000000000000036,
+          "received_wall": 8298.092449792,
+          "status": "active"
+        }
+      ]
+    },
+    {
+      "version": 1,
+      "task_id": "unreachable",
+      "state": "UNREACHABLE",
+      "wall": 8298.258977021,
+      "stamp": 12.15,
+      "mode": "ground_truth_oracle",
+      "robot_truth_input": false,
+      "velocity_publisher": false,
+      "result": {
+        "request": {
+          "version": 1,
+          "task_id": "unreachable",
+          "text": "到最近的纸箱那里"
+        },
+        "parsed": {
+          "intent": "navigate_to_object",
+          "object_class": "box",
+          "relation": "approach",
+          "selection": "nearest_reachable"
+        },
+        "passed": false,
+        "mode": "ground_truth_oracle",
+        "relation_audit": {
+          "relation": "approach",
+          "reference_objects": [],
+          "candidate_relations": []
+        },
+        "objects": [
+          {
+            "object_id": "fixture/box",
+            "class_name": "box",
+            "confidence": 1.0,
+            "position": [
+              5.0,
+              6.0,
+              0.3
+            ],
+            "dimensions": [
+              0.7,
+              0.5,
+              0.6
+            ],
+            "orientation_xyzw": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "source": "ground_truth",
+            "last_seen": 12.000000000000036,
+            "received_wall": 8298.092449792,
+            "status": "active"
+          }
+        ],
+        "approach_audit": [
+          {
+            "object_id": "fixture/box",
+            "goal": [
+              6.359999999999999,
+              6.0,
+              3.141592653589793
+            ],
+            "rejected": "unsafe_goal"
+          },
+          {
+            "object_id": "fixture/box",
+            "goal": [
+              5.0,
+              7.26,
+              -1.5707963267948966
+            ],
+            "rejected": "unsafe_goal"
+          },
+          {
+            "object_id": "fixture/box",
+            "goal": [
+              3.64,
+              6.0,
+              0.0
+            ],
+            "rejected": "unsafe_goal"
+          },
+          {
+            "object_id": "fixture/box",
+            "goal": [
+              5.0,
+              4.74,
+              1.5707963267948966
+            ],
+            "rejected": "unsafe_goal"
+          }
+        ],
+        "disarmed": true,
+        "state": "UNREACHABLE",
+        "finished_stamp": 12.15
+      }
+    },
+    {
+      "version": 1,
+      "task_id": "moved",
+      "state": "QUERYING",
+      "wall": 8298.280655322,
+      "stamp": 12.15,
+      "mode": "ground_truth_oracle",
+      "robot_truth_input": false,
+      "velocity_publisher": false,
+      "parsed": {
+        "intent": "navigate_to_object",
+        "object_class": "box",
+        "relation": "approach",
+        "selection": "nearest_reachable"
+      }
+    },
+    {
+      "version": 1,
+      "task_id": "moved",
+      "state": "PLANNING",
+      "wall": 8298.322358593,
+      "stamp": 12.200000000000001,
+      "mode": "ground_truth_oracle",
+      "robot_truth_input": false,
+      "velocity_publisher": false,
+      "candidates": [
+        {
+          "object_id": "fixture/box",
+          "class_name": "box",
+          "confidence": 1.0,
+          "position": [
+            5.0,
+            6.0,
+            0.3
+          ],
+          "dimensions": [
+            0.7,
+            0.5,
+            0.6
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "source": "ground_truth",
+          "last_seen": 12.000000000000036,
+          "received_wall": 8298.092449792,
+          "status": "active"
+        }
+      ]
+    },
+    {
+      "version": 1,
+      "task_id": "moved",
+      "state": "SELECTED",
+      "wall": 8298.494117036,
+      "stamp": 12.4,
+      "mode": "ground_truth_oracle",
+      "robot_truth_input": false,
+      "velocity_publisher": false,
+      "object": {
+        "object_id": "fixture/box",
+        "class_name": "box",
+        "confidence": 1.0,
+        "position": [
+          5.0,
+          6.0,
+          0.3
+        ],
+        "dimensions": [
+          0.7,
+          0.5,
+          0.6
+        ],
+        "orientation_xyzw": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "source": "ground_truth",
+        "last_seen": 12.000000000000036,
+        "received_wall": 8298.092449792,
+        "status": "active"
+      },
+      "goal": [
+        3.64,
+        6.0,
+        0.0
+      ],
+      "path_length_m": 3.6399999999999997
+    },
+    {
+      "version": 1,
+      "task_id": "moved",
+      "state": "NAVIGATING",
+      "wall": 8298.536277755,
+      "stamp": 12.4,
+      "mode": "ground_truth_oracle",
+      "robot_truth_input": false,
+      "velocity_publisher": false,
+      "object_id": "fixture/box",
+      "goal": [
+        3.64,
+        6.0,
+        0.0
+      ]
+    },
+    {
+      "version": 1,
+      "task_id": "moved",
+      "state": "CANCEL_ACK",
+      "wall": 8298.69926358,
+      "stamp": 12.600000000000001,
+      "mode": "ground_truth_oracle",
+      "robot_truth_input": false,
+      "velocity_publisher": false,
+      "cancel_accepted": true,
+      "native_status": 5
+    },
+    {
+      "version": 1,
+      "task_id": "moved",
+      "state": "TARGET_INVALID",
+      "wall": 8298.720897319,
+      "stamp": 12.600000000000001,
+      "mode": "ground_truth_oracle",
+      "robot_truth_input": false,
+      "velocity_publisher": false,
+      "result": {
+        "request": {
+          "version": 1,
+          "task_id": "moved",
+          "text": "到最近的纸箱那里"
+        },
+        "parsed": {
+          "intent": "navigate_to_object",
+          "object_class": "box",
+          "relation": "approach",
+          "selection": "nearest_reachable"
+        },
+        "passed": false,
+        "mode": "ground_truth_oracle",
+        "relation_audit": {
+          "relation": "approach",
+          "reference_objects": [],
+          "candidate_relations": []
+        },
+        "objects": [
+          {
+            "object_id": "fixture/box",
+            "class_name": "box",
+            "confidence": 1.0,
+            "position": [
+              5.0,
+              6.0,
+              0.3
+            ],
+            "dimensions": [
+              0.7,
+              0.5,
+              0.6
+            ],
+            "orientation_xyzw": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "source": "ground_truth",
+            "last_seen": 12.000000000000036,
+            "received_wall": 8298.092449792,
+            "status": "active"
+          }
+        ],
+        "approach_audit": [
+          {
+            "object_id": "fixture/box",
+            "goal": [
+              6.359999999999999,
+              6.0,
+              3.141592653589793
+            ],
+            "rejected": "unsafe_path",
+            "first_unsafe": {
+              "point": [
+                4.256307692307692,
+                6.0
+              ],
+              "cost": 0,
+              "object_ids": [
+                "fixture/box"
+              ]
+            }
+          },
+          {
+            "object_id": "fixture/box",
+            "goal": [
+              5.0,
+              7.26,
+              -1.5707963267948966
+            ],
+            "path_length_m": 5.156316514722501
+          },
+          {
+            "object_id": "fixture/box",
+            "goal": [
+              3.64,
+              6.0,
+              0.0
+            ],
+            "path_length_m": 3.6399999999999997
+          },
+          {
+            "object_id": "fixture/box",
+            "goal": [
+              5.0,
+              4.74,
+              1.5707963267948966
+            ],
+            "path_length_m": 5.156316514722501
+          }
+        ],
+        "object_ranking": [
+          {
+            "object_id": "fixture/box",
+            "shortest_approach_path_m": 3.6399999999999997,
+            "goal": [
+              3.64,
+              6.0,
+              0.0
+            ]
+          }
+        ],
+        "selected_object": {
+          "object_id": "fixture/box",
+          "class_name": "box",
+          "confidence": 1.0,
+          "position": [
+            5.0,
+            6.0,
+            0.3
+          ],
+          "dimensions": [
+            0.7,
+            0.5,
+            0.6
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "source": "ground_truth",
+          "last_seen": 12.000000000000036,
+          "received_wall": 8298.092449792,
+          "status": "active"
+        },
+        "goal": [
+          3.64,
+          6.0,
+          0.0
+        ],
+        "path_length_m": 3.6399999999999997,
+        "planned_path": [
+          [
+            0.0,
+            6.0
+          ],
+          [
+            0.182,
+            6.0
+          ],
+          [
+            0.364,
+            6.0
+          ],
+          [
+            0.546,
+            6.0
+          ],
+          [
+            0.728,
+            6.0
+          ],
+          [
+            0.9099999999999999,
+            6.0
+          ],
+          [
+            1.092,
+            6.0
+          ],
+          [
+            1.274,
+            6.0
+          ],
+          [
+            1.456,
+            6.0
+          ],
+          [
+            1.638,
+            6.0
+          ],
+          [
+            1.8199999999999998,
+            6.0
+          ],
+          [
+            2.002,
+            6.0
+          ],
+          [
+            2.184,
+            6.0
+          ],
+          [
+            2.366,
+            6.0
+          ],
+          [
+            2.548,
+            6.0
+          ],
+          [
+            2.73,
+            6.0
+          ],
+          [
+            2.912,
+            6.0
+          ],
+          [
+            3.0940000000000003,
+            6.0
+          ],
+          [
+            3.276,
+            6.0
+          ],
+          [
+            3.4579999999999997,
+            6.0
+          ],
+          [
+            3.6399999999999997,
+            6.0
+          ]
+        ],
+        "reason": "target_moved",
+        "disarmed": true,
+        "state": "TARGET_INVALID",
+        "finished_stamp": 12.600000000000001
+      }
+    },
+    {
+      "version": 1,
+      "task_id": "expired",
+      "state": "QUERYING",
+      "wall": 8298.76703436,
+      "stamp": 12.65,
+      "mode": "ground_truth_oracle",
+      "robot_truth_input": false,
+      "velocity_publisher": false,
+      "parsed": {
+        "intent": "navigate_to_object",
+        "object_class": "box",
+        "relation": "approach",
+        "selection": "nearest_reachable"
+      }
+    },
+    {
+      "version": 1,
+      "task_id": "expired",
+      "state": "PLANNING",
+      "wall": 8298.810037934,
+      "stamp": 12.700000000000001,
+      "mode": "ground_truth_oracle",
+      "robot_truth_input": false,
+      "velocity_publisher": false,
+      "candidates": [
+        {
+          "object_id": "fixture/box",
+          "class_name": "box",
+          "confidence": 1.0,
+          "position": [
+            5.3,
+            6.0,
+            0.3
+          ],
+          "dimensions": [
+            0.7,
+            0.5,
+            0.6
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "source": "ground_truth",
+          "last_seen": 12.500000000000043,
+          "received_wall": 8298.59158198,
+          "status": "active"
+        }
+      ]
+    },
+    {
+      "version": 1,
+      "task_id": "expired",
+      "state": "SELECTED",
+      "wall": 8298.980110497,
+      "stamp": 12.850000000000001,
+      "mode": "ground_truth_oracle",
+      "robot_truth_input": false,
+      "velocity_publisher": false,
+      "object": {
+        "object_id": "fixture/box",
+        "class_name": "box",
+        "confidence": 1.0,
+        "position": [
+          5.3,
+          6.0,
+          0.3
+        ],
+        "dimensions": [
+          0.7,
+          0.5,
+          0.6
+        ],
+        "orientation_xyzw": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "source": "ground_truth",
+        "last_seen": 12.500000000000043,
+        "received_wall": 8298.59158198,
+        "status": "active"
+      },
+      "goal": [
+        3.94,
+        6.0,
+        0.0
+      ],
+      "path_length_m": 3.94
+    },
+    {
+      "version": 1,
+      "task_id": "expired",
+      "state": "NAVIGATING",
+      "wall": 8299.021207527,
+      "stamp": 12.9,
+      "mode": "ground_truth_oracle",
+      "robot_truth_input": false,
+      "velocity_publisher": false,
+      "object_id": "fixture/box",
+      "goal": [
+        3.94,
+        6.0,
+        0.0
+      ]
+    },
+    {
+      "version": 1,
+      "task_id": "expired",
+      "state": "CANCEL_ACK",
+      "wall": 8301.147998583,
+      "stamp": 15.05,
+      "mode": "ground_truth_oracle",
+      "robot_truth_input": false,
+      "velocity_publisher": false,
+      "cancel_accepted": true,
+      "native_status": 5
+    },
+    {
+      "version": 1,
+      "task_id": "expired",
+      "state": "TARGET_INVALID",
+      "wall": 8301.169294846,
+      "stamp": 15.05,
+      "mode": "ground_truth_oracle",
+      "robot_truth_input": false,
+      "velocity_publisher": false,
+      "result": {
+        "request": {
+          "version": 1,
+          "task_id": "expired",
+          "text": "到最近的纸箱那里"
+        },
+        "parsed": {
+          "intent": "navigate_to_object",
+          "object_class": "box",
+          "relation": "approach",
+          "selection": "nearest_reachable"
+        },
+        "passed": false,
+        "mode": "ground_truth_oracle",
+        "relation_audit": {
+          "relation": "approach",
+          "reference_objects": [],
+          "candidate_relations": []
+        },
+        "objects": [
+          {
+            "object_id": "fixture/box",
+            "class_name": "box",
+            "confidence": 1.0,
+            "position": [
+              5.3,
+              6.0,
+              0.3
+            ],
+            "dimensions": [
+              0.7,
+              0.5,
+              0.6
+            ],
+            "orientation_xyzw": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "source": "ground_truth",
+            "last_seen": 12.500000000000043,
+            "received_wall": 8298.59158198,
+            "status": "active"
+          }
+        ],
+        "approach_audit": [
+          {
+            "object_id": "fixture/box",
+            "goal": [
+              6.66,
+              6.0,
+              3.141592653589793
+            ],
+            "rejected": "unsafe_path",
+            "first_unsafe": {
+              "point": [
+                4.543071428571429,
+                6.0
+              ],
+              "cost": 0,
+              "object_ids": [
+                "fixture/box"
+              ]
+            }
+          },
+          {
+            "object_id": "fixture/box",
+            "goal": [
+              5.3,
+              7.26,
+              -1.5707963267948966
+            ],
+            "path_length_m": 5.4477151173680145
+          },
+          {
+            "object_id": "fixture/box",
+            "goal": [
+              3.94,
+              6.0,
+              0.0
+            ],
+            "path_length_m": 3.94
+          },
+          {
+            "object_id": "fixture/box",
+            "goal": [
+              5.3,
+              4.74,
+              1.5707963267948966
+            ],
+            "path_length_m": 5.4477151173680145
+          }
+        ],
+        "object_ranking": [
+          {
+            "object_id": "fixture/box",
+            "shortest_approach_path_m": 3.94,
+            "goal": [
+              3.94,
+              6.0,
+              0.0
+            ]
+          }
+        ],
+        "selected_object": {
+          "object_id": "fixture/box",
+          "class_name": "box",
+          "confidence": 1.0,
+          "position": [
+            5.3,
+            6.0,
+            0.3
+          ],
+          "dimensions": [
+            0.7,
+            0.5,
+            0.6
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "source": "ground_truth",
+          "last_seen": 12.500000000000043,
+          "received_wall": 8298.59158198,
+          "status": "active"
+        },
+        "goal": [
+          3.94,
+          6.0,
+          0.0
+        ],
+        "path_length_m": 3.94,
+        "planned_path": [
+          [
+            0.0,
+            6.0
+          ],
+          [
+            0.197,
+            6.0
+          ],
+          [
+            0.394,
+            6.0
+          ],
+          [
+            0.591,
+            6.0
+          ],
+          [
+            0.788,
+            6.0
+          ],
+          [
+            0.985,
+            6.0
+          ],
+          [
+            1.182,
+            6.0
+          ],
+          [
+            1.379,
+            6.0
+          ],
+          [
+            1.576,
+            6.0
+          ],
+          [
+            1.7730000000000001,
+            6.0
+          ],
+          [
+            1.97,
+            6.0
+          ],
+          [
+            2.167,
+            6.0
+          ],
+          [
+            2.364,
+            6.0
+          ],
+          [
+            2.561,
+            6.0
+          ],
+          [
+            2.758,
+            6.0
+          ],
+          [
+            2.955,
+            6.0
+          ],
+          [
+            3.152,
+            6.0
+          ],
+          [
+            3.349,
+            6.0
+          ],
+          [
+            3.5460000000000003,
+            6.0
+          ],
+          [
+            3.743,
+            6.0
+          ],
+          [
+            3.94,
+            6.0
+          ]
+        ],
+        "reason": "target_expired",
+        "disarmed": true,
+        "state": "TARGET_INVALID",
+        "finished_stamp": 15.05
+      }
+    },
+    {
+      "version": 1,
+      "task_id": "align_cancel",
+      "state": "QUERYING",
+      "wall": 8301.599707102,
+      "stamp": 15.500000000000002,
+      "mode": "ground_truth_oracle",
+      "robot_truth_input": false,
+      "velocity_publisher": false,
+      "parsed": {
+        "intent": "navigate_to_object",
+        "object_class": "box",
+        "relation": "approach",
+        "selection": "nearest_reachable"
+      }
+    },
+    {
+      "version": 1,
+      "task_id": "align_cancel",
+      "state": "PLANNING",
+      "wall": 8301.64238508,
+      "stamp": 15.55,
+      "mode": "ground_truth_oracle",
+      "robot_truth_input": false,
+      "velocity_publisher": false,
+      "candidates": [
+        {
+          "object_id": "fixture/box",
+          "class_name": "box",
+          "confidence": 1.0,
+          "position": [
+            -5.0,
+            6.0,
+            0.3
+          ],
+          "dimensions": [
+            0.7,
+            0.5,
+            0.6
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "source": "ground_truth",
+          "last_seen": 15.500000000000085,
+          "received_wall": 8301.590473586,
+          "status": "active"
+        }
+      ]
+    },
+    {
+      "version": 1,
+      "task_id": "align_cancel",
+      "state": "SELECTED",
+      "wall": 8301.812949139,
+      "stamp": 15.700000000000001,
+      "mode": "ground_truth_oracle",
+      "robot_truth_input": false,
+      "velocity_publisher": false,
+      "object": {
+        "object_id": "fixture/box",
+        "class_name": "box",
+        "confidence": 1.0,
+        "position": [
+          -5.0,
+          6.0,
+          0.3
+        ],
+        "dimensions": [
+          0.7,
+          0.5,
+          0.6
+        ],
+        "orientation_xyzw": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "source": "ground_truth",
+        "last_seen": 15.500000000000085,
+        "received_wall": 8301.590473586,
+        "status": "active"
+      },
+      "goal": [
+        -3.64,
+        6.0,
+        3.141592653589793
+      ],
+      "path_length_m": 3.6399999999999997
+    },
+    {
+      "version": 1,
+      "task_id": "align_cancel",
+      "state": "NAVIGATING",
+      "wall": 8301.854014838,
+      "stamp": 15.750000000000002,
+      "mode": "ground_truth_oracle",
+      "robot_truth_input": false,
+      "velocity_publisher": false,
+      "object_id": "fixture/box",
+      "goal": [
+        -3.64,
+        6.0,
+        3.141592653589793
+      ]
+    },
+    {
+      "version": 1,
+      "task_id": "align_cancel",
+      "state": "CANCEL_ACK",
+      "wall": 8301.968500399,
+      "stamp": 15.850000000000001,
+      "mode": "ground_truth_oracle",
+      "robot_truth_input": false,
+      "velocity_publisher": false,
+      "cancel_accepted": true,
+      "native_status": 5
+    },
+    {
+      "version": 1,
+      "task_id": "align_cancel",
+      "state": "CANCELLED",
+      "wall": 8301.992159944,
+      "stamp": 15.9,
+      "mode": "ground_truth_oracle",
+      "robot_truth_input": false,
+      "velocity_publisher": false,
+      "result": {
+        "request": {
+          "version": 1,
+          "task_id": "align_cancel",
+          "text": "到最近的纸箱那里"
+        },
+        "parsed": {
+          "intent": "navigate_to_object",
+          "object_class": "box",
+          "relation": "approach",
+          "selection": "nearest_reachable"
+        },
+        "passed": false,
+        "mode": "ground_truth_oracle",
+        "relation_audit": {
+          "relation": "approach",
+          "reference_objects": [],
+          "candidate_relations": []
+        },
+        "objects": [
+          {
+            "object_id": "fixture/box",
+            "class_name": "box",
+            "confidence": 1.0,
+            "position": [
+              -5.0,
+              6.0,
+              0.3
+            ],
+            "dimensions": [
+              0.7,
+              0.5,
+              0.6
+            ],
+            "orientation_xyzw": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "source": "ground_truth",
+            "last_seen": 15.500000000000085,
+            "received_wall": 8301.590473586,
+            "status": "active"
+          }
+        ],
+        "approach_audit": [
+          {
+            "object_id": "fixture/box",
+            "goal": [
+              -3.64,
+              6.0,
+              3.141592653589793
+            ],
+            "path_length_m": 3.6399999999999997
+          },
+          {
+            "object_id": "fixture/box",
+            "goal": [
+              -5.0,
+              7.26,
+              -1.5707963267948966
+            ],
+            "path_length_m": 5.156316514722501
+          },
+          {
+            "object_id": "fixture/box",
+            "goal": [
+              -6.359999999999999,
+              6.0,
+              0.0
+            ],
+            "rejected": "unsafe_path",
+            "first_unsafe": {
+              "point": [
+                -4.256307692307692,
+                6.0
+              ],
+              "cost": 0,
+              "object_ids": [
+                "fixture/box"
+              ]
+            }
+          },
+          {
+            "object_id": "fixture/box",
+            "goal": [
+              -5.0,
+              4.74,
+              1.5707963267948966
+            ],
+            "path_length_m": 5.156316514722501
+          }
+        ],
+        "object_ranking": [
+          {
+            "object_id": "fixture/box",
+            "shortest_approach_path_m": 3.6399999999999997,
+            "goal": [
+              -3.64,
+              6.0,
+              3.141592653589793
+            ]
+          }
+        ],
+        "selected_object": {
+          "object_id": "fixture/box",
+          "class_name": "box",
+          "confidence": 1.0,
+          "position": [
+            -5.0,
+            6.0,
+            0.3
+          ],
+          "dimensions": [
+            0.7,
+            0.5,
+            0.6
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "source": "ground_truth",
+          "last_seen": 15.500000000000085,
+          "received_wall": 8301.590473586,
+          "status": "active"
+        },
+        "goal": [
+          -3.64,
+          6.0,
+          3.141592653589793
+        ],
+        "path_length_m": 3.6399999999999997,
+        "planned_path": [
+          [
+            -0.0,
+            6.0
+          ],
+          [
+            -0.182,
+            6.0
+          ],
+          [
+            -0.364,
+            6.0
+          ],
+          [
+            -0.546,
+            6.0
+          ],
+          [
+            -0.728,
+            6.0
+          ],
+          [
+            -0.9099999999999999,
+            6.0
+          ],
+          [
+            -1.092,
+            6.0
+          ],
+          [
+            -1.274,
+            6.0
+          ],
+          [
+            -1.456,
+            6.0
+          ],
+          [
+            -1.638,
+            6.0
+          ],
+          [
+            -1.8199999999999998,
+            6.0
+          ],
+          [
+            -2.002,
+            6.0
+          ],
+          [
+            -2.184,
+            6.0
+          ],
+          [
+            -2.366,
+            6.0
+          ],
+          [
+            -2.548,
+            6.0
+          ],
+          [
+            -2.73,
+            6.0
+          ],
+          [
+            -2.912,
+            6.0
+          ],
+          [
+            -3.0940000000000003,
+            6.0
+          ],
+          [
+            -3.276,
+            6.0
+          ],
+          [
+            -3.4579999999999997,
+            6.0
+          ],
+          [
+            -3.6399999999999997,
+            6.0
+          ]
+        ],
+        "reason": "user_cancelled",
+        "disarmed": true,
+        "state": "CANCELLED",
+        "finished_stamp": 15.850000000000001
+      }
+    },
+    {
+      "version": 1,
+      "task_id": "align_cancel",
+      "state": "DUPLICATE",
+      "wall": 8302.023632891,
+      "stamp": 15.9,
+      "mode": "ground_truth_oracle",
+      "robot_truth_input": false,
+      "velocity_publisher": false
+    },
+    {
+      "version": 1,
+      "task_id": "missing_reference",
+      "state": "QUERYING",
+      "wall": 8302.054445125,
+      "stamp": 15.950000000000001,
+      "mode": "ground_truth_oracle",
+      "robot_truth_input": false,
+      "velocity_publisher": false,
+      "parsed": {
+        "intent": "navigate_to_object",
+        "object_class": "box",
+        "relation": "near_shelf_row",
+        "selection": "unique",
+        "reference": {
+          "object_class": "shelf",
+          "row_index": 2
+        }
+      }
+    },
+    {
+      "version": 1,
+      "task_id": "missing_reference",
+      "state": "REFERENCE_NOT_FOUND",
+      "wall": 8302.098355836,
+      "stamp": 16.0,
+      "mode": "ground_truth_oracle",
+      "robot_truth_input": false,
+      "velocity_publisher": false,
+      "result": {
+        "request": {
+          "version": 1,
+          "task_id": "missing_reference",
+          "text": "走到第二排货架旁边的那个纸箱"
+        },
+        "parsed": {
+          "intent": "navigate_to_object",
+          "object_class": "box",
+          "relation": "near_shelf_row",
+          "selection": "unique",
+          "reference": {
+            "object_class": "shelf",
+            "row_index": 2
+          }
+        },
+        "passed": false,
+        "mode": "ground_truth_oracle",
+        "relation_audit": {
+          "relation": "near_shelf_row",
+          "reference_objects": [],
+          "candidate_relations": [],
+          "near_surface_distance_m": 1.5
+        },
+        "objects": [],
+        "disarmed": true,
+        "state": "REFERENCE_NOT_FOUND",
+        "finished_stamp": 16.0
+      }
+    },
+    {
+      "version": 1,
+      "task_id": "ambiguous",
+      "state": "QUERYING",
+      "wall": 8302.640613022,
+      "stamp": 16.5,
+      "mode": "ground_truth_oracle",
+      "robot_truth_input": false,
+      "velocity_publisher": false,
+      "parsed": {
+        "intent": "navigate_to_object",
+        "object_class": "box",
+        "relation": "near_shelf_row",
+        "selection": "unique",
+        "reference": {
+          "object_class": "shelf",
+          "row_index": 2
+        }
+      }
+    },
+    {
+      "version": 1,
+      "task_id": "ambiguous",
+      "state": "AMBIGUOUS",
+      "wall": 8302.686843624,
+      "stamp": 16.55,
+      "mode": "ground_truth_oracle",
+      "robot_truth_input": false,
+      "velocity_publisher": false,
+      "result": {
+        "request": {
+          "version": 1,
+          "task_id": "ambiguous",
+          "text": "走到第二排货架旁边的那个纸箱"
+        },
+        "parsed": {
+          "intent": "navigate_to_object",
+          "object_class": "box",
+          "relation": "near_shelf_row",
+          "selection": "unique",
+          "reference": {
+            "object_class": "shelf",
+            "row_index": 2
+          }
+        },
+        "passed": false,
+        "mode": "ground_truth_oracle",
+        "relation_audit": {
+          "relation": "near_shelf_row",
+          "reference_objects": [
+            {
+              "object_id": "fixture/shelf2",
+              "class_name": "shelf",
+              "row_index": 2,
+              "confidence": 1.0,
+              "position": [
+                -7.0,
+                6.0,
+                1.5
+              ],
+              "dimensions": [
+                1.0,
+                4.0,
+                3.0
+              ],
+              "orientation_xyzw": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ],
+              "source": "ground_truth",
+              "last_seen": 16.5000000000001,
+              "received_wall": 8302.596633081,
+              "status": "active"
+            }
+          ],
+          "candidate_relations": [
+            {
+              "object_id": "fixture/box",
+              "surface_gap_m": 1.1500000000000004,
+              "matched": true
+            },
+            {
+              "object_id": "fixture/box2",
+              "surface_gap_m": 1.1500000000000004,
+              "matched": true
+            }
+          ],
+          "near_surface_distance_m": 1.5,
+          "clarification": "找到多个匹配物体，请补充最近的、最远的，或更具体的位置"
+        },
+        "objects": [
+          {
+            "object_id": "fixture/box",
+            "class_name": "box",
+            "confidence": 1.0,
+            "position": [
+              -5.0,
+              6.0,
+              0.3
+            ],
+            "dimensions": [
+              0.7,
+              0.5,
+              0.6
+            ],
+            "orientation_xyzw": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "source": "ground_truth",
+            "last_seen": 16.5000000000001,
+            "received_wall": 8302.596633081,
+            "status": "active"
+          },
+          {
+            "object_id": "fixture/box2",
+            "class_name": "box",
+            "confidence": 1.0,
+            "position": [
+              -5.0,
+              7.0,
+              0.3
+            ],
+            "dimensions": [
+              0.7,
+              0.5,
+              0.6
+            ],
+            "orientation_xyzw": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "source": "ground_truth",
+            "last_seen": 16.5000000000001,
+            "received_wall": 8302.596633081,
+            "status": "active"
+          }
+        ],
+        "disarmed": true,
+        "state": "AMBIGUOUS",
+        "finished_stamp": 16.55
+      }
+    },
+    {
+      "version": 1,
+      "task_id": "reference_moved",
+      "state": "QUERYING",
+      "wall": 8304.74797609,
+      "stamp": 18.650000000000002,
+      "mode": "ground_truth_oracle",
+      "robot_truth_input": false,
+      "velocity_publisher": false,
+      "parsed": {
+        "intent": "navigate_to_object",
+        "object_class": "box",
+        "relation": "near_shelf_row",
+        "selection": "unique",
+        "reference": {
+          "object_class": "shelf",
+          "row_index": 2
+        }
+      }
+    },
+    {
+      "version": 1,
+      "task_id": "reference_moved",
+      "state": "PLANNING",
+      "wall": 8304.790126928,
+      "stamp": 18.650000000000002,
+      "mode": "ground_truth_oracle",
+      "robot_truth_input": false,
+      "velocity_publisher": false,
+      "candidates": [
+        {
+          "object_id": "fixture/box",
+          "class_name": "box",
+          "confidence": 1.0,
+          "position": [
+            -5.0,
+            6.0,
+            0.3
+          ],
+          "dimensions": [
+            0.7,
+            0.5,
+            0.6
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "source": "ground_truth",
+          "last_seen": 18.500000000000128,
+          "received_wall": 8304.591088379,
+          "status": "active"
+        }
+      ]
+    },
+    {
+      "version": 1,
+      "task_id": "reference_moved",
+      "state": "SELECTED",
+      "wall": 8304.920083546,
+      "stamp": 18.8,
+      "mode": "ground_truth_oracle",
+      "robot_truth_input": false,
+      "velocity_publisher": false,
+      "object": {
+        "object_id": "fixture/box",
+        "class_name": "box",
+        "confidence": 1.0,
+        "position": [
+          -5.0,
+          6.0,
+          0.3
+        ],
+        "dimensions": [
+          0.7,
+          0.5,
+          0.6
+        ],
+        "orientation_xyzw": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "source": "ground_truth",
+        "last_seen": 18.500000000000128,
+        "received_wall": 8304.591088379,
+        "status": "active"
+      },
+      "goal": [
+        -3.64,
+        6.0,
+        3.141592653589793
+      ],
+      "path_length_m": 3.6399999999999997
+    },
+    {
+      "version": 1,
+      "task_id": "reference_moved",
+      "state": "NAVIGATING",
+      "wall": 8304.961852047,
+      "stamp": 18.85,
+      "mode": "ground_truth_oracle",
+      "robot_truth_input": false,
+      "velocity_publisher": false,
+      "object_id": "fixture/box",
+      "goal": [
+        -3.64,
+        6.0,
+        3.141592653589793
+      ]
+    },
+    {
+      "version": 1,
+      "task_id": "reference_moved",
+      "state": "CANCEL_ACK",
+      "wall": 8305.175219444,
+      "stamp": 19.05,
+      "mode": "ground_truth_oracle",
+      "robot_truth_input": false,
+      "velocity_publisher": false,
+      "cancel_accepted": true,
+      "native_status": 5
+    },
+    {
+      "version": 1,
+      "task_id": "reference_moved",
+      "state": "TARGET_INVALID",
+      "wall": 8305.197331422,
+      "stamp": 19.1,
+      "mode": "ground_truth_oracle",
+      "robot_truth_input": false,
+      "velocity_publisher": false,
+      "result": {
+        "request": {
+          "version": 1,
+          "task_id": "reference_moved",
+          "text": "走到第二排货架旁边的那个纸箱"
+        },
+        "parsed": {
+          "intent": "navigate_to_object",
+          "object_class": "box",
+          "relation": "near_shelf_row",
+          "selection": "unique",
+          "reference": {
+            "object_class": "shelf",
+            "row_index": 2
+          }
+        },
+        "passed": false,
+        "mode": "ground_truth_oracle",
+        "relation_audit": {
+          "relation": "near_shelf_row",
+          "reference_objects": [
+            {
+              "object_id": "fixture/shelf2",
+              "class_name": "shelf",
+              "row_index": 2,
+              "confidence": 1.0,
+              "position": [
+                -7.0,
+                6.0,
+                1.5
+              ],
+              "dimensions": [
+                1.0,
+                4.0,
+                3.0
+              ],
+              "orientation_xyzw": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ],
+              "source": "ground_truth",
+              "last_seen": 18.500000000000128,
+              "received_wall": 8304.591088379,
+              "status": "active"
+            }
+          ],
+          "candidate_relations": [
+            {
+              "object_id": "fixture/box",
+              "surface_gap_m": 1.1500000000000004,
+              "matched": true
+            }
+          ],
+          "near_surface_distance_m": 1.5
+        },
+        "objects": [
+          {
+            "object_id": "fixture/box",
+            "class_name": "box",
+            "confidence": 1.0,
+            "position": [
+              -5.0,
+              6.0,
+              0.3
+            ],
+            "dimensions": [
+              0.7,
+              0.5,
+              0.6
+            ],
+            "orientation_xyzw": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "source": "ground_truth",
+            "last_seen": 18.500000000000128,
+            "received_wall": 8304.591088379,
+            "status": "active"
+          }
+        ],
+        "approach_audit": [
+          {
+            "object_id": "fixture/box",
+            "goal": [
+              -3.64,
+              6.0,
+              3.141592653589793
+            ],
+            "path_length_m": 3.6399999999999997
+          },
+          {
+            "object_id": "fixture/box",
+            "goal": [
+              -5.0,
+              7.26,
+              -1.5707963267948966
+            ],
+            "path_length_m": 5.156316514722501
+          },
+          {
+            "object_id": "fixture/box",
+            "goal": [
+              -6.359999999999999,
+              6.0,
+              0.0
+            ],
+            "rejected": "unsafe_goal"
+          },
+          {
+            "object_id": "fixture/box",
+            "goal": [
+              -5.0,
+              4.74,
+              1.5707963267948966
+            ],
+            "path_length_m": 5.156316514722501
+          }
+        ],
+        "object_ranking": [
+          {
+            "object_id": "fixture/box",
+            "shortest_approach_path_m": 3.6399999999999997,
+            "goal": [
+              -3.64,
+              6.0,
+              3.141592653589793
+            ]
+          }
+        ],
+        "selected_object": {
+          "object_id": "fixture/box",
+          "class_name": "box",
+          "confidence": 1.0,
+          "position": [
+            -5.0,
+            6.0,
+            0.3
+          ],
+          "dimensions": [
+            0.7,
+            0.5,
+            0.6
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "source": "ground_truth",
+          "last_seen": 18.500000000000128,
+          "received_wall": 8304.591088379,
+          "status": "active"
+        },
+        "goal": [
+          -3.64,
+          6.0,
+          3.141592653589793
+        ],
+        "path_length_m": 3.6399999999999997,
+        "planned_path": [
+          [
+            -0.0,
+            6.0
+          ],
+          [
+            -0.182,
+            6.0
+          ],
+          [
+            -0.364,
+            6.0
+          ],
+          [
+            -0.546,
+            6.0
+          ],
+          [
+            -0.728,
+            6.0
+          ],
+          [
+            -0.9099999999999999,
+            6.0
+          ],
+          [
+            -1.092,
+            6.0
+          ],
+          [
+            -1.274,
+            6.0
+          ],
+          [
+            -1.456,
+            6.0
+          ],
+          [
+            -1.638,
+            6.0
+          ],
+          [
+            -1.8199999999999998,
+            6.0
+          ],
+          [
+            -2.002,
+            6.0
+          ],
+          [
+            -2.184,
+            6.0
+          ],
+          [
+            -2.366,
+            6.0
+          ],
+          [
+            -2.548,
+            6.0
+          ],
+          [
+            -2.73,
+            6.0
+          ],
+          [
+            -2.912,
+            6.0
+          ],
+          [
+            -3.0940000000000003,
+            6.0
+          ],
+          [
+            -3.276,
+            6.0
+          ],
+          [
+            -3.4579999999999997,
+            6.0
+          ],
+          [
+            -3.6399999999999997,
+            6.0
+          ]
+        ],
+        "reason": "target_moved",
+        "disarmed": true,
+        "state": "TARGET_INVALID",
+        "finished_stamp": 19.1
+      }
+    }
+  ]
+}

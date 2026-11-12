@@ -1,0 +1,429 @@
+{
+  "query_checks_passed": true,
+  "checks": {
+    "ranking_matches_minimum_of_each_objects_safe_approaches": true,
+    "three_reachable_objects_in_farthest_preview": true,
+    "all_negative_and_preview_expectations_passed": true
+  },
+  "queries": [
+    {
+      "task": "farthest_preview",
+      "state": "DRY_RUN_COMPLETE",
+      "native_status": null,
+      "selected_object": "/World/SemanticOracle/box_far",
+      "object_ranking": [
+        {
+          "object_id": "/World/SemanticOracle/box_far",
+          "shortest_approach_path_m": 27.671226296114302,
+          "goal": [
+            -13.0,
+            22.740000005587934,
+            1.5707963267948966
+          ]
+        },
+        {
+          "object_id": "/World/SemanticOracle/box_near",
+          "shortest_approach_path_m": 16.90081898084994,
+          "goal": [
+            -12.54000000782311,
+            12.0,
+            3.141592653589793
+          ]
+        },
+        {
+          "object_id": "/World/SemanticOracle/box_relation",
+          "shortest_approach_path_m": 11.441850270803137,
+          "goal": [
+            -8.4,
+            10.740000005587936,
+            1.5707963267948966
+          ]
+        }
+      ],
+      "relation_audit": {
+        "relation": "approach",
+        "reference_objects": [],
+        "candidate_relations": []
+      }
+    },
+    {
+      "task": "relational_preview",
+      "state": "DRY_RUN_COMPLETE",
+      "native_status": null,
+      "selected_object": "/World/SemanticOracle/box_relation",
+      "object_ranking": [
+        {
+          "object_id": "/World/SemanticOracle/box_relation",
+          "shortest_approach_path_m": 11.416517822717317,
+          "goal": [
+            -8.4,
+            10.740000005587936,
+            1.5707963267948966
+          ]
+        }
+      ],
+      "relation_audit": {
+        "relation": "near_shelf_row",
+        "reference_objects": [
+          {
+            "object_id": "/SemanticCatalog/shelf_row_2",
+            "class_name": "shelf",
+            "confidence": 1.0,
+            "position": [
+              -10.460000009923284,
+              16.94999997059793,
+              1.4999998145876212
+            ],
+            "orientation_xyzw": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "dimensions": [
+              1.1745612980493725,
+              16.296415433685564,
+              3.0000020691751956
+            ],
+            "source": "ground_truth",
+            "geometry": "world_axis_aligned_bbox",
+            "prim_orientation_wxyz": [
+              -0.707106709480286,
+              0.0,
+              0.0,
+              0.707106852892802
+            ],
+            "row_index": 2,
+            "label": "第2排货架",
+            "last_seen": 12.009999731555581,
+            "received_wall": 8566.924172973,
+            "status": "active"
+          }
+        ],
+        "candidate_relations": [
+          {
+            "object_id": "/World/SemanticOracle/box_near",
+            "surface_gap_m": 2.5027193488751394,
+            "matched": false
+          },
+          {
+            "object_id": "/World/SemanticOracle/box_far",
+            "surface_gap_m": 1.602719348875139,
+            "matched": false
+          },
+          {
+            "object_id": "/World/SemanticOracle/box_relation",
+            "surface_gap_m": 1.1227193687217074,
+            "matched": true
+          }
+        ],
+        "near_surface_distance_m": 1.5
+      }
+    },
+    {
+      "task": "row_nearest",
+      "state": "DRY_RUN_COMPLETE",
+      "native_status": null,
+      "selected_object": "/World/SemanticOracle/box_near",
+      "object_ranking": [
+        {
+          "object_id": "/World/SemanticOracle/box_near",
+          "shortest_approach_path_m": 16.80164823505742,
+          "goal": [
+            -12.54000000782311,
+            12.0,
+            3.141592653589793
+          ]
+        },
+        {
+          "object_id": "/World/SemanticOracle/box_far",
+          "shortest_approach_path_m": 27.85611202121921,
+          "goal": [
+            -13.0,
+            22.740000005587934,
+            1.5707963267948966
+          ]
+        }
+      ],
+      "relation_audit": {
+        "relation": "near_shelf_row",
+        "reference_objects": [
+          {
+            "object_id": "/SemanticCatalog/shelf_row_1",
+            "class_name": "shelf",
+            "confidence": 1.0,
+            "position": [
+              -15.442976084142032,
+              16.94999997059793,
+              1.4999998145876212
+            ],
+            "orientation_xyzw": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "dimensions": [
+              1.2086091496118723,
+              16.296415433685564,
+              3.0000020691751956
+            ],
+            "source": "ground_truth",
+            "geometry": "world_axis_aligned_bbox",
+            "prim_orientation_wxyz": [
+              -0.707106709480286,
+              0.0,
+              0.0,
+              0.707106852892802
+            ],
+            "row_index": 1,
+            "label": "第1排货架",
+            "last_seen": 12.529999719932675,
+            "received_wall": 8568.783975738,
+            "status": "active"
+          }
+        ],
+        "candidate_relations": [
+          {
+            "object_id": "/World/SemanticOracle/box_near",
+            "surface_gap_m": 0.588671517159205,
+            "matched": true
+          },
+          {
+            "object_id": "/World/SemanticOracle/box_far",
+            "surface_gap_m": 1.4886715171592053,
+            "matched": true
+          },
+          {
+            "object_id": "/World/SemanticOracle/box_relation",
+            "surface_gap_m": 6.088671517159205,
+            "matched": false
+          }
+        ],
+        "near_surface_distance_m": 1.5
+      }
+    },
+    {
+      "task": "row_farthest",
+      "state": "DRY_RUN_COMPLETE",
+      "native_status": null,
+      "selected_object": "/World/SemanticOracle/box_far",
+      "object_ranking": [
+        {
+          "object_id": "/World/SemanticOracle/box_far",
+          "shortest_approach_path_m": 27.962729108853864,
+          "goal": [
+            -13.0,
+            22.740000005587934,
+            1.5707963267948966
+          ]
+        },
+        {
+          "object_id": "/World/SemanticOracle/box_near",
+          "shortest_approach_path_m": 16.801127744290262,
+          "goal": [
+            -12.54000000782311,
+            12.0,
+            3.141592653589793
+          ]
+        }
+      ],
+      "relation_audit": {
+        "relation": "near_shelf_row",
+        "reference_objects": [
+          {
+            "object_id": "/SemanticCatalog/shelf_row_1",
+            "class_name": "shelf",
+            "confidence": 1.0,
+            "position": [
+              -15.442976084142032,
+              16.94999997059793,
+              1.4999998145876212
+            ],
+            "orientation_xyzw": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "dimensions": [
+              1.2086091496118723,
+              16.296415433685564,
+              3.0000020691751956
+            ],
+            "source": "ground_truth",
+            "geometry": "world_axis_aligned_bbox",
+            "prim_orientation_wxyz": [
+              -0.707106709480286,
+              0.0,
+              0.0,
+              0.707106852892802
+            ],
+            "row_index": 1,
+            "label": "第1排货架",
+            "last_seen": 13.04999970830977,
+            "received_wall": 8570.591870214,
+            "status": "active"
+          }
+        ],
+        "candidate_relations": [
+          {
+            "object_id": "/World/SemanticOracle/box_near",
+            "surface_gap_m": 0.588671517159205,
+            "matched": true
+          },
+          {
+            "object_id": "/World/SemanticOracle/box_far",
+            "surface_gap_m": 1.4886715171592053,
+            "matched": true
+          },
+          {
+            "object_id": "/World/SemanticOracle/box_relation",
+            "surface_gap_m": 6.088671517159205,
+            "matched": false
+          }
+        ],
+        "near_surface_distance_m": 1.5
+      }
+    },
+    {
+      "task": "farthest_nav",
+      "state": "NAVIGATION_FAILED",
+      "native_status": 6,
+      "selected_object": "/World/SemanticOracle/box_far",
+      "object_ranking": [
+        {
+          "object_id": "/World/SemanticOracle/box_far",
+          "shortest_approach_path_m": 27.671226296114302,
+          "goal": [
+            -13.0,
+            22.740000005587934,
+            1.5707963267948966
+          ]
+        },
+        {
+          "object_id": "/World/SemanticOracle/box_near",
+          "shortest_approach_path_m": 16.948772083194505,
+          "goal": [
+            -12.54000000782311,
+            12.0,
+            3.141592653589793
+          ]
+        },
+        {
+          "object_id": "/World/SemanticOracle/box_relation",
+          "shortest_approach_path_m": 11.441850270803137,
+          "goal": [
+            -8.4,
+            10.740000005587936,
+            1.5707963267948966
+          ]
+        }
+      ],
+      "relation_audit": {
+        "relation": "approach",
+        "reference_objects": [],
+        "candidate_relations": []
+      }
+    },
+    {
+      "task": "relational_nav",
+      "state": "FAILED",
+      "native_status": null,
+      "selected_object": "/World/SemanticOracle/box_relation",
+      "object_ranking": [
+        {
+          "object_id": "/World/SemanticOracle/box_relation",
+          "shortest_approach_path_m": 19.46647727390279,
+          "goal": [
+            -8.4,
+            13.259999994412064,
+            -1.5707963267948966
+          ]
+        }
+      ],
+      "relation_audit": {
+        "relation": "near_shelf_row",
+        "reference_objects": [
+          {
+            "object_id": "/SemanticCatalog/shelf_row_2",
+            "class_name": "shelf",
+            "confidence": 1.0,
+            "position": [
+              -10.460000009923284,
+              16.94999997059793,
+              1.4999998145876212
+            ],
+            "orientation_xyzw": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "dimensions": [
+              1.1745612980493725,
+              16.296415433685564,
+              3.0000020691751956
+            ],
+            "source": "ground_truth",
+            "geometry": "world_axis_aligned_bbox",
+            "prim_orientation_wxyz": [
+              -0.707106709480286,
+              0.0,
+              0.0,
+              0.707106852892802
+            ],
+            "row_index": 2,
+            "label": "第2排货架",
+            "last_seen": 90.00999798811972,
+            "received_wall": 8847.615763916,
+            "status": "active"
+          }
+        ],
+        "candidate_relations": [
+          {
+            "object_id": "/World/SemanticOracle/box_near",
+            "surface_gap_m": 2.5027193488751394,
+            "matched": false
+          },
+          {
+            "object_id": "/World/SemanticOracle/box_far",
+            "surface_gap_m": 1.602719348875139,
+            "matched": false
+          },
+          {
+            "object_id": "/World/SemanticOracle/box_relation",
+            "surface_gap_m": 1.1227193687217074,
+            "matched": true
+          }
+        ],
+        "near_surface_distance_m": 1.5
+      }
+    }
+  ],
+  "production_modules_identical_cases_02_03_04": {
+    "cli.py": "b2c014a0a0ff04ed1f80f36e300a64a9053fde28522ac3c1e2586a0413120a63",
+    "core.py": "72b2a8517302833e32a576b1d817f311435c4fd38fdef81ffdf7037ea33c04e5",
+    "config.py": "d0243a92f173d4430e4154def747390d98c73ad0ef1cb0dc540d24854a16743c",
+    "mapper.py": "272173ba81a5b77de01b1660ad8151dadcc2abd95ac7a0ebaabb16b80dba8200",
+    "oracle.py": "f5e9bb0908e3b03759a0efd11bd47678d00b5a846d28257e40663b7067848580",
+    "__init__.py": "d84c1967f3dcf9ff90c93a9807bb9816429cc40220337027a0c83f075b75dd56",
+    "manager.py": "c0a738569a5b618dc68fe3741c27c1da0add399d19e8a9ef5a25fe26e4efbb6b"
+  },
+  "relational_from_spawn": {
+    "state": "SUCCEEDED",
+    "native_status": 4,
+    "selected_object": "/World/SemanticOracle/box_relation",
+    "goal": [
+      -8.4,
+      10.740000005587936,
+      1.5707963267948966
+    ]
+  },
+  "full_navigation_suite_passed": false,
+  "failed_tasks_preserved": [
+    "semantic_rel_20261112_03/farthest_nav",
+    "semantic_rel_20261112_03/relational_nav"
+  ],
+  "truth_used_online": false
+}
