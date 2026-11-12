@@ -1,0 +1,699 @@
+{
+  "task": "cart_nav",
+  "source": "observer viewport, offline text only",
+  "truth_source": "semantic objects only",
+  "localization": "native IMU + FAST-LIVO2 + AMCL, not robot truth",
+  "start_sim_s": 10.449999766424298,
+  "end_sim_s": 36.36999918706715,
+  "playback_speed": 4.0,
+  "input_frames": 163,
+  "maximum_source_gap_sim_s": 0.1599999964237213,
+  "video_sha256": "ca80953ef6d7a92aa52d2749c8b8d62eb3429a1bdf1c2e1f9d501647e6530c19",
+  "video_bytes": 3064936,
+  "events": [
+    {
+      "version": 1,
+      "task_id": "cart_nav",
+      "state": "QUERYING",
+      "wall": 3806.428575445,
+      "stamp": 10.929999756,
+      "mode": "ground_truth_oracle",
+      "robot_truth_input": false,
+      "velocity_publisher": false,
+      "parsed": {
+        "intent": "navigate_to_object",
+        "object_class": "cart",
+        "selection": "nearest_reachable",
+        "relation": "approach"
+      }
+    },
+    {
+      "version": 1,
+      "task_id": "cart_nav",
+      "state": "PLANNING",
+      "wall": 3806.470483116,
+      "stamp": 10.929999756,
+      "mode": "ground_truth_oracle",
+      "robot_truth_input": false,
+      "velocity_publisher": false,
+      "candidates": [
+        {
+          "object_id": "/World/SemanticOracle/cart_near",
+          "class_name": "cart",
+          "confidence": 1.0,
+          "position": [
+            -3.0,
+            7.0,
+            0.18870250280121326
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "dimensions": [
+            0.9357002812094919,
+            1.6481130613063328,
+            0.3774050056024265
+          ],
+          "source": "ground_truth",
+          "geometry": "world_axis_aligned_bbox",
+          "prim_orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "last_seen": 10.449999766424298,
+          "received_wall": 3804.668748482,
+          "status": "active"
+        },
+        {
+          "object_id": "/World/SemanticOracle/cart_far",
+          "class_name": "cart",
+          "confidence": 1.0,
+          "position": [
+            -13.0,
+            20.0,
+            0.18870250280121326
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "dimensions": [
+            0.9357002812094919,
+            1.6481130613063328,
+            0.3774050056024265
+          ],
+          "source": "ground_truth",
+          "geometry": "world_axis_aligned_bbox",
+          "prim_orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "last_seen": 10.449999766424298,
+          "received_wall": 3804.668748482,
+          "status": "active"
+        }
+      ]
+    },
+    {
+      "version": 1,
+      "task_id": "cart_nav",
+      "state": "SELECTED",
+      "wall": 3806.839866584,
+      "stamp": 11.049999753,
+      "mode": "ground_truth_oracle",
+      "robot_truth_input": false,
+      "velocity_publisher": false,
+      "object": {
+        "object_id": "/World/SemanticOracle/cart_near",
+        "class_name": "cart",
+        "confidence": 1.0,
+        "position": [
+          -3.0,
+          7.0,
+          0.18870250280121326
+        ],
+        "orientation_xyzw": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "dimensions": [
+          0.9357002812094919,
+          1.6481130613063328,
+          0.3774050056024265
+        ],
+        "source": "ground_truth",
+        "geometry": "world_axis_aligned_bbox",
+        "prim_orientation_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "last_seen": 10.449999766424298,
+        "received_wall": 3804.668748482,
+        "status": "active"
+      },
+      "goal": [
+        -1.522149859395254,
+        7.0,
+        3.141592653589793
+      ],
+      "path_length_m": 1.8381162240805284
+    },
+    {
+      "version": 1,
+      "task_id": "cart_nav",
+      "state": "NAVIGATING",
+      "wall": 3807.003646512,
+      "stamp": 11.089999752,
+      "mode": "ground_truth_oracle",
+      "robot_truth_input": false,
+      "velocity_publisher": false,
+      "object_id": "/World/SemanticOracle/cart_near",
+      "goal": [
+        -1.522149859395254,
+        7.0,
+        3.141592653589793
+      ]
+    },
+    {
+      "version": 1,
+      "task_id": "cart_nav",
+      "state": "SUCCEEDED",
+      "wall": 3899.527907036,
+      "stamp": 35.949999196,
+      "mode": "ground_truth_oracle",
+      "robot_truth_input": false,
+      "velocity_publisher": false,
+      "result": {
+        "request": {
+          "version": 1,
+          "task_id": "cart_nav",
+          "text": "到最近的推车那里",
+          "dry_run": false
+        },
+        "parsed": {
+          "intent": "navigate_to_object",
+          "object_class": "cart",
+          "selection": "nearest_reachable",
+          "relation": "approach"
+        },
+        "passed": true,
+        "mode": "ground_truth_oracle",
+        "objects": [
+          {
+            "object_id": "/World/SemanticOracle/cart_near",
+            "class_name": "cart",
+            "confidence": 1.0,
+            "position": [
+              -3.0,
+              7.0,
+              0.18870250280121326
+            ],
+            "orientation_xyzw": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "dimensions": [
+              0.9357002812094919,
+              1.6481130613063328,
+              0.3774050056024265
+            ],
+            "source": "ground_truth",
+            "geometry": "world_axis_aligned_bbox",
+            "prim_orientation_wxyz": [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "last_seen": 10.449999766424298,
+            "received_wall": 3804.668748482,
+            "status": "active"
+          },
+          {
+            "object_id": "/World/SemanticOracle/cart_far",
+            "class_name": "cart",
+            "confidence": 1.0,
+            "position": [
+              -13.0,
+              20.0,
+              0.18870250280121326
+            ],
+            "orientation_xyzw": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "dimensions": [
+              0.9357002812094919,
+              1.6481130613063328,
+              0.3774050056024265
+            ],
+            "source": "ground_truth",
+            "geometry": "world_axis_aligned_bbox",
+            "prim_orientation_wxyz": [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "last_seen": 10.449999766424298,
+            "received_wall": 3804.668748482,
+            "status": "active"
+          }
+        ],
+        "approach_audit": [
+          {
+            "object_id": "/World/SemanticOracle/cart_near",
+            "goal": [
+              -1.522149859395254,
+              7.0,
+              3.141592653589793
+            ],
+            "path_length_m": 1.8381162240805284
+          },
+          {
+            "object_id": "/World/SemanticOracle/cart_near",
+            "goal": [
+              -3.0,
+              8.834056530653166,
+              -1.5707963267948966
+            ],
+            "rejected": "unsafe_goal"
+          },
+          {
+            "object_id": "/World/SemanticOracle/cart_near",
+            "goal": [
+              -4.477850140604746,
+              7.0,
+              0.0
+            ],
+            "path_length_m": 6.061901596425963
+          },
+          {
+            "object_id": "/World/SemanticOracle/cart_near",
+            "goal": [
+              -3.0000000000000004,
+              5.165943469346834,
+              1.5707963267948963
+            ],
+            "path_length_m": 3.1975006962906924
+          },
+          {
+            "object_id": "/World/SemanticOracle/cart_far",
+            "goal": [
+              -11.522149859395254,
+              20.0,
+              3.141592653589793
+            ],
+            "rejected": "unsafe_goal"
+          },
+          {
+            "object_id": "/World/SemanticOracle/cart_far",
+            "goal": [
+              -13.0,
+              21.834056530653164,
+              -1.5707963267948966
+            ],
+            "rejected": "unsafe_path"
+          },
+          {
+            "object_id": "/World/SemanticOracle/cart_far",
+            "goal": [
+              -14.477850140604746,
+              20.0,
+              0.0
+            ],
+            "rejected": "unsafe_goal"
+          },
+          {
+            "object_id": "/World/SemanticOracle/cart_far",
+            "goal": [
+              -13.0,
+              18.165943469346836,
+              1.5707963267948966
+            ],
+            "rejected": "unsafe_path"
+          }
+        ],
+        "selected_object": {
+          "object_id": "/World/SemanticOracle/cart_near",
+          "class_name": "cart",
+          "confidence": 1.0,
+          "position": [
+            -3.0,
+            7.0,
+            0.18870250280121326
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "dimensions": [
+            0.9357002812094919,
+            1.6481130613063328,
+            0.3774050056024265
+          ],
+          "source": "ground_truth",
+          "geometry": "world_axis_aligned_bbox",
+          "prim_orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "last_seen": 10.449999766424298,
+          "received_wall": 3804.668748482,
+          "status": "active"
+        },
+        "goal": [
+          -1.522149859395254,
+          7.0,
+          3.141592653589793
+        ],
+        "path_length_m": 1.8381162240805284,
+        "planned_path": [
+          [
+            4.2542815137380785e-07,
+            6.0000007137656155
+          ],
+          [
+            -0.044771914106195965,
+            5.993405865034532
+          ],
+          [
+            -0.0653987454682472,
+            6.007529400401239
+          ],
+          [
+            -0.08638568425753945,
+            6.021115826384943
+          ],
+          [
+            -0.10759845312832184,
+            6.034345196699263
+          ],
+          [
+            -0.12882953254625207,
+            6.047547101192862
+          ],
+          [
+            -0.1496974527790833,
+            6.061310529132328
+          ],
+          [
+            -0.1705958905904943,
+            6.075031232461782
+          ],
+          [
+            -0.19154620828549085,
+            6.088675641844787
+          ],
+          [
+            -0.2122798511725712,
+            6.102643537560738
+          ],
+          [
+            -0.23305011515394725,
+            6.116556501635245
+          ],
+          [
+            -0.2538661555031929,
+            6.130402327036876
+          ],
+          [
+            -0.2746821958524386,
+            6.144248152438507
+          ],
+          [
+            -0.2953944764345131,
+            6.158246565733037
+          ],
+          [
+            -0.3161220158058775,
+            6.172223616722562
+          ],
+          [
+            -0.33686786572438976,
+            6.186176253649222
+          ],
+          [
+            -0.3575313181807367,
+            6.200247909132344
+          ],
+          [
+            -0.3782069776685155,
+            6.214298202310459
+          ],
+          [
+            -0.3989101029770161,
+            6.228317977909995
+          ],
+          [
+            -0.41961017652765875,
+            6.242334701751673
+          ],
+          [
+            -0.4402583701947158,
+            6.256427719539801
+          ],
+          [
+            -0.46091877089320477,
+            6.270505478538638
+          ],
+          [
+            -0.48158527510740967,
+            6.284571030506044
+          ],
+          [
+            -0.5022639863530465,
+            6.298621323684159
+          ],
+          [
+            -0.5228969212308137,
+            6.312735703777292
+          ],
+          [
+            -0.5435451148978707,
+            6.326831773323278
+          ],
+          [
+            -0.5641933085649278,
+            6.340924791111405
+          ],
+          [
+            -0.5848140364112631,
+            6.355063585267402
+          ],
+          [
+            -0.6054408677733143,
+            6.369187120634109
+          ],
+          [
+            -0.6260707508932235,
+            6.3833045524851
+          ],
+          [
+            -0.6467097892867066,
+            6.397415880820375
+          ],
+          [
+            -0.667321361859468,
+            6.411560778492088
+          ],
+          [
+            -0.6879420897058033,
+            6.425699572648085
+          ],
+          [
+            -0.7085658693099965,
+            6.439829211530508
+          ],
+          [
+            -0.729165234851326,
+            6.453992419749369
+          ],
+          [
+            -0.7497768074240874,
+            6.468143420936798
+          ],
+          [
+            -0.7703883799968487,
+            6.482291370366369
+          ],
+          [
+            -0.7910030043274681,
+            6.496433216280224
+          ],
+          [
+            -0.8116023698687975,
+            6.510599476256942
+          ],
+          [
+            -0.832204787167985,
+            6.524756580960087
+          ],
+          [
+            -0.8528163597407463,
+            6.538910633905374
+          ],
+          [
+            -0.8734065700085019,
+            6.553086049155667
+          ],
+          [
+            -0.8940059355498313,
+            6.567255360890243
+          ],
+          [
+            -0.9146053010911608,
+            6.581418569109104
+          ],
+          [
+            -0.9352077183903482,
+            6.595578725570107
+          ],
+          [
+            -0.9558009804159617,
+            6.6097541408203995
+          ],
+          [
+            -0.9763942424415752,
+            6.623926504312834
+          ],
+          [
+            -0.9969936079829047,
+            6.638092764289553
+          ],
+          [
+            -1.0175807664928023,
+            6.652277334813419
+          ],
+          [
+            -1.0381709767605578,
+            6.66645580182157
+          ],
+          [
+            -1.0587672905440293,
+            6.680628165314005
+          ],
+          [
+            -1.0793605525696428,
+            6.694800528806439
+          ],
+          [
+            -1.0999507628373983,
+            6.708982047572448
+          ],
+          [
+            -1.1205409731051539,
+            6.723160514580599
+          ],
+          [
+            -1.1411342351307674,
+            6.737332878073033
+          ],
+          [
+            -1.161718341882807,
+            6.751520500354758
+          ],
+          [
+            -1.1823055003927045,
+            6.765702019120766
+          ],
+          [
+            -1.202898762418318,
+            6.779880486128917
+          ],
+          [
+            -1.2234920244439316,
+            6.79405590137921
+          ],
+          [
+            -1.2440761311959712,
+            6.808240471903076
+          ],
+          [
+            -1.2646663414637267,
+            6.822421990669085
+          ],
+          [
+            -1.2852565517314822,
+            6.8365974059193775
+          ],
+          [
+            -1.3058437102413798,
+            6.850785028201102
+          ],
+          [
+            -1.3264308687512774,
+            6.864966546967111
+          ],
+          [
+            -1.3470241307768909,
+            6.879141962217403
+          ],
+          [
+            -1.3676173928025044,
+            6.893317377467696
+          ],
+          [
+            -1.38820760307026,
+            6.9074958444758465
+          ],
+          [
+            -1.4088008650958734,
+            6.921671259726139
+          ],
+          [
+            -1.429397178879345,
+            6.935837519702858
+          ],
+          [
+            -1.4499995961785324,
+            6.950000727921719
+          ],
+          [
+            -1.4999995969235904,
+            7.000000728666777
+          ],
+          [
+            -1.522149859395254,
+            7.0
+          ]
+        ],
+        "native_status": 4,
+        "final_estimated_position": [
+          -1.5645836471626295,
+          6.990706539117971,
+          -0.0044489541676456
+        ],
+        "gate_at_result": {
+          "wall": 3899.486376326,
+          "sim": 35.929999197,
+          "armed": false,
+          "reason": "DISARMED",
+          "fault": null,
+          "output": [
+            0.0,
+            0.0
+          ],
+          "predicted_clearance_m": null,
+          "scan_stamp": 35.829998001,
+          "stream_wall_ages": {
+            "clock": 0.06035868599974492,
+            "odom": 0.09174077299985584,
+            "scan": 0.04392325799972241,
+            "input": 0.06793330700020306
+          },
+          "raw_candidate": [
+            0.0,
+            0.0
+          ],
+          "clipped_candidate": null
+        },
+        "disarmed": true,
+        "state": "SUCCEEDED",
+        "finished_stamp": 35.949999196
+      }
+    }
+  ],
+  "source_index_sha256": "0b63c043096681270a374268362307ffd36ae7af5e739c8375f62c4fad358618"
+}

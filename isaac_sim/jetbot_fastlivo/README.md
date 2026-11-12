@@ -1,3 +1,7 @@
+## 2026-11-12：独立对象语义导航
+
+显式`warehouse_semantic_oracle_20261112.json`启用USD对象oracle、对象地图、中文规则查询和安全接近点选择；使用operator模式，由语义manager独占任务。Python包在`ros2_ws/src/jetbot_semantic_nav`，部署时把内部同名模块目录置于本目录旁。原Nav2参数、安全门、估计定位和旧语义地点目录保留；普通配置不启动此功能。见[语义实现、接口与实际验证记录](../../docs/JETBOT_SEMANTIC_ORACLE_20261112.md)。
+
 ## 2026-11-01：3倍研发基线v2，0.40m规划半径
 
 当前入口`warehouse_soft040_precision_20261101.json`，B→A和C分别`warehouse_soft040_BA_20261101.json`、`warehouse_soft040_C_20261101.json`。仅在原0.40候选上将BaseObstacle.scale .20→.40；全局/局部半径.40、膨胀影响1m/衰减5，原速度/传感器/定位/门控/5cm及.05rad容差保持。`limit_vel_cmd_in_traj`仍false。五例完整回归通过，启动11和收尾15异常保留；真实3cm/1–2°目标未全部达到。见[本版参数与运行](../../docs/JETBOT_NAV_PARAMETERS_20261101.md)、[冻结清单](../../experiments/jetbot_soft040_20261101/FROZEN_PROFILE.json)、[验收报告](../../docs/JETBOT_SOFT040_VALIDATION_20261101.md)。调试开关影响负载，当前回归入口保留原调试设置；长时间无人值守训练稳定性未验收。

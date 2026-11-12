@@ -1,0 +1,38 @@
+[
+  {
+    "task": "cart_nav",
+    "state": "SUCCEEDED",
+    "cli_exit_code": 0,
+    "passed": true
+  },
+  {
+    "task": "missing_sign",
+    "state": "NOT_FOUND",
+    "cli_exit_code": 1,
+    "passed": true
+  },
+  {
+    "task": "unsupported_person",
+    "state": "INVALID_COMMAND",
+    "cli_exit_code": 1,
+    "passed": true
+  },
+  {
+    "task": "cancel_pallet",
+    "state": "CANCELLED",
+    "cli_exit_code": 0,
+    "passed": true
+  },
+  {
+    "task": "pallet_nav",
+    "state": "SUCCEEDED",
+    "cli_exit_code": 0,
+    "passed": true
+  },
+  {
+    "task": "box_nav",
+    "state": "SUCCEEDED",
+    "cli_exit_code": 0,
+    "passed": true
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "task": "relational_spawn_nav",
+    "state": "SUCCEEDED",
+    "cli_exit_code": 0,
+    "passed": true,
+    "selected_object": "/World/SemanticOracle/box_relation",
+    "ranking_verified": true
+  }
+]

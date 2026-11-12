@@ -1,6 +1,12 @@
 # isaacsim-jetbot-nav
 
+最新进度：[2026-11-12语义导航源码、全部结果与视频交付](docs/JETBOT_SEMANTIC_PROGRESS_RELEASE_20261112.md)。连续任务仍有失败，尚未全部通过。
+
 阿童木机器人课题：JetBot仓储导航、视觉与激光融合、学习型局部避障。导航/系统集成负责人任权伟。
+
+2026-11-12独立语义开发：[USD对象真值、中文查询、安全接近点与Nav2闭环](docs/JETBOT_SEMANTIC_ORACLE_20261112.md)。使用明确标注的对象oracle替代尚未完成的视觉输出；机器人定位仍为FAST-LIVO2+AMCL，冻结导航参数不变。实现及逐次验收见链接，不把旧人工地点目录当作视觉语义地图。
+
+同日扩展：[最远对象、货架排号与“旁边的纸箱”关系查询](docs/JETBOT_SEMANTIC_RELATIONAL_20261112.md)，保留歧义澄清、参照失效取消及原始逐轮证据。
 
 2026-11-01研发基线v2：[0.40m规划半径、参数与复现](docs/JETBOT_NAV_PARAMETERS_20261101.md) · [冻结清单](experiments/jetbot_soft040_20261101/FROZEN_PROFILE.json) · [全部验收与异常](docs/JETBOT_SOFT040_VALIDATION_20261101.md) · [视觉/PPO接口](docs/JETBOT_SCALED_MODULE_HANDOFF_20261029.md)。固定用例回归通过，真实停车约3.6–5.5cm、角度约2.7–3.0°，尚未达到3cm/1–2°；启动与后端收尾异常保留。仅用于仿真研发对接。
 
