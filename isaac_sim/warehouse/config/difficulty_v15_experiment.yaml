@@ -1,0 +1,55 @@
+# =============================================================================
+# difficulty_v15_experiment.yaml — EXPERIMENTAL density for layout v1.5
+# =============================================================================
+# NOT the accepted baseline. baseline = config/difficulty.yaml (layout v1.4.0).
+# Use only by scripts/experiment_v15.py until the new layout is approved.
+#
+# Counts are per-scene totals across the 4 random classes (box/pallet/barrier/cart).
+# Placement is additionally capped by real available space (see sampler_v2.py),
+# so these are targets, not guarantees.
+# =============================================================================
+version: "1.5-experimental"
+layout_version: "1.5.0-exp"
+
+totals:
+  easy:   [6, 10]
+  medium: [18, 24]
+  hard:   [28, 40]
+
+# how the total is split across classes (weights, normalised at runtime)
+class_weights:
+  box: 0.52
+  pallet: 0.22
+  barrier: 0.12
+  cart: 0.14
+
+# segment capacity: max objects per placement segment
+#   segment = one aisle strip / one shelf-edge strip / one 6x6 m open-floor cell
+capacity:
+  aisle_area_per_object_m2: 18     # aisle strips ~54 m2 -> up to 3 per strip
+  edge_area_per_object_m2: 25
+  open_area_per_object_m2: 36
+  max_per_segment: {aisle: 3, edge: 2, open: 2}
+
+# region preference multipliers (multiplied by segment area when weighting)
+# aisle area share is 25%; multiplier 2.0 lifts it to ~40% of objects while the
+# open floor still receives ~50% (spread over many cells -> coverage stays high)
+region_multiplier:
+  box:     {aisle: 2.0, edge: 1.3, open: 1.0}
+  pallet:  {aisle: 1.6, edge: 1.0, open: 1.2}
+  barrier: {aisle: 2.2, edge: 0.6, open: 0.8}
+  cart:    {aisle: 1.0, edge: 0.8, open: 1.6}
+
+# aisle objects are kept in the outer bands so a central lane stays free
+aisle_lane:
+  keep_centre_free_fraction: 0.40    # middle 40% of the strip width stays free
+  min_lane_width_m: 0.90
+
+# gentle clustering: some boxes are placed next to a pallet
+clustering:
+  box_near_pallet_prob: 0.35
+  distance_m: [0.60, 1.30]
+
+limits:
+  max_placement_attempts_per_object: 60
+  max_objects_per_scene_hard_cap: 40
