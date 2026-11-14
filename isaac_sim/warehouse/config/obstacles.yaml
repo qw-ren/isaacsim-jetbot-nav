@@ -1,0 +1,105 @@
+# =============================================================================
+# obstacles.yaml — fixed vs random classes (revised for 精简分工版, stages 0/1/2)
+# =============================================================================
+# Scope this phase: box / pallet / barrier are MANDATORY random.
+#                       cart / sign are OPTIONAL static.
+#                       person is NOT implemented (registry entry kept for future).
+#
+# All concrete models are OFFICIAL Isaac Sim assets (priority rule stands).
+# =============================================================================
+version: 1
+
+classes:
+  # ---------------- FIXED (never changes with seed) ----------------
+  shelf:
+    fixed: true
+    random: false
+    source: "built-in SM_RackShelf_*/SM_RackFrame_* of the official base"
+    note: "REUSED, not rebuilt"
+  wall:
+    fixed: true
+    random: false
+    source: "built-in SM_WallA_*/SM_Wall_* of the official base"
+    note: "REUSED, not rebuilt"
+
+  # ---------------- RANDOM (mandatory this phase) ----------------
+  box:
+    random: true
+    required_this_phase: true
+    variants: [box_A, box_B, box_C, box_D]
+    placement: [open_floor, staging]
+    yaw_mode: "90deg_steps"      # 0/90/180/270
+    note: "official SM_CardBoxA/B/C/D_01; multiple appearance variants"
+
+  pallet:
+    random: true
+    required_this_phase: true
+    variants: [pallet_main, pallet_prop]
+    placement: [open_floor, staging]
+    yaw_mode: "90deg_steps"
+    note: "real measured footprint 1.213 x 0.802 / 1.003 m used for OBB checks"
+
+  barrier:
+    random: true
+    required_this_phase: true
+    # re-evaluated 2026-11-12: the official set has NO dedicated barrier unit.
+    # New task book: prefer an official cone / isolation combination; do NOT
+    # silently rename plain cartons as barrier. So carton wall is only a marked
+    # temporary fallback.
+    strategy: cone_isolation        # default
+    strategies:
+      cone_isolation:               # DEFAULT — official units, clear semantic
+        units: [barrier_cone, barrier_wet_sign]
+        layout: "2-4 cones/signs in a short row across a candidate gap"
+        pros: "genuinely official + visually distinct from a plain carton"
+        cons: "narrow; blocks a gap rather than a full aisle width"
+      carton_wall:                  # TEMPORARY fallback (documented limitation)
+        units: [box_B]
+        layout: "contiguous 0.5 m-pitch row of SM_CardBoxB_01"
+        pros: "true full-width aisle closure"
+        cons: "visually a carton row -> may confuse semantic/detection teammates;
+               MUST be declared as class 'barrier_temp_carton_wall', not 'box'"
+        status: temporary_fallback
+    placement: [open_floor, aisle_gap]
+    yaw_mode: "90deg_steps"
+
+  # ---------------- OPTIONAL static this phase ----------------
+  cart:
+    random: true
+    optional_this_phase: true
+    variants: [cart_push, dolly]
+    placement: [open_floor, staging]
+    yaw_mode: "90deg_steps"
+    note: "static initial pose only; NO motion behaviour this phase"
+
+  sign:
+    random: false
+    optional_this_phase: true
+    variants: [sign_wall, sign_aisle]
+    placement: [shelf_mount, wall_mount]
+    note: "fixed mount only; NO semantic dataset capture this phase"
+
+  # ---------------- NOT implemented this phase ----------------
+  person:
+    random: false
+    implemented: false
+    note: "out of scope this phase; registry entry retained for future extension"
+    variants: [person_m]
+
+# ---- placement regions (world frame) ----
+regions:
+  open_floor:
+    rect_from_zone: open_floor
+    note: "clean by default (no existing clutter here)"
+  queue_staging_west:
+    rect: {x: [-27.0, -23.0], y: [-6.0, 2.0]}
+  queue_staging_east:
+    rect: {x: [3.0, 7.0], y: [-6.0, 2.0]}
+  aisle_gap:
+    kind: gap_between_rows
+    note: "only meaningful with existing_clutter.policy == derived_clean_base"
+
+clearance:
+  wall: 0.25          # min gap to fixed structure (m)
+  obstacle: 0.20      # min gap between random obstacles (m)
+  keep_clear_width: 1.2   # reserved corridor half-width to keep free (m)

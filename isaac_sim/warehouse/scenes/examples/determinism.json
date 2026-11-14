@@ -1,0 +1,40 @@
+{
+  "a_counts": [
+    20,
+    20,
+    20
+  ],
+  "b_counts": [
+    6,
+    7,
+    6
+  ],
+  "blocked_aisles": [
+    [
+      1
+    ],
+    [
+      3
+    ],
+    [
+      1
+    ]
+  ],
+  "counts": [
+    26,
+    27,
+    26
+  ],
+  "density": "medium",
+  "differs_1001_1002": true,
+  "fingerprint_sha256": "92b9d7dea3882d2e5d297f2680e6a90741d9752926eb7f5b4522ee52d7dec6fb",
+  "first_equals_third": true,
+  "hash_first_equals_third": true,
+  "hashes": [
+    "3d87ce3ecfffa3c1",
+    "ad91018ccb6f0934",
+    "3d87ce3ecfffa3c1"
+  ],
+  "ids_equal": true,
+  "residue_of_1002_after_reapply": 0
+}

@@ -1,0 +1,137 @@
+# =============================================================================
+# warehouse.yaml — FIXED base = official full_warehouse.usd (non-destructive)
+# =============================================================================
+# Revised 2026-11-12 (rev2) for the 精简分工版 task book. Scope: stages 0/1/2 only.
+# PRIORITY RULE: measured official-asset geometry overrides task-book numbers.
+#
+# MEASURED (re-verified on site):
+#   official file    .../Simple_Warehouse/full_warehouse.usd
+#   size             6,724,555 B, no sublayers, flat crate, default prim /Root
+#   WORLD bbox       x[-28.0,8.0] y[-41.4,33.4] z[-0.01,9.30]  (36.0 x 74.8 x 9.31)
+#                    includes objects OUTSIDE the floor -> never use as floor size
+#   FLOOR extent     x[-28.0,8.0] y[-23.4,30.6]  ->  36.0 x 54.0 m  (placement area)
+#   top-level kids   3148;  existing goods = 2197 (box 1841 / pallet 158 / loose 198)
+#   shelf rows       6 longitudinal rows inside y approx 8.7..25.0
+#   collision        100% of wall/shelf/floor/box/pallet/loose carry CollisionAPI
+# =============================================================================
+version: 2
+units: meters
+coordinate: {up_axis: Z, meters_per_unit: 1.0}
+
+base:
+  usd: Environments/Simple_Warehouse/full_warehouse.usd
+  source_root: /home/admin/isaacsim_assets/Assets/Isaac/4.5/Isaac
+  default_prim: Root
+  size_bytes: 6724555
+  prims: 26337
+  entry_point: scenes/warehouse_base.usd
+  world_bbox: {x: [-28.00, 8.00], y: [-41.40, 33.42], z: [-0.01, 9.30]}
+  floor_extent: {x: [-28.00, 8.00], y: [-23.40, 30.60]}
+  floor_size_m: [36.0, 54.0]
+
+layers:
+  fixed:
+    description: "floor, outer walls, fixed racks, ceiling, lights"
+    keep: true
+  random:
+    description: "seed-generated box / pallet / barrier (cart, sign optional static)"
+    prim_root: "/World/RandomObjects"
+    managed_by: "generator + isaac_adapter"
+  decor:
+    description: "existing goods that sit ON/UNDER the fixed shelves"
+    policy: keep_as_fixed_decor_inside_rack
+
+# ---------------------------------------------------------------------------
+# EXISTING CLUTTER — SELECTIVE cleanup (user decision 2026-11-12 rev2)
+#   keep structure + keep goods on shelves; clean only goods on the floor/aisle
+# ---------------------------------------------------------------------------
+existing_clutter:
+  policy: derived_clean_base_improved
+  investigation:            # source: docs/stage0_clutter_plan.md
+    total_objects: 2197
+    keep_on_shelf_or_under_rack: 2190     # box 1834 / pallet 158 / loose_goods 198
+    clean_floor_or_aisle: 7               # all box
+  rule:
+    clean_if: "(object world bbox minz < 0.15 m) AND (xy centre outside every shelf/frame footprint)"
+    keep_if: "otherwise -> shelf stock / under-rack storage, treated as fixed decor"
+    rationale: "the lowest shelf level sits at z~0, so height alone is ambiguous;
+                the XY-footprint test disambiguates bottom-level rack storage
+                from true floor clutter."
+  clean_list:               # exact prim names to deactivate in the override layer
+    - SM_CardBoxA_02_2
+    - SM_CardBoxA_3
+    - SM_CardBoxD_04_6
+    - SM_CardBoxD_03_9
+    - SM_CardBoxD_4
+    - SM_CardBoxB_02_32
+    - SM_CardBoxB_3
+  clean_cluster: {x: [-4.5, -1.9], y: [10.2, 12.1], note: "one rack-aisle gap"}
+  mechanics:
+    method: "override layer on scenes/warehouse_base.usd sets active=False on clean_list"
+    source_file_modified: false
+    parent_child_check: "verified: 0 of 2197 candidates contain any fixed-prefixed descendant"
+    fixed_collision_retained: {wall: "239/239", shelf: "167/167", floor: "126/126"}
+  fallback_policies:
+    keep_as_fixed_decor: "clean nothing; random layer restricted to the open floor"
+    derived_clean_base_full: "clean all 2197 (NOT recommended: destroys shelf realism)"
+
+placement:
+  # open floor is completely empty (verified: 0 existing objects) -> primary area
+  primary_area: {x: [-28.0, 8.0], y: [-23.4, 8.7], size_m2: 1156}
+  secondary_area: {x: [-28.0, 8.0], y: [25.0, 30.6]}
+  rack_aisles: {enabled_after_clean: true, note: "usable once clean_list is deactivated"}
+  keep_clear:
+    - {x: [-27.0, -23.0], y: [-23.0, 8.0], name: west_aisle}
+    - {x: [3.0, 7.0],     y: [-23.0, 8.0], name: east_aisle}
+  # ---------------------------------------------------------------------
+  # SAMPLING REGIONS (built from the REAL occupancy map, never planning rects)
+  #   aisle      : free cells inside the rack band  -> between shelf rows
+  #   shelf_edge : ring of width edge_margin_m around shelf structure
+  #   open       : every other placeable cell
+  # weights are normalised at runtime; change them to reshape the distribution.
+  # ---------------------------------------------------------------------
+  regions:
+    aisle_band_y: [8.70, 25.00]
+    edge_margin_m: 2.0
+    weights: {aisle: 0.60, shelf_edge: 0.20, open: 0.20}
+    # quota   : each scene matches the weights as closely as integer counts allow
+    #           (deterministic shuffle) -> predictable per-scene distribution
+    # stochastic: draw a region per object from the weights (more variance)
+    mode: quota
+    note: "weights must sum to 1.0 (validated); change both to reshape placement"
+
+map:
+  resolution: 0.05
+  # occupancy = XY footprint of any prim whose bbox intersects this z band
+  # (ground obstacles + shelf structure); high shelf stock above it does not
+  # block ground passage.
+  passage_height_m: 1.20
+  z_floor_m: 0.02
+  # rasterise per-leaf geometry and require a real collision shape (no parent bbox)
+  require_collision: true
+  # Stage 1 builds these from the DERIVED usd (same file Stage 2 loads)
+  cache: scenes/base_map.npz
+  meta: scenes/base_map_meta.json
+
+# clearance radius used only for obstacle inflation / passage checks.
+# NOTE: this is not a JetBot implementation; it is a placement-safety parameter.
+clearance:
+  robot_radius_m: 0.30
+  safety_margin_m: 0.12
+
+protected_zones: []
+start_goal_demo_only: true
+start_goal_demo:
+  start: {x: -24.0, y: -17.0}
+  goal:  {x: 5.0,   y: -17.0}
+
+# DISPLAY-ONLY hint for the human-facing schematic. NOT used for collision or
+# placement: the real fixed footprint comes from per-prim rasterisation of
+# scenes/warehouse_base.usd in Stage 1 (scenes/base_map.npz).
+display_only:
+  rack_band_y: [8.70, 25.00]
+  note: "schematic shading only; never a collision source"
+
+task_book_reference:
+  warehouse_size: "16 x 12 m"
+  note: "superseded by measured official floor 36 x 54 m"
