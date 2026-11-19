@@ -1,0 +1,18 @@
+{
+  "samples": 1000,
+  "correct_decisions": 904,
+  "confident_decisions": 905,
+  "wrong_confident_decisions": 1,
+  "states": {
+    "NOT_FOUND": 443,
+    "AMBIGUOUS": 125,
+    "SELECTED": 337,
+    "LOW_CONFIDENCE": 90,
+    "GROUNDING_INCONSISTENT": 5
+  },
+  "object_proposals": 337,
+  "wrong_object_proposals": 0,
+  "commands_sha256": "1dbf617d098b063f75aae746fb1cffd65bb0bd920a5b604490370e1fbb589403",
+  "server_sha256_verified": true,
+  "live_navigation_qualified": false
+}

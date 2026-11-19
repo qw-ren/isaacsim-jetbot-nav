@@ -1,5 +1,7 @@
 # isaacsim-jetbot-nav
 
+2026-11-19研发中：[对象级中文模型微调与固定ID位姿绑定](docs/JETBOT_OBJECT_GROUNDING_FINETUNE_20261119.md)。学习后端仍限制为只读预览；不替代既有导航验收。
+
 最新进度：[2026-11-12语义导航源码、全部结果与视频交付](docs/JETBOT_SEMANTIC_PROGRESS_RELEASE_20261112.md)。连续任务仍有失败，尚未全部通过。
 
 阿童木机器人课题：JetBot仓储导航、视觉与激光融合、学习型局部避障。导航/系统集成负责人任权伟。

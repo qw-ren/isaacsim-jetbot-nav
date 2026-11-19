@@ -1,0 +1,6 @@
+{
+  "samples": 1000,
+  "same_inputs_and_target_ids_across_03_and_09": true,
+  "slot_annotations_refined": true,
+  "benchmark_used_for_development_not_external_acceptance": true
+}

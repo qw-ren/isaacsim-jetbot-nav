@@ -1,0 +1,4 @@
+# Optional isolated training dependencies; use --target under a NEW data directory.
+# Existing Torch/CUDA are reused; do not pip install into Isaac Sim.
+transformers==4.44.2
+numpy==1.26.4

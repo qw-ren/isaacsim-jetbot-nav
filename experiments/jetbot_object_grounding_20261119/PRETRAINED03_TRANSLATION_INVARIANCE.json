@@ -1,0 +1,29 @@
+{
+  "backend": "pretrained_chinese_tiny",
+  "checkpoint_sha256": "a2ec0fafdc16e32d73d059a397f9d6fa001f18a1896bcefbcda7f3458f168d83",
+  "map_translation_invariance_passed": true,
+  "result": {
+    "state": "SELECTED",
+    "object_id": "/World/SemanticOracle/box_far",
+    "confidence": 0.7140548825263977,
+    "margin": 0.9994999766349792,
+    "slots": {
+      "object_class": "box",
+      "reference_row": 0,
+      "selection": "farthest_euclidean"
+    },
+    "backend": "pretrained_chinese_tiny"
+  },
+  "translated_result": {
+    "state": "SELECTED",
+    "object_id": "/World/SemanticOracle/box_far",
+    "confidence": 0.7140548825263977,
+    "margin": 0.9994999766349792,
+    "slots": {
+      "object_class": "box",
+      "reference_row": 0,
+      "selection": "farthest_euclidean"
+    },
+    "backend": "pretrained_chinese_tiny"
+  }
+}

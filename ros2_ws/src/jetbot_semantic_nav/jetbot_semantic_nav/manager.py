@@ -1,5 +1,6 @@
 """One semantic mission owner; native Nav2 actions and existing arm service only."""
 import argparse
+import hashlib
 import copy
 import json
 import math
@@ -20,6 +21,7 @@ from nav2_msgs.srv import GetCostmap
 from nav2_msgs.msg import SpeedLimit
 from lifecycle_msgs.srv import GetState
 from tf2_ros import Buffer,TransformListener
+from .goal_bindings import validate_bindings,bound_goal
 from .config import load,write_json,claim
 from .core import (parse_command,approaches,distance_to_object,path_length,sample_path,
                    grid_cost,validate_observation,resolve_query,rank_reachable,proximity_speed_limit,native_speed_limit_value)
@@ -33,6 +35,23 @@ class Manager(Node):
     def __init__(self,case):
         super().__init__('semantic_goal_manager',parameter_overrides=[Parameter('use_sim_time',value=True)])
         self.case=Path(case);self.ownership=claim(case,'semantic_goal_manager');self.runtime,self.cfg=load(case);self.topics=self.cfg['topics']
+        self.grounder=None;self.bindings=None
+        grounding=self.cfg.get('object_grounding')
+        if grounding:
+            checkpoint=Path(grounding['checkpoint'])
+            if hashlib.sha256(checkpoint.read_bytes()).hexdigest()!=grounding['checkpoint_sha256']:
+                raise ValueError('Grounding checkpoint digest mismatch')
+            if grounding['bindings'].get('world_to_map')!=self.cfg['world_to_map']:
+                raise ValueError('Binding map or world registration mismatch')
+            self.bindings=validate_bindings(grounding['bindings'],self.cfg['world_to_map']['source_scene_sha256'])
+            if grounding.get('backend','prototype_gru') in ('pretrained_chinese_tiny','pretrained_chinese_encoder'):
+                if self.cfg.get('near_shelf_distance_m',1.5)!=1.5:raise ValueError('Learned relation contract requires 1.5m surface gap')
+                from .pretrained_grounding import PretrainedGrounder
+                self.grounder=PretrainedGrounder(checkpoint.parent,grounding.get('min_confidence',.9),grounding.get('min_margin',.2))
+            elif grounding.get('backend','prototype_gru')=='prototype_gru':
+                from .object_grounding import Grounder
+                self.grounder=Grounder(checkpoint,grounding.get('min_confidence',.9),grounding.get('min_margin',.2))
+            else:raise ValueError('Unsupported grounding backend')
         self.buffer=Buffer();self.listener=TransformListener(self.buffer,self)
         self.planner=ActionClient(self,ComputePathToPose,self.cfg['actions']['plan'])
         self.navigator=ActionClient(self,NavigateToPose,self.cfg['actions']['navigate'])
@@ -149,7 +168,11 @@ class Manager(Node):
                 self.emit('DUPLICATE',task_id);return
             if not self.ready or self.active_id is not None:
                 self.emit('BUSY' if self.ready else 'NOT_READY',task_id);return
-            parsed=parse_command(request['text']);self.seen.add(task_id)
+            if self.grounder is not None:
+                if not isinstance(request.get('text'),str) or not 0<len(request['text'])<=128:raise ValueError('Invalid text')
+                parsed=dict(intent='neural_object_grounding',selection='unique')
+            else:parsed=parse_command(request['text'])
+            self.seen.add(task_id)
             self.cancel.clear();self.cancel_reason='user_cancelled';self.active_id=task_id
             self.worker=threading.Thread(target=self.execute,args=(request,parsed));self.worker.start()
         except Exception as exc:self.emit('INVALID_COMMAND',locals().get('task_id'),error=str(exc))
@@ -273,10 +296,24 @@ class Manager(Node):
         state='FAILED'
         try:
             self.emit('QUERYING',task_id,parsed=parsed)
+            # Synthetic-only listener is deliberately restricted to preview.
+            # No config switch may authorize live navigation before independent qualification.
+            if self.grounder is not None and not request.get('dry_run',False):
+                state='MODEL_NOT_QUALIFIED';return
             if self.gate().get('fault'):raise RuntimeError('Gate fault requires fresh session')
             if not self.arm_gate(False):raise RuntimeError('Cannot disarm')
             objects=self.active_objects()
-            candidates,relation_audit,query_error=resolve_query(objects,parsed,self.cfg.get('near_shelf_distance_m',1.5))
+            if self.grounder is not None:
+                tr=self.buffer.lookup_transform('map','chassis',rclpy.time.Time()).transform.translation
+                prediction=self.grounder.predict(request['text'],objects,[tr.x,tr.y]);result['grounding']=prediction
+                if prediction['state']!='SELECTED':state=prediction['state'];return
+                candidates=[o for o in objects if o['object_id']==prediction['object_id']]
+                if len(candidates)!=1:raise RuntimeError('Neural target absent from current object snapshot')
+                # Reference dependency is conservative: any shelf change invalidates this task.
+                relation_audit=dict(reference_objects=[o for o in objects if o['class_name']=='shelf'],backend='neural_object_listener')
+                query_error=None
+            else:
+                candidates,relation_audit,query_error=resolve_query(objects,parsed,self.cfg.get('near_shelf_distance_m',1.5))
             result['relation_audit']=relation_audit
             references=relation_audit['reference_objects']
             result['objects']=candidates
@@ -287,7 +324,9 @@ class Manager(Node):
             ranked=[];audits=[];deadline=time.monotonic()+self.cfg['query_timeout_wall_s']
             self.emit('PLANNING',task_id,candidates=candidates)
             for obj in candidates:
-                for target in approaches(obj,self.cfg['planning_radius_m'],self.cfg['footprint_padding_m'],self.cfg['approach_margin_m'],self.cfg['approach_samples']):
+                targets=([bound_goal(self.bindings,obj)] if self.bindings is not None else
+                    approaches(obj,self.cfg['planning_radius_m'],self.cfg['footprint_padding_m'],self.cfg['approach_margin_m'],self.cfg['approach_samples']))
+                for target in targets:
                     self.check_stop();self.target_valid(obj)
                     for reference in references:self.target_valid(reference)
                     if time.monotonic()>deadline:raise TimeoutError('Semantic query budget exceeded')

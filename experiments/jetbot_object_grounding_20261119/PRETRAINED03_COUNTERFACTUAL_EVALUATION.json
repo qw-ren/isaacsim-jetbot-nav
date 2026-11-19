@@ -1,0 +1,245 @@
+{
+  "min_confidence": 0.5,
+  "agent_authored_not_human_validated": true,
+  "commands_sha256": "d5b70230468f3b1fee5ff2e3f5f98068ff63b1778c123a7d66e3aa5efbf372f2",
+  "samples": 12,
+  "correct": 7,
+  "accepted": 11,
+  "accepted_wrong": 4,
+  "cpu_latency_ms": {
+    "median": 1.53144799992333,
+    "maximum": 426.73665999996047
+  },
+  "candidate_order_and_id_invariance_passed": true,
+  "results": [
+    {
+      "case_id": "counterfactual_00",
+      "text": "不要前往最近的托盘",
+      "expected": "NOT_FOUND",
+      "prediction": "/Counterfactual/pallet",
+      "correct": false,
+      "result": {
+        "state": "SELECTED",
+        "object_id": "/Counterfactual/pallet",
+        "confidence": 0.8832036256790161,
+        "margin": 1.0,
+        "slots": {
+          "object_class": "pallet",
+          "reference_row": 0,
+          "selection": "nearest_euclidean"
+        },
+        "backend": "pretrained_chinese_tiny"
+      }
+    },
+    {
+      "case_id": "counterfactual_01",
+      "text": "先别去最近的纸箱",
+      "expected": "NOT_FOUND",
+      "prediction": "/World/SemanticOracle/box_relation",
+      "correct": false,
+      "result": {
+        "state": "SELECTED",
+        "object_id": "/World/SemanticOracle/box_relation",
+        "confidence": 0.6554872989654541,
+        "margin": 0.98020339012146,
+        "slots": {
+          "object_class": "box",
+          "reference_row": 0,
+          "selection": "nearest_euclidean"
+        },
+        "backend": "pretrained_chinese_tiny"
+      }
+    },
+    {
+      "case_id": "counterfactual_02",
+      "text": "不要去最远的纸箱",
+      "expected": "NOT_FOUND",
+      "prediction": "/World/SemanticOracle/box_far",
+      "correct": false,
+      "result": {
+        "state": "SELECTED",
+        "object_id": "/World/SemanticOracle/box_far",
+        "confidence": 0.7024934887886047,
+        "margin": 0.9994999766349792,
+        "slots": {
+          "object_class": "box",
+          "reference_row": 0,
+          "selection": "farthest_euclidean"
+        },
+        "backend": "pretrained_chinese_tiny"
+      }
+    },
+    {
+      "case_id": "counterfactual_03",
+      "text": "不用带我到第二排货架旁边的箱子",
+      "expected": "NOT_FOUND",
+      "prediction": "LOW_CONFIDENCE",
+      "correct": false,
+      "result": {
+        "state": "LOW_CONFIDENCE",
+        "object_id": null,
+        "confidence": 0.40079212188720703,
+        "margin": 0.9406206607818604,
+        "slots": {
+          "object_class": "box",
+          "reference_row": 2,
+          "selection": "unique"
+        },
+        "backend": "pretrained_chinese_tiny"
+      }
+    },
+    {
+      "case_id": "counterfactual_04",
+      "text": "我不是让你找纸箱",
+      "expected": "NOT_FOUND",
+      "prediction": "NOT_FOUND",
+      "correct": true,
+      "result": {
+        "state": "NOT_FOUND",
+        "object_id": null,
+        "confidence": 0.594565749168396,
+        "margin": 1.0,
+        "slots": {
+          "object_class": "unsupported",
+          "reference_row": 0,
+          "selection": "unique"
+        },
+        "backend": "pretrained_chinese_tiny"
+      }
+    },
+    {
+      "case_id": "counterfactual_05",
+      "text": "不用去最近的推车",
+      "expected": "NOT_FOUND",
+      "prediction": "/World/SemanticOracle/cart_near",
+      "correct": false,
+      "result": {
+        "state": "SELECTED",
+        "object_id": "/World/SemanticOracle/cart_near",
+        "confidence": 0.8512571454048157,
+        "margin": 1.0,
+        "slots": {
+          "object_class": "cart",
+          "reference_row": 0,
+          "selection": "nearest_euclidean"
+        },
+        "backend": "pretrained_chinese_tiny"
+      }
+    },
+    {
+      "case_id": "counterfactual_06",
+      "text": "请停止寻找纸箱",
+      "expected": "NOT_FOUND",
+      "prediction": "NOT_FOUND",
+      "correct": true,
+      "result": {
+        "state": "NOT_FOUND",
+        "object_id": null,
+        "confidence": 0.8105374574661255,
+        "margin": 1.0,
+        "slots": {
+          "object_class": "unsupported",
+          "reference_row": 0,
+          "selection": "unique"
+        },
+        "backend": "pretrained_chinese_tiny"
+      }
+    },
+    {
+      "case_id": "counterfactual_07",
+      "text": "暂时别导航到托盘",
+      "expected": "NOT_FOUND",
+      "prediction": "NOT_FOUND",
+      "correct": true,
+      "result": {
+        "state": "NOT_FOUND",
+        "object_id": null,
+        "confidence": 0.5408732891082764,
+        "margin": 1.0,
+        "slots": {
+          "object_class": "unsupported",
+          "reference_row": 0,
+          "selection": "unique"
+        },
+        "backend": "pretrained_chinese_tiny"
+      }
+    },
+    {
+      "case_id": "counterfactual_08",
+      "text": "找离我第二近的纸箱",
+      "expected": "NOT_FOUND",
+      "prediction": "NOT_FOUND",
+      "correct": true,
+      "result": {
+        "state": "NOT_FOUND",
+        "object_id": null,
+        "confidence": 0.6712254285812378,
+        "margin": 1.0,
+        "slots": {
+          "object_class": "unsupported",
+          "reference_row": 0,
+          "selection": "unique"
+        },
+        "backend": "pretrained_chinese_tiny"
+      }
+    },
+    {
+      "case_id": "counterfactual_09",
+      "text": "去第九排货架旁边的纸箱",
+      "expected": "NOT_FOUND",
+      "prediction": "NOT_FOUND",
+      "correct": true,
+      "result": {
+        "state": "NOT_FOUND",
+        "object_id": null,
+        "confidence": 0.5983098745346069,
+        "margin": 1.0,
+        "slots": {
+          "object_class": "box",
+          "reference_row": 5,
+          "selection": "unique"
+        },
+        "backend": "pretrained_chinese_tiny"
+      }
+    },
+    {
+      "case_id": "counterfactual_10",
+      "text": "到最近的托盘那里",
+      "expected": "/Counterfactual/pallet",
+      "prediction": "/Counterfactual/pallet",
+      "correct": true,
+      "result": {
+        "state": "SELECTED",
+        "object_id": "/Counterfactual/pallet",
+        "confidence": 0.9366577863693237,
+        "margin": 1.0,
+        "slots": {
+          "object_class": "pallet",
+          "reference_row": 0,
+          "selection": "nearest_euclidean"
+        },
+        "backend": "pretrained_chinese_tiny"
+      }
+    },
+    {
+      "case_id": "counterfactual_11",
+      "text": "去离我最近的纸箱",
+      "expected": "/World/SemanticOracle/box_relation",
+      "prediction": "/World/SemanticOracle/box_relation",
+      "correct": true,
+      "result": {
+        "state": "SELECTED",
+        "object_id": "/World/SemanticOracle/box_relation",
+        "confidence": 0.83954256772995,
+        "margin": 0.98020339012146,
+        "slots": {
+          "object_class": "box",
+          "reference_row": 0,
+          "selection": "nearest_euclidean"
+        },
+        "backend": "pretrained_chinese_tiny"
+      }
+    }
+  ],
+  "live_navigation_qualified": false
+}

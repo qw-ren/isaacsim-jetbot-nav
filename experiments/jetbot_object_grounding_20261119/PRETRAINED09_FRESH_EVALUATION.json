@@ -1,0 +1,257 @@
+{
+  "min_confidence": 0.8,
+  "agent_authored_not_human_validated": true,
+  "commands_sha256": "95770f2eb6e3aaeb2c72ded625ef1bc4464a49695e8f40aa5959cd3d35bfb42c",
+  "samples": 12,
+  "correct": 11,
+  "accepted": 11,
+  "accepted_wrong": 0,
+  "cpu_latency_ms": {
+    "median": 4.391959000258794,
+    "maximum": 432.9420620001656
+  },
+  "candidate_order_and_id_invariance_passed": true,
+  "results": [
+    {
+      "case_id": "fresh_00",
+      "text": "可以麻烦你带我去最近的箱子旁吗？",
+      "expected": "/World/SemanticOracle/box_relation",
+      "prediction": "/World/SemanticOracle/box_relation",
+      "correct": true,
+      "result": {
+        "state": "SELECTED",
+        "object_id": "/World/SemanticOracle/box_relation",
+        "confidence": 0.9843850135803223,
+        "margin": 0.9689270257949829,
+        "slots": {
+          "object_class": "box",
+          "reference_row": 0,
+          "selection": "nearest_euclidean",
+          "intent": "navigate"
+        },
+        "backend": "pretrained_chinese_encoder"
+      }
+    },
+    {
+      "case_id": "fresh_01",
+      "text": "能不能把我带到离我最远的纸箱附近？",
+      "expected": "/World/SemanticOracle/box_far",
+      "prediction": "/World/SemanticOracle/box_far",
+      "correct": true,
+      "result": {
+        "state": "SELECTED",
+        "object_id": "/World/SemanticOracle/box_far",
+        "confidence": 0.9978972673416138,
+        "margin": 0.9986564517021179,
+        "slots": {
+          "object_class": "box",
+          "reference_row": 0,
+          "selection": "farthest_euclidean",
+          "intent": "navigate"
+        },
+        "backend": "pretrained_chinese_encoder"
+      }
+    },
+    {
+      "case_id": "fresh_02",
+      "text": "我想检查第二排货架边的纸箱，导航过去吧。",
+      "expected": "/World/SemanticOracle/box_relation",
+      "prediction": "LOW_CONFIDENCE",
+      "correct": false,
+      "result": {
+        "state": "LOW_CONFIDENCE",
+        "object_id": null,
+        "confidence": 0.6341860890388489,
+        "margin": 0.270140141248703,
+        "slots": {
+          "object_class": "box",
+          "reference_row": 2,
+          "selection": "unique",
+          "intent": "navigate"
+        },
+        "backend": "pretrained_chinese_encoder"
+      }
+    },
+    {
+      "case_id": "fresh_03",
+      "text": "是否方便前往离我最近的托盘？",
+      "expected": "/Counterfactual/pallet",
+      "prediction": "/Counterfactual/pallet",
+      "correct": true,
+      "result": {
+        "state": "SELECTED",
+        "object_id": "/Counterfactual/pallet",
+        "confidence": 0.9971530437469482,
+        "margin": 1.0,
+        "slots": {
+          "object_class": "pallet",
+          "reference_row": 0,
+          "selection": "nearest_euclidean",
+          "intent": "navigate"
+        },
+        "backend": "pretrained_chinese_encoder"
+      }
+    },
+    {
+      "case_id": "fresh_04",
+      "text": "我不想继续找托盘了，保持原地。",
+      "expected": "NOT_FOUND",
+      "prediction": "NOT_FOUND",
+      "correct": true,
+      "result": {
+        "state": "NOT_FOUND",
+        "object_id": null,
+        "confidence": 0.9548999667167664,
+        "margin": 1.0,
+        "slots": {
+          "object_class": "pallet",
+          "reference_row": 0,
+          "selection": "unique",
+          "intent": "no_navigation"
+        },
+        "backend": "pretrained_chinese_encoder"
+      }
+    },
+    {
+      "case_id": "fresh_05",
+      "text": "不要带我靠近最远的纸箱。",
+      "expected": "NOT_FOUND",
+      "prediction": "NOT_FOUND",
+      "correct": true,
+      "result": {
+        "state": "NOT_FOUND",
+        "object_id": null,
+        "confidence": 0.9981277585029602,
+        "margin": 0.9999909996986389,
+        "slots": {
+          "object_class": "box",
+          "reference_row": 0,
+          "selection": "farthest_euclidean",
+          "intent": "no_navigation"
+        },
+        "backend": "pretrained_chinese_encoder"
+      }
+    },
+    {
+      "case_id": "fresh_06",
+      "text": "先不用找第一排货架旁边那个箱子。",
+      "expected": "NOT_FOUND",
+      "prediction": "NOT_FOUND",
+      "correct": true,
+      "result": {
+        "state": "NOT_FOUND",
+        "object_id": null,
+        "confidence": 0.9966027736663818,
+        "margin": 1.0,
+        "slots": {
+          "object_class": "box",
+          "reference_row": 1,
+          "selection": "unique",
+          "intent": "no_navigation"
+        },
+        "backend": "pretrained_chinese_encoder"
+      }
+    },
+    {
+      "case_id": "fresh_07",
+      "text": "只识别纸箱，别导航过去。",
+      "expected": "NOT_FOUND",
+      "prediction": "NOT_FOUND",
+      "correct": true,
+      "result": {
+        "state": "NOT_FOUND",
+        "object_id": null,
+        "confidence": 0.9114828109741211,
+        "margin": 1.0,
+        "slots": {
+          "object_class": "box",
+          "reference_row": 0,
+          "selection": "unique",
+          "intent": "no_navigation"
+        },
+        "backend": "pretrained_chinese_encoder"
+      }
+    },
+    {
+      "case_id": "fresh_08",
+      "text": "请告诉我离纸箱多远，不要过去。",
+      "expected": "NOT_FOUND",
+      "prediction": "NOT_FOUND",
+      "correct": true,
+      "result": {
+        "state": "NOT_FOUND",
+        "object_id": null,
+        "confidence": 0.8948438167572021,
+        "margin": 1.0,
+        "slots": {
+          "object_class": "box",
+          "reference_row": 0,
+          "selection": "unique",
+          "intent": "no_navigation"
+        },
+        "backend": "pretrained_chinese_encoder"
+      }
+    },
+    {
+      "case_id": "fresh_09",
+      "text": "可以去最近的手推车旁等着吗？",
+      "expected": "/World/SemanticOracle/cart_near",
+      "prediction": "/World/SemanticOracle/cart_near",
+      "correct": true,
+      "result": {
+        "state": "SELECTED",
+        "object_id": "/World/SemanticOracle/cart_near",
+        "confidence": 0.99696284532547,
+        "margin": 1.0,
+        "slots": {
+          "object_class": "cart",
+          "reference_row": 0,
+          "selection": "nearest_euclidean",
+          "intent": "navigate"
+        },
+        "backend": "pretrained_chinese_encoder"
+      }
+    },
+    {
+      "case_id": "fresh_10",
+      "text": "能否导航去第五排货架旁的纸箱？",
+      "expected": "NOT_FOUND",
+      "prediction": "NOT_FOUND",
+      "correct": true,
+      "result": {
+        "state": "NOT_FOUND",
+        "object_id": null,
+        "confidence": 0.9935271739959717,
+        "margin": 1.0,
+        "slots": {
+          "object_class": "box",
+          "reference_row": 5,
+          "selection": "unique",
+          "intent": "navigate"
+        },
+        "backend": "pretrained_chinese_encoder"
+      }
+    },
+    {
+      "case_id": "fresh_11",
+      "text": "可不可以去最远的标识牌那边？",
+      "expected": "NOT_FOUND",
+      "prediction": "NOT_FOUND",
+      "correct": true,
+      "result": {
+        "state": "NOT_FOUND",
+        "object_id": null,
+        "confidence": 0.9981293082237244,
+        "margin": 0.9999909996986389,
+        "slots": {
+          "object_class": "sign",
+          "reference_row": 0,
+          "selection": "farthest_euclidean",
+          "intent": "navigate"
+        },
+        "backend": "pretrained_chinese_encoder"
+      }
+    }
+  ],
+  "live_navigation_qualified": false
+}

@@ -1,0 +1,472 @@
+{
+  "agent_authored_not_human_validated": true,
+  "commands_sha256": "b1066f6db539d3038150da9c5bc8c843b6e5dfe9e53a098d374bdcc344757849",
+  "samples": 24,
+  "correct": 5,
+  "accepted": 5,
+  "accepted_wrong": 0,
+  "cpu_latency_ms": {
+    "median": 1.5641729999060772,
+    "maximum": 499.29710900005375
+  },
+  "candidate_order_and_id_invariance_passed": true,
+  "results": [
+    {
+      "case_id": "manual_01",
+      "text": "去最远的纸箱",
+      "expected": "/World/SemanticOracle/box_far",
+      "prediction": "LOW_CONFIDENCE",
+      "correct": false,
+      "result": {
+        "state": "LOW_CONFIDENCE",
+        "object_id": null,
+        "confidence": 0.7140548825263977,
+        "margin": 0.9994999766349792,
+        "slots": {
+          "object_class": "box",
+          "reference_row": 0,
+          "selection": "farthest_euclidean"
+        },
+        "backend": "pretrained_chinese_tiny"
+      }
+    },
+    {
+      "case_id": "manual_02",
+      "text": "找离我最近的箱子",
+      "expected": "/World/SemanticOracle/box_relation",
+      "prediction": "LOW_CONFIDENCE",
+      "correct": false,
+      "result": {
+        "state": "LOW_CONFIDENCE",
+        "object_id": null,
+        "confidence": 0.8841890096664429,
+        "margin": 0.9802141189575195,
+        "slots": {
+          "object_class": "box",
+          "reference_row": 0,
+          "selection": "nearest_euclidean"
+        },
+        "backend": "pretrained_chinese_tiny"
+      }
+    },
+    {
+      "case_id": "manual_03",
+      "text": "带我到距离我最远的箱子旁边",
+      "expected": "/World/SemanticOracle/box_far",
+      "prediction": "LOW_CONFIDENCE",
+      "correct": false,
+      "result": {
+        "state": "LOW_CONFIDENCE",
+        "object_id": null,
+        "confidence": 0.8472095131874084,
+        "margin": 0.9994999766349792,
+        "slots": {
+          "object_class": "box",
+          "reference_row": 0,
+          "selection": "farthest_euclidean"
+        },
+        "backend": "pretrained_chinese_tiny"
+      }
+    },
+    {
+      "case_id": "manual_04",
+      "text": "我想去第二排货架旁边的那个纸箱",
+      "expected": "/World/SemanticOracle/box_relation",
+      "prediction": "LOW_CONFIDENCE",
+      "correct": false,
+      "result": {
+        "state": "LOW_CONFIDENCE",
+        "object_id": null,
+        "confidence": 0.3796355724334717,
+        "margin": 0.9406206607818604,
+        "slots": {
+          "object_class": "box",
+          "reference_row": 2,
+          "selection": "unique"
+        },
+        "backend": "pretrained_chinese_tiny"
+      }
+    },
+    {
+      "case_id": "manual_05",
+      "text": "请带我前往第2排货架附近的箱子",
+      "expected": "/World/SemanticOracle/box_relation",
+      "prediction": "LOW_CONFIDENCE",
+      "correct": false,
+      "result": {
+        "state": "LOW_CONFIDENCE",
+        "object_id": null,
+        "confidence": 0.5340586304664612,
+        "margin": 0.9406206607818604,
+        "slots": {
+          "object_class": "box",
+          "reference_row": 2,
+          "selection": "unique"
+        },
+        "backend": "pretrained_chinese_tiny"
+      }
+    },
+    {
+      "case_id": "manual_06",
+      "text": "第二排货架边上不是有个纸箱吗？带我过去。",
+      "expected": "/World/SemanticOracle/box_relation",
+      "prediction": "LOW_CONFIDENCE",
+      "correct": false,
+      "result": {
+        "state": "LOW_CONFIDENCE",
+        "object_id": null,
+        "confidence": 0.3982304334640503,
+        "margin": 0.9406206607818604,
+        "slots": {
+          "object_class": "box",
+          "reference_row": 2,
+          "selection": "unique"
+        },
+        "backend": "pretrained_chinese_tiny"
+      }
+    },
+    {
+      "case_id": "manual_07",
+      "text": "走到第一排货架附近的那个纸箱",
+      "expected": "AMBIGUOUS",
+      "prediction": "LOW_CONFIDENCE",
+      "correct": false,
+      "result": {
+        "state": "LOW_CONFIDENCE",
+        "object_id": null,
+        "confidence": 0.34826990962028503,
+        "margin": 0.4800848662853241,
+        "slots": {
+          "object_class": "box",
+          "reference_row": 1,
+          "selection": "unique"
+        },
+        "backend": "pretrained_chinese_tiny"
+      }
+    },
+    {
+      "case_id": "manual_08",
+      "text": "去第一排货架旁边离我最近的纸箱",
+      "expected": "/World/SemanticOracle/box_near",
+      "prediction": "LOW_CONFIDENCE",
+      "correct": false,
+      "result": {
+        "state": "LOW_CONFIDENCE",
+        "object_id": null,
+        "confidence": 0.34773507714271545,
+        "margin": 0.9999992847442627,
+        "slots": {
+          "object_class": "box",
+          "reference_row": 1,
+          "selection": "nearest_euclidean"
+        },
+        "backend": "pretrained_chinese_tiny"
+      }
+    },
+    {
+      "case_id": "manual_09",
+      "text": "请去第1排货架边上最远的箱子",
+      "expected": "/World/SemanticOracle/box_far",
+      "prediction": "LOW_CONFIDENCE",
+      "correct": false,
+      "result": {
+        "state": "LOW_CONFIDENCE",
+        "object_id": null,
+        "confidence": 0.3858509361743927,
+        "margin": 0.571835994720459,
+        "slots": {
+          "object_class": "box",
+          "reference_row": 1,
+          "selection": "farthest_euclidean"
+        },
+        "backend": "pretrained_chinese_tiny"
+      }
+    },
+    {
+      "case_id": "manual_10",
+      "text": "去第5排货架旁边的纸箱",
+      "expected": "NOT_FOUND",
+      "prediction": "LOW_CONFIDENCE",
+      "correct": false,
+      "result": {
+        "state": "LOW_CONFIDENCE",
+        "object_id": null,
+        "confidence": 0.7820679545402527,
+        "margin": 1.0,
+        "slots": {
+          "object_class": "box",
+          "reference_row": 5,
+          "selection": "unique"
+        },
+        "backend": "pretrained_chinese_tiny"
+      }
+    },
+    {
+      "case_id": "manual_11",
+      "text": "请找第三排货架旁的箱子",
+      "expected": "NOT_FOUND",
+      "prediction": "LOW_CONFIDENCE",
+      "correct": false,
+      "result": {
+        "state": "LOW_CONFIDENCE",
+        "object_id": null,
+        "confidence": 0.5125418901443481,
+        "margin": 1.0,
+        "slots": {
+          "object_class": "box",
+          "reference_row": 3,
+          "selection": "unique"
+        },
+        "backend": "pretrained_chinese_tiny"
+      }
+    },
+    {
+      "case_id": "manual_12",
+      "text": "去最近的托盘",
+      "expected": "NOT_FOUND",
+      "prediction": "NOT_FOUND",
+      "correct": true,
+      "result": {
+        "state": "NOT_FOUND",
+        "object_id": null,
+        "confidence": 0.9040095806121826,
+        "margin": 1.0,
+        "slots": {
+          "object_class": "pallet",
+          "reference_row": 0,
+          "selection": "nearest_euclidean"
+        },
+        "backend": "pretrained_chinese_tiny"
+      }
+    },
+    {
+      "case_id": "manual_13",
+      "text": "到最远的标牌那里",
+      "expected": "NOT_FOUND",
+      "prediction": "NOT_FOUND",
+      "correct": true,
+      "result": {
+        "state": "NOT_FOUND",
+        "object_id": null,
+        "confidence": 0.9143821001052856,
+        "margin": 1.0,
+        "slots": {
+          "object_class": "sign",
+          "reference_row": 0,
+          "selection": "farthest_euclidean"
+        },
+        "backend": "pretrained_chinese_tiny"
+      }
+    },
+    {
+      "case_id": "manual_14",
+      "text": "带我找最近的推车",
+      "expected": "/World/SemanticOracle/cart_near",
+      "prediction": "/World/SemanticOracle/cart_near",
+      "correct": true,
+      "result": {
+        "state": "SELECTED",
+        "object_id": "/World/SemanticOracle/cart_near",
+        "confidence": 0.9023637175559998,
+        "margin": 1.0,
+        "slots": {
+          "object_class": "cart",
+          "reference_row": 0,
+          "selection": "nearest_euclidean"
+        },
+        "backend": "pretrained_chinese_tiny"
+      }
+    },
+    {
+      "case_id": "manual_15",
+      "text": "走到手推车旁边",
+      "expected": "/World/SemanticOracle/cart_near",
+      "prediction": "/World/SemanticOracle/cart_near",
+      "correct": true,
+      "result": {
+        "state": "SELECTED",
+        "object_id": "/World/SemanticOracle/cart_near",
+        "confidence": 0.9040996432304382,
+        "margin": 1.0,
+        "slots": {
+          "object_class": "cart",
+          "reference_row": 0,
+          "selection": "unique"
+        },
+        "backend": "pretrained_chinese_tiny"
+      }
+    },
+    {
+      "case_id": "manual_16",
+      "text": "请去最近的货架",
+      "expected": "/SemanticCatalog/shelf_row_3",
+      "prediction": "LOW_CONFIDENCE",
+      "correct": false,
+      "result": {
+        "state": "LOW_CONFIDENCE",
+        "object_id": null,
+        "confidence": 0.5019230842590332,
+        "margin": 0.08928307890892029,
+        "slots": {
+          "object_class": "shelf",
+          "reference_row": 0,
+          "selection": "nearest_euclidean"
+        },
+        "backend": "pretrained_chinese_tiny"
+      }
+    },
+    {
+      "case_id": "manual_17",
+      "text": "我想到离我最远的货架旁边",
+      "expected": "/SemanticCatalog/shelf_row_1",
+      "prediction": "/SemanticCatalog/shelf_row_1",
+      "correct": true,
+      "result": {
+        "state": "SELECTED",
+        "object_id": "/SemanticCatalog/shelf_row_1",
+        "confidence": 0.9294294118881226,
+        "margin": 0.9172908067703247,
+        "slots": {
+          "object_class": "shelf",
+          "reference_row": 0,
+          "selection": "farthest_euclidean"
+        },
+        "backend": "pretrained_chinese_tiny"
+      }
+    },
+    {
+      "case_id": "manual_18",
+      "text": "先别去找纸箱",
+      "expected": "NOT_FOUND",
+      "prediction": "LOW_CONFIDENCE",
+      "correct": false,
+      "result": {
+        "state": "LOW_CONFIDENCE",
+        "object_id": null,
+        "confidence": 0.874583899974823,
+        "margin": 1.0,
+        "slots": {
+          "object_class": "unsupported",
+          "reference_row": 0,
+          "selection": "unique"
+        },
+        "backend": "pretrained_chinese_tiny"
+      }
+    },
+    {
+      "case_id": "manual_19",
+      "text": "不要前往最近的托盘",
+      "expected": "NOT_FOUND",
+      "prediction": "LOW_CONFIDENCE",
+      "correct": false,
+      "result": {
+        "state": "LOW_CONFIDENCE",
+        "object_id": null,
+        "confidence": 0.8832036256790161,
+        "margin": 1.0,
+        "slots": {
+          "object_class": "pallet",
+          "reference_row": 0,
+          "selection": "nearest_euclidean"
+        },
+        "backend": "pretrained_chinese_tiny"
+      }
+    },
+    {
+      "case_id": "manual_20",
+      "text": "纸箱先不找了，原地等着",
+      "expected": "NOT_FOUND",
+      "prediction": "LOW_CONFIDENCE",
+      "correct": false,
+      "result": {
+        "state": "LOW_CONFIDENCE",
+        "object_id": null,
+        "confidence": 0.8822376132011414,
+        "margin": 1.0,
+        "slots": {
+          "object_class": "unsupported",
+          "reference_row": 0,
+          "selection": "unique"
+        },
+        "backend": "pretrained_chinese_tiny"
+      }
+    },
+    {
+      "case_id": "manual_21",
+      "text": "把那个纸箱拿给我",
+      "expected": "NOT_FOUND",
+      "prediction": "LOW_CONFIDENCE",
+      "correct": false,
+      "result": {
+        "state": "LOW_CONFIDENCE",
+        "object_id": null,
+        "confidence": 0.7446295619010925,
+        "margin": 1.0,
+        "slots": {
+          "object_class": "unsupported",
+          "reference_row": 0,
+          "selection": "unique"
+        },
+        "backend": "pretrained_chinese_tiny"
+      }
+    },
+    {
+      "case_id": "manual_22",
+      "text": "现在几点了",
+      "expected": "NOT_FOUND",
+      "prediction": "LOW_CONFIDENCE",
+      "correct": false,
+      "result": {
+        "state": "LOW_CONFIDENCE",
+        "object_id": null,
+        "confidence": 0.64485102891922,
+        "margin": 1.0,
+        "slots": {
+          "object_class": "unsupported",
+          "reference_row": 0,
+          "selection": "unique"
+        },
+        "backend": "pretrained_chinese_tiny"
+      }
+    },
+    {
+      "case_id": "manual_23",
+      "text": "请帮我找一个人",
+      "expected": "NOT_FOUND",
+      "prediction": "LOW_CONFIDENCE",
+      "correct": false,
+      "result": {
+        "state": "LOW_CONFIDENCE",
+        "object_id": null,
+        "confidence": 0.682735800743103,
+        "margin": 1.0,
+        "slots": {
+          "object_class": "unsupported",
+          "reference_row": 0,
+          "selection": "unique"
+        },
+        "backend": "pretrained_chinese_tiny"
+      }
+    },
+    {
+      "case_id": "manual_24",
+      "text": "找离我第二近的纸箱",
+      "expected": "NOT_FOUND",
+      "prediction": "LOW_CONFIDENCE",
+      "correct": false,
+      "result": {
+        "state": "LOW_CONFIDENCE",
+        "object_id": null,
+        "confidence": 0.6712254285812378,
+        "margin": 1.0,
+        "slots": {
+          "object_class": "unsupported",
+          "reference_row": 0,
+          "selection": "unique"
+        },
+        "backend": "pretrained_chinese_tiny"
+      }
+    }
+  ],
+  "live_navigation_qualified": false
+}

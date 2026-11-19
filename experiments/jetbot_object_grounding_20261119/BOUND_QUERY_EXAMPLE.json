@@ -1,0 +1,19 @@
+{
+  "state": "SELECTED",
+  "object_id": "/World/SemanticOracle/box_far",
+  "confidence": 0.7140548825263977,
+  "margin": 0.9994999766349792,
+  "slots": {
+    "object_class": "box",
+    "reference_row": 0,
+    "selection": "farthest_euclidean"
+  },
+  "backend": "pretrained_chinese_tiny",
+  "goal": [
+    -13.0,
+    22.540000005587935,
+    1.5707963267948966
+  ],
+  "frame_id": "map",
+  "requires_native_path_check": true
+}

@@ -1,0 +1,8 @@
+{
+  "candidate_permutation_invariant": true,
+  "id_rename_invariant": true,
+  "unseen_characters_rejected": true,
+  "no_candidate_never_selects_object": true,
+  "duplicate_ids_rejected": true,
+  "live_navigation_qualified": false
+}

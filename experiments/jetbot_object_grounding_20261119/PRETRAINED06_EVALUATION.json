@@ -1,0 +1,133 @@
+{
+  "prototype_only": true,
+  "pretrained_model": {
+    "model_id": "uer/roberta-tiny-wwm-chinese-cluecorpussmall",
+    "revision": "6a4e70f3f8bcc2a64ce655e92ceeebb10ad1cafa",
+    "files": [
+      {
+        "file": "config.json",
+        "sha256": "34e103e6dc4a98d3baa564fb9e8278c42a50288c9ad0736d9832a9444f4ce2dc",
+        "bytes": 621
+      },
+      {
+        "file": "pytorch_model.bin",
+        "sha256": "35f53ca6d452c8d5be3f7886817cdbe898256959086f756bec666200bc72d4de",
+        "bytes": 12841159
+      },
+      {
+        "file": "special_tokens_map.json",
+        "sha256": "303df45a03609e4ead04bc3dc1536d0ab19b5358db685b6f3da123d05ec200e3",
+        "bytes": 112
+      },
+      {
+        "file": "tokenizer_config.json",
+        "sha256": "e20f6b039422d59cc09f00654e34f04441b4eb722031939e769617275f58ea17",
+        "bytes": 307
+      },
+      {
+        "file": "vocab.txt",
+        "sha256": "45bbac6b341c319adc98a532532882e91a9cefc0329aa57bac9ae761c27b291c",
+        "bytes": 109540
+      },
+      {
+        "file": "README.md",
+        "sha256": "d66ce340d4305bdf480c920457fd0d1c078d9de7f5d0388a14ad1d6ae2688f0f",
+        "bytes": 8640
+      }
+    ]
+  },
+  "dataset": {
+    "train": {
+      "samples": 15998,
+      "sha256": "b4513c63763569d57ab7ac7c1afeae58ddaf58109c6ead565d1f62095a79cdab",
+      "scene_seed_range": [
+        300000,
+        315999
+      ]
+    },
+    "dev": {
+      "samples": 800,
+      "sha256": "96b59879724989755886755ac5b9fdccb5976a70c8e7b5325669f4d4f5326bcd",
+      "scene_seed_range": [
+        500000,
+        500799
+      ]
+    },
+    "test": {
+      "samples": 1000,
+      "sha256": "8d57d6be644d8bd7a56cc16c4c48f25a22f119a777818be6076407d91cedadb8",
+      "scene_seed_range": [
+        700000,
+        700999
+      ]
+    }
+  },
+  "parameters": 3186261,
+  "device": "cuda",
+  "elapsed_s": 97.41509103775024,
+  "checkpoint_sha256": "ac1c358c6ec3fc1b25bdffa20ceb10e698e1a4d91b3824095d41db7e040244f1",
+  "live_navigation_qualified": false,
+  "dev": {
+    "samples": 800,
+    "accuracy": 0.85375,
+    "slot_exact_accuracy": 0.7675,
+    "coverage": 0.0625,
+    "accepted_accuracy": 1.0,
+    "groups": {
+      "NOT_FOUND": {
+        "correct": 352,
+        "total": 364
+      },
+      "OBJECT": {
+        "correct": 276,
+        "total": 335
+      },
+      "AMBIGUOUS": {
+        "correct": 55,
+        "total": 101
+      }
+    }
+  },
+  "test": {
+    "samples": 1000,
+    "accuracy": 0.833,
+    "slot_exact_accuracy": 0.623,
+    "coverage": 0.005,
+    "accepted_accuracy": 1.0,
+    "groups": {
+      "NOT_FOUND": {
+        "correct": 469,
+        "total": 474
+      },
+      "AMBIGUOUS": {
+        "correct": 99,
+        "total": 125
+      },
+      "OBJECT": {
+        "correct": 265,
+        "total": 401
+      }
+    }
+  },
+  "test_with_oracle_language_slots": {
+    "samples": 1000,
+    "accuracy": 0.992,
+    "slot_exact_accuracy": 0.623,
+    "coverage": 0.005,
+    "accepted_accuracy": 1.0,
+    "groups": {
+      "NOT_FOUND": {
+        "correct": 474,
+        "total": 474
+      },
+      "AMBIGUOUS": {
+        "correct": 125,
+        "total": 125
+      },
+      "OBJECT": {
+        "correct": 393,
+        "total": 401
+      }
+    }
+  }
+}

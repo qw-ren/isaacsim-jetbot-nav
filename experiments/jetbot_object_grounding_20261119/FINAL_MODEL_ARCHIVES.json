@@ -1,0 +1,20 @@
+[
+  {
+    "file": "grounding_20261119_08_selected.tar.gz",
+    "bytes": 75206809,
+    "sha256": "72de8c757f5680688189feca9c13e6b8b75422911469f4f50df0e0065f8d4d1e",
+    "files": 53
+  },
+  {
+    "file": "grounding_20261119_09_selected.tar.gz",
+    "bytes": 75237633,
+    "sha256": "4b6ae788b2724422ad52be9899958c9201af85b6010b488da1862178c807a855",
+    "files": 56
+  },
+  {
+    "file": "grounding_20261119_10_selected.tar.gz",
+    "bytes": 70218,
+    "sha256": "67539c8053862820a03b220105c573dfdebb5bc7f8023f08a653fb1255dbf4b6",
+    "files": 45
+  }
+]

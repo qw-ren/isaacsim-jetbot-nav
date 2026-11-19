@@ -1,0 +1,123 @@
+{
+  "threshold_selected_using": "dev_only",
+  "min_confidence": 0.5,
+  "min_margin": 0.2,
+  "dev": {
+    "samples": 800,
+    "accepted": 780,
+    "coverage": 0.975,
+    "accepted_accuracy": 0.9910256410256411,
+    "accepted_wrong": 7
+  },
+  "test": {
+    "samples": 1000,
+    "accepted": 993,
+    "coverage": 0.993,
+    "accepted_accuracy": 0.824773413897281,
+    "accepted_wrong": 174
+  },
+  "dev_choices": [
+    {
+      "threshold": 0.5,
+      "metrics": {
+        "samples": 800,
+        "accepted": 780,
+        "coverage": 0.975,
+        "accepted_accuracy": 0.9910256410256411,
+        "accepted_wrong": 7
+      }
+    },
+    {
+      "threshold": 0.55,
+      "metrics": {
+        "samples": 800,
+        "accepted": 780,
+        "coverage": 0.975,
+        "accepted_accuracy": 0.9910256410256411,
+        "accepted_wrong": 7
+      }
+    },
+    {
+      "threshold": 0.6,
+      "metrics": {
+        "samples": 800,
+        "accepted": 779,
+        "coverage": 0.97375,
+        "accepted_accuracy": 0.9910141206675225,
+        "accepted_wrong": 7
+      }
+    },
+    {
+      "threshold": 0.65,
+      "metrics": {
+        "samples": 800,
+        "accepted": 734,
+        "coverage": 0.9175,
+        "accepted_accuracy": 0.9918256130790191,
+        "accepted_wrong": 6
+      }
+    },
+    {
+      "threshold": 0.7,
+      "metrics": {
+        "samples": 800,
+        "accepted": 725,
+        "coverage": 0.90625,
+        "accepted_accuracy": 0.9917241379310345,
+        "accepted_wrong": 6
+      }
+    },
+    {
+      "threshold": 0.75,
+      "metrics": {
+        "samples": 800,
+        "accepted": 709,
+        "coverage": 0.88625,
+        "accepted_accuracy": 0.9915373765867419,
+        "accepted_wrong": 6
+      }
+    },
+    {
+      "threshold": 0.8,
+      "metrics": {
+        "samples": 800,
+        "accepted": 654,
+        "coverage": 0.8175,
+        "accepted_accuracy": 0.9923547400611621,
+        "accepted_wrong": 5
+      }
+    },
+    {
+      "threshold": 0.85,
+      "metrics": {
+        "samples": 800,
+        "accepted": 568,
+        "coverage": 0.71,
+        "accepted_accuracy": 0.9929577464788732,
+        "accepted_wrong": 4
+      }
+    },
+    {
+      "threshold": 0.9,
+      "metrics": {
+        "samples": 800,
+        "accepted": 363,
+        "coverage": 0.45375,
+        "accepted_accuracy": 0.9972451790633609,
+        "accepted_wrong": 1
+      }
+    },
+    {
+      "threshold": 0.95,
+      "metrics": {
+        "samples": 800,
+        "accepted": 24,
+        "coverage": 0.03,
+        "accepted_accuracy": 1.0,
+        "accepted_wrong": 0
+      }
+    }
+  ],
+  "live_navigation_qualified": false,
+  "not_probability_calibration": true
+}

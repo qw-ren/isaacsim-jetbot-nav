@@ -1,0 +1,71 @@
+{
+  "preview_only": true,
+  "live_navigation_qualified": false,
+  "configuration_section": "navigation.semantic.object_grounding",
+  "object_grounding": {
+    "backend": "pretrained_chinese_encoder",
+    "checkpoint": "/home/admin/jetbot-warehouse/grounding_20261119_09/run01/grounding.pt",
+    "checkpoint_sha256": "5ade3359aedd464ae3ac86505a1738395b37bfd46b14d3836093ab42d67cf6f4",
+    "min_confidence": 0.8,
+    "min_margin": 0.2,
+    "bindings": {
+      "version": 1,
+      "frame_id": "map",
+      "scene_id": "3d2fbe4238e2652572c5a5ee68749caf165adf47648c2b140b65cc9dfd20eec0",
+      "objects": [
+        {
+          "object_id": "/World/SemanticOracle/box_far",
+          "goal": [
+            -13.0,
+            22.540000005587935,
+            1.5707963267948966
+          ],
+          "object_position": [
+            -13.0,
+            24.0,
+            0.24999999441206455
+          ],
+          "object_dimensions": [
+            0.6999999843537807,
+            0.4999999888241291,
+            0.4999999888241291
+          ],
+          "object_orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "source_task": "farthest_nav.json",
+          "source_task_sha256": "6aa21feb910cc11e15e76726ff265f13e0aef4166e66e1eb782f7bdb7a0a21cf"
+        }
+      ],
+      "source_case": "semantic_maneuver_20261112_09",
+      "requires_runtime_revalidation": true,
+      "world_to_map": {
+        "method": "same_usd_world_as_map_raster",
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation_xyzw": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "source_scene_sha256": "3d2fbe4238e2652572c5a5ee68749caf165adf47648c2b140b65cc9dfd20eec0",
+        "planning_map_sha256": "d42be37e98acac1017e473188ad1f69bd8f202818d985ed9976450a9e8aed4d0"
+      }
+    }
+  },
+  "selection_metric": "Euclidean object-center distance",
+  "model_parameters": 8771673,
+  "numeric_consistency_validation": {
+    "enabled": true,
+    "reject_only": true,
+    "reference_surface_gap_m": 1.5,
+    "automatic_object_substitution": false
+  }
+}

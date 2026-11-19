@@ -1,0 +1,50 @@
+{
+  "prototype_only": true,
+  "trained_from_scratch": true,
+  "parameters": 45923,
+  "train_samples": 3000,
+  "dev": {
+    "samples": 400,
+    "accuracy": 0.9325,
+    "accepted": 312,
+    "coverage": 0.78,
+    "accepted_accuracy": 0.9903846153846154,
+    "groups": {
+      "NOT_FOUND": {
+        "correct": 193,
+        "total": 203
+      },
+      "OBJECT": {
+        "correct": 164,
+        "total": 178
+      },
+      "AMBIGUOUS": {
+        "correct": 16,
+        "total": 19
+      }
+    }
+  },
+  "heldout_scene_and_phrase": {
+    "samples": 500,
+    "accuracy": 0.502,
+    "accepted": 455,
+    "coverage": 0.91,
+    "accepted_accuracy": 0.4967032967032967,
+    "groups": {
+      "OBJECT": {
+        "correct": 1,
+        "total": 215
+      },
+      "NOT_FOUND": {
+        "correct": 249,
+        "total": 252
+      },
+      "AMBIGUOUS": {
+        "correct": 1,
+        "total": 33
+      }
+    }
+  },
+  "checkpoint_sha256": "69ee8f9d5e0557ec7da0d1206c83fc220fa5a375a06aaf6cdabb4c21ad1414aa",
+  "not_navigation_acceptance": true
+}
