@@ -60,6 +60,7 @@ def planar_observations(result: PerceptionResult, session_id: str, sequence: int
         "session_id": session_id,
         "sequence": int(sequence),
         "stamp": float(result.stamp),
+        "time_domain": "ros",
         "frame_id": result.frame_id,
         "objects": objects,
     }

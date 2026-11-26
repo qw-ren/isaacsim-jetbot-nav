@@ -10,6 +10,19 @@ import time
 CODE = Path("/home/admin/jetbot-warehouse/code_deploy_20261120")
 
 
+def load_route(path):
+    route = json.loads(path.read_text())
+    if route.get("frame_id") != "map" or not route.get("map_sha256"):
+        raise ValueError("route requires map frame and map_sha256 provenance")
+    goals = route.get("waypoints", [])
+    if len(goals) < 2:
+        raise ValueError("provide at least two surveyed shelf-aisle waypoints")
+    for goal in goals:
+        if (len(goal) != 3 or any(type(v) not in (int, float) or not math.isfinite(v) for v in goal)):
+            raise ValueError("waypoints must be finite [x, y, yaw] triples")
+    return route
+
+
 def read_json(path):
     try:
         return json.loads(path.read_text())
@@ -37,8 +50,11 @@ def wait_for(case, condition, timeout):
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--case", type=Path, required=True)
+    ap.add_argument("--route", type=Path, required=True,
+                    help="Surveyed map-frame shelf-aisle route JSON; no corridor fallback")
     args = ap.parse_args()
     case = args.case.resolve()
+    route = load_route(args.route)
     if case.parent != Path("/home/admin/jetbot-warehouse/artifacts"):
         raise ValueError("unexpected case directory")
     def ready():
@@ -49,10 +65,8 @@ def main():
     results = []
     try:
         wait_for(case, ready, 300)
-        # Reuse the two previously traversed corridor segments in both directions.
-        # Approximately 8 m total translation; do not relax arrival or safety limits.
-        for index, goal in enumerate([(0., 7., math.pi / 2), (-3., 7., math.pi),
-                                      (0., 7., 0.), (0., 6., -math.pi / 2)], 1):
+        (case / "REQUESTED_ROUTE.json").write_text(json.dumps(route, indent=2))
+        for index, goal in enumerate(route["waypoints"], 1):
             mission = "visible_demo_%02d" % index
             subprocess.run(["python3", str(CODE / "submit_goal.py"), "--case", str(case),
                             "--id", mission, "--x", str(goal[0]), "--y", str(goal[1]),

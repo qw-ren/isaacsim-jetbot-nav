@@ -16,6 +16,7 @@ import numpy as np
 
 from .config import DetectorConfig
 from .types import Detection2D
+from .model_identity import model_identity
 
 
 def resolve_weights_path(weights: str) -> str:
@@ -63,8 +64,10 @@ class YoloDetector:
         self.max_det = int(max_det)
         self.verbose = verbose
 
-        self.model = YOLO(resolve_weights_path(weights))
+        resolved = resolve_weights_path(weights)
+        self.model = YOLO(resolved)
         self.names = {int(k): str(v) for k, v in self.model.names.items()}
+        self.identity = model_identity(getattr(self.model, "ckpt_path", None) or resolved, self.names)
         self._name_to_id = {v: k for k, v in self.names.items()}
         self.class_ids = self._resolve_class_ids(classes)
         self.last_latency_ms = 0.0

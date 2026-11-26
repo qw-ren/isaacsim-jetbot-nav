@@ -103,6 +103,7 @@ class PerceptionNode(Node):
             self.cfg = PerceptionConfig()
             self.get_logger().warn("未指定 config_file，使用内置默认参数")
         self.pipeline = PerceptionPipeline(self.cfg, detector=YoloDetector.from_config(self.cfg.detector))
+        self.model_identity = self.pipeline.detector.identity
 
         # ---------------- ROS 设施 ----------------
         self.bridge = CvBridge()
@@ -291,8 +292,11 @@ class PerceptionNode(Node):
         if self.publish_legacy:
             self.pose_pub.publish(String(data=json.dumps(json_finite(pose_payload), ensure_ascii=False, allow_nan=False)))
         self.sequence += 1
+        planar_payload = planar_observations(result, self.session_id, self.sequence)
+        planar_payload["model"] = getattr(self, "model_identity", None)
+        planar_payload["time_domain"] = "ros_sim" if self.get_parameter("use_sim_time").value else "ros_system"
         self.planar_pub.publish(String(data=json.dumps(
-            planar_observations(result, self.session_id, self.sequence), ensure_ascii=False, allow_nan=False)))
+            planar_payload, ensure_ascii=False, allow_nan=False)))
         if self.marker_pub is not None:
             self.marker_pub.publish(self._markers(result, stamp))
 

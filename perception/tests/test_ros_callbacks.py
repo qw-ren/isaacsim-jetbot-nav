@@ -76,6 +76,7 @@ def fixture(require_map=True):
     node.session_id, node.sequence, node.scan_slop = "offline", 0, .06
     node._warned = set()
     node.get_logger = lambda: Mock()
+    node.get_parameter = lambda name: NS(value=True)
     node.bridge = NS(imgmsg_to_cv2=lambda msg, desired_encoding: msg.pixels)
     node.det_pub, node.pose_pub, node.planar_pub = Mock(), Mock(), Mock()
     node.marker_pub = None
