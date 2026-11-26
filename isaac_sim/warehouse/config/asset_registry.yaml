@@ -1,0 +1,142 @@
+# =============================================================================
+# asset_registry.yaml — official Isaac Sim 4.5 assets, all paths VERIFIED on site
+# =============================================================================
+# Verified 2026-11-12 by opening each USD with pxr and measuring a world bbox.
+# source_root is the only absolute root; all asset paths are relative to it.
+# "verified: true"      -> file exists AND opened AND (where noted) bbox measured
+# "verified: partial"   -> file exists, not yet bbox-measured (Stage 1/2)
+# =============================================================================
+version: 1
+source_root: /home/admin/isaacsim_assets/Assets/Isaac/4.5/Isaac
+asset_version: "isaac45-2025-01-28"
+
+assets:
+  # ---- box (random, mandatory) ----
+  box_A:
+    path: Environments/Simple_Warehouse/Props/SM_CardBoxA_01.usd
+    dims_m: [0.700, 0.500, 0.500]
+    class: box
+    collision: verified_present
+    verified: true
+  box_B:
+    path: Environments/Simple_Warehouse/Props/SM_CardBoxB_01.usd
+    dims_m: [0.500, 0.500, 0.500]
+    class: box
+    collision: verified_present
+    verified: true
+  box_C:
+    path: Environments/Simple_Warehouse/Props/SM_CardBoxC_01.usd
+    dims_m: [0.500, 0.500, 0.250]
+    class: box
+    collision: verified_present
+    verified: true
+  box_D:
+    path: Environments/Simple_Warehouse/Props/SM_CardBoxD_04.usd
+    dims_m: [0.380, 0.250, 0.149]
+    class: box
+    collision: verified_present
+    verified: true
+
+  # ---- pallet (random, mandatory) ----
+  pallet_main:
+    path: Props/Pallet/pallet.usd
+    dims_m: [1.213, 0.802, 0.143]
+    class: pallet
+    collision: verified_present
+    verified: true
+  pallet_prop:
+    path: Environments/Simple_Warehouse/Props/SM_PaletteA_01.usd
+    dims_m: [1.213, 1.003, 0.211]
+    class: pallet
+    collision: verified_present
+    verified: true
+
+  # ---- barrier (random, mandatory) : NO dedicated official unit exists ----
+  barrier_cone:
+    path: Environments/Simple_Warehouse/Props/S_TrafficCone.usd
+    dims_m: [0.336, 0.334, 0.463]
+    class: barrier
+    role: official_proxy_unit
+    collision: verified_present
+    verified: true
+    limitation: "single cone; blocks a gap, not a full aisle width"
+  barrier_wet_sign:
+    path: Environments/Simple_Warehouse/Props/S_WetFloorSign.usd
+    dims_m: [0.267, 0.232, 0.644]
+    class: barrier
+    role: official_proxy_unit
+    collision: verified_present
+    verified: true
+    limitation: "single sign; same as cone"
+  # TEMPORARY fallback only — a carton row must be logged as barrier_temp_carton_wall
+  barrier_carton_unit:
+    path: Environments/Simple_Warehouse/Props/SM_CardBoxB_01.usd
+    dims_m: [0.500, 0.500, 0.500]
+    class: barrier
+    role: temporary_carton_wall_unit
+    collision: verified_present
+    verified: true
+    limitation: "visually a carton row; must not be reported as class 'box'"
+
+  # ---- cart (optional static this phase) ----
+  cart_push:
+    path: Environments/Simple_Warehouse/Props/SM_PushcartA_02.usd
+    dims_m: [0.936, 1.648, 0.377]
+    class: cart
+    collision: verified_present
+    verified: true
+  dolly:
+    path: Props/Dolly/dolly_physics.usd
+    dims_m: [0.865, 1.242, 0.495]
+    class: cart
+    collision: verified_present
+    verified: true
+
+  # ---- sign (optional static mount) ----
+  sign_wall:
+    path: Environments/Simple_Warehouse/Props/SM_SignCVer_01.usd
+    dims_m: [0.005, 0.100, 0.325]
+    class: sign
+    collision: verified_present
+    verified: true
+  sign_aisle:
+    path: Environments/Simple_Warehouse/Props/S_AisleSign.usd
+    dims_m: [0.394, 0.004, 0.787]
+    class: sign
+    collision: verified_present
+    verified: true
+
+  # ---- NOT implemented this phase (registry only) ----
+  person_m:
+    path: People/Characters/original_male_adult_construction_01/male_adult_construction_01.usd
+    dims_m: null
+    class: person
+    collision: not_checked
+    verified: partial
+    implemented: false
+    note: "out of scope this phase"
+
+  # ---- fixed layer (from the official base, not instantiated separately) ----
+  shelf_board:
+    path: Environments/Simple_Warehouse/Props/SM_RackShelf_01.usd
+    dims_m: [4.000, 1.077, 0.370]
+    class: shelf
+    role: fixed_layer_reference_only
+    verified: true
+    note: "the scene reuses the built-in racks of full_warehouse, not this file"
+  wall_6m:
+    path: Environments/Simple_Warehouse/Props/SM_WallA_6M.usd
+    dims_m: [0.200, 6.000, 3.100]
+    class: wall
+    role: fixed_layer_reference_only
+    verified: true
+
+base:
+  usd: Environments/Simple_Warehouse/full_warehouse.usd
+  entry_point: scenes/warehouse_base.usd
+  size_bytes: 6724555
+  prims: 26337
+  default_prim: Root
+  floor_extent: {x: [-28.0, 8.0], y: [-23.4, 30.6]}
+  floor_size_m: [36.0, 54.0]
+  world_bbox: {x: [-28.0, 8.0], y: [-41.4, 33.42], z: [-0.01, 9.30]}

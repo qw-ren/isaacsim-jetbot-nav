@@ -68,3 +68,7 @@ isaac_sim/logs/
 *.usdz
 assets/large/
 assets/textures/
+
+# 本模块需要的两个 USD（体积小、不可重建）
+!isaac_sim/warehouse/scenes/*.usd
+!isaac_sim/warehouse/project/*.usd

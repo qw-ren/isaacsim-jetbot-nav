@@ -1,0 +1,153 @@
+{
+    "active_children":  3141,
+    "asset_version":  "isaac45-2025-01-28",
+    "base_source":  "Environments/Simple_Warehouse/full_warehouse.usd",
+    "clean_applied":  7,
+    "clean_list":  [
+                       "SM_CardBoxA_02_2",
+                       "SM_CardBoxA_3",
+                       "SM_CardBoxD_04_6",
+                       "SM_CardBoxD_03_9",
+                       "SM_CardBoxD_4",
+                       "SM_CardBoxB_02_32",
+                       "SM_CardBoxB_3"
+                   ],
+    "config_hash":  "31a785eb7aec177450516b270a5ebfd90be13b0e2f1433018ecd7f4135843818",
+    "derived_usd":  "scenes/warehouse_base.usd",
+    "derived_usd_sha256":  "07b0e6b51493818c386e5dd09bbdb853f6e767e759dfa71c327b0f203689087b",
+    "derived_usd_size_bytes":  1087,
+    "generator_version":  "1.0.0",
+    "official_usd":  "/home/admin/isaacsim_assets/Assets/Isaac/4.5/Isaac/Environments/Simple_Warehouse/full_warehouse.usd",
+    "official_usd_sha256":  "81898ea7284276130af37645a31888b3a9a2e9b8d4490518484829e15813f85d",
+    "official_usd_size_bytes":  6724555,
+    "referenced_assets":  {
+                              "barrier_cone":  {
+                                                   "dims_m":  [
+                                                                  0.336,
+                                                                  0.334,
+                                                                  0.463
+                                                              ],
+                                                   "path":  "Environments/Simple_Warehouse/Props/S_TrafficCone.usd",
+                                                   "sha256":  "9ef55b04170826cc0157573a5db443e707f456518951a3a53e0178f3ce817de3",
+                                                   "size_bytes":  49957
+                                               },
+                              "barrier_wet_sign":  {
+                                                       "dims_m":  [
+                                                                      0.267,
+                                                                      0.232,
+                                                                      0.644
+                                                                  ],
+                                                       "path":  "Environments/Simple_Warehouse/Props/S_WetFloorSign.usd",
+                                                       "sha256":  "dba63019a6e3553f0c778f03c0c9c98bd1ba9ea0f6060238099d3d1a9739aee7",
+                                                       "size_bytes":  43488
+                                                   },
+                              "box_A":  {
+                                            "dims_m":  [
+                                                           0.7,
+                                                           0.5,
+                                                           0.5
+                                                       ],
+                                            "path":  "Environments/Simple_Warehouse/Props/SM_CardBoxA_01.usd",
+                                            "sha256":  "7401195d235442dd5c19fb7408ec0e67bfb7aa8c1235e97d313c90b3fbb4985d",
+                                            "size_bytes":  8841
+                                        },
+                              "box_B":  {
+                                            "dims_m":  [
+                                                           0.5,
+                                                           0.5,
+                                                           0.5
+                                                       ],
+                                            "path":  "Environments/Simple_Warehouse/Props/SM_CardBoxB_01.usd",
+                                            "sha256":  "ed3e9d2cc84e60103886405516dbca5b1f98aca8430d7689d325d89eb3fae446",
+                                            "size_bytes":  5044
+                                        },
+                              "box_C":  {
+                                            "dims_m":  [
+                                                           0.5,
+                                                           0.5,
+                                                           0.25
+                                                       ],
+                                            "path":  "Environments/Simple_Warehouse/Props/SM_CardBoxC_01.usd",
+                                            "sha256":  "efb5a84634818e13559af871db2eff6c4982f6662645e94cd1c15d3003acc939",
+                                            "size_bytes":  5428
+                                        },
+                              "box_D":  {
+                                            "dims_m":  [
+                                                           0.38,
+                                                           0.25,
+                                                           0.149
+                                                       ],
+                                            "path":  "Environments/Simple_Warehouse/Props/SM_CardBoxD_04.usd",
+                                            "sha256":  "e35bac376af806f52c5413fbe397e587450c942201525ada5bbfca58989c52ff",
+                                            "size_bytes":  5056
+                                        },
+                              "cart_push":  {
+                                                "dims_m":  [
+                                                               0.936,
+                                                               1.648,
+                                                               0.377
+                                                           ],
+                                                "path":  "Environments/Simple_Warehouse/Props/SM_PushcartA_02.usd",
+                                                "sha256":  "7b6ba0345adb3a291b283f16dc7092026fbdd1265db309dfaab87ea162e1e6e5",
+                                                "size_bytes":  85538
+                                            },
+                              "dolly":  {
+                                            "dims_m":  [
+                                                           0.865,
+                                                           1.242,
+                                                           0.495
+                                                       ],
+                                            "path":  "Props/Dolly/dolly_physics.usd",
+                                            "sha256":  "ad1e0da8af8f91f65c4b9e7faa3668487adab77f1724a8095a7801fabb452d33",
+                                            "size_bytes":  779088
+                                        },
+                              "pallet_main":  {
+                                                  "dims_m":  [
+                                                                 1.213,
+                                                                 0.802,
+                                                                 0.143
+                                                             ],
+                                                  "path":  "Props/Pallet/pallet.usd",
+                                                  "sha256":  "65be56cde3268b61e3a997efa2835e6b051f5b7ae199ca6e49a1ead9a1b4a281",
+                                                  "size_bytes":  19577
+                                              },
+                              "pallet_prop":  {
+                                                  "dims_m":  [
+                                                                 1.213,
+                                                                 1.003,
+                                                                 0.211
+                                                             ],
+                                                  "path":  "Environments/Simple_Warehouse/Props/SM_PaletteA_01.usd",
+                                                  "sha256":  "419bfc1fcd24eec0da27fae86e2f8f31bea615f0383eb3c01216c581c26d295c",
+                                                  "size_bytes":  52055
+                                              },
+                              "person_m":  {
+                                               "dims_m":  null,
+                                               "path":  "People/Characters/original_male_adult_construction_01/male_adult_construction_01.usd",
+                                               "sha256":  "7e0fd510fe6344074dc71e60d3ef7704016492f640ad4733d2167afab390f50f",
+                                               "size_bytes":  544468
+                                           },
+                              "sign_aisle":  {
+                                                 "dims_m":  [
+                                                                0.394,
+                                                                0.004,
+                                                                0.787
+                                                            ],
+                                                 "path":  "Environments/Simple_Warehouse/Props/S_AisleSign.usd",
+                                                 "sha256":  "73dc61a83cfd504551feee8d55baa35225266aded4493beb3c6f35cd22ac3cf4",
+                                                 "size_bytes":  4428
+                                             },
+                              "sign_wall":  {
+                                                "dims_m":  [
+                                                               0.005,
+                                                               0.1,
+                                                               0.325
+                                                           ],
+                                                "path":  "Environments/Simple_Warehouse/Props/SM_SignCVer_01.usd",
+                                                "sha256":  "66794621c46bb44dba39e9c906de4904c1dc357de5f6211f0be6a8cf8e55a3e4",
+                                                "size_bytes":  5179
+                                            }
+                          },
+    "schema_version":  "1.0",
+    "total_prims":  26296
+}

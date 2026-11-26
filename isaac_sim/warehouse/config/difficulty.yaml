@@ -1,0 +1,41 @@
+# =============================================================================
+# difficulty.yaml — density tiers (DENSITY ONLY, not navigation/PPO difficulty)
+# =============================================================================
+# Per 精简分工版: easy/medium/hard describe obstacle placement complexity /
+# density ONLY. No reward, no curriculum, no per-task path optimality.
+# Counts are INITIAL values; Stage 1 may re-calibrate from batch statistics.
+# =============================================================================
+version: 1
+
+tiers:
+  easy:
+    box:     [2, 4]
+    pallet:  [0, 1]
+    barrier: [0, 1]
+    cart:    [0, 0]
+    description: "sparse; main corridors mostly free"
+  medium:
+    box:     [5, 9]
+    pallet:  [2, 3]
+    barrier: [1, 2]
+    cart:    [0, 1]
+    description: "moderate; some areas occupied, corridors partly narrowed"
+  hard:
+    box:     [9, 14]
+    pallet:  [3, 5]
+    barrier: [2, 3]
+    cart:    [1, 2]
+    description: "dense; local congestion, some gaps closed"
+
+# density guard-rails (geometric only)
+limits:
+  max_floor_area_occupancy: 0.25     # random layer may not cover >25% of floor
+  max_placement_attempts_per_object: 60
+  max_layout_attempts_per_seed: 40
+  record_failure_reason: true
+
+# NOT implemented (explicitly out of scope now)
+not_implemented:
+  - reward / curriculum / PPO difficulty
+  - detour_ratio or path-optimality grading
+  - dynamic obstacle density

@@ -1,0 +1,60 @@
+{
+    "cells":  {
+                  "envelope_components":  3,
+                  "floor":  777600,
+                  "free":  631618,
+                  "interior":  683324,
+                  "keep_clear":  100602,
+                  "placeable":  512682,
+                  "region_aisle":  124825,
+                  "region_edge":  43893,
+                  "region_open":  343964,
+                  "stock":  43851,
+                  "structure":  35565,
+                  "wall":  4780
+              },
+    "derived_usd":  "scenes/warehouse_base.usd",
+    "derived_usd_sha256":  "07b0e6b51493818c386e5dd09bbdb853f6e767e759dfa71c327b0f203689087b",
+    "grid":  [
+                 720,
+                 1080
+             ],
+    "leaves_bbox_in_band":  797,
+    "leaves_skipped_no_collision":  0,
+    "leaves_with_ground_geometry":  797,
+    "map_sha256":  "b4e460c6a888451ae7fbfc48b0711be71f4cefb50608ed58d9f4c37578e5713b",
+    "obstacle_clearance_m":  0.2,
+    "origin":  [
+                   -28.0,
+                   -23.4
+               ],
+    "passage_height_m":  1.2,
+    "placeable_area_m2":  1281.7050000000002,
+    "placement_margin_m":  0.25,
+    "prims_in_band":  700,
+    "rasterisation":  "per-leaf geometry (Mesh/Cube/...), world bbox, no parent bbox",
+    "rasterisation_detail":  "per-leaf triangle/band intersection (no bbox shortcut)",
+    "regions":  {
+                    "aisle_band_y":  [
+                                         8.7,
+                                         25.0
+                                     ],
+                    "edge_margin_m":  2.0,
+                    "weights":  {
+                                    "aisle":  0.6,
+                                    "open":  0.2,
+                                    "shelf_edge":  0.2
+                                }
+                },
+    "require_collision":  true,
+    "resolution_m":  0.05,
+    "robot_margin_m":  0.42,
+    "robot_radius_m":  0.3,
+    "safety_margin_m":  0.12,
+    "schema_version":  "1.1",
+    "stock_protruding_area_m2":  52.88500000000001,
+    "z_band_m":  [
+                     0.02,
+                     1.2
+                 ]
+}

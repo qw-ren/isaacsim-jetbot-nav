@@ -1,0 +1,890 @@
+{
+  "B_requested": 1,
+  "a_stats": {
+    "by_region": {
+      "aisle": 10,
+      "open": 20,
+      "shelf_edge": 3
+    },
+    "connectivity_removed": [],
+    "placed": {
+      "barrier": 4,
+      "box": 17,
+      "cart": 5,
+      "pallet": 7
+    },
+    "requested": {
+      "barrier": 4,
+      "box": 17,
+      "cart": 5,
+      "pallet": 7
+    },
+    "target_total": 33
+  },
+  "aisle_state": {
+    "0": {
+      "blocked_by_design": false,
+      "passable": true,
+      "was_passable": true
+    },
+    "1": {
+      "blocked_by_design": true,
+      "passable": false,
+      "was_passable": true
+    },
+    "2": {
+      "blocked_by_design": false,
+      "passable": true,
+      "was_passable": true
+    },
+    "3": {
+      "blocked_by_design": false,
+      "passable": true,
+      "was_passable": true
+    },
+    "4": {
+      "blocked_by_design": false,
+      "passable": true,
+      "was_passable": true
+    },
+    "5": {
+      "blocked_by_design": false,
+      "passable": false,
+      "was_passable": false
+    }
+  },
+  "blockages": [
+    {
+      "aisle": 1,
+      "asset": "box_A",
+      "assets": [
+        "box_A",
+        "box_B"
+      ],
+      "covered_m": 3.8,
+      "left_gap_m": 0.0,
+      "ok": true,
+      "piece_size": [
+        0.7,
+        0.5,
+        0.5
+      ],
+      "pieces": 6,
+      "right_gap_m": 0.05,
+      "span_m": 3.85,
+      "station_y": 13.975,
+      "verify": {
+        "after_local_passable": false,
+        "aisle": 1,
+        "before_passable": true,
+        "global_alternative_exists": true,
+        "legal": true,
+        "ok": true,
+        "problems": []
+      }
+    }
+  ],
+  "blocked_aisles": [
+    1
+  ],
+  "counts_by_class": {
+    "barrier": 4,
+    "blockage": 6,
+    "box": 17,
+    "cart": 5,
+    "pallet": 7
+  },
+  "density": "hard",
+  "global_alternative_after_all": {
+    "1": true
+  },
+  "layout_hash": "a320fd27fe0cf16027e6a337b3f0fe3e7ff0ef4678e7be8c6761fbcfe2f870f0",
+  "layout_version": "1.6.0",
+  "metadata": {
+    "aisle_pref": 1.4,
+    "mode": "A_B_mixed",
+    "num_blocked_aisles": 1,
+    "robot_radius_m": 0.42
+  },
+  "mode": "A_B_mixed",
+  "object_count": 39,
+  "objects": [
+    {
+      "asset_key": "box_A",
+      "blockage_aisle": 1,
+      "blockage_station_y": 13.975,
+      "class": "blockage",
+      "id": "blockage_0001",
+      "kind": "B",
+      "position": [
+        -19.475,
+        13.975,
+        0.0
+      ],
+      "region": "aisle",
+      "segment": 1,
+      "size": [
+        0.7,
+        0.5,
+        0.5
+      ],
+      "yaw_rad": 0.0
+    },
+    {
+      "asset_key": "box_A",
+      "blockage_aisle": 1,
+      "blockage_station_y": 13.975,
+      "class": "blockage",
+      "id": "blockage_0002",
+      "kind": "B",
+      "position": [
+        -18.775,
+        13.975,
+        0.0
+      ],
+      "region": "aisle",
+      "segment": 1,
+      "size": [
+        0.7,
+        0.5,
+        0.5
+      ],
+      "yaw_rad": 0.0
+    },
+    {
+      "asset_key": "box_A",
+      "blockage_aisle": 1,
+      "blockage_station_y": 13.975,
+      "class": "blockage",
+      "id": "blockage_0003",
+      "kind": "B",
+      "position": [
+        -18.075,
+        13.975,
+        0.0
+      ],
+      "region": "aisle",
+      "segment": 1,
+      "size": [
+        0.7,
+        0.5,
+        0.5
+      ],
+      "yaw_rad": 0.0
+    },
+    {
+      "asset_key": "box_A",
+      "blockage_aisle": 1,
+      "blockage_station_y": 13.975,
+      "class": "blockage",
+      "id": "blockage_0004",
+      "kind": "B",
+      "position": [
+        -17.375,
+        13.975,
+        0.0
+      ],
+      "region": "aisle",
+      "segment": 1,
+      "size": [
+        0.7,
+        0.5,
+        0.5
+      ],
+      "yaw_rad": 0.0
+    },
+    {
+      "asset_key": "box_B",
+      "blockage_aisle": 1,
+      "blockage_station_y": 13.975,
+      "class": "blockage",
+      "id": "blockage_0005",
+      "kind": "B",
+      "position": [
+        -16.775,
+        13.975,
+        0.0
+      ],
+      "region": "aisle",
+      "segment": 1,
+      "size": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "yaw_rad": 0.0
+    },
+    {
+      "asset_key": "box_B",
+      "blockage_aisle": 1,
+      "blockage_station_y": 13.975,
+      "class": "blockage",
+      "id": "blockage_0006",
+      "kind": "B",
+      "position": [
+        -16.275,
+        13.975,
+        0.0
+      ],
+      "region": "aisle",
+      "segment": 1,
+      "size": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "yaw_rad": 0.0
+    },
+    {
+      "asset_key": "pallet_main",
+      "class": "pallet",
+      "id": "pallet_0002",
+      "kind": "A",
+      "position": [
+        -23.075,
+        10.175,
+        0.0
+      ],
+      "region": "aisle",
+      "segment": 0,
+      "size": [
+        1.213,
+        0.802,
+        0.143
+      ],
+      "yaw_rad": 0.0
+    },
+    {
+      "asset_key": "pallet_main",
+      "class": "pallet",
+      "id": "pallet_0004",
+      "kind": "A",
+      "position": [
+        -13.875,
+        21.325,
+        0.0
+      ],
+      "region": "aisle",
+      "segment": 2,
+      "size": [
+        1.213,
+        0.802,
+        0.143
+      ],
+      "yaw_rad": 0.0
+    },
+    {
+      "asset_key": "pallet_prop",
+      "class": "pallet",
+      "id": "pallet_0005",
+      "kind": "A",
+      "position": [
+        -7.775,
+        11.125,
+        0.0
+      ],
+      "region": "aisle",
+      "segment": 3,
+      "size": [
+        1.213,
+        1.003,
+        0.211
+      ],
+      "yaw_rad": 0.0
+    },
+    {
+      "asset_key": "pallet_prop",
+      "class": "pallet",
+      "id": "pallet_0007",
+      "kind": "A",
+      "position": [
+        1.575,
+        23.175,
+        0.0
+      ],
+      "region": "aisle",
+      "segment": 4,
+      "size": [
+        1.213,
+        1.003,
+        0.211
+      ],
+      "yaw_rad": 0.0
+    },
+    {
+      "asset_key": "pallet_main",
+      "class": "pallet",
+      "id": "pallet_0009",
+      "kind": "A",
+      "position": [
+        2.125,
+        8.675,
+        0.0
+      ],
+      "region": "shelf_edge",
+      "segment": 6,
+      "size": [
+        1.213,
+        0.802,
+        0.143
+      ],
+      "yaw_rad": 0.0
+    },
+    {
+      "asset_key": "pallet_main",
+      "class": "pallet",
+      "id": "pallet_0010",
+      "kind": "A",
+      "position": [
+        1.825,
+        25.825,
+        0.0
+      ],
+      "region": "shelf_edge",
+      "segment": 7,
+      "size": [
+        1.213,
+        0.802,
+        0.143
+      ],
+      "yaw_rad": 0.0
+    },
+    {
+      "asset_key": "pallet_prop",
+      "class": "pallet",
+      "id": "pallet_0011",
+      "kind": "A",
+      "position": [
+        -19.275,
+        -11.725,
+        0.0
+      ],
+      "region": "open",
+      "segment": 12,
+      "size": [
+        1.213,
+        1.003,
+        0.211
+      ],
+      "yaw_rad": 0.0
+    },
+    {
+      "asset_key": "box_B",
+      "class": "box",
+      "id": "box_0001",
+      "kind": "A",
+      "position": [
+        -22.025,
+        24.575,
+        0.0
+      ],
+      "region": "aisle",
+      "segment": 0,
+      "size": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "yaw_rad": 0.0
+    },
+    {
+      "asset_key": "box_B",
+      "class": "box",
+      "id": "box_0002",
+      "kind": "A",
+      "position": [
+        -13.625,
+        22.425,
+        0.0
+      ],
+      "region": "aisle",
+      "segment": 2,
+      "size": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "yaw_rad": 0.0
+    },
+    {
+      "asset_key": "box_D",
+      "class": "box",
+      "id": "box_0003",
+      "kind": "A",
+      "position": [
+        -7.625,
+        18.975,
+        0.0
+      ],
+      "region": "aisle",
+      "segment": 3,
+      "size": [
+        0.38,
+        0.25,
+        0.149
+      ],
+      "yaw_rad": 0.0
+    },
+    {
+      "asset_key": "box_D",
+      "class": "box",
+      "id": "box_0005",
+      "kind": "A",
+      "position": [
+        2.875,
+        22.225,
+        0.0
+      ],
+      "region": "aisle",
+      "segment": 4,
+      "size": [
+        0.38,
+        0.25,
+        0.149
+      ],
+      "yaw_rad": 0.0
+    },
+    {
+      "asset_key": "box_C",
+      "class": "box",
+      "id": "box_0006",
+      "kind": "A",
+      "position": [
+        -2.675,
+        20.175,
+        0.0
+      ],
+      "region": "aisle",
+      "segment": 5,
+      "size": [
+        0.5,
+        0.5,
+        0.25
+      ],
+      "yaw_rad": 0.0
+    },
+    {
+      "asset_key": "box_D",
+      "class": "box",
+      "id": "box_0007",
+      "kind": "A",
+      "position": [
+        -2.225,
+        25.175,
+        0.0
+      ],
+      "region": "shelf_edge",
+      "segment": 7,
+      "size": [
+        0.38,
+        0.25,
+        0.149
+      ],
+      "yaw_rad": 0.0
+    },
+    {
+      "asset_key": "box_D",
+      "class": "box",
+      "id": "box_0008",
+      "kind": "A",
+      "position": [
+        -11.525,
+        -14.925,
+        0.0
+      ],
+      "region": "open",
+      "segment": 13,
+      "size": [
+        0.38,
+        0.25,
+        0.149
+      ],
+      "yaw_rad": 0.0
+    },
+    {
+      "asset_key": "box_C",
+      "class": "box",
+      "id": "box_0009",
+      "kind": "A",
+      "position": [
+        -9.025,
+        -16.775,
+        0.0
+      ],
+      "region": "open",
+      "segment": 14,
+      "size": [
+        0.5,
+        0.5,
+        0.25
+      ],
+      "yaw_rad": 0.0
+    },
+    {
+      "asset_key": "box_D",
+      "class": "box",
+      "id": "box_0010",
+      "kind": "A",
+      "position": [
+        -2.075,
+        -16.875,
+        0.0
+      ],
+      "region": "open",
+      "segment": 15,
+      "size": [
+        0.38,
+        0.25,
+        0.149
+      ],
+      "yaw_rad": 0.0
+    },
+    {
+      "asset_key": "box_D",
+      "class": "box",
+      "id": "box_0011",
+      "kind": "A",
+      "position": [
+        -21.725,
+        -8.675,
+        0.0
+      ],
+      "region": "open",
+      "segment": 16,
+      "size": [
+        0.38,
+        0.25,
+        0.149
+      ],
+      "yaw_rad": 0.0
+    },
+    {
+      "asset_key": "box_B",
+      "class": "box",
+      "id": "box_0012",
+      "kind": "A",
+      "position": [
+        -15.325,
+        -10.125,
+        0.0
+      ],
+      "region": "open",
+      "segment": 17,
+      "size": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "yaw_rad": 0.0
+    },
+    {
+      "asset_key": "box_C",
+      "class": "box",
+      "id": "box_0013",
+      "kind": "A",
+      "position": [
+        -8.475,
+        -9.475,
+        0.0
+      ],
+      "region": "open",
+      "segment": 18,
+      "size": [
+        0.5,
+        0.5,
+        0.25
+      ],
+      "yaw_rad": 0.0
+    },
+    {
+      "asset_key": "box_C",
+      "class": "box",
+      "id": "box_0014",
+      "kind": "A",
+      "position": [
+        -3.325,
+        -7.825,
+        0.0
+      ],
+      "region": "open",
+      "segment": 19,
+      "size": [
+        0.5,
+        0.5,
+        0.25
+      ],
+      "yaw_rad": 0.0
+    },
+    {
+      "asset_key": "box_C",
+      "class": "box",
+      "id": "box_0015",
+      "kind": "A",
+      "position": [
+        -20.025,
+        -0.075,
+        0.0
+      ],
+      "region": "open",
+      "segment": 20,
+      "size": [
+        0.5,
+        0.5,
+        0.25
+      ],
+      "yaw_rad": 0.0
+    },
+    {
+      "asset_key": "box_D",
+      "class": "box",
+      "id": "box_0016",
+      "kind": "A",
+      "position": [
+        -15.725,
+        -3.175,
+        0.0
+      ],
+      "region": "open",
+      "segment": 21,
+      "size": [
+        0.38,
+        0.25,
+        0.149
+      ],
+      "yaw_rad": 0.0
+    },
+    {
+      "asset_key": "box_B",
+      "class": "box",
+      "id": "box_0017",
+      "kind": "A",
+      "position": [
+        -8.475,
+        -2.675,
+        0.0
+      ],
+      "region": "open",
+      "segment": 22,
+      "size": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "yaw_rad": 0.0
+    },
+    {
+      "asset_key": "box_C",
+      "class": "box",
+      "id": "box_0018",
+      "kind": "A",
+      "position": [
+        -1.675,
+        -2.475,
+        0.0
+      ],
+      "region": "open",
+      "segment": 23,
+      "size": [
+        0.5,
+        0.5,
+        0.25
+      ],
+      "yaw_rad": 0.0
+    },
+    {
+      "asset_key": "barrier_wet_sign",
+      "class": "barrier",
+      "id": "barrier_0003",
+      "kind": "A",
+      "position": [
+        -1.625,
+        19.125,
+        0.0
+      ],
+      "region": "aisle",
+      "segment": 5,
+      "size": [
+        0.267,
+        0.232,
+        0.644
+      ],
+      "yaw_rad": 0.0
+    },
+    {
+      "asset_key": "barrier_wet_sign",
+      "class": "barrier",
+      "id": "barrier_0004",
+      "kind": "A",
+      "position": [
+        -19.675,
+        2.025,
+        0.0
+      ],
+      "region": "open",
+      "segment": 24,
+      "size": [
+        0.267,
+        0.232,
+        0.644
+      ],
+      "yaw_rad": 0.0
+    },
+    {
+      "asset_key": "barrier_wet_sign",
+      "class": "barrier",
+      "id": "barrier_0005",
+      "kind": "A",
+      "position": [
+        -15.375,
+        3.325,
+        0.0
+      ],
+      "region": "open",
+      "segment": 25,
+      "size": [
+        0.267,
+        0.232,
+        0.644
+      ],
+      "yaw_rad": 0.0
+    },
+    {
+      "asset_key": "barrier_wet_sign",
+      "class": "barrier",
+      "id": "barrier_0006",
+      "kind": "A",
+      "position": [
+        -5.025,
+        4.625,
+        0.0
+      ],
+      "region": "open",
+      "segment": 26,
+      "size": [
+        0.267,
+        0.232,
+        0.644
+      ],
+      "yaw_rad": 0.0
+    },
+    {
+      "asset_key": "dolly",
+      "class": "cart",
+      "id": "cart_0002",
+      "kind": "A",
+      "position": [
+        -17.325,
+        -20.275,
+        0.0
+      ],
+      "region": "open",
+      "segment": 8,
+      "size": [
+        0.865,
+        1.242,
+        0.495
+      ],
+      "yaw_rad": 0.0
+    },
+    {
+      "asset_key": "dolly",
+      "class": "cart",
+      "id": "cart_0003",
+      "kind": "A",
+      "position": [
+        -12.325,
+        -20.525,
+        0.0
+      ],
+      "region": "open",
+      "segment": 9,
+      "size": [
+        0.865,
+        1.242,
+        0.495
+      ],
+      "yaw_rad": 0.0
+    },
+    {
+      "asset_key": "cart_push",
+      "class": "cart",
+      "id": "cart_0004",
+      "kind": "A",
+      "position": [
+        -6.175,
+        -21.575,
+        0.0
+      ],
+      "region": "open",
+      "segment": 10,
+      "size": [
+        0.936,
+        1.648,
+        0.377
+      ],
+      "yaw_rad": 0.0
+    },
+    {
+      "asset_key": "cart_push",
+      "class": "cart",
+      "id": "cart_0005",
+      "kind": "A",
+      "position": [
+        0.125,
+        -21.525,
+        0.0
+      ],
+      "region": "open",
+      "segment": 11,
+      "size": [
+        0.936,
+        1.648,
+        0.377
+      ],
+      "yaw_rad": 0.0
+    },
+    {
+      "asset_key": "cart_push",
+      "class": "cart",
+      "id": "cart_0006",
+      "kind": "A",
+      "position": [
+        -2.125,
+        3.425,
+        0.0
+      ],
+      "region": "open",
+      "segment": 27,
+      "size": [
+        0.936,
+        1.648,
+        0.377
+      ],
+      "yaw_rad": 0.0
+    }
+  ],
+  "scene_name": "official_1001_hard",
+  "scene_type": "A_B_mixed",
+  "schema_version": "1.6.0",
+  "seed": 1001,
+  "validation": {
+    "A": {
+      "checks": {
+        "in_bounds": 0,
+        "in_keep_clear": 0,
+        "in_protected": 0,
+        "on_structure": 0,
+        "outside_interior": 0,
+        "outside_placeable": 0,
+        "too_close": 0
+      },
+      "reasons": [],
+      "valid": true
+    },
+    "A_B_no_overlap": true,
+    "B_global_after_A": true,
+    "B_legal": true,
+    "B_sealed_with_alternative": true,
+    "valid": true
+  }
+}
