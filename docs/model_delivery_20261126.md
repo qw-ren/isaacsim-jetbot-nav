@@ -31,3 +31,64 @@ route.json 必须包含 `frame_id: "map"`、当前导航地图 `map_sha256` 和
 
 本地执行23项原有二维接口/真实回调函数测试及1项路线契约测试；回调使用模拟 ROS
 输入和真实几何流水线，不等于服务器 DDS、GPU 推理或货架导航实跑。
+
+## 组员获取与接入
+
+交付分支：`feature/CV-guozi`。需一起获取整个 `perception/`、
+`ros2_ws/src/atongmu_perception_ros/`、`ros2_ws/tools/` 与本说明。
+仅下载 pt 文件不能得到坐标变换、跟踪和 ROS 输出。
+精确权重与清单必须放在同一目录，且保持上述文件名。
+
+在项目根目录用普通 Python 校验下载文件（无需安装 torch）：
+
+```bash
+python3 -c 'import hashlib,json; from pathlib import Path; p=Path("perception/weights/obstacles_best.pt"); m=json.loads(p.with_suffix(".manifest.json").read_text()); assert hashlib.sha256(p.read_bytes()).hexdigest()==m["sha256"]; assert p.stat().st_size==m["size_bytes"]; print(m["classes"], m["inference_version"])'
+```
+
+使用已有 ROS2 Humble / cv_bridge 兼容环境，历史模型依赖为
+`ultralytics==8.4.211` 和 `torch==2.8.0+cu128`。CUDA wheel 需与部署机器匹配，
+完整 ROS/GPU 环境不包含在 Git 仓库中。新节点实际导入的版本记录在每条观测里。
+不要仅凭 `perception/requirements.txt` 的宽范围认定推理环境相同。
+
+仿真与导航启动并发布 RGB、对齐深度、CameraInfo、scan、采集时刻 TF 和 /clock 后，
+在项目根目录的兼容 ROS Python 终端执行：
+
+```bash
+source /home/admin/go2-warehouse/nav_stage2/cloud/warehouse_stage2/nav_env.sh
+export ROS_DOMAIN_ID=51
+export PYTHONPATH="$PWD/perception:$PYTHONPATH"
+export ATONGMU_PROJECT_ROOT="$PWD"
+cd ros2_ws
+colcon build --packages-select atongmu_perception_ros --symlink-install
+source install/setup.bash
+ros2 launch atongmu_perception_ros jetbot_planar.launch.py \
+  config_file:="$ATONGMU_PROJECT_ROOT/ros2_ws/src/atongmu_perception_ros/config/perception_ros.yaml"
+```
+
+上述环境脚本是历史服务器的路径；其他机器应 source 其实际导航/ROS 环境。
+`jetbot_planar.launch.py` 已启用 `use_sim_time=true`、`require_map=true`。
+模型默认相对路径解析到源码 `perception/weights/`，因此须保留源码 PYTHONPATH，
+或将 detector.weights 改为下载权重的绝对路径。
+
+节点连续向 `/perception/objects_2d` 发布 JSON。另一终端设置相同 ROS 环境、
+ROS_DOMAIN_ID 和 PYTHONPATH，从项目根目录验收并保存原始观测：
+
+```bash
+python3 ros2_ws/tools/check_planar_stream.py --seconds 30 --frame map \
+  --out experiments/planar_check_NEW_UNIQUE_ID
+```
+
+验收程序输出 observations.jsonl 和 summary.json，检查时间、序号、map 系和有效点；
+模型身份由启动校验以及消息里的 model 字段核对。要持续建图，应持续订阅话题，
+30秒检查程序仅用于短时采样，不是持续建图服务。
+
+单条消息包含 `stamp`（图像采集时刻，非发布时刻）、`time_domain=ros_sim`、
+`frame_id=map`、`session_id`、`sequence`、`model` 和 `objects`。
+每个 object 包含 `object_id`、`track_id`、`class_name`、`confidence`、
+`position_xy`、`position_reference`、`range_m`、`localization_method`。
+`model.weights_sha256` 对应本页摘要，`model.classes` 对应 ID 0..7，
+`model.runtime` 给出实际 ultralytics/torch 版本。
+
+货架上悬空物品不可用 ground 地面投影作为可靠位置，应优先消费有效深度/激光
+定位；地面与货架物品都只能识别上述八类。持久语义地图需另做多帧关联、
+定位误差处理及动态目标过期，不能把 person 固化为静态货架障碍。
