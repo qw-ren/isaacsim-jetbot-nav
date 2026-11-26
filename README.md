@@ -1,8 +1,10 @@
 # isaacsim-jetbot-nav
 
-2026-11-19研发中：[对象级中文模型微调与固定ID位姿绑定](docs/JETBOT_OBJECT_GROUNDING_FINETUNE_20261119.md)。学习后端仍限制为只读预览；不替代既有导航验收。
+2026-11-26 集成分支已合并当前导航代码、[PR #8 随机场景](https://github.com/qw-ren/isaacsim-jetbot-nav/pull/8)和[PR #9 视觉模块](https://github.com/qw-ren/isaacsim-jetbot-nav/pull/9)。[集成说明与启动边界](docs/JETBOT_TEAM_INTEGRATION_20261126.md)汇总目录、接口及验证结果；本次是源码合并，尚未验收随机场景与视觉语义导航的完整联合运行。
 
-最新进度：[2026-11-12语义导航源码、全部结果与视频交付](docs/JETBOT_SEMANTIC_PROGRESS_RELEASE_20261112.md)。连续任务仍有失败，尚未全部通过。
+[二维视觉地图适配](docs/JETBOT_VISUAL_MAP_20261126.md)已完成接口检查，八类别检测权重仍待提供。导航对象地图使用 `/semantic/objects/visual_map`，与视觉模块自身的 `/semantic/objects/map_2d` 缓存分开。冻结定位、控制和安全参数保留。
+
+[对象级中文模型与位姿绑定](docs/JETBOT_OBJECT_GROUNDING_FINETUNE_20261119.md) · [单次托盘目标实际仿真导航成功](docs/JETBOT_OBJECT_GROUNDING_NAV_20261119.md) · [此前语义导航结果与视频](docs/JETBOT_SEMANTIC_PROGRESS_RELEASE_20261112.md)。学习后端默认只预览，单次成功不代表任意语言或场景均可导航。
 
 阿童木机器人课题：JetBot仓储导航、视觉与激光融合、学习型局部避障。导航/系统集成负责人任权伟。
 

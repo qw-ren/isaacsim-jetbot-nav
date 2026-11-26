@@ -12,7 +12,7 @@ from jetbot_semantic_nav.manager import Manager
 p=argparse.ArgumentParser();p.add_argument('--config',required=True,type=Path);p.add_argument('--model',required=True,type=Path);p.add_argument('--output',required=True,type=Path);a=p.parse_args()
 assert not a.output.exists()
 c=json.loads(a.config.read_text());s=c['semantic'];s.update(mode='vision',object_geometry='measured_point',fixtures=[],registered_groups=[],registered_prims=[],vision_upstream_commit='a3bbe944a99b72e5b93e1ef6024125af4e586b73',ready_after_sim_s=1.,healthy_ready_wall_s=.1,object_ttl_s=3.,visual_map_policy=dict(active_s=.5,memory_sim_s=2.,memory_wall_s=2.))
-s['topics']['observations']='/perception/objects_2d';s['topics']['objects']='/semantic/objects/map_2d';s.pop('speed_policy',None)
+s['topics']['observations']='/perception/objects_2d';s['topics']['objects']='/semantic/objects/visual_map';s.pop('speed_policy',None)
 s['object_grounding']=dict(backend='pretrained_chinese_encoder',checkpoint=str(a.model/'grounding.pt'),checkpoint_sha256=hashlib.sha256((a.model/'grounding.pt').read_bytes()).hexdigest(),min_confidence=.8,min_margin=.2)
 root=Path(tempfile.mkdtemp(prefix='visual_map_fixture_'));(root/'CASE.json').write_text(json.dumps(dict(simulation_only=True,operator_enabled=True,navigation=c,motion_limits=dict(max_linear_m_s=.8,scan_clearance_m=.4))))
 (root/'GATE_PROGRESS.json').write_text(json.dumps(dict(fault=None,stream_wall_ages=dict(clock=.01,odom=.01,scan=.01))))

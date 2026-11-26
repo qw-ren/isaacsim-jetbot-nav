@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "checks": [
+    "vision_points_to_real_manager_preview_without_fabricated_box",
+    "row_identity_not_invented_from_usd",
+    "preview_never_enables_gate_or_sends_navigation",
+    "stopped_visual_stream_expires_targets",
+    "historical_map_retained_without_reactivating_stale_target"
+  ],
+  "case": "/home/admin/go2-warehouse/cache/tmp/visual_map_fixture_otbdu103",
+  "ros_domain_id": 52,
+  "native_navigation_goals": 0,
+  "gate_enables": 0,
+  "camera_inference_tested": false,
+  "Isaac_navigation_tested": false
+}

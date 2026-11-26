@@ -15,7 +15,7 @@ c=json.loads(a.base.read_text());s=c['semantic'];s.update(mode='vision',object_g
  visual_map_policy=dict(min_confidence=.65,association_m=.45,min_hits=3,memory_sim_s=45.,memory_wall_s=90.,active_s=5.),
  vision_python=str(a.vision_python),vision_dependency_dir=str(a.vision_deps),vision_pythonpath=[str(a.vision_root/'perception'),str(a.vision_root/'ros2_ws/src/atongmu_perception_ros')],
  vision_ros_params=str(a.output/'VISION_ROS.yaml'))
-s['topics']['observations']='/perception/objects_2d';s['topics']['objects']='/semantic/objects/map_2d'
+s['topics']['observations']='/perception/objects_2d';s['topics']['objects']='/semantic/objects/visual_map'
 s['object_grounding']=dict(backend='pretrained_chinese_encoder',checkpoint=str(a.language_model/'grounding.pt'),
  checkpoint_sha256=hashlib.sha256((a.language_model/'grounding.pt').read_bytes()).hexdigest(),min_confidence=.8,min_margin=.2,
  inference_dependency_dir=str(a.language_deps))

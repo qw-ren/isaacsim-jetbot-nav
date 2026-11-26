@@ -1,0 +1,68 @@
+{
+  "scope": "offline source merge and component regression; no camera inference or Isaac navigation",
+  "python": "/usr/bin/python3",
+  "suites": [
+    {
+      "name": "navigation_visual_map",
+      "exit_code": 0,
+      "passed": true,
+      "checks_reported": 42,
+      "skipped_asset_checks": 0
+    },
+    {
+      "name": "perception",
+      "exit_code": 0,
+      "passed": true,
+      "checks_reported": 75,
+      "skipped_asset_checks": 0
+    },
+    {
+      "name": "capture_transform",
+      "exit_code": 0,
+      "passed": true,
+      "checks_reported": 2,
+      "skipped_asset_checks": 0
+    },
+    {
+      "name": "warehouse_config",
+      "exit_code": 0,
+      "passed": true,
+      "checks_reported": 70,
+      "skipped_asset_checks": 3
+    },
+    {
+      "name": "warehouse_determinism",
+      "exit_code": 0,
+      "passed": true,
+      "checks_reported": 12,
+      "skipped_asset_checks": 0
+    },
+    {
+      "name": "warehouse_negative",
+      "exit_code": 0,
+      "passed": true,
+      "checks_reported": 8,
+      "skipped_asset_checks": 0
+    }
+  ],
+  "checks": {
+    "python_syntax_files": 204,
+    "unique_ros_packages": {
+      "atongmu_perception_ros": "ros2_ws/src/atongmu_perception_ros/package.xml",
+      "jetbot_semantic_nav": "ros2_ws/src/jetbot_semantic_nav/package.xml"
+    },
+    "shell_syntax_files": 3,
+    "scene_reproducible": true,
+    "scene_layout_hash": "3d87ce3ecfffa3c170b7b5b38456664285dce6ccc9da10890cd4449e79d8f697",
+    "scene_counts": {
+      "A": 20,
+      "B": 6
+    },
+    "scene_matches_upstream_example": true,
+    "scene_blocked_aisles": [
+      1
+    ]
+  },
+  "passed": true,
+  "checks_reported": 209
+}

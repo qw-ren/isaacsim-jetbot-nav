@@ -21,6 +21,7 @@ class VisualConfigTests(unittest.TestCase):
             self.assertNotIn('bindings',s['object_grounding']);self.assertNotIn('simulation_execution',s['object_grounding'])
             self.assertTrue(result['extensions']['depth']);self.assertFalse(result['visualization']['record_video'])
             self.assertEqual(s['topics']['observations'],'/perception/objects_2d')
+            self.assertEqual(s['topics']['objects'],'/semantic/objects/visual_map')
             (root/'weights.pt').unlink();cmd[cmd.index('--output')+1]=str(root/'rejected')
             self.assertNotEqual(subprocess.run(cmd,capture_output=True).returncode,0)
             self.assertFalse((root/'rejected').exists())

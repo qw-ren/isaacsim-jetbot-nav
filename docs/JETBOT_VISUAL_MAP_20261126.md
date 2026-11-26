@@ -19,13 +19,15 @@ RGB + 同帧对齐深度 + scan + 采集时刻估计 TF
   -> 队友 PerceptionNode
   -> /perception/objects_2d
   -> vision_mapper
-  -> /semantic/objects/map_2d
+  -> /semantic/objects/visual_map
   -> 任务管理器二维查询与接近点预览
 ```
 
 `SEMANTIC_OBJECTS.json` 保存当前可查询对象；`SEMANTIC_MAP.json` 保存本会话已确认的历史测量点假设，过期项标记 stale，不能直接作为导航输入。`visual_observations.jsonl` 保留全部接收测量和采集时刻的观察位置。地图坐标来自 FAST-LIVO2 + AMCL 的 TF，未使用机器人真值。
 
 新地图协议是 `jetbot.visual_object_map`，每项保留 `position_xy`、`position_reference=visible_surface`、`geometry=measured_point`、`observed_from_xy`、`last_seen` 和不确定度保护余量，不提供虚构的中心、包围盒、尺寸或朝向。地图 ID 是会话内的空间关联假设，不是永久物理实例 ID。跟踪丢失且长时间未观测后可能建立新的假设；历史层不能拿来统计唯一物体总数。
+
+合并 PR #9 后，导航对象地图使用独立话题 `/semantic/objects/visual_map`；视觉模块自己的5秒缓存仍为 `/semantic/objects/map_2d`，协议为 `atongmu.planar_map`。旧云端03接口检查曾用后者名称；新配置生成器使用新名称，避免不同协议同名发布。集成 supervisor 只启动视觉检测节点和导航 mapper，不重复启动队友的缓存节点。
 
 地图默认仅融合置信度至少 0.65 的可见表面点，同类别空间关联门限 0.45m，至少 3 次且跨度至少 0.3 仿真秒才确认。5 秒内为 active，此后为短期 memory；45 仿真秒或90墙钟秒过期，目标从查询输入移除。历史层最多保留4096项，原始测量日志保留。0.25m 起始不确定度只是未标定的保护余量，不是已测定位精度。person/cart 不固化进本版静态层，地面约束估计点和低置信观测保留在原始日志但不进入静态层。
 
