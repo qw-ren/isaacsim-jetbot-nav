@@ -1,0 +1,14 @@
+{
+  "frames": 562,
+  "simulation_duration_s": 89.91999799013138,
+  "expected_video_duration_s": 89.91999799013138,
+  "playback_speed": 1.0,
+  "timebase": "recorded simulation timestamps",
+  "output": "/home/admin/jetbot-warehouse/artifacts/semantic_route_20261126_04/observer_video/navigation_1x.mp4",
+  "ffprobe": {
+    "format": {
+      "duration": "89.960000",
+      "size": "4903365"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "date": "2026-11-24",
+  "purpose": "Real USD asset annotation smoke test; not detector accuracy evaluation or production training",
+  "local_tests_passed": 75,
+  "source_registry": "PR8 asset_registry.yaml at 13e42258689dc3b28c8e8f5f8d506f3513249f6e",
+  "seed": 20261124,
+  "asset_instances": 8,
+  "pilot_classes": ["box", "pallet", "barrier", "cart"],
+  "pending_classes": ["shelf", "wall", "sign", "person"],
+  "original_class_id_order_preserved": true,
+  "before_fix": {
+    "cloud_dataset": "/home/admin/datasets/atongmu_real_assets_smoke_20261124_01",
+    "images": 12,
+    "boxes": 150,
+    "issue": "Official USD nested semantics produced duplicate part-level boxes and composite barrier,cone labels (11 skipped)"
+  },
+  "after_fix": {
+    "cloud_dataset": "/home/admin/datasets/atongmu_real_assets_smoke_20261124_02",
+    "images": 12,
+    "train": 10,
+    "val": 2,
+    "boxes": 86,
+    "empty_frames": 0,
+    "class_box_counts": {"box": 43, "pallet": 22, "barrier": 10, "cart": 11},
+    "composite_label_skip_warning": false,
+    "structural_validation": "passed",
+    "fix": "remove inherited semantic APIs recursively in the composed stage, then annotate the instance root with the canonical class"
+  },
+  "production_weights_replaced": false,
+  "not_validated": [
+    "Full warehouse background and robot-camera distribution",
+    "Forklift hard-negative coverage",
+    "Complete eight-class dataset",
+    "Training, held-out real-asset detection accuracy and navigation integration of a new model"
+  ]
+}

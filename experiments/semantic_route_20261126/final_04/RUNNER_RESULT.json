@@ -1,0 +1,72 @@
+{
+  "exit_code": 130,
+  "error": null,
+  "elapsed_wall_s": 414.44943986399994,
+  "children": [
+    {
+      "pid": 11549,
+      "exit_code": 0
+    },
+    {
+      "pid": 12170,
+      "exit_code": -6
+    },
+    {
+      "pid": 12171,
+      "exit_code": -2
+    },
+    {
+      "pid": 12172,
+      "exit_code": -2
+    },
+    {
+      "pid": 12329,
+      "exit_code": -2
+    },
+    {
+      "pid": 12330,
+      "exit_code": -2
+    },
+    {
+      "pid": 12331,
+      "exit_code": -2
+    },
+    {
+      "pid": 12332,
+      "exit_code": -2
+    },
+    {
+      "pid": 12333,
+      "exit_code": 0
+    },
+    {
+      "pid": 12335,
+      "exit_code": 0
+    },
+    {
+      "pid": 12340,
+      "exit_code": 0
+    },
+    {
+      "pid": 12342,
+      "exit_code": 0
+    },
+    {
+      "pid": 12344,
+      "exit_code": 254
+    },
+    {
+      "pid": 12346,
+      "exit_code": 254
+    },
+    {
+      "pid": 12348,
+      "exit_code": 254
+    },
+    {
+      "pid": 12350,
+      "exit_code": 0
+    }
+  ],
+  "power_operation": false
+}

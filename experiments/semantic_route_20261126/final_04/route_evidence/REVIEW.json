@@ -1,0 +1,90 @@
+{
+  "navigation_passed": true,
+  "capture": {
+    "images": 43,
+    "scans": 160,
+    "planar_packets": 683,
+    "tf_misses": 355,
+    "map_messages": 1,
+    "estimated_path_length_m": 10.378394906470188,
+    "error": null,
+    "passed": true,
+    "scope": "map-frame observation atlas, not SLAM; scan endpoints only; vision classes unverified"
+  },
+  "selected_images": [
+    {
+      "file": "detection_00000.png",
+      "stamp": 3.05,
+      "xy": [
+        -0.002322450860766618,
+        6.001669222915741
+      ]
+    },
+    {
+      "file": "detection_00006.png",
+      "stamp": 15.35,
+      "xy": [
+        0.2073088602581784,
+        6.861501365887231
+      ]
+    },
+    {
+      "file": "detection_00013.png",
+      "stamp": 29.829999,
+      "xy": [
+        -0.784773133202488,
+        7.340140573577244
+      ]
+    },
+    {
+      "file": "detection_00014.png",
+      "stamp": 31.909999,
+      "xy": [
+        -1.6464649857966998,
+        7.321951050742257
+      ]
+    },
+    {
+      "file": "detection_00015.png",
+      "stamp": 33.929999,
+      "xy": [
+        -2.4661035570313685,
+        7.202793879834702
+      ]
+    },
+    {
+      "file": "detection_00030.png",
+      "stamp": 64.929999,
+      "xy": [
+        -1.607525814654366,
+        7.375083764178849
+      ]
+    },
+    {
+      "file": "detection_00031.png",
+      "stamp": 66.929999,
+      "xy": [
+        -0.8012701035687506,
+        7.258554667629827
+      ]
+    },
+    {
+      "file": "detection_00033.png",
+      "stamp": 70.989998,
+      "xy": [
+        -0.052068569222762415,
+        7.0196784779789185
+      ]
+    },
+    {
+      "file": "detection_00037.png",
+      "stamp": 79.269998,
+      "xy": [
+        0.2628847753706921,
+        6.277364203985813
+      ]
+    }
+  ],
+  "evidence_passed": true,
+  "note": "Position estimates and unverified detections; not detection accuracy or SLAM validation"
+}

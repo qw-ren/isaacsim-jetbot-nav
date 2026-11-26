@@ -1,0 +1,158 @@
+seed: 20261124
+num_frames: 60
+resolution:
+- 640
+- 480
+output_dir: /home/admin/datasets/atongmu_real_assets_pilot_20261124
+train_val_split: 0.85
+image_format: jpg
+max_occlusion: 0.95
+scene:
+  ground_size: 30.0
+  area:
+  - - -2.6
+    - -2.6
+  - - 2.6
+    - 2.6
+  min_gap: 0.55
+  camera:
+    distance:
+    - 7.0
+    - 10.0
+    height:
+    - 0.35
+    - 1.5
+    look_at_height:
+    - 0.3
+    - 0.9
+    focal_length: 24.0
+  light:
+    dome_intensity: 900.0
+    distant_intensity: 1200.0
+obstacles:
+- class_name: shelf
+  count: 0
+  primitive: cube
+- class_name: wall
+  count: 0
+  primitive: cube
+- class_name: box
+  count: 0
+  primitive: cube
+- class_name: pallet
+  count: 0
+  primitive: cube
+- class_name: barrier
+  count: 0
+  primitive: cube
+- class_name: cart
+  count: 0
+  primitive: cube
+- class_name: sign
+  count: 0
+  primitive: cube
+- class_name: person
+  count: 0
+  primitive: cube
+- class_name: box
+  usd: /home/admin/isaacsim_assets/Assets/Isaac/4.5/Isaac/Environments/Simple_Warehouse/Props/SM_CardBoxA_01.usd
+  count: 1
+  scale:
+  - - 1.0
+    - 1.0
+    - 1.0
+  - - 1.0
+    - 1.0
+    - 1.0
+  z_offset: 0.0
+- class_name: box
+  usd: /home/admin/isaacsim_assets/Assets/Isaac/4.5/Isaac/Environments/Simple_Warehouse/Props/SM_CardBoxB_01.usd
+  count: 1
+  scale:
+  - - 1.0
+    - 1.0
+    - 1.0
+  - - 1.0
+    - 1.0
+    - 1.0
+  z_offset: 0.0
+- class_name: box
+  usd: /home/admin/isaacsim_assets/Assets/Isaac/4.5/Isaac/Environments/Simple_Warehouse/Props/SM_CardBoxC_01.usd
+  count: 1
+  scale:
+  - - 1.0
+    - 1.0
+    - 1.0
+  - - 1.0
+    - 1.0
+    - 1.0
+  z_offset: 0.0
+- class_name: box
+  usd: /home/admin/isaacsim_assets/Assets/Isaac/4.5/Isaac/Environments/Simple_Warehouse/Props/SM_CardBoxD_04.usd
+  count: 1
+  scale:
+  - - 1.0
+    - 1.0
+    - 1.0
+  - - 1.0
+    - 1.0
+    - 1.0
+  z_offset: 0.0
+- class_name: pallet
+  usd: /home/admin/isaacsim_assets/Assets/Isaac/4.5/Isaac/Props/Pallet/pallet.usd
+  count: 1
+  scale:
+  - - 1.0
+    - 1.0
+    - 1.0
+  - - 1.0
+    - 1.0
+    - 1.0
+  z_offset: 0.0
+- class_name: pallet
+  usd: /home/admin/isaacsim_assets/Assets/Isaac/4.5/Isaac/Environments/Simple_Warehouse/Props/SM_PaletteA_01.usd
+  count: 1
+  scale:
+  - - 1.0
+    - 1.0
+    - 1.0
+  - - 1.0
+    - 1.0
+    - 1.0
+  z_offset: 0.0
+- class_name: barrier
+  usd: /home/admin/isaacsim_assets/Assets/Isaac/4.5/Isaac/Environments/Simple_Warehouse/Props/S_TrafficCone.usd
+  count: 1
+  scale:
+  - - 1.0
+    - 1.0
+    - 1.0
+  - - 1.0
+    - 1.0
+    - 1.0
+  z_offset: 0.0
+- class_name: cart
+  usd: /home/admin/isaacsim_assets/Assets/Isaac/4.5/Isaac/Environments/Simple_Warehouse/Props/SM_PushcartA_02.usd
+  count: 1
+  scale:
+  - - 1.0
+    - 1.0
+    - 1.0
+  - - 1.0
+    - 1.0
+    - 1.0
+  z_offset: 0.0
+pilot_only: true
+coverage_pending:
+- shelf
+- wall
+- sign
+- person
+notes:
+- Keep eight-class IDs by zero-count declarations; pilot is not a complete training
+  set.
+- Inspect USD units, ground alignment, visibility and bounding boxes in Isaac before
+  scaling up.
+- 'Wet-floor sign excluded: registry labels it barrier; do not relabel the same appearance
+  as sign.'
+- Forklift/wheel hard negatives and real warehouse backgrounds still required.
