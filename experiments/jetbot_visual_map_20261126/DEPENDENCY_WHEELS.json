@@ -1,0 +1,26 @@
+[
+  {
+    "file": "nvidia_ml_py-13.615.71-py3-none-any.whl",
+    "sha256": "959bf4adf6fe1308e4bd739e722236b0d1ec8392e2cefad33ff70c311380b9b6"
+  },
+  {
+    "file": "polars-2.0.0-py3-none-any.whl",
+    "sha256": "35d62f3541b7a6d4c360a2e2f07fccc0c2bcbd33b0ea51c83a25417a47a3f3ad"
+  },
+  {
+    "file": "polars_runtime_32-2.0.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+    "sha256": "0d6ac584ea2b38913784db943879412380d92e28ab9cb88e20a77ba71ba3f911"
+  },
+  {
+    "file": "tqdm-4.70.1-py3-none-any.whl",
+    "sha256": "c293e525e6fef9c20e8728fd4612df02a0aa31bb5fe91ecd93e123b1b7bffa73"
+  },
+  {
+    "file": "ultralytics-8.4.211-py3-none-any.whl",
+    "sha256": "4d6507f3f8de4d48db08532ee3ce2b6a7bd1b2946c99235b429ee83e1261a776"
+  },
+  {
+    "file": "ultralytics_thop-2.2.5-py3-none-any.whl",
+    "sha256": "a698003b42de578731ba51c747031914bba8775f47fe675dbbf28510f0c2654d"
+  }
+]

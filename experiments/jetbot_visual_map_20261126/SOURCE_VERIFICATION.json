@@ -1,0 +1,34 @@
+{
+  "files": {
+    "code/jetbot_semantic_nav/grounding_contract.py": true,
+    "code/jetbot_semantic_nav/planar_objects.py": true,
+    "code/jetbot_semantic_nav/cli.py": true,
+    "code/jetbot_semantic_nav/grounding_dataset.py": true,
+    "code/jetbot_semantic_nav/core.py": true,
+    "code/jetbot_semantic_nav/vision_mapper.py": true,
+    "code/jetbot_semantic_nav/config.py": true,
+    "code/jetbot_semantic_nav/mapper.py": true,
+    "code/jetbot_semantic_nav/grounding_execution.py": true,
+    "code/jetbot_semantic_nav/pretrained_grounding.py": true,
+    "code/jetbot_semantic_nav/oracle.py": true,
+    "code/jetbot_semantic_nav/__init__.py": true,
+    "code/jetbot_semantic_nav/object_grounding.py": true,
+    "code/jetbot_semantic_nav/manager.py": true,
+    "code/jetbot_semantic_nav/goal_bindings.py": true,
+    "code/supervise.py": true,
+    "tools/make_visual_map_config.py": true,
+    "tools/check_visual_map_resources.py": true,
+    "tools/validate_visual_map_ros.py": true
+  },
+  "base_files_unchanged": {
+    "velocity_gate.py": true,
+    "sensor_bridge.py": true,
+    "nav_odometry.py": true,
+    "nav2.yaml": true,
+    "livo_base.yaml": true,
+    "navigate.xml": true,
+    "navigate_through.xml": true
+  },
+  "source_matches_local": true,
+  "simulator_started": false
+}

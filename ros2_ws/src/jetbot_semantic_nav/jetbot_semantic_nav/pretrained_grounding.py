@@ -56,6 +56,30 @@ class PretrainedGrounder:
         if state['format_version']not in (2,3,4):raise ValueError('Invalid pretrained grounding version')
         self.parser=Parser(BertModel(BertConfig.from_json_file(str(base/'config.json'))),include_intent=state['format_version']>=3,attention_pool=state['format_version']==4);self.selector=ObjectSelector()
         self.parser.load_state_dict(state['parser']);self.selector.load_state_dict(state['selector']);self.parser.eval();self.selector.eval();self.confidence=min_confidence;self.margin=min_margin
+    def predict_planar(self,text,objects,robot_xy):
+        """Reuse learned language heads; do not fabricate box features for the selector."""
+        if not isinstance(text,str) or not 0<len(text)<=128:raise ValueError('Invalid text')
+        with torch.inference_mode():
+            heads=self.parser(**self.tokenizer(text,return_tensors='pt',truncation=True,max_length=128))
+            slots=[int(h.argmax(-1))for h in heads]
+            scores=[h.softmax(-1).topk(2).values[0]for h in heads]
+            confidence=min(float(v[0])for v in scores);margin=min(float(v[0]-v[1])for v in scores)
+        kind=CLASSES[slots[0]] if slots[0]<5 else 'unsupported'
+        selection=['unique','nearest_euclidean','farthest_euclidean'][slots[2]]
+        result=dict(backend='pretrained_language_planar_selection',confidence=confidence,margin=margin,
+            slots=dict(object_class=kind,reference_row=slots[1],selection=selection),object_id=None,
+            metric='Euclidean distance to measured visible surface point; not object centre')
+        if confidence<self.confidence or margin<self.margin:return dict(result,state='LOW_CONFIDENCE')
+        if kind=='unsupported' or (len(slots)>3 and slots[3]==0):return dict(result,state='NOT_FOUND')
+        # Shelf row identity is not inferred from USD or a fabricated point extent.
+        if slots[1]>0:return dict(result,state='REFERENCE_NOT_FOUND',reason='Visual shelf row identities not established')
+        rows=[o for o in objects if o['class_name']==kind]
+        if not rows:return dict(result,state='NOT_FOUND')
+        if selection=='unique' and len(rows)!=1:return dict(result,state='AMBIGUOUS')
+        rows=sorted(rows,key=lambda o:(math.dist(robot_xy,o['position_xy']),o['object_id']))
+        target=rows[-1]if selection=='farthest_euclidean'else rows[0]
+        return dict(result,state='SELECTED',object_id=target['object_id'])
+
     def predict(self,text,objects,robot_xy):
         if not isinstance(text,str) or not 0<len(text)<=128:raise ValueError('Invalid text')
         if len({o['object_id'] for o in objects})!=len(objects):raise ValueError('Duplicate IDs')

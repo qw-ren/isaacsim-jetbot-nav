@@ -148,6 +148,9 @@ def yaw_of(row):
 
 
 def distance_to_object(point, row):
+    if row.get('geometry')=='measured_point':
+        # Distance to measured surface support, not distance to a complete outline.
+        return max(0.,math.dist(point[:2],row['position_xy'])-row['position_uncertainty_m'])
     dx,dy = point[0]-row['position'][0], point[1]-row['position'][1]
     yaw = yaw_of(row); c,s = math.cos(yaw),math.sin(yaw)
     x,y = c*dx+s*dy, -s*dx+c*dy
@@ -167,6 +170,9 @@ def planar_half_sizes(row):
 
 def approaches(row, radius, padding, margin, count=12):
     """Ray/OBB surface intersection + robot disk + explicit approach margin."""
+    if row.get('geometry')=='measured_point':
+        from .planar_objects import point_approaches
+        return point_approaches(row,radius,padding,margin)
     yaw = yaw_of(row); half = planar_half_sizes(row)
     candidates = []
     for i in range(count):

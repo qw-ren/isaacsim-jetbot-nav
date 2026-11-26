@@ -1,0 +1,16 @@
+{
+  "parameter_overrides_unchanged": true,
+  "base_files_unchanged": {
+    "velocity_gate.py": true,
+    "sensor_bridge.py": true,
+    "nav_odometry.py": true,
+    "nav2.yaml": true,
+    "livo_base.yaml": true,
+    "navigate.xml": true,
+    "navigate_through.xml": true
+  },
+  "checkpoint_sha256": "5ade3359aedd464ae3ac86505a1738395b37bfd46b14d3836093ab42d67cf6f4",
+  "estimated_goal_error_m": 0.01862669369629746,
+  "task_passed": true,
+  "model_retrained": false
+}

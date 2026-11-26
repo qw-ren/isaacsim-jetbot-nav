@@ -47,7 +47,27 @@ try:
    if cfg.get('navigation',{}).get('semantic'):
     assert cfg.get('operator_enabled'), 'Semantic manager must be the only mission owner'
     environment=os.environ.copy();environment['PYTHONPATH']=str(source)+':'+environment.get('PYTHONPATH','')
-    extension_children.append(spawn([python,'-m','jetbot_semantic_nav.mapper','--case',str(a.case)],'semantic_mapper.log',environment))
+    semantic=cfg['navigation']['semantic'];vision=semantic.get('object_geometry')=='measured_point'
+    if vision:
+     assert semantic['mode']=='vision' and not semantic.get('fixtures') and not semantic.get('registered_groups') and not semantic.get('registered_prims')
+     paths=semantic['vision_pythonpath'];assert all(Path(v).is_dir()for v in paths)
+     environment['PYTHONPATH']=environment['PYTHONPATH']+':'+':'.join(paths)
+     extension_children.append(spawn([python,'-m','jetbot_semantic_nav.vision_mapper','--case',str(a.case)],'semantic_mapper.log',environment))
+     vision_python=semantic['vision_python'];assert Path(vision_python).is_absolute() and Path(vision_python).is_file()
+     vision_environment=environment.copy();vision_dependencies=semantic.get('vision_dependency_dir')
+     if vision_dependencies:
+      assert Path(vision_dependencies).is_absolute() and Path(vision_dependencies).is_dir()
+      vision_environment['PYTHONPATH']=vision_environment['PYTHONPATH']+':'+vision_dependencies
+     vision_environment['YOLO_CONFIG_DIR']=str(a.case/'vision_config');vision_environment['OMP_NUM_THREADS']='4'
+     extension_children.append(spawn([vision_python,'-m','atongmu_perception_ros.perception_node','--ros-args','--params-file',semantic['vision_ros_params']],'vision_detector.log',vision_environment))
+    else:
+     extension_children.append(spawn([python,'-m','jetbot_semantic_nav.mapper','--case',str(a.case)],'semantic_mapper.log',environment))
+    grounding=cfg['navigation']['semantic'].get('object_grounding',{})
+    dependencies=grounding.get('inference_dependency_dir')
+    if dependencies:
+     assert Path(dependencies).is_absolute() and Path(dependencies).is_dir()
+     environment=environment.copy();environment['PYTHONPATH']=environment['PYTHONPATH']+':'+dependencies
+     environment['OMP_NUM_THREADS']='4';environment['TOKENIZERS_PARALLELISM']='false'
     navigation_check=spawn([python,'-m','jetbot_semantic_nav.manager','--case',str(a.case)],'semantic_manager.log',environment)
    else:
     navigation_check=spawn([python,str(source/('operator_session.py'if cfg.get('operator_enabled')else'check_navigation.py')),'--case',str(a.case)],'operator_session.log'if cfg.get('operator_enabled')else'navigation_check.log')

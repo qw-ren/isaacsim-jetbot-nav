@@ -1,0 +1,9 @@
+{
+  "navigation_unit_tests": 42,
+  "cloud_navigation_unit_tests": 42,
+  "perception_unit_tests": 75,
+  "capture_transform_tests": 2,
+  "passed": true,
+  "camera_inference": false,
+  "sim_navigation": false
+}

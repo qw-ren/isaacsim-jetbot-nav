@@ -1,0 +1,21 @@
+{
+  "modules": {
+    "rclpy": "import_ok",
+    "cv_bridge": "import_ok",
+    "message_filters": "import_ok",
+    "tf2_ros": "import_ok",
+    "torch": "2.5.1+cu118",
+    "torchvision": "0.20.1+cu118",
+    "cv2": "4.9.0",
+    "scipy": "1.10.1",
+    "ultralytics": "8.4.211",
+    "atongmu_perception": "0.1.0"
+  },
+  "errors": [
+    "Missing eight-class detector weights; no substitute model loaded"
+  ],
+  "weights": "/home/admin/jetbot-warehouse/vision_map_20261126_03/upstream/perception/weights/obstacles_best.pt",
+  "inference_performed": false,
+  "yolo_class_import": true,
+  "ready_for_camera_inference": false
+}

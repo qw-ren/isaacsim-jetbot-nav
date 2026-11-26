@@ -1,0 +1,284 @@
+{
+  "repository": "https://github.com/qw-ren/isaacsim-jetbot-nav",
+  "branch": "feature/CV-guozi",
+  "commit": "a3bbe944a99b72e5b93e1ef6024125af4e586b73",
+  "files": [
+    {
+      "path": "deployment/server_demo/capture_route.py",
+      "sha256": "8ca0bdb7cd6bd9a9d15f91197e5973e6e4b82a3931daa0aea4922e079885c049"
+    },
+    {
+      "path": "deployment/server_demo/configure_fixed_view.py",
+      "sha256": "8cbd26f952b840e6911cf02bfbf39886312681f5571809f2f114c851df331e5a"
+    },
+    {
+      "path": "deployment/server_demo/demo_video.sh",
+      "sha256": "77b7a4e56ece06ea3b0df52bf0e9d1cfffff30dfaf66e520ab67ca379422a09a"
+    },
+    {
+      "path": "deployment/server_demo/encode_observer_video.py",
+      "sha256": "000795b53c1b021b6edbfdf7989050e072a7fbaa32710d2068bd35c6e6a62758"
+    },
+    {
+      "path": "deployment/server_demo/launch_demo.sh",
+      "sha256": "7b96637759db7fe90cb6cfda3db7dcb06c5da9100d1c83651196792b0c35afa5"
+    },
+    {
+      "path": "deployment/server_demo/run_navigation_demo.py",
+      "sha256": "305ae264d5ea6da47a03b8c8fbc17e562499686a2b150de5e69453cf6f667fff"
+    },
+    {
+      "path": "deployment/server_demo/summarize_route.py",
+      "sha256": "8711dd27c7bee8168fe5f80a3a44d96574b1b1e32d8d0c5b157d8b9118cba56d"
+    },
+    {
+      "path": "deployment/server_demo/test_capture_route.py",
+      "sha256": "ae9d9dbfe904a0202282db0377f29b3ddc29b3b53a3df44a2181089f198a2c9e"
+    },
+    {
+      "path": "isaac_sim/replicator/README.md",
+      "sha256": "8fab7c82bbb49d26303b16296f617fec40984f93315efd58cc37a08ee1fad396"
+    },
+    {
+      "path": "isaac_sim/replicator/configs/dataset_config.yaml",
+      "sha256": "cdf53196c0bd84a8f91f8f87fc3ce977cae0efb3669a0299aa1d65edc543ef3f"
+    },
+    {
+      "path": "isaac_sim/replicator/configs/real_assets_pilot_20261124.yaml",
+      "sha256": "caed60a6efd6842a861c97735de6b6f98514538cd6c6b6b155fb037b7d145d59"
+    },
+    {
+      "path": "isaac_sim/replicator/gen_dataset.py",
+      "sha256": "1a6c964070623aacad8606f1a725667bf9d2918f529aef405178af1d52844986"
+    },
+    {
+      "path": "isaac_sim/replicator/prepare_asset_pilot.py",
+      "sha256": "58656f10c9a1732e054547c5c20ddae0ca3006428f8f934ce32515fe127cb97d"
+    },
+    {
+      "path": "isaac_sim/replicator/validate_dataset.py",
+      "sha256": "1dcd8771c777d44de4a91f063ea83711bfd39148728ebc56f5cd69401f1f049a"
+    },
+    {
+      "path": "perception/.gitkeep",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "perception/PROGRESS.md",
+      "sha256": "f27a50bfebe3c775932a292cb215fad2779d5f6d96885112302452e9e73b498a"
+    },
+    {
+      "path": "perception/README.md",
+      "sha256": "01e0291fdd8c256399f6541858d85fbb328f9975713defab32a0a49306808679"
+    },
+    {
+      "path": "perception/atongmu_perception/__init__.py",
+      "sha256": "4c3202861942e52b2e502591bbd47f9e7935bdc0175dd9ceb811117aefea10c6"
+    },
+    {
+      "path": "perception/atongmu_perception/camera.py",
+      "sha256": "a13cb4e86f0e0bb064ec5772d22e2ea53d3747a0aaf14356dc4f6cd4925b2e08"
+    },
+    {
+      "path": "perception/atongmu_perception/config.py",
+      "sha256": "d74a2e68040226362ce02d663f2c067d8b84380c1cade03aba2af880b7fe7165"
+    },
+    {
+      "path": "perception/atongmu_perception/detector.py",
+      "sha256": "d56a57b3407e2c08b016f8e8da884ab99b949571ce5f2769e2665b81d845e67c"
+    },
+    {
+      "path": "perception/atongmu_perception/fusion.py",
+      "sha256": "6feaeea1bda6304f6637e4518123f77ce76bf13d049208efffb11d09f134c28e"
+    },
+    {
+      "path": "perception/atongmu_perception/geometry.py",
+      "sha256": "0b26de29ea4cb7d9b0cecabaa47814a07e8451d53c4b203c31939ab742c69ba6"
+    },
+    {
+      "path": "perception/atongmu_perception/localizer.py",
+      "sha256": "297258129109574d944162c5d90de04d1e41e86cd2e4a4ef6b3ea1b1b6d4ae3b"
+    },
+    {
+      "path": "perception/atongmu_perception/pipeline.py",
+      "sha256": "14aa295932c7ba02cb2e09af2f362307490eba5cdcf48bd3475bda1551d663e8"
+    },
+    {
+      "path": "perception/atongmu_perception/planar.py",
+      "sha256": "3d4346c89695ecf04690be8b8ee021bb990dad0f492f836f5139829fca67859a"
+    },
+    {
+      "path": "perception/atongmu_perception/planar_map.py",
+      "sha256": "c529b727ee4086e2094417680d62c11f31827e46177773876018f90929da6f12"
+    },
+    {
+      "path": "perception/atongmu_perception/tracker.py",
+      "sha256": "59481b54922588bd0572f5b205503f61fa03e583d0d38f71e5883492499fab50"
+    },
+    {
+      "path": "perception/atongmu_perception/types.py",
+      "sha256": "c69c025232d0cd5fb0087c48b8c59f0a4de98cfdb1e835dee3102af7c4d0efe4"
+    },
+    {
+      "path": "perception/atongmu_perception/viz.py",
+      "sha256": "6bf91f7b9dd15ad88685abf6b52b9365c716803ec6c0d2109a4cd224839eccc3"
+    },
+    {
+      "path": "perception/configs/perception.yaml",
+      "sha256": "75fddc9ab194544418272920d34482f6a16b153cb9b4aebe347e3f74f43ae854"
+    },
+    {
+      "path": "perception/pyproject.toml",
+      "sha256": "037079fa2de23bf7f9467ee9684b17622cf4dcaac82459bcf99ac5f6396d931f"
+    },
+    {
+      "path": "perception/requirements.txt",
+      "sha256": "5ab16dff1e3256040e8bcc52adc46486449beaff4e183aed75f8450954b8e85c"
+    },
+    {
+      "path": "perception/scripts/demo_detect.py",
+      "sha256": "56f66cf3cba1379c18dd1f6230facea1eaf898c2a1469ca00b9b62e86cbf4eb2"
+    },
+    {
+      "path": "perception/scripts/demo_locate_3d.py",
+      "sha256": "2a31731f33a7d9afbdd736eaabb0a5da57978ac2026bc1c65fa16baf48d44321"
+    },
+    {
+      "path": "perception/scripts/live_preview.py",
+      "sha256": "c1475f1c027f1b6e145eddf51a0bf9899321946177c825fab9f4a3b4bf878b1a"
+    },
+    {
+      "path": "perception/scripts/train_yolo.py",
+      "sha256": "f5ce46162e139ac90a9bff9ef71bdb1e83b11c2ceb4c8916b4452e69f90a4176"
+    },
+    {
+      "path": "perception/tests/run_all.py",
+      "sha256": "867a3b47a61b3a85c5e7f7b0c1c12ac9f092adce4de4ba9c73de89d3e008a401"
+    },
+    {
+      "path": "perception/tests/test_config.py",
+      "sha256": "40e66f707c54b45e70ed7a1cc63859ee2fd44bb30b3709a5305155bf06dc0747"
+    },
+    {
+      "path": "perception/tests/test_geometry.py",
+      "sha256": "85f5a2bec4b0266d8b36c437f9decf789e4ddf2f1367878130eff38feaac4ad3"
+    },
+    {
+      "path": "perception/tests/test_localizer.py",
+      "sha256": "942bb4cbe40642dd4755b144af4ca0bda5fdd51d49d467c08abe5e9d15be0f0f"
+    },
+    {
+      "path": "perception/tests/test_planar.py",
+      "sha256": "8ca3fcb7d34835e27ce464e6b6a16907d0f4361857eb55fa6f7f9445ef45a797"
+    },
+    {
+      "path": "perception/tests/test_planar_map.py",
+      "sha256": "f24c9d409e2102e0f1e0ad21c142d1a99fd61e2b8924c510382a83e4e0bb09b1"
+    },
+    {
+      "path": "perception/tests/test_probe_images.py",
+      "sha256": "cc6223faf3e25f9a5b1458ccf0dc31a47bb662a6423924b3282724caaab40418"
+    },
+    {
+      "path": "perception/tests/test_ros_callbacks.py",
+      "sha256": "d656ea645c27015eec840c12fecb10d067376e74739fa7ccb6bdc1358b969012"
+    },
+    {
+      "path": "perception/tests/test_tracker.py",
+      "sha256": "eacf1bbc07f0543474b2da00c15d0f54bb15a2461e78f3a60e932dbe4cfd143c"
+    },
+    {
+      "path": "perception/tests/test_training_data.py",
+      "sha256": "8c0123b84b9b812e1e7fa123ee5c2c8d29f9e17c86360318a57f3d9693254699"
+    },
+    {
+      "path": "perception/tests/test_video_timing.py",
+      "sha256": "98c331f30a3930b68d1d8db4cdcbad2067a3b785e10ab6668a952daaf511e2d4"
+    },
+    {
+      "path": "ros2_ws/src/atongmu_perception_ros/README.md",
+      "sha256": "2c0006e4872a40e07b98541e9ca780f9cb2710bc94511664966333705c66fe70"
+    },
+    {
+      "path": "ros2_ws/src/atongmu_perception_ros/atongmu_perception_ros/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "ros2_ws/src/atongmu_perception_ros/atongmu_perception_ros/perception_node.py",
+      "sha256": "d0ede1c1e3bfeda04e108b7686dfa1c09a4295400561b4db9f544bc533161185"
+    },
+    {
+      "path": "ros2_ws/src/atongmu_perception_ros/atongmu_perception_ros/planar_map_node.py",
+      "sha256": "0b58ac4f408d8d84b5c15c015a6dd37cf80f7d0c9ab6de6b6734bd2e3fdbe1fd"
+    },
+    {
+      "path": "ros2_ws/src/atongmu_perception_ros/config/perception_ros.yaml",
+      "sha256": "cb676f469dc82948a44c144e6cd20af83d8207193b5852176f2454871e80081b"
+    },
+    {
+      "path": "ros2_ws/src/atongmu_perception_ros/launch/jetbot_planar.launch.py",
+      "sha256": "3b0c8062ba6fef1eec138534d289d49b82438e1a6b672207e63740a489582f0a"
+    },
+    {
+      "path": "ros2_ws/src/atongmu_perception_ros/launch/perception.launch.py",
+      "sha256": "49b297b2963c8e663428317f3a7c8b3bdb1a1f750c3c1d685fa51ec83c8353fc"
+    },
+    {
+      "path": "ros2_ws/src/atongmu_perception_ros/package.xml",
+      "sha256": "c9b9502e5ef152cd660f4d78a32920a1ef9f2e2aca5aeca727203d31d95e30e8"
+    },
+    {
+      "path": "ros2_ws/src/atongmu_perception_ros/resource/atongmu_perception_ros",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "ros2_ws/src/atongmu_perception_ros/setup.cfg",
+      "sha256": "bed67f25052e81febf2be6b6b63bcea1af9d7ce3931d8eea9adf7c8aa24c1644"
+    },
+    {
+      "path": "ros2_ws/src/atongmu_perception_ros/setup.py",
+      "sha256": "36978d43a542279883e33cf626102725182331ee054c34c3fd47150c555529c2"
+    },
+    {
+      "path": "ros2_ws/tools/capture_planar_preview.py",
+      "sha256": "b35f9092c0bad120cee34325e136c75f55f5bdf282048f99ee3394a2509e8d9f"
+    },
+    {
+      "path": "ros2_ws/tools/check_cloud_perception_env.py",
+      "sha256": "c7fc7e12eaf13259399804fb63e1dab009ba378e3d0052b787d31c6eaa8bb535"
+    },
+    {
+      "path": "ros2_ws/tools/check_planar_stream.py",
+      "sha256": "c6c9680f787a311386a261814d9fee34c609cb9f32c7ae3ef2155c14092f9682"
+    },
+    {
+      "path": "ros2_ws/tools/perception_probe.py",
+      "sha256": "7717009b3c7206a14430ad2da50e409f820cfe4584e93a109c06881f3dc4f3ad"
+    },
+    {
+      "path": "docs/perception_interface.md",
+      "sha256": "37e91e5b37998942eaabc4b8e6e7806ad2ff85c5d170c575107a4fb90154149c"
+    },
+    {
+      "path": "docs/planar_perception_handoff.md",
+      "sha256": "acd2c4452b921783dfcd641fc4ba4937ca628c2c9dd765732616d8b9e4cc51fe"
+    },
+    {
+      "path": "docs/CV-guozi.md",
+      "sha256": "16da59ccc3fb746ba0b2afaf1f687dcca7499fac4889b8f2584cd5a9a1f814df"
+    },
+    {
+      "path": "docs/server_deployment_20261120.md",
+      "sha256": "2680475fc557118e30b4ebbeb409c5cb47cf2a56c2d4ebe3ccde83f149a4f7fb"
+    },
+    {
+      "path": "docs/gui_recording_20261120.md",
+      "sha256": "fdb64cfa1d80f73e9de04ce2f1179115a2a8f65f5c46d8cd71ebb6335286a901"
+    },
+    {
+      "path": "docs/semantic_route_20261126.md",
+      "sha256": "6a060a21c2c1aeeb03c590b5141a0d9e65062c09c5c4991d33e45ea5e818b99c"
+    }
+  ],
+  "upstream_files_modified": false
+}

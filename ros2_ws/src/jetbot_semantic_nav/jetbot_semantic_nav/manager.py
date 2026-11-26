@@ -22,6 +22,7 @@ from nav2_msgs.msg import SpeedLimit
 from lifecycle_msgs.srv import GetState
 from tf2_ros import Buffer,TransformListener
 from .goal_bindings import validate_bindings,bound_goal
+from .grounding_execution import permitted
 from .config import load,write_json,claim
 from .core import (parse_command,approaches,distance_to_object,path_length,sample_path,
                    grid_cost,validate_observation,resolve_query,rank_reachable,proximity_speed_limit,native_speed_limit_value)
@@ -41,9 +42,13 @@ class Manager(Node):
             checkpoint=Path(grounding['checkpoint'])
             if hashlib.sha256(checkpoint.read_bytes()).hexdigest()!=grounding['checkpoint_sha256']:
                 raise ValueError('Grounding checkpoint digest mismatch')
-            if grounding['bindings'].get('world_to_map')!=self.cfg['world_to_map']:
-                raise ValueError('Binding map or world registration mismatch')
-            self.bindings=validate_bindings(grounding['bindings'],self.cfg['world_to_map']['source_scene_sha256'])
+            if self.cfg.get('object_geometry')=='measured_point':
+                if self.cfg['mode']!='vision' or grounding.get('bindings') or grounding.get('backend') not in ('pretrained_chinese_tiny','pretrained_chinese_encoder'):
+                    raise ValueError('Visual point maps cannot use USD object bindings')
+            else:
+                if grounding['bindings'].get('world_to_map')!=self.cfg['world_to_map']:
+                    raise ValueError('Binding map or world registration mismatch')
+                self.bindings=validate_bindings(grounding['bindings'],self.cfg['world_to_map']['source_scene_sha256'])
             if grounding.get('backend','prototype_gru') in ('pretrained_chinese_tiny','pretrained_chinese_encoder'):
                 if self.cfg.get('near_shelf_distance_m',1.5)!=1.5:raise ValueError('Learned relation contract requires 1.5m surface gap')
                 from .pretrained_grounding import PretrainedGrounder
@@ -86,7 +91,11 @@ class Manager(Node):
         try:
             packet=json.loads(msg.data)
             if packet['version']!=1 or packet['frame_id']!='map':raise ValueError('Invalid object map')
-            rows=[validate_observation(r)|{'last_seen':float(r['last_seen'])} for r in packet['objects']]
+            if self.cfg.get('object_geometry')=='measured_point':
+                from .planar_objects import validate_point
+                if packet.get('schema')!='jetbot.visual_object_map' or packet.get('source')!='vision':raise ValueError('Visual object map required')
+                rows=[validate_point(r)for r in packet['objects']]
+            else:rows=[validate_observation(r)|{'last_seen':float(r['last_seen'])} for r in packet['objects']]
             if len({r['object_id']for r in rows})!=len(rows):raise ValueError('Duplicate id')
             with self.lock:
                 self.rows=rows;self.rows_wall=time.monotonic();self.rows_stamp=float(packet['stamp'])
@@ -193,6 +202,10 @@ class Manager(Node):
     def target_valid(self,target):
         row=next((r for r in self.active_objects()if r['object_id']==target['object_id']),None)
         if row is None:raise MissionStopped('target_expired')
+        if target.get('geometry')=='measured_point':
+            if row['class_name']!=target['class_name'] or math.dist(row['position_xy'],target['position_xy'])>self.cfg['target_move_m']:
+                raise MissionStopped('target_visual_support_changed')
+            return
         if row.get('row_index')!=target.get('row_index'):raise MissionStopped('target_reference_changed')
         if math.dist(row['position'],target['position'])>self.cfg['target_move_m']:
             raise MissionStopped('target_moved')
@@ -296,23 +309,28 @@ class Manager(Node):
         state='FAILED'
         try:
             self.emit('QUERYING',task_id,parsed=parsed)
-            # Synthetic-only listener is deliberately restricted to preview.
-            # No config switch may authorize live navigation before independent qualification.
-            if self.grounder is not None and not request.get('dry_run',False):
+            # Default remains preview. Explicit simulation trials bind exact text to an ID;
+            # this permits validation, not unrestricted model qualification.
+            if self.grounder is not None and not request.get('dry_run',False) and not permitted(self.runtime,self.cfg['object_grounding'],request['text']):
                 state='MODEL_NOT_QUALIFIED';return
             if self.gate().get('fault'):raise RuntimeError('Gate fault requires fresh session')
             if not self.arm_gate(False):raise RuntimeError('Cannot disarm')
             objects=self.active_objects()
             if self.grounder is not None:
                 tr=self.buffer.lookup_transform('map','chassis',rclpy.time.Time()).transform.translation
-                prediction=self.grounder.predict(request['text'],objects,[tr.x,tr.y]);result['grounding']=prediction
+                predictor=self.grounder.predict_planar if self.cfg.get('object_geometry')=='measured_point' else self.grounder.predict
+                prediction=predictor(request['text'],objects,[tr.x,tr.y]);result['grounding']=prediction
                 if prediction['state']!='SELECTED':state=prediction['state'];return
+                if not request.get('dry_run',False) and not permitted(self.runtime,self.cfg['object_grounding'],request['text'],prediction['object_id']):
+                    state='MODEL_NOT_QUALIFIED';return
                 candidates=[o for o in objects if o['object_id']==prediction['object_id']]
                 if len(candidates)!=1:raise RuntimeError('Neural target absent from current object snapshot')
                 # Reference dependency is conservative: any shelf change invalidates this task.
-                relation_audit=dict(reference_objects=[o for o in objects if o['class_name']=='shelf'],backend='neural_object_listener')
+                relation_audit=dict(reference_objects=[] if self.cfg.get('object_geometry')=='measured_point' else [o for o in objects if o['class_name']=='shelf'],backend=prediction['backend'])
                 query_error=None
             else:
+                if self.cfg.get('object_geometry')=='measured_point':
+                    raise RuntimeError('Visual point queries require the learned language parser')
                 candidates,relation_audit,query_error=resolve_query(objects,parsed,self.cfg.get('near_shelf_distance_m',1.5))
             result['relation_audit']=relation_audit
             references=relation_audit['reference_objects']
