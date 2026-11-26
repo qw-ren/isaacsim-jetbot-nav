@@ -1,0 +1,36 @@
+{
+  "date": "2026-11-20",
+  "environment": "local Windows, Python 3.12 (32-bit)",
+  "scope": "local algorithms, wire contract, actual node callbacks with fake ROS I/O, syntax and package metadata",
+  "test_command": "cd perception && python -B tests/run_all.py -v",
+  "passed": 62,
+  "failed": 0,
+  "test_groups": {
+    "config": 3,
+    "geometry": 13,
+    "localizer": 10,
+    "planar": 9,
+    "ros_callbacks_with_test_doubles": 14,
+    "tracker": 13
+  },
+  "python_ast_files_passed": 30,
+  "package_xml_parse": "passed",
+  "launch_files_matched_by_setup_glob": ["jetbot_planar.launch.py", "perception.launch.py"],
+  "stream_checker_cli_help": "passed",
+  "fixes": [
+    "Reject zero simulation stamps and noninteger sequence numbers at producer",
+    "Filter invalid track IDs, empty classes and unsupported localization methods",
+    "Retry timestamped TF using a bounded five-frame queue with 0.25 wall-second expiry"
+  ],
+  "not_validated": [
+    "Real ROS2/DDS communication, QoS matching and executor scheduling",
+    "cv_bridge ABI and real image conversion",
+    "YOLO weight loading, inference and detection accuracy",
+    "Isaac Sim simulation, localization accuracy and navigation",
+    "Downstream planar semantic consumer (not implemented)"
+  ],
+  "ros_api_references": [
+    "https://github.com/ros2/rclpy/blob/humble/rclpy/rclpy/node.py",
+    "https://github.com/ros2/rclpy/blob/humble/rclpy/rclpy/clock.py"
+  ]
+}

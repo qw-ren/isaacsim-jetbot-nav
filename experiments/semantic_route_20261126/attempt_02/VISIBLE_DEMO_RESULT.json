@@ -1,0 +1,26 @@
+{
+  "passed": false,
+  "missions": [
+    {
+      "id": "visible_demo_01",
+      "goal": [
+        0.0,
+        7.0,
+        1.5707963267948966
+      ],
+      "passed": false,
+      "truth_input": false,
+      "velocity_publisher": false,
+      "request_sha256": "ce8ad5117421738bfd5d1d6620a2e24e3c280a32ab72b9cd2054cf5a5b06674d",
+      "start_map_pose": [
+        -0.014351050647256449,
+        6.012035189224696
+      ],
+      "error": "TimeoutError('Native action/service timeout')",
+      "cancel_reply_received": true,
+      "disarm_success": true
+    }
+  ],
+  "error": "navigation demonstration failed: visible_demo_01",
+  "velocity_published": false
+}
