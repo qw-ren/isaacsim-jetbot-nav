@@ -1,0 +1,11 @@
+{
+  "images": 137,
+  "scans": 264,
+  "planar_packets": 1145,
+  "tf_misses": 371,
+  "map_messages": 1,
+  "estimated_path_length_m": 23.57385287728371,
+  "error": null,
+  "passed": true,
+  "scope": "map-frame observation atlas, not SLAM; scan endpoints only; vision classes unverified"
+}

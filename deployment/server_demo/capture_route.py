@@ -25,7 +25,7 @@ def main():
     from rclpy.time import Time
     from rclpy.qos import qos_profile_sensor_data, QoSProfile, DurabilityPolicy
     from cv_bridge import CvBridge
-    from sensor_msgs.msg import Image, LaserScan
+    from sensor_msgs.msg import Image, LaserScan, CameraInfo
     from nav_msgs.msg import OccupancyGrid
     from std_msgs.msg import String
     from tf2_ros import Buffer, TransformListener, TransformException
@@ -34,6 +34,7 @@ def main():
     ap.add_argument('--case', type=Path, required=True)
     ap.add_argument('--interval', type=float, default=2.)
     ap.add_argument('--timeout', type=float, default=1100.)
+    ap.add_argument('--raw-depth', action='store_true', help='Save RGB-D and optical extrinsics for offline distance evaluation')
     args = ap.parse_args()
     if not math.isfinite(args.interval) or args.interval <= 0:
         raise ValueError('interval must be positive')
@@ -44,6 +45,7 @@ def main():
     bridge, buffer = CvBridge(), Buffer()
     listener = TransformListener(buffer, node)
     images, detections, planar, pending_scans = {}, {}, {}, {}
+    depths, calibration = {}, {}
     route, hits, objects = [], set(), {}
     last_image, last_scan = -math.inf, -math.inf
     counts = dict(images=0, scans=0, planar_packets=0, tf_misses=0, map_messages=0)
@@ -97,6 +99,24 @@ def main():
             if packet.get('frame_id') != 'map':
                 continue
             frame = bridge.imgmsg_to_cv2(images[key], desired_encoding='bgr8').copy()
+            raw = {}
+            if args.raw_depth:
+                if key not in depths or not calibration:
+                    continue
+                try:
+                    tf = buffer.lookup_transform('chassis', images[key].header.frame_id,
+                                                 Time.from_msg(images[key].header.stamp)).transform
+                except TransformException:
+                    continue
+                raw_name = 'rgb_%05d.png' % counts['images']
+                depth_name = 'depth_%05d.npy' % counts['images']
+                if not cv2.imwrite(str(out/raw_name), frame):
+                    raise RuntimeError('raw RGB write failed')
+                np.save(str(out/depth_name), bridge.imgmsg_to_cv2(depths[key], desired_encoding='passthrough'))
+                raw = dict(rgb=raw_name, depth=depth_name, depth_encoding=depths[key].encoding,
+                           calibration=dict(calibration), T_base_optical=dict(
+                               translation=[tf.translation.x,tf.translation.y,tf.translation.z],
+                               quaternion_xyzw=[tf.rotation.x,tf.rotation.y,tf.rotation.z,tf.rotation.w]))
             for det in detections[key]['detections']:
                 x1,y1,x2,y2 = [int(v) for v in det['bbox']]
                 cv2.rectangle(frame,(x1,y1),(x2,y2),(0,220,255),1)
@@ -106,12 +126,18 @@ def main():
             name = 'detection_%05d.png'%counts['images']
             if not cv2.imwrite(str(out/name),frame):
                 raise RuntimeError('detection image write failed')
-            write('frames',dict(file=name,stamp=key,detections=detections[key],planar=packet))
+            write('frames',dict(file=name,stamp=key,detections=detections[key],planar=packet,raw=raw))
             last_image=key; counts['images']+=1
             render()
 
     def on_image(msg):
         bounded(images,stamp(msg),msg); save_pairs()
+
+    def on_depth(msg):
+        bounded(depths,stamp(msg),msg); save_pairs()
+
+    def on_info(msg):
+        calibration.update(K=list(msg.k), width=msg.width, height=msg.height, frame_id=msg.header.frame_id)
 
     def on_detection(msg):
         data=json.loads(msg.data); bounded(detections,round(data['stamp'],6),data); save_pairs()
@@ -178,6 +204,9 @@ def main():
         node.create_subscription(String,'/perception/objects_2d',on_planar,10),
         node.create_subscription(LaserScan,'/jetbot/scan',on_scan,qos_profile_sensor_data),
         node.create_subscription(OccupancyGrid,'/map',on_map,QoSProfile(depth=1,durability=DurabilityPolicy.TRANSIENT_LOCAL))]
+    if args.raw_depth:
+        subscriptions.extend([node.create_subscription(Image,'/jetbot/depth/image_rect_raw',on_depth,qos_profile_sensor_data),
+                              node.create_subscription(CameraInfo,'/jetbot/camera_info',on_info,qos_profile_sensor_data)])
     timer=node.create_timer(.1,retry_scans)
     deadline=time.monotonic()+args.timeout
     error=None

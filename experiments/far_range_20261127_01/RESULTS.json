@@ -1,0 +1,30 @@
+{
+  "case": "far_range_20261127_01",
+  "navigation_passed": false,
+  "navigation_missions_passed": 5,
+  "navigation_missions_total": 6,
+  "video_duration_s": 146.92,
+  "estimated_path_length_m": 23.57385287728371,
+  "map_observation_packets": 1145,
+  "objects": 1844,
+  "reference_box_visible_proxy_frames": 70,
+  "reference_box_matched_frames": 0,
+  "reference_box_range_m": [
+    3.01150884591288,
+    15.955385536627352
+  ],
+  "robot_map_trajectory_xy_rmse_m": 0.015684414530579786,
+  "robot_map_trajectory_xy_p95_m": 0.025787310596412108,
+  "target_localization_accuracy": "unavailable: reference target was not matched; robot pose error is not target localization error",
+  "camera_resolution": [
+    320,
+    240
+  ],
+  "shutdown_zero_published": true,
+  "interruption": "controller_probe is bounded to 600 wall seconds; supervisor treats normal extension-process exit as session failure",
+  "next_steps": [
+    "increase original camera resolution with matching CameraInfo; repeat identical scene and range bins",
+    "collect annotated examples using actual warehouse USD assets and evaluate/fine-tune eight-class model",
+    "align diagnostic process lifetime with supervisor runtime before repeating full navigation acceptance"
+  ]
+}

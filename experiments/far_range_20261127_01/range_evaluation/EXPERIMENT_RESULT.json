@@ -1,0 +1,308 @@
+{
+  "passed": false,
+  "missions": [
+    {
+      "id": "range_00",
+      "goal": [
+        0.0,
+        7.0,
+        1.5707963267948966
+      ],
+      "passed": true,
+      "truth_input": false,
+      "velocity_publisher": false,
+      "request_sha256": "2435845ee0f070452c9f375a1b588206823990c0e3341cfbef32fb280aacc74f",
+      "start_map_pose": [
+        -0.010930614947945592,
+        6.010367864093263
+      ],
+      "native_status": 4,
+      "final_map_pose": [
+        0.033334778747207985,
+        7.015303275189205
+      ],
+      "estimated_goal_error_m": 0.0366796633796147,
+      "gate_at_result": {
+        "wall": 493.574014861,
+        "sim": 32.849999266,
+        "armed": true,
+        "reason": "ENABLED",
+        "fault": null,
+        "output": [
+          0.0,
+          0.0
+        ],
+        "predicted_clearance_m": 1.7807878255844116,
+        "scan_stamp": 32.649998072,
+        "stream_wall_ages": {
+          "odom": 0.04751120600002423,
+          "clock": 0.02495576900003016,
+          "scan": 0.4299842639999838,
+          "input": 0.00958045099997662
+        },
+        "raw_candidate": [
+          0.0,
+          0.0
+        ],
+        "clipped_candidate": [
+          0.0,
+          0.0
+        ]
+      },
+      "disarm_success": true
+    },
+    {
+      "id": "range_01",
+      "goal": [
+        -8.0,
+        7.0,
+        3.141592653589793
+      ],
+      "passed": true,
+      "truth_input": false,
+      "velocity_publisher": false,
+      "request_sha256": "a6dda26de2abf7c14bdb2aea4641679983d76846ed0a02f97796269cdcc8e8ca",
+      "start_map_pose": [
+        0.03301767749442429,
+        7.016918110983078
+      ],
+      "native_status": 4,
+      "final_map_pose": [
+        -7.976142172515448,
+        7.037408935433819
+      ],
+      "estimated_goal_error_m": 0.04436918280264234,
+      "gate_at_result": {
+        "wall": 640.2970159,
+        "sim": 68.409998471,
+        "armed": true,
+        "reason": "ENABLED",
+        "fault": null,
+        "output": [
+          0.0,
+          0.0
+        ],
+        "predicted_clearance_m": 2.4799575805664067,
+        "scan_stamp": 68.209997277,
+        "stream_wall_ages": {
+          "odom": 0.0529219219999959,
+          "clock": 0.031261808000067504,
+          "scan": 0.4484384699999282,
+          "input": 0.004031086000054529
+        },
+        "raw_candidate": [
+          0.0,
+          0.0
+        ],
+        "clipped_candidate": [
+          0.0,
+          0.0
+        ]
+      },
+      "disarm_success": true
+    },
+    {
+      "id": "range_02",
+      "goal": [
+        -8.0,
+        10.0,
+        1.5707963267948966
+      ],
+      "passed": true,
+      "truth_input": false,
+      "velocity_publisher": false,
+      "request_sha256": "df3be5c5b0911a206c29ade78f04bfb09682d95d8503c09e82921130352ca4ac",
+      "start_map_pose": [
+        -7.977575713440689,
+        7.0313590894045195
+      ],
+      "native_status": 4,
+      "final_map_pose": [
+        -8.003874640830945,
+        9.969420595412805
+      ],
+      "estimated_goal_error_m": 0.030823900247635837,
+      "gate_at_result": {
+        "wall": 727.259528704,
+        "sim": 89.169998007,
+        "armed": true,
+        "reason": "ENABLED",
+        "fault": null,
+        "output": [
+          0.0,
+          0.040000000000000015
+        ],
+        "predicted_clearance_m": 1.9229018688201902,
+        "scan_stamp": 89.049996811,
+        "stream_wall_ages": {
+          "odom": 0.0014041160000033415,
+          "clock": 0.05701206699995964,
+          "scan": 0.11323023099998863,
+          "input": 0.04359805399997185
+        },
+        "raw_candidate": [
+          0.0,
+          0.040000000000000015
+        ],
+        "clipped_candidate": [
+          0.0,
+          0.040000000000000015
+        ]
+      },
+      "disarm_success": true
+    },
+    {
+      "id": "range_03",
+      "goal": [
+        -8.0,
+        14.0,
+        1.5707963267948966
+      ],
+      "passed": true,
+      "truth_input": false,
+      "velocity_publisher": false,
+      "request_sha256": "cb046333471e6ce71d3bf9a73c5dee7694f23e8aeb54506e3e36f46e340c723b",
+      "start_map_pose": [
+        -8.00747725153072,
+        9.964874712264153
+      ],
+      "native_status": 4,
+      "final_map_pose": [
+        -7.966907684342896,
+        13.986089709474324
+      ],
+      "estimated_goal_error_m": 0.035897040798067256,
+      "gate_at_result": {
+        "wall": 815.581544569,
+        "sim": 110.48999753,
+        "armed": true,
+        "reason": "ENABLED",
+        "fault": null,
+        "output": [
+          0.0,
+          0.0
+        ],
+        "predicted_clearance_m": 1.8464050292968752,
+        "scan_stamp": 110.289996336,
+        "stream_wall_ages": {
+          "odom": 0.048531834000073104,
+          "clock": 0.03869453300001169,
+          "scan": 0.4848821850000604,
+          "input": 0.02435097299996869
+        },
+        "raw_candidate": [
+          0.0,
+          0.0
+        ],
+        "clipped_candidate": [
+          0.0,
+          0.0
+        ]
+      },
+      "disarm_success": true
+    },
+    {
+      "id": "range_04",
+      "goal": [
+        -8.0,
+        18.0,
+        1.5707963267948966
+      ],
+      "passed": true,
+      "truth_input": false,
+      "velocity_publisher": false,
+      "request_sha256": "31da682371cb724ed5402a3a3276555747573df86adec6ef6763760d1dc39a48",
+      "start_map_pose": [
+        -7.972040932251343,
+        13.988486033685705
+      ],
+      "native_status": 4,
+      "final_map_pose": [
+        -7.97014900188081,
+        17.97461774825191
+      ],
+      "estimated_goal_error_m": 0.03918342497173197,
+      "gate_at_result": {
+        "wall": 902.904032087,
+        "sim": 131.469997061,
+        "armed": true,
+        "reason": "ENABLED",
+        "fault": null,
+        "output": [
+          0.0,
+          -0.03999999999999999
+        ],
+        "predicted_clearance_m": 1.860830545425415,
+        "scan_stamp": 131.329995866,
+        "stream_wall_ages": {
+          "odom": 0.013020578999999088,
+          "clock": 0.049006145000021206,
+          "scan": 0.1856106530000261,
+          "input": 0.048688339000023007
+        },
+        "raw_candidate": [
+          0.0,
+          -0.03999999999999999
+        ],
+        "clipped_candidate": [
+          0.0,
+          -0.03999999999999999
+        ]
+      },
+      "disarm_success": true
+    },
+    {
+      "id": "range_05",
+      "goal": [
+        -8.0,
+        20.0,
+        1.5707963267948966
+      ],
+      "passed": false,
+      "truth_input": false,
+      "velocity_publisher": false,
+      "request_sha256": "9a6880a7ff0a178e11ca1c8bcb8f453df2f380f00555482c1b8d32d097419ec9",
+      "start_map_pose": [
+        -7.96919272501971,
+        17.976316846319953
+      ],
+      "native_status": 6,
+      "final_map_pose": [
+        -7.968253223885907,
+        19.97382102274764
+      ],
+      "estimated_goal_error_m": 0.041148470732433835,
+      "gate_at_result": {
+        "wall": 966.625371593,
+        "sim": 146.789996719,
+        "armed": true,
+        "reason": "ENABLED",
+        "fault": null,
+        "output": [
+          0.0,
+          -0.03999999999999999
+        ],
+        "predicted_clearance_m": 1.9274613857269285,
+        "scan_stamp": 146.649995524,
+        "stream_wall_ages": {
+          "odom": 0.05687349099991934,
+          "clock": 0.03933610900003259,
+          "scan": 0.16413198999998713,
+          "input": 0.006064095999931851
+        },
+        "raw_candidate": [
+          0.0,
+          -0.03999999999999999
+        ],
+        "clipped_candidate": [
+          0.0,
+          -0.03999999999999999
+        ]
+      },
+      "disarm_error": "TimeoutError('Native action/service timeout')"
+    }
+  ],
+  "case": "/home/admin/jetbot-warehouse/artifacts/far_range_20261127_01",
+  "error": "native navigation failed: range_05",
+  "capture_exit": 0
+}

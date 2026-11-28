@@ -1,0 +1,56 @@
+{
+  "schema": "atongmu.planar_observations",
+  "version": 1,
+  "source": "vision",
+  "session_id": "4f57dc2f2b784cffb675c72e0d69c159",
+  "sequence": 2,
+  "stamp": 3.409999924,
+  "time_domain": "ros_sim",
+  "frame_id": "map",
+  "objects": [
+    {
+      "object_id": "vision:4f57dc2f2b784cffb675c72e0d69c159:1",
+      "track_id": 1,
+      "class_name": "pallet",
+      "confidence": 0.7840526700019836,
+      "position_xy": [
+        3.2475036887227007,
+        10.100913157700493
+      ],
+      "position_reference": "visible_surface",
+      "range_m": 5.232745434416639,
+      "localization_method": "depth"
+    },
+    {
+      "object_id": "vision:4f57dc2f2b784cffb675c72e0d69c159:2",
+      "track_id": 2,
+      "class_name": "box",
+      "confidence": 0.706257700920105,
+      "position_xy": [
+        3.8407115363941577,
+        10.462281488289321
+      ],
+      "position_reference": "visible_surface",
+      "range_m": 5.890340318767684,
+      "localization_method": "depth"
+    }
+  ],
+  "model": {
+    "weights_sha256": "367994e796f76c875eebccb018141e71af8c04b1dcbe25a26f8d428abf134a3d",
+    "classes": [
+      "shelf",
+      "wall",
+      "box",
+      "pallet",
+      "barrier",
+      "cart",
+      "sign",
+      "person"
+    ],
+    "inference_version": "atongmu.planar.v1",
+    "runtime": {
+      "ultralytics": "8.4.211",
+      "torch": "2.8.0"
+    }
+  }
+}

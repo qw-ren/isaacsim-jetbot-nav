@@ -1,0 +1,103 @@
+{
+  "scope": "Single known box, projected CAD envelope and depth visibility proxy; not manual detection recall, not eight-class accuracy. Exterior AABB distance is a lower bound, not exact target point error.",
+  "target": {
+    "path": "/World/DeclaredStaticFixtures/event_0/asset_0",
+    "asset": "/home/admin/isaacsim_assets/Assets/Isaac/4.5/Isaac/Environments/Simple_Warehouse/Props/SM_CardBoxA_01_467.usd",
+    "asset_sha256": "bb0990532d404294b05880d7b048b0b5bb15f0f78d5663a00eb44d540424d541",
+    "min": [
+      -8.34999999217689,
+      22.750000005587935,
+      0.0
+    ],
+    "max": [
+      -7.65000000782311,
+      23.249999994412065,
+      0.4999999888241291
+    ],
+    "center": [
+      -8.0,
+      23.0,
+      0.24999999441206455
+    ],
+    "size": [
+      0.6999999843537807,
+      0.4999999888241291,
+      0.4999999888241291
+    ],
+    "yaw_rad": 0.0,
+    "collision": true,
+    "authored_colliders": [
+      "/World/DeclaredStaticFixtures/event_0/asset_0/content/SM_CardBoxA_01/SM_CardBoxA_01"
+    ],
+    "procedural_geometry": false
+  },
+  "frames": 137,
+  "bins": [
+    {
+      "range_m": [
+        0,
+        3
+      ],
+      "visibility_proxy_frames": 0,
+      "box_matches": 0,
+      "localized_matches": 0,
+      "aabb_exterior_mean_m": null
+    },
+    {
+      "range_m": [
+        3,
+        5
+      ],
+      "visibility_proxy_frames": 11,
+      "box_matches": 0,
+      "localized_matches": 0,
+      "aabb_exterior_mean_m": null
+    },
+    {
+      "range_m": [
+        5,
+        8
+      ],
+      "visibility_proxy_frames": 17,
+      "box_matches": 0,
+      "localized_matches": 0,
+      "aabb_exterior_mean_m": null
+    },
+    {
+      "range_m": [
+        8,
+        12
+      ],
+      "visibility_proxy_frames": 20,
+      "box_matches": 0,
+      "localized_matches": 0,
+      "aabb_exterior_mean_m": null
+    },
+    {
+      "range_m": [
+        12,
+        100
+      ],
+      "visibility_proxy_frames": 22,
+      "box_matches": 0,
+      "localized_matches": 0,
+      "aabb_exterior_mean_m": null
+    }
+  ],
+  "estimated_map_trajectory_vs_truth": {
+    "samples": 264,
+    "rmse_m": 0.015684414530579786,
+    "p95_m": 0.025787310596412108
+  },
+  "reference_pose": "truth translation and normalized interpolated quaternion; static optical extrinsics from TF",
+  "all_class_counts": {
+    "shelf": 21,
+    "wall": 62,
+    "box": 64,
+    "pallet": 128,
+    "barrier": 25,
+    "cart": 19,
+    "sign": 0,
+    "person": 0
+  }
+}

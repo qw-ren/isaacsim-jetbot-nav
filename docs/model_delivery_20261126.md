@@ -1,5 +1,25 @@
 # 八类模型与二维观测交付
 
+2026-11-28 补充：2026-11-27 服务器实测已输出1145条map观测、1844个物体记录。
+原始流位于 `experiments/far_range_20261127_01/route_evidence/observations.jsonl`，
+采集时间、session/track ID及模型身份均保留。包中的torch版本元数据为 `2.8.0`，
+ultralytics为 `8.4.211`；历史完整CUDA构建版本记录为 `2.8.0+cu128`。
+当前文件是已采集证据，不是正在运行的实时话题。
+
+从项目根目录离线核对模型与全部观测（无需ROS、torch或GPU）：
+
+```bash
+python3 ros2_ws/tools/verify_model_handoff.py \
+  --weights perception/weights/obstacles_best.pt \
+  --manifest perception/weights/obstacles_best.manifest.json \
+  --observations experiments/far_range_20261127_01/route_evidence/observations.jsonl
+```
+
+本轮远距离已知箱体约3–16米，70个投影/深度一致性代理样本中均没有匹配box检测，
+该目标的视觉XY定位不能验收。轨迹XY RMSE约1.57厘米仅描述机器人定位。
+5/6个导航任务成功，最后一项被600秒诊断进程运行上限中断；完整结论见同case下
+`RESULTS.json`。输出协议可用不等于远距离识别与目标定位可靠。
+
 权重：`perception/weights/obstacles_best.pt`（20,312,901 bytes）。
 SHA256：`367994e796f76c875eebccb018141e71af8c04b1dcbe25a26f8d428abf134a3d`。
 类别 ID 0..7：`shelf, wall, box, pallet, barrier, cart, sign, person`。

@@ -141,5 +141,5 @@ perception/
 ├── configs/perception.yaml 参数
 ├── scripts/                demo_detect / live_preview / demo_locate_3d / train_yolo（自定义障碍物模型）
 ├── tests/                  36 个单元测试
-└── weights/                模型权重（不进仓库）
+└── weights/                模型权重（八类 obstacles_best.pt 与 manifest 已交付，其余默认忽略）
 ```
