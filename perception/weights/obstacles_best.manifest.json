@@ -1,0 +1,25 @@
+{
+  "schema": "atongmu.model_manifest",
+  "version": 1,
+  "file": "obstacles_best.pt",
+  "size_bytes": 20312901,
+  "sha256": "367994e796f76c875eebccb018141e71af8c04b1dcbe25a26f8d428abf134a3d",
+  "classes": [
+    "shelf",
+    "wall",
+    "box",
+    "pallet",
+    "barrier",
+    "cart",
+    "sign",
+    "person"
+  ],
+  "class_order_source": "checkpoint data.pkl names dictionary, statically inspected without unpickling",
+  "checkpoint_ultralytics_version": "8.4.211",
+  "inference_version": "atongmu.planar.v1",
+  "reported_deployment_runtime": {
+    "ultralytics": "8.4.211",
+    "torch": "2.8.0+cu128",
+    "source": "docs/server_deployment_20261120.md; historical deployment, not current runtime measurement"
+  }
+}

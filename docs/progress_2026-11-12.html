@@ -1,0 +1,434 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>阿童木 11.27 阶段进度</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Space+Grotesk:wght@500;600&display=swap">
+<style>
+  /* 排版基线：论文式报告，冷灰纸面 + 墨色正文 + 青绿状态色 */
+  :root {
+    --paper: #f5f7f8;
+    --surface: #ffffff;
+    --surface-alt: #eef2f3;
+    --ink: #172026;
+    --muted: #5b6a72;
+    --line: #d7e0e2;
+    --accent: #0e6f78;
+    --accent-soft: #d9ecec;
+    --ok: #1d6f4a;
+    --ok-soft: #dcefe4;
+    --warn: #a3540e;
+    --warn-soft: #f7e6d2;
+    --fail: #a12b2b;
+    --fail-soft: #f6dede;
+    --radius: 10px;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #0e1417;
+      --surface: #151d21;
+      --surface-alt: #1b2529;
+      --ink: #e4ecee;
+      --muted: #98a8ae;
+      --line: #28363b;
+      --accent: #5ec9c0;
+      --accent-soft: #17393b;
+      --ok: #77d3a4;
+      --ok-soft: #17342a;
+      --warn: #e5a86a;
+      --warn-soft: #3a2a1a;
+      --fail: #e79595;
+      --fail-soft: #3a1f1f;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #0e1417;
+    --surface: #151d21;
+    --surface-alt: #1b2529;
+    --ink: #e4ecee;
+    --muted: #98a8ae;
+    --line: #28363b;
+    --accent: #5ec9c0;
+    --accent-soft: #17393b;
+    --ok: #77d3a4;
+    --ok-soft: #17342a;
+    --warn: #e5a86a;
+    --warn-soft: #3a2a1a;
+    --fail: #e79595;
+    --fail-soft: #3a1f1f;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    padding-block: 0 64px;
+  }
+  .wrap { max-width: 1000px; margin: 0 auto; }
+
+  .masthead {
+    padding-block: 40px 28px;
+    border-bottom: 1px solid var(--line);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .eyebrow {
+    font-family: "Space Grotesk", "Noto Sans SC", sans-serif;
+    font-size: 12px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(28px, 4.2vw, 40px);
+    line-height: 1.25;
+    font-weight: 700;
+    letter-spacing: .01em;
+    text-wrap: balance;
+  }
+  .lede {
+    margin: 0;
+    max-width: 46em;
+    color: var(--muted);
+    font-size: 16px;
+  }
+  .status-row { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 500;
+    background: var(--surface-alt);
+    color: var(--muted);
+    border: 1px solid var(--line);
+  }
+  .chip.ok { background: var(--ok-soft); color: var(--ok); border-color: transparent; }
+  .chip.warn { background: var(--warn-soft); color: var(--warn); border-color: transparent; }
+  .chip.fail { background: var(--fail-soft); color: var(--fail); border-color: transparent; }
+
+  section { padding-block: 34px 0; }
+  h2 {
+    margin: 0 0 14px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: .01em;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+  h2 .num {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 13px;
+    color: var(--accent);
+    letter-spacing: .08em;
+  }
+  h3 { margin: 22px 0 8px; font-size: 16px; font-weight: 700; }
+  p { margin: 0 0 12px; max-width: 46em; }
+  a { color: var(--accent); }
+  code {
+    font-family: "Space Grotesk", ui-monospace, monospace;
+    font-size: .9em;
+    background: var(--surface-alt);
+    padding: 1px 5px;
+    border-radius: 4px;
+  }
+
+  .kpis {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+  }
+  .kpi {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+  }
+  .kpi .v {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.15;
+    font-variant-numeric: tabular-nums;
+    color: var(--ink);
+  }
+  .kpi .v small { font-size: 15px; color: var(--muted); font-weight: 500; }
+  .kpi .k { font-size: 13px; color: var(--muted); margin-top: 2px; }
+
+  .table-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+  table { border-collapse: collapse; width: 100%; min-width: 520px; font-size: 14.5px; }
+  th, td { padding: 9px 14px; text-align: left; border-bottom: 1px solid var(--line); vertical-align: middle; }
+  th {
+    font-size: 12.5px;
+    font-weight: 500;
+    letter-spacing: .06em;
+    color: var(--muted);
+    background: var(--surface-alt);
+    white-space: nowrap;
+  }
+  tr:last-child td { border-bottom: none; }
+  td.n { font-family: "Space Grotesk", sans-serif; font-variant-numeric: tabular-nums; }
+  td.cls { font-family: "Space Grotesk", ui-monospace, monospace; font-size: 13.5px; }
+
+  .bars { display: flex; flex-direction: column; gap: 10px; }
+  .bar-row { display: grid; grid-template-columns: 96px 1fr 56px; gap: 12px; align-items: center; font-size: 13.5px; }
+  .bar-row .name { font-family: "Space Grotesk", ui-monospace, monospace; color: var(--muted); }
+  .bar-track { height: 10px; background: var(--surface-alt); border-radius: 5px; overflow: hidden; }
+  .bar-fill { height: 100%; background: var(--accent); border-radius: 5px; }
+  .bar-row .val { font-family: "Space Grotesk", sans-serif; font-variant-numeric: tabular-nums; text-align: right; color: var(--ink); }
+  .bar-note { font-size: 12.5px; color: var(--muted); margin-top: 10px; }
+
+  .done { display: grid; gap: 10px; }
+  .item {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 14px 18px;
+    display: grid;
+    grid-template-columns: 22px 1fr;
+    gap: 12px;
+  }
+  .item .tick {
+    width: 22px; height: 22px; border-radius: 50%;
+    background: var(--ok-soft); color: var(--ok);
+    display: grid; place-items: center;
+    font-size: 13px; font-weight: 700; margin-top: 3px;
+  }
+  .item .tick.todo { background: var(--warn-soft); color: var(--warn); }
+  .item h3 { margin: 0 0 2px; font-size: 15.5px; }
+  .item p { margin: 0; font-size: 14.5px; color: var(--muted); max-width: none; }
+
+  .callout {
+    border-left: 3px solid var(--accent);
+    background: var(--accent-soft);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    padding: 14px 18px;
+    font-size: 14.5px;
+  }
+  .callout.warn { border-left-color: var(--warn); background: var(--warn-soft); }
+  .callout strong { font-weight: 700; }
+
+  .next { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+  }
+  .card.rec { border-color: var(--accent); }
+  .card h3 { margin: 0 0 6px; font-size: 15.5px; display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
+  .card h3 .tag { font-size: 12px; font-weight: 500; color: var(--accent); }
+  .card p { margin: 0; font-size: 14px; color: var(--muted); }
+
+  ul { margin: 0 0 12px; padding-left: 1.2em; }
+  li { margin-bottom: 4px; max-width: 44em; }
+
+  footer {
+    margin-top: 44px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+    font-size: 13px;
+    color: var(--muted);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+  }
+
+  @media (max-width: 640px) {
+    .bar-row { grid-template-columns: 78px 1fr 50px; }
+    .kpi .v { font-size: 26px; }
+  }
+</style>
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="eyebrow">Isaac Sim · JetBot · 2026-11-12</div>
+    <h1>阿童木 11.27 阶段进度</h1>
+    <p class="lede">视觉链路已经从「合成数据」走到「权重部署并验证」；PPO 链路尚未开始，卡在底座选择。基线场景、JetBot、SLAM/Nav2 在两份代码库里都不存在。</p>
+    <div class="status-row">
+      <span class="chip ok">视觉：数据与模型完成</span>
+      <span class="chip warn">ROS2 联调：未开始</span>
+      <span class="chip fail">PPO：未开始</span>
+      <span class="chip">距 11.27 还有 15 天</span>
+    </div>
+  </header>
+
+  <section>
+    <h2><span class="num">01</span>一页结论</h2>
+    <p>按课题 PDF 的三层能力对照：<strong>主要扩展（语义目标导航）的感知底座已具备</strong>——8 类障碍物的检测模型在 450 张验证集上 mAP50 达到 0.958；但<strong>第一层 baseline 与第三层 PPO 都还没有落地</strong>，11.27 要交的两条链路目前只完成了视觉的「数据 → 模型」这一段。</p>
+    <div class="kpis">
+      <div class="kpi"><div class="v">3000<small> 帧</small></div><div class="k">Replicator 合成数据</div></div>
+      <div class="kpi"><div class="v">33,499<small> 框</small></div><div class="k">8 类，零空标签帧</div></div>
+      <div class="kpi"><div class="v">0.958</div><div class="k">mAP50（450 张 val）</div></div>
+      <div class="kpi"><div class="v">39</div><div class="k">单元测试全部通过</div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">02</span>已完成</h2>
+    <div class="done">
+      <div class="item">
+        <div class="tick">✓</div>
+        <div>
+          <h3>感知核心库（L1–L4）</h3>
+          <p>检测、跨帧跟踪、平面定位（深度投影到地面）、激光融合、JSON 接口；<code>object_poses</code> 已带 <code>class_name</code>、<code>position</code>、<code>track_id</code>。语义地图只取平面坐标 <code>(x, y)</code>，<code>z</code> 只用于过滤悬空误检。</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="tick">✓</div>
+        <div>
+          <h3>Replicator 数据流水线（Isaac Sim 4.5 实测）</h3>
+          <p>场地随机布障、相机环绕取景、光照随机；约 1000 帧/分钟。踩通并处理了 4.5 的三个坑：<code>plane</code> 是竖直面、相机自动加 <code>(90,0,90)</code>、自定义 randomizer 只在建图时执行一次。</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="tick">✓</div>
+        <div>
+          <h3>八类物体表定稿</h3>
+          <p>shelf / wall / box / pallet / barrier / cart / sign / person；同时确定了每类是否进先验地图、能否作语义目标，已写进配置与文档。</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="tick">✓</div>
+        <div>
+          <h3>数据集与训练</h3>
+          <p>3000 帧（train 2550 / val 450），YOLO26s 训练 80 epoch，batch 16，640×640；推理约 10 ms/帧（RTX 5880 Ada 16 GB）。</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="tick">✓</div>
+        <div>
+          <h3>部署与验证</h3>
+          <p><code>obstacles_best.pt</code> 已放入 <code>perception/weights/</code>，两份 yaml 的类别表已改为 8 类；云上单图检测 8 个目标，三维定位 demo 最大误差 2.2 cm。</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="tick">✓</div>
+        <div>
+          <h3>修掉一个静默 bug</h3>
+          <p>配置加载用 <code>hasattr</code> 过滤字段，导致 yaml 里的 <code>classes</code> 从未生效、一直用代码里的 COCO 默认表。已修，并补了 3 个回归用例。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">03</span>数据与指标</h2>
+    <h3>训练集构成（train + val）</h3>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>类别</th><th>中文</th><th class="n">框数</th><th>先验地图</th><th>语义目标</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="cls">shelf</td><td>货架</td><td class="n">5,176</td><td>是</td><td>是</td></tr>
+          <tr><td class="cls">wall</td><td>墙体</td><td class="n">5,207</td><td>是</td><td>一般否</td></tr>
+          <tr><td class="cls">box</td><td>纸箱</td><td class="n">7,919</td><td>动态加入</td><td>是</td></tr>
+          <tr><td class="cls">pallet</td><td>托盘</td><td class="n">3,660</td><td>动态加入</td><td>是</td></tr>
+          <tr><td class="cls">barrier</td><td>挡板</td><td class="n">4,058</td><td>动态加入</td><td>否</td></tr>
+          <tr><td class="cls">cart</td><td>推车</td><td class="n">1,982</td><td>否</td><td>是</td></tr>
+          <tr><td class="cls">sign</td><td>标牌</td><td class="n">3,541</td><td>否 / 附着货架</td><td>是</td></tr>
+          <tr><td class="cls">person</td><td>人</td><td class="n">1,956</td><td>否</td><td>后续可作目标</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>验证集结果（450 张 / 5,014 实例）</h3>
+    <div class="bars">
+      <div class="bar-row"><span class="name">person</span><div class="bar-track"><div class="bar-fill" style="width:97.9%"></div></div><span class="val">0.979</span></div>
+      <div class="bar-row"><span class="name">shelf</span><div class="bar-track"><div class="bar-fill" style="width:96.8%"></div></div><span class="val">0.968</span></div>
+      <div class="bar-row"><span class="name">pallet</span><div class="bar-track"><div class="bar-fill" style="width:96.8%"></div></div><span class="val">0.968</span></div>
+      <div class="bar-row"><span class="name">wall</span><div class="bar-track"><div class="bar-fill" style="width:96.3%"></div></div><span class="val">0.963</span></div>
+      <div class="bar-row"><span class="name">box</span><div class="bar-track"><div class="bar-fill" style="width:96.3%"></div></div><span class="val">0.963</span></div>
+      <div class="bar-row"><span class="name">barrier</span><div class="bar-track"><div class="bar-fill" style="width:94.8%"></div></div><span class="val">0.948</span></div>
+      <div class="bar-row"><span class="name">cart</span><div class="bar-track"><div class="bar-fill" style="width:94.0%"></div></div><span class="val">0.940</span></div>
+      <div class="bar-row"><span class="name">sign</span><div class="bar-track"><div class="bar-fill" style="width:93.7%"></div></div><span class="val">0.937</span></div>
+    </div>
+    <p class="bar-note">条形长度为 mAP50（0–1）。全体：P 0.935 / R 0.901 / mAP50 0.958 / mAP50-95 0.864。</p>
+
+    <h3>各指标的弱点</h3>
+    <ul>
+      <li><code>sign</code> 的 mAP50-95 只有 0.712：标牌又小又薄，边框往往只差几个像素，定位精度对下游影响不大，但报告里要说明。</li>
+      <li><code>pallet</code> 的 mAP50-95 0.820：扁平物体在低机位下上下边界容易判错。</li>
+      <li>全部指标来自合成数据，<strong>只能证明流程与类别可分性，不能代表真实场景精度</strong>。</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="num">04</span>环境与踩坑</h2>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>项</th><th>现状</th></tr></thead>
+        <tbody>
+          <tr><td>云电脑</td><td>Ubuntu 22.04，RTX 5880 Ada 16 GB，驱动 570.172.18（CUDA 12.8 上限）</td></tr>
+          <tr><td>训练环境</td><td><code>/home/admin/venvs/yolo</code>：torch 2.8.0+cu128、torchvision 0.23.0、ultralytics 8.4.211</td></tr>
+          <tr><td>Isaac Sim</td><td>4.5.0，headless；自带 humble 运行库（缺 cv_bridge / tf2_ros）</td></tr>
+          <tr><td>ROS2</td><td><strong>未安装</strong>，感知节点的实机联调因此阻塞</td></tr>
+          <tr><td>可用资产</td><td>jetbot.usd、Simple_Warehouse、Digital_Twin_Warehouse、Simple_Room 均已在本地资产库</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout warn" style="margin-top:14px;">
+      <strong>CUDA 大版本坑：</strong>PyPI 上最新 torch 会拉 CUDA 13 的运行库，而驱动 570 最高只支持 CUDA 12.8，装上后 <code>cuda.is_available()</code> 为 False、静默退回 CPU。必须锁 cu128 的 wheel。
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">05</span>未完成与风险</h2>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>事项</th><th>状态</th><th>影响</th></tr></thead>
+        <tbody>
+          <tr><td>Baseline 场景 / JetBot / 传感器 / ROS2 Bridge</td><td><span class="chip fail">缺失</span></td><td>视觉接入与 PPO 训练的共同前置</td></tr>
+          <tr><td>SLAM / Nav2 目标点导航</td><td><span class="chip fail">缺失</span></td><td>DWB 对比没有基线</td></tr>
+          <tr><td>ROS2 感知节点联调</td><td><span class="chip warn">阻塞</span></td><td>需装 ROS2 或补 cv_bridge 兜底</td></tr>
+          <tr><td>PPO 训练环境</td><td><span class="chip warn">未定</span></td><td>Isaac Lab 是否可用待确认</td></tr>
+          <tr><td>真实 USD 障碍资产</td><td><span class="chip warn">未到位</span></td><td>当前用几何体近似，存在外观域差距</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout" style="margin-top:14px;">
+      <strong>需要和航硕确认三件事：</strong>① baseline 场景由谁负责，如果由我们搭，用 Simple_Warehouse 还是等仓库 USD；② 云电脑能否装 Isaac Lab（或指定 PPO 底座）；③ 真实障碍物 USD 清单与尺寸，用于替换当前几何体。
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">06</span>下一步</h2>
+    <div class="next">
+      <div class="card rec">
+        <h3>搭 baseline 场景 <span class="tag">推荐</span></h3>
+        <p>用本地 jetbot.usd + Simple_Warehouse，写场景脚本：JetBot、相机、深度、单线雷达、ROS2 桥接发布 <code>/rgb</code> <code>/depth</code> <code>/scan</code> <code>/tf</code>。视觉接入与 PPO 都靠它。</p>
+      </div>
+      <div class="card">
+        <h3>先通感知 ROS2 节点</h3>
+        <p>装 ROS2 humble（几百 MB），配合成发布器回放数据集图片，验证 <code>object_poses</code> 的类别、坐标、track_id。半天出结果，但不验证仿真接入。</p>
+      </div>
+      <div class="card">
+        <h3>两边并行</h3>
+        <p>我先写场景脚本（不依赖 ROS2），同时在服务器上装 ROS2，装完合起来联调。风险是两条线都要盯。</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>最后更新 2026-11-12</span>
+    <span>数据来源：云电脑实测日志与训练输出</span>
+    <span>详细文档：docs/milestone_2026-11-27.md</span>
+  </footer>
+</div>

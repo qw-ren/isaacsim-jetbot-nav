@@ -1,0 +1,32 @@
+{
+  "headless": false,
+  "observer_camera": "/World/JetbotObserverCamera",
+  "follow": false,
+  "fixed_eye": [
+    -1.5,
+    9.0,
+    4.0
+  ],
+  "fixed_target": [
+    -1.5,
+    6.7,
+    0.2
+  ],
+  "observer_offset_behind_m": 2.8,
+  "observer_height_m": 2.6,
+  "lookahead_m": 1.8,
+  "observer_smoothing": {
+    "position_tau_sim_s": 0.35,
+    "yaw_tau_sim_s": 0.65,
+    "yaw_deadband_deg": 3.0,
+    "max_yaw_rad_s": 0.4,
+    "level_height_fixed": true,
+    "occlusion_check": "display-only static CAD and authored props; shorten distance, expand smoothly"
+  },
+  "look_target_height_m": 0.35,
+  "focal_length_mm": 24.0,
+  "horizontal_aperture_mm": 36.0,
+  "algorithm_camera": "/World/jetbot/chassis/rgb_camera/jetbot_camera",
+  "truth_pose_used_only_for_viewer_follow": true,
+  "navigation_truth_input": false
+}

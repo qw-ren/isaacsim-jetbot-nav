@@ -1,0 +1,103 @@
+# 障碍物识别数据集生成配置（Isaac Sim 4.5 · Replicator）
+#
+# 在云电脑上运行（Isaac Sim 自带 Python，不是系统 Python）：
+#   Linux:   ./python.sh isaac_sim/replicator/gen_dataset.py --config isaac_sim/replicator/configs/dataset_config.yaml
+#   Windows: python.bat isaac_sim\replicator\gen_dataset.py --config isaac_sim\replicator\configs\dataset_config.yaml
+#
+# 类别已按课题的物体表确定（2026-11-12）：
+#   shelf 货架     固定仓储结构、通道边界，进入先验地图，可作语义目标
+#   wall  墙体     固定边界/不可通行区域，进入先验地图，一般不作语义目标
+#   box   纸箱     A 类局部障碍/堆料，动态加入，可作语义目标
+#   pallet 托盘    较大局部障碍/通道封堵，动态加入，可作语义目标
+#   barrier 挡板   B 类通道封闭，动态加入，不作语义目标
+#   cart  推车     大体积/后续移动障碍，可作语义目标
+#   sign  标牌     货架编号/区域识别，附着于货架，可作语义目标
+#   person 人      后续动态障碍，后续可作语义目标
+#
+# 当前 assets 还没到位，先用 primitive 近似形体把「生成 → 训练 → 部署」跑通；
+# 航硕给出 USD 清单后，把对应条目的 primitive 换成 usd + z_offset 即可，代码不用改。
+# 注意：shelf/wall 最终应来自场景 USD（先验地图），这里只是为了检测链路先有正样本。
+
+seed: 42
+num_frames: 1000
+resolution: [640, 480]          # 与感知默认内参一致，训练/推理不用再缩放
+output_dir: ../../../datasets/atongmu_obstacles   # 相对本配置文件；datasets/ 已被 .gitignore 忽略
+train_val_split: 0.85
+image_format: jpg
+max_occlusion: 0.95             # 遮挡比例超过此值的框不写进标签
+
+scene:
+  ground_size: 30.0
+  # 障碍物撒布范围 [[x_min, y_min], [x_max, y_max]]，单位米
+  area: [[-2.6, -2.6], [2.6, 2.6]]
+  min_gap: 0.55                 # 障碍物中心最小间距，避免严重重叠
+  camera:
+    # 相机环绕半径必须大于场地对角半径（2.6*1.414≈3.7），否则相机会埋在物体里面、
+    # 画面被近处立方体占满（2026-11-12 抽帧检查发现的问题）
+    distance: [7.0, 10.0]       # 相机到场景中心的水平距离
+    height: [0.35, 1.5]
+    look_at_height: [0.30, 0.90]
+    focal_length: 24.0
+  light:
+    dome_intensity: 900.0
+    distant_intensity: 1200.0
+
+# primitive: cube | cylinder | cone | sphere，先用几何体跑通流程
+# usd: 指向具体资产路径（支持 $ENV_VAR 和 ~），与 primitive 二选一
+# scale: [[sx_min, sy_min, sz_min], [sx_max, sy_max, sz_max]]，单位米
+# z_offset: 可选，primitive 默认按半高贴地；悬空物体（如 sign）显式给定
+obstacles:
+  # 固定仓储结构：最终应换成场景 USD / 先验地图里的货架与墙体
+  - class_name: shelf
+    primitive: cube
+    count: 2
+    scale: [[1.0, 0.4, 1.5], [1.8, 0.6, 2.2]]
+
+  - class_name: wall
+    primitive: cube
+    count: 2
+    scale: [[2.0, 0.20, 1.2], [3.0, 0.30, 2.0]]
+
+  # A 类局部障碍：纸箱、堆料
+  - class_name: box
+    primitive: cube
+    count: 5
+    scale: [[0.25, 0.25, 0.25], [0.60, 0.60, 0.80]]
+
+  # 较大局部障碍：托盘（扁平）
+  - class_name: pallet
+    primitive: cube
+    count: 2
+    scale: [[0.80, 0.60, 0.10], [1.20, 1.00, 0.18]]
+
+  # B 类通道封闭：挡板（宽、薄）
+  - class_name: barrier
+    primitive: cube
+    count: 2
+    scale: [[1.00, 0.08, 0.50], [1.60, 0.15, 1.00]]
+
+  # 大体积/后续移动障碍
+  - class_name: cart
+    primitive: cube
+    count: 1
+    scale: [[0.60, 0.50, 0.80], [0.90, 0.80, 1.20]]
+
+  # 标牌：悬空，显式给 z_offset
+  - class_name: sign
+    primitive: cube
+    count: 2
+    scale: [[0.30, 0.04, 0.25], [0.50, 0.06, 0.40]]
+    z_offset: 1.20
+
+  # 人：后续动态障碍，先用圆柱近似
+  - class_name: person
+    primitive: cylinder
+    count: 1
+    scale: [[0.35, 0.35, 1.55], [0.50, 0.50, 1.80]]
+
+  # --- 真实资产示例（资产到位后启用，并删掉同类 primitive 条目）---
+  # - class_name: shelf
+  #   usd: ~/atongmu_assets/shelf.usd
+  #   count: 2
+  #   scale: [[1.0, 1.0, 1.0], [1.0, 1.0, 1.0]]
+  #   z_offset: 0.0             # 资产原点离地高度（米），按资产实际底面调整

@@ -1,5 +1,7 @@
 # isaacsim-jetbot-nav
 
+模型交付与二维语义观测：见 [交付说明](docs/model_delivery_20261126.md)，包括八类权重、SHA256、类别顺序、推理版本及2026-11-27实测观测。远距离目标识别尚未通过验收。
+
 阿童木机器人课题：**基于 Isaac Sim 的 JetBot 视觉-激光融合导航与学习型局部避障**（暂定）。
 
 先跑通 Isaac Sim + JetBot + ROS 2 + SLAM/Nav2 的目标点导航 baseline，再推进 PPO 局部避障及与传统局部规划器的对比，逐步接入视觉与激光感知融合。当前仓库为项目骨架，尚未实现各模块 Demo。

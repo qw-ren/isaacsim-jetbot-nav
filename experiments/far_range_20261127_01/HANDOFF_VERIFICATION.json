@@ -1,0 +1,24 @@
+{
+  "checkpoint_verified": true,
+  "weights_sha256": "367994e796f76c875eebccb018141e71af8c04b1dcbe25a26f8d428abf134a3d",
+  "classes": [
+    "shelf",
+    "wall",
+    "box",
+    "pallet",
+    "barrier",
+    "cart",
+    "sign",
+    "person"
+  ],
+  "inference_version": "atongmu.planar.v1",
+  "packets": 1145,
+  "objects": 1844,
+  "session_runtimes": {
+    "4f57dc2f2b784cffb675c72e0d69c159": {
+      "ultralytics": "8.4.211",
+      "torch": "2.8.0"
+    }
+  },
+  "scope": "artifact identity and recorded wire contract; no live freshness, detection accuracy or target position accuracy check"
+}

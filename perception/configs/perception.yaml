@@ -1,0 +1,72 @@
+# 感知模块配置
+# 注意：这里的标定值是离线 demo 的默认值。接入 Isaac Sim 后，
+# 内参由 /camera/color/camera_info 提供，外参由 TF（base_link -> camera_link）提供，
+# 应以仿真里的真实值为准。
+
+camera:
+  # 640x480 下约 60° 水平视场角。接入仿真后会被 CameraInfo 覆盖。
+  fx: 554.26
+  fy: 554.26
+  cx: 320.0
+  cy: 240.0
+  width: 640
+  height: 480
+  depth_scale: 1.0      # Isaac Sim depth 一般已是米
+  depth_min: 0.05
+  depth_max: 10.0
+
+extrinsics:
+  # 相机光心在 base_link 下的位置 [x 前, y 左, z 上]，单位米
+  camera_position: [0.08, 0.0, 0.32]
+  camera_pitch_deg: 0.0   # 正数 = 镜头向下俯视
+  camera_yaw_deg: 0.0
+  camera_roll_deg: 0.0
+  # 激光雷达在 base_link 下的位置（单线雷达，扫描平面 z = lidar_position[2]）
+  lidar_position: [0.0, 0.0, 0.20]
+  lidar_yaw_deg: 0.0
+  lidar_pitch_deg: 0.0
+
+detector:
+  weights: weights/obstacles_best.pt   # Replicator 合成数据训练（2026-11-12，80 epoch）
+  device: cpu            # 有 GPU 的机器改成 cuda:0
+  imgsz: 640
+  conf: 0.35
+  iou: 0.5
+  half: false
+  max_det: 100
+  # 必须与训练时 data.yaml 的 names 完全一致（顺序也算），否则 detector 会报错。
+  classes:
+    - shelf
+    - wall
+    - box
+    - pallet
+    - barrier
+    - cart
+    - sign
+    - person
+
+localizer:
+  shrink: 0.25               # bbox 内部收缩，避开背景渗色
+  depth_percentile: 20       # 深度分位数，越小越偏向框内最近处
+  min_valid_pixels: 8
+  max_range: 12.0
+  use_ground_plane_fallback: true
+  ground_plane_pixel: bottom_center
+
+fusion:
+  enabled: true
+  bbox_margin_px: 12
+  min_points: 3
+  depth_window_ratio: 0.35
+  max_range: 12.0
+  scan_angle_offset_deg: 0.0
+
+tracker:
+  enabled: true
+  iou_threshold: 0.3        # 帧间 IoU 低于此值就不认为是同一目标
+  max_age: 15               # 连续丢失 15 帧（8 FPS 约 2 秒）后删除轨迹，ID 不复用
+  min_hits: 2               # 累计命中 2 帧后才对外发布 track_id，抑制误检
+  class_aware: true         # 只允许同类别目标互相匹配
+  velocity_prediction: true # 用轨迹速度预测下一帧位置，低帧率下更稳
+  velocity_smoothing: 0.3
+  max_speed_px_s: 4000.0
